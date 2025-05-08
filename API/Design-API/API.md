@@ -34,96 +34,78 @@
 
 We can do the same operation over and over. I am not going to see different result each time. For example, when you get some from rest endpoint, you should expert to be the same except some come to modify behind the screen.
 
+## Data Format
 
-## Hateoas
+- REST primarily uses JSON instead of XML
+- JSON advantages:
+  - Designed with JavaScript compatibility in mind
+  - Easier for browser/client code to process
+  - Smaller data size compared to XML
 
-~~everything what wegonado is descript by the way with interface with the rest API endpoint~~
+## Resource Identification
+- Resources are represented by URLs
+- Resources should be accessible via browser
+- Follows noun-based resource naming
+- HTTP methods (verbs) define actions on resources
+  
+## HTTP Methods
 
-~~We should able to operate the resource understand what operate are available and make modification, do everything we need do just through thecommunication of resource of URL. And the verb you are done that. One key ofHateOSis you return the information you can do with dataset. If I go out the high level dataset. I am not just give the information back. I am also getting the location information and operation information~~
+- GET: Download/retrieve data
+  
+- PUT: Modify existing data.The put is replacement that when I am using for update.
+  
+- POST: Create new data. The idea of post is we posting something new to the collection.  
+   - For post, what should be returned. There is a design question behind the API weather you return the product back with the ID populated or just say ok I got the post
+  
+- Patch: Just modify the part of the object. Maybe you can take partial representation
+  
+## API Design Considerations
+- Focus on business logic and application expertise
+- Design for resource accessibility
+- Consider how consumers will interact with the API
 
-~~This is I can do find the subset of the data.. is I can do to ..add subset of the data . It's really just put some format around way you can expose rest endpoint.~~
+## Example: Twitter API
+- Uses collections (e.g., "status")
+- Resources include:
+    - User timeline
+    - Home timeline
 
-# API design 2
+## Key Differences from RPC
+- REST is resource-oriented (nouns)
+- RPC is procedure-oriented (verbs added to nouns)
+- REST uses standard HTTP methods for actions
+- Resources are directly accessible via URLs
 
-## Why move WFC to the REST API
+## How the resource are represent.
 
-Used the browser's HTTP mechanism. It's a well-known protocol. Typically, firewalls are already open to that. There's security around it, and Secure Sockets Layer is so. It just makes for it a good transport, if you will, a means for setting up APIs
+- Consider the transaction initiator's perspective
+- Balance between:
+  - Business logic exposed to API consumers
+  - Service-managed business logic
+- Focus on your core business expertise
+ 
+## HATEOAS (Hypermedia as the Engine of Application State)
+- API provides all necessary information in responses
+- Clients can discover available actions
+- Example: GitHub repository API
+  - Single call provides complete repository information
+  - Includes related resources (followers, etc.)
+  - Eliminates need for multiple API calls
 
-But the two real drivers that we saw we're
-
-
-### Number one
-
-### Number two 
-
-is that rest facilitates this content negotiation and exposing Json data instead of XML
-
-
-It turns out that Jason was designed with JavaScript in mind. I say that sort of tongue-in-cheek is Jason really is Javascript but it makes it very easy for JavaScript whether it's a a browser client code excetera to take that payload and process it
-
-
-jason data is smaller than XML
-
-
-Finding the resource
-
-~~The remote procedure calling is not the way we design we design the rest API. For the RPC: there is resource which is Noun. We have verb added to the Noun.~~
-
-The rest API web have the URL to represent the resource. If you can type in the browser that is the idea of the resource. It should be able to get to it from the browser windows.
-
-It's noun it's wefindits object in question and the verb is going to identify what we want to do.
-
-If I say get, I am looking for download --- GET
-
-If I say put, I am looking for making a modification. -- PUT
-
-If I say post, I am looking for creating a new one. -- POST
-
-When you create a API, you have to ask yourself.
-
-
-
-~~Did you build the ways that consumer has figure out all the logic around hosing the process or you build the way you can capture the business logic which were you know and you are expert with you application~~.
-
-
-
-Tweet API. Status is a collection. We negative with the status to user timeline, home timeline or user timeline.
-
-Verb:
-
-Get is just simple read. Post, the idea of post is we posting something new to the collection. Use the endpoint will be products and I have the information about new product I go to post.
-
-
-
-For post, what should be returned. There is a design question behind the API weather you return the product back with the ID populated or just say ok I got the post
-
-
-
-The put is replacement that when I am using for update.
-
-
-
-Patch :just modify the part of the object. Maybe you can take partial representation
+## Performance Optimization
+- Stateless Design
+  - No state maintenance required
+  - Each request contains complete information
+  - Client provides all necessary data per call
+- Round Trip Avoidance
+  - Minimize HTTP calls
+  - Better to send more data in one call than multiple smaller calls
+  - Reduces latency and improves performance
+  - Prefer comprehensive responses over multiple small requests
 
 
 
-**How the resource are represent.** Think about the from the perspective who initial the transaction; how much the business logic are you really posting about consume the API vs you are service manage because that's what you know yourapibecause you know your business. You allow people to interact with that business you know.
-
-
-
-We are talking about theHateoas. All I had is I got top of the API. I got everything I need. What I receive back is anything possible for me to do with mygithubrepository here.
-
-I can find myfollowee.. get all information in one shot. I don't have to middle multiple call for that.
-
-It is stateless. I don't have to maintain state information even my client giveto me each call.
-
-Avoid of round trip. The more calls you want to made on HTTP. The slow isgonna
-
-That's much better just sent on too much information and avoid all of round trip than sendingdownsmaller or trunk information and let user keep coming back for more data.
-
-
-
-[Lesson 3]{.mark}
+# Lesson 3
 
 Role template part of theurland map to thesegmatsyou have. what's template could be match theurlhas the result do?? Couldn't be ambiguous.
 
