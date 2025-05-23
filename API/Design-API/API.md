@@ -573,184 +573,64 @@ The main takeaway is that using an HTTPResult wrapper provides more flexibility 
 
 
 
-Authentication and authorization
+## Authentication and authorization
 
-Authentication is who are you ; what is your identify I am know to system or not;
 
-Authorization is who you allow to do . what's my permission.
 
+1. **Authentication vs Authorization**
+   - Authentication: Verifies "who you are" (identity)
+   - Authorization: Determines "what you're allowed to do" (permissions)
 
+2. **Benefits of Using Social Media Authentication (Facebook, Twitter, etc.)**
+   - Reduces user friction (users don't need to create new credentials)
+   - Covers majority of potential users (estimated 99.99% of population)
+   - Reduces security responsibility for storing passwords
+   - Easier to manage security breaches (just invalidate tokens)
 
-Why I want Facebook authorization on my APP. There are couple of different reason. The bigest part of it is because it'sgonato be much similar to user. The trends are your usergonnahave F account or T account. Those 4 providers. Igonnamake up of this status on top of my head like 87% or other stats made up on thespot I am willing to bet those4 providers probably cover 99.99% of population going to be using your application. So by allowing them user name and password, they currently have ? you are moving abarrier. Honestly a lot of two. I got to say ?? I would look to say sign up for brand-new user nameand new password . I just go to I am not interesting. You are removing thatbarrier and allow people to log in usercredentials they already have.
+3. **Token-Based Authentication**
+   - Apps receive tokens instead of passwords
+   - Tokens are passed in headers
+   - Protected by SSL (Secure Sockets Layer)
+   - More secure than password-based authentication
+   - Easier to revoke access if needed
 
-The another reason I like to user Fauthorization is because there is less security data for me to have to worry about. The reason way to security datais doesn't store it.
+4. **Security Concerns**
+   - Cross-Site Request Forgery (CSRF) attacks
+     - Attackers can simulate forms from other sites
+     - Can execute unwanted actions without user knowledge
+     - Sites need to verify request origins
+   - Need to implement proper origin checking
+   - SSL encryption is essential
 
-So come to F or come to T will all i get is token. That if turn out my database get hack, all the token are released. It's very easy I just go back to F invalidate those token. Problem solve. I don't need worry aboutexposing someone else password. if you use password cross multiple site. You really kind ofopeningyourself up to that. I don't want one of responsible for exposing out your password which the same password that I have in my luggage . I don't want to worry about it I just want to hold on the token,
+5. **Best Practices**
+   - Use token-based authentication
+   - Implement SSL
+   - Verify request origins
+   - Don't store sensitive password data
+   - Use third-party authentication when possible
+   - Implement proper authorization checks
 
-Authorized attribution. The action will not run unless we have ??untlfor the individual they areauthorized
+The main takeaway is that using third-party authentication (like Facebook or Twitter) and token-based authentication provides better security and user experience compared to traditional username/password systems, while also reducing the security responsibilities of your application.
 
-[if you got the API token and secrets, you can pass them right into the developer API configuration, and then it just know it can handle that type of login]{.mark}
 
 
 
-Overrwirtethesyntry to get the user name out of the header. If it is existed then I'm create anidentifyusing ?? you can create a customeridentifytoo. There are a lot offlexablearound it passing in who is user and I'm set theprinclablethere and Http context
 
 
 
-token base Authentication
 
-we you give permission to your app,
 
-your app and it says this app would
 
-like to Tweet on your behalf and post Facebook updates without
 
-you knowing and things like that .
 
 
 
-It protects revealing the password to the app, so when it's generated
 
-by a third party, I never get the password. I just get the token, and that's all I'm dealing with.
 
 
 
-Token is passed in the header
 
 
 
-it's going to be through a secured sockets layer ((SSL) and managed
-
-by your code
-
-
-
-encrypted in SSL
-
-
-
-cross-site request forgery.
-
-
-
-Yes. This is kind of a big thing where somebody could potentially simulate my form and be sending in a request from somewhere else that I'm not expecting.
-
-That's a problem.
-
-
-
-attack takes advantage of the fact that you may not be testing where your form posts came from, so I stand up a page
-
-
-
-
-
-on my site, I take your information and make it look like we're on a good site, but then, under the covers, I might be setting some parameters like delete user
-
-or something that you don't want to happen, and then I'm posting
-
-it to the site that's the
-
-
-
-
-
-ultimate site we're going to. And
-
-that site is just looking for
-
-
-
-00:46:23.880 --> 00:46:26.690
-
-a post. It's not necessarily looking
-
-where it's coming form,
-
-
-
-
-
-
-
-
-
-
-
-lesson 6
-
-
-
-/stand/{name} or / stand/name
-
-
-
-I'm gonna create a placeholder for name; so that rather than
-
-
-
-you always having the same name equals... name = that you can just simply send it as part of the path.
-
-
-
-we can pass the name from the body
-
-
-
-but you only can have one parameters was passed from body and multiple from URL
-
-
-
-Model Bind
-
-
-
-
-
-a very explicit way to inform the system how you want to deal with
-
-certain types of complex objects.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![](../../media/API-Design-API-API-image1.png){width="0.22916666666666666in" height="0.5833333333333334in"}![](../../media/API-Design-API-API-image2.png){width="0.22916666666666666in" height="0.5833333333333334in"}
 
 

@@ -1,7 +1,7 @@
 
 ---
 
-**Why not use html**
+**Why not use HTML
 
 after we get the html from service, we need parse the html and extract the information that I would like to show on my web site
 

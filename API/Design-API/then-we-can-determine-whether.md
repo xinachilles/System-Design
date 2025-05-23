@@ -1,43 +1,86 @@
-# then we can determine whether use partial Get request
+1. **Partial GET Requests**
+   - Useful for handling large resources like images
+   - Example shows using Range header to request specific byte ranges
+   - Can include HATEOAS links to point to other resources
 
-Created: 2019-06-11 23:55:42 -0600
+I'll explain HATEOAS (Hypermedia as the Engine of Application State) with a practical example.
 
-Modified: 2019-06-11 23:55:54 -0600
+Let's say we have a REST API for a product catalog. Here's how a HATEOAS response might look:
 
----
+```json
+{
+    "id": "123",
+    "name": "Smartphone X",
+    "price": 999.99,
+    "inStock": true,
+    "_links": {
+        "self": {
+            "href": "/api/v1/products/123"
+        },
+        "category": {
+            "href": "/api/v1/categories/electronics"
+        },
+        "reviews": {
+            "href": "/api/v1/products/123/reviews"
+        },
+        "addToCart": {
+            "href": "/api/v1/cart",
+            "method": "POST"
+        },
+        "relatedProducts": {
+            "href": "/api/v1/products/123/related"
+        }
+    }
+}
+```
 
-then we can determine whether use partial Get request
+In this example:
+1. The response includes not just the product data, but also relevant links to related resources
+2. Each link tells the client:
+   - Where to find related resources (`href`)
+   - What HTTP method to use (`method`)
+   - What the link represents (through the key name)
 
-for example, if the image is huge, we can use the partial request get the a small chunk image first
+Benefits of HATEOAS:
+- Clients don't need to know the API structure in advance
+- The API can evolve without breaking clients
+- Clients can discover available actions dynamically
+- Reduces coupling between client and server
 
+This is particularly useful in scenarios like:
+- Pagination (next/previous page links)
+- Related resources
+- Available actions for a resource
+- State transitions in a workflow
 
-
-GET <https://adventure-works.com/products/10?fields=productImage> HTTP/1.1
-
-Range: bytes=0-2499
-
-
-
-In the result, We can included an another link pointed to another source (HATEOAS)
-
-
-
-We also can add the version on theurland like /v2/.. and router or API gateway?? Will sent the request to different end pointor we can put the version number to parameter
-
-
-
-
-
+The key idea is that the API response itself tells the client what it can do next, rather than the client having to know all the possible endpoints in advance.
 
 
-There are two types of API restful and RPC.If the API is client side, most of time they use REST API over the HTTP since it must compatible with browser or mobile application
+2. **API Versioning Options**
+   - Can be implemented in URLs (e.g., /v2/...)
+   - Can be handled through API gateways/routers
+   - Can be specified as parameters
 
-For the backend side, I think RPC is more efficiency?? than REST API because, most company build own protocol instead of Http. Those protocol supportbinary serializeand more efficiency than HTTP
+3. **API Types Comparison**
+   - REST APIs
+     - Better for client-side applications
+     - Compatible with browsers and mobile apps
+     - Uses HTTP protocol
+   - RPC (Remote Procedure Call)
+     - More efficient for backend services
+     - Often uses custom protocols instead of HTTP
+     - Supports binary serialization
+     - Better performance than HTTP-based REST
 
+4. **API Gateway Features**
+   - Acts as middleware between clients and API services
+   - Key functionalities:
+     - User identification
+     - SSL offloading
+     - Request routing
+     - Rate limiting
+     - Request aggregation (combining multiple services)
+     - Can host additional functionality like user authentication
 
+This document appears to be a collection of notes about API design considerations, focusing on practical aspects of implementing and optimizing APIs for different use cases.
 
-
-
-API gateway is between client and API service. It can be used identify use, provide the SSL offloading, routing, rate limited
-
-Gateway rote is route the request to different backend service , aggregate is combine the multiple service to single one, we also can put some function in the gateway such as identify the user

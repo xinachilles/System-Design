@@ -1,3 +1,7 @@
 *.json
 *.canvas
 *.DS_Store
+.obsidian/plugins/copy-url-in-preview/main.js
+.obsidian/plugins/obsidian-image-auto-upload-plugin/main.js
+.obsidian/plugins/oz-clear-unused-images/main.js
+.obsidian/plugins/oz-clear-unused-images/styles.css
