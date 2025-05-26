@@ -1,101 +1,71 @@
-# circuit breaker
-
-Created: 2019-10-24 22:01:50 -0600
-
-Modified: 2019-12-12 16:21:14 -0600
 
 ---
 
-if we have any sort of service consumer, that would be either web site or application. Talking remotely to other servicer: we have to do 2 things, we have do availability and responsibility.
+If we have any service consumer, that would be either a website or an application. Talking remotely to other service providers: We have to do two things: we have to be available and responsible.
 
-Availability is mean can I even get the service. When I got the service, I get time to response.
+Availability means I can even get the service. When I get the service, I get time to respond.
 
-The circuit breaker pattern is very similar with the circuit breaker in your home. In other words, it remains does it allow all electricity flow your plans, lights. When there isaissue. When something bad happened. The break immediate happen. It break all electricity out into that home.so that protectdoesn't burn out the site.
+The circuit breaker pattern is very similar to the circuit breaker in your home. In other words, does it allow all electricity to flow through your plans and lights? When there is an issue, when something bad happens, the break immediately happens. It breaks all the electricity into the home so that it doesn't burn out the site.
 
+The circuit breaker in software works the same way between applications and services. Set a circuit breaker. The circuit break continue to monitor the microservices. If everything is healthy in the microservice, the circuit remains closed. When the request was made, for instance, for that trade, the "service consumer "checked that circuit breaker first and said: Breaker, are you closed. Yes. Now I know the microservices are responsive. However, I can make the call when bad things happen to good people. That means microservices become non-responsive. The breaker constantly monitors the microservice and immediately notifies and opens it.
 
+Suppose I want to send a request. I checked the breaker and said: Are you close? No, I am open. An error occurs. I discovered through the circuit breaker that the microservice is not responsive in 10 million seconds. Every client finds out through the circuit breaker that there is an error in the microservice. That circuit breaker still monitors the microservice to say Are you up and running, are you better. Now the microservice has become responsive. The circuit breaker is closed, allowing all the transactions to go through.
 
-The circuit break in software work exact the same way between application and service . set a circuit breaker. The circuit break continue monitor the microservices. If everything health in the microservice, the circuit remain close. When the request made for instance for that trade, the "service consumer " check that circuit break first and said: breaker are you close. Yes. Now I know the microservices is responsive. Now in can to make the call. However, when the bad things happen to the good people. That is mean microservice become no responsive. The breaker constantly monitors the microservice and immediate notify and open
+There are 3 basic types of circuit breakers you might try. 
 
-If I want to send a request. I check the breaker and say are you close. No I am open. And error occurs. I found out through the circuit breaker that microservice is not responsive in 10 million second. Every client find out though the circuit breaker that there is an error in microservice. That circuit break sill monitor the microservice to say are you up on running are you better. Now the microservice is now become responsive. The circuit break is close and allowing all the transaction trough.
+1. Simple heartbeat. It is not very useful for the responsive message, but it is helpful for the ability. They do not work well for the circuit breaker. From the responsive standpoint, it is that heartbeat response, but I do not know the "place trade function."
 
-There are 3 basic type of circuit break you might try. 1 simpleheart beat. It is not very useful for responsive message. It is useful for ability. There are not work well for the circuit break. For the responsive stand point, is that heart beat response but I have no knowledge about the "place trade function "
+2. Send a "transaction or fake transaction, a fake number, a fake bank account or credit number. The circuit break will continue to call the "place trade function" with the fake number. So they can determine the response for the partial function
 
+	The problem with this method is that all the systems, including all downstream systems and the report system, need to know that the number I just posted is fake and cannot be processed. The second problem with that transaction is that we only test a general one-pass through that "place trade." We do not really get an accurate picture of what happens with that( "place trade " function), a certain function.
 
+3. Really user monitor. Which is a better way to determine the health and responsiveness of any given operation: to monitor the health transaction? There is no time out with a circuit breaker; other uses include "trend analysis."
 
-2.send a "" transaction or faker transaction, a fake number, fake bank account or credit number. The circuit break will continue call the "place trade function" with the fake number. So they can determine that responsive for the partial function
+I will go through some numbers, and send for that response time for "trade ", watch what happens
 
-The problem of this way is all the system including alldown streamsystem and report system need know the number I just post in is fake and cannot processed. That lead second problem with that transaction that is we only test general one pass through that "place trade". We not really get the true picture of what happen of that( "place trade " function) certain function
+So the break is closed. We assume the response time we got is 
+2.1 
+1.6 
+1.8 
+2.5 
+1.5 
+1.9 
+2.7 
+3.6 
+4.8 
+5.2 open
 
+Did you see what happened? The trend was significant, going up. Most users do a standard deviation analysis because they all go up and down. But that trend was way past 33 standard deviations. In that case, the circular open means that it is not allowing requests to that microservice.
 
+So, I need to determine how the microservice will become healthy again. That case is called the open state. That means I don't allow any transactions except for a couple.
 
-3. really user monitor. Which is better way to determine that health and responsive of any give operation: to actual monitor the heathy transaction. There is no time out with circuit break other use "trend analysis "
-
-
-
-I will go through some number of which number of send for that response time for "trade " watch what happen
-
-So the break is closed. We assume the responsive time we got is 2.1 1.6 1.82.51.5 1.9 2. 7 3.6 4.8 5.2 open
-
-Did you see what happen. The trend was significant going up. Most user stand deviation analysis because all up set down? But that tread were way pass 33 standard deviation. In that case , the circular open, that it is no allowing request to that microservice.
-
-So I need determine that how the microservice become healthy again. That case is called half open state. That is mean I don't allow any transaction throw except a couple
-
-The state is called half open state. That is means I don't all
-
-
-
-
+The state is called an open state. That means I don't all
 
 A circuit breaker acts as a proxy
 
+Half-Open: A limited number of requests from the application are allowed to pass through and invoke the operation. If these requests are successful, it's assumed that the fault previously causing the failure has been fixed, and the circuit breaker switches to the Closed state (the failure counter is reset). If any request fails, the circuit breaker assumes that the fault is still present, so it reverts to the Open state and restarts the timeout timer to give the system a further period to recover from the failure.
 
-
-Half-Open: A limited number of requests from the application are allowed to pass through and invoke the operation. If these requests are successful, it's assumed that the fault that was previously causing the failure has been fixed and the circuit breaker switches to the Closed state (the failure counter is reset). If any request fails, the circuit breaker assumes that the fault is still present so it reverts back to the Open state and restarts the timeout timer to give the system a further period of time to recover from the failure.
-
-
-
-It can help to maintain the response time of the system by quickly rejecting a request for an operation that's likely to fail, rather than waiting for the operation to time out,
-
+It can help maintain the system's response time by quickly rejecting a request for an operation that's likely to fail rather than waiting for the operation to time out.
 
 
 **circuit breaker 2**
 
-your application use circuit break connect to the service and it call close state. If the circuit is close you are able to connect the outside service. You have a API out there. You circuit break said I am close state. I can connect. then the client sent out the information and get the response
+Your application uses a circuit breaker connected to the service, and it calls the closed state. If the circuit is closed, you can connect to the outside service. You have an API out there. Your circuit breaker said I am in the closed state. I can connect. Then the client sent out the information and got the response.
 
+Now you have made another request. Somehow, the current state is still close. But there is a timeout, and you cannot reach the service anymore. (Some bad thing happened on the service)
 
+What happens is that the state has now changed to open. There is no bridge; the circuit breaker is closed like a bridge connected open right now, and both can go through. Now, it is the open state, rather than calling the service. You responded right away. You know it is closed, you don't need to connect again for now. After a specific time, try to connect the service again. They said OK, the connection runs through, just somehow this thing happened. The connection goes down. It comes back up automatically
 
+And now it's back to the closed state.
 
+When it is half open, it goes back to the closed state. Then you can actually go to communication again.
 
-now you made another request. somehow the current state is still close. but there is a timeout and you cannot reach the service anymore. ( some bad thing happen on the service)
+**When use:**
 
+When you want to prevent the application from trying to invoke a remote service to access a resource if this operation is highly likely to fail
 
+Give the user a better experience, not just loading, give the user a better response to the application
 
-what happen the state now change to open. There is no bridge, circuit break closed like bridge connected open right now and both can go through. now is open state rather calling the service. you response right the way. you know it is closed, you don't need connect again for the time being. After certain amount of time you may think try to connect the service again. They said OK the connection run through just somehow this thing happen. connection goes down. it comes back up automatically
+**When not use**
 
-
-
-and now it back to the close state.
-
-
-
-when it is like half open state then it back to the close state. Then you can actually go to communication again.
-
-
-
-when use:
-
-when you want to prevent application from trying to invoke remote service of access resource if this operation is highly likely to failure
-
-
-
-give user a better experience not just loading loading give a user better response of the application
-
-
-
-when not use
-
-when you need handle access to local private resource application such as in memory data structure
-
-
-
-you don't want to circular break pattern for hash table. .
+You don't want a circular break pattern for the hash table when you need to handle access to a local private resource application, such as an in-memory data structure.
