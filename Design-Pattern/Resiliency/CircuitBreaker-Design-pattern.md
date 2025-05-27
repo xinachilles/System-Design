@@ -1,62 +1,30 @@
-# CircuitBreaker Design pattern
-
-Created: 2018-10-31 00:13:06 -0600
-
-Modified: 2019-06-21 08:58:11 -0600
-
 ---
 
 <https://itnext.io/understand-circuitbreaker-design-pattern-with-simple-practical-example-92a752615b42>
 
+Suppose we have two servers, A and B, in A has two APIs
 
-
-suppose we have two servers A and B, in A has two APIs
-
-
-
-/data which depends on serviceB
+/data that depends on service B
 
 /data2 does not depend on any external service
 
+Without a circuit design pattern
 
+For Service B, the API is returning a 5-second delayed response to a request for the first 5 minutes.
 
-Without circuit design pattern
+Why do we need a circuit breaker?
 
-
-
-for Service B The API is returning a 5 second delayed response to a request for the first 5 minutes.
-
-
-
-Why we need a circuit breaker
-
-In case we have serviceB down, serviceA should still try to recover from this and try to do one of the followings:
-
-
+In case we have service B down, service A should still try to recover from this and try to do one of the following:
 
 Custom fallback: Try to get the same data from some other source. If not possible, use its own cache value.
 
-
-
-Fail fast: If serviceA knows that serviceB is down, there is no point waiting for the timeout and consuming its own resources. It should return ASAP "knowing" that serviceB is down
-
-
+Fail fast: If service A knows that service B is down, there is no point waiting for the timeout and consuming its own resources. It should return ASAP, "knowing" that service B is down
 
 Don't crash: As we saw in this case, serviceA should not have crashed.
 
-
-
 Heal automatic: Periodically check if serviceB is working again.
 
-
-
 Other APIs should work: All other APIs should continue to work.
-
-
-
-
-
-
 
 Closed: The request from the application is routed to the operation. The proxy maintains a count of the number of recent failures, and if the call to the operation is unsuccessful the proxy increments this count.
 
@@ -82,7 +50,6 @@ If these requests are successful, it's assumed that the fault that was previousl
 
 If any request fails, the circuit breaker assumes that the fault is still present so it reverts back to the Open state and restarts the timeout timer to give the system a further period of time to recover from the failure.
 
-![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image1.png){width="5.375in" height="0.4270833333333333in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image2.png){width="4.479166666666667in" height="0.4375in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image3.png){width="4.833333333333333in" height="0.4375in"}
 
 
 
