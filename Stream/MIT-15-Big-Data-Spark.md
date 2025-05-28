@@ -72,7 +72,7 @@ communication here to get from HDFS to the to the responsible worker but after t
 
 
 
-![](../media/Stream-MIT-15-Big-Data-Spark-image1.png){width="5.0in" height="1.6145833333333333in"}
+![](../media/Stream-MIT-15-Big-Data-Spark-image1.png){width="5.0in" height="1.6111111111111112in"}
 
 
 
@@ -148,7 +148,7 @@ and then we can run the distinct because all the given keys are on the same work
 
 
 
-![](../media/Stream-MIT-15-Big-Data-Spark-image2.png){width="5.0in" height="2.6354166666666665in"}
+![](../media/Stream-MIT-15-Big-Data-Spark-image2.png){width="5.0in" height="2.6319444444444446in"}
 
 
 

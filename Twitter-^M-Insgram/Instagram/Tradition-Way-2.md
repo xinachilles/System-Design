@@ -70,5 +70,5 @@ The second is the latency. So the latency because of the fact that if you miss i
 
 
 
-![NFS based Desi n • data bottletteck • t-•tss CDN exeenscve ](../../media/Twitter-^M-Insgram-Instagram-Tradition-Way-2-image1.png){width="10.083333333333334in" height="5.1875in"}
+![NFS based Desi n • data bottletteck • t-•tss CDN exeenscve ](../../media/Twitter-^M-Insgram-Instagram-Tradition-Way-2-image1.png){width="5.0in" height="2.5520833333333335in"}
 

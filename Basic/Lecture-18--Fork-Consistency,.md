@@ -218,7 +218,7 @@ companies know their own certificates, some monitors are run by certificate auth
 
 certificate they didn't issue for one of their customers names, in addition there's some totally third-party monitor systems where you give the third-party monitor your names and yours and your valid certificates and it checks for expected certificates for your names
 
-![つ 0 ↓ 沼 ス つ を 」 ツ び ダ ~ 亠 」 ↓ 80 日 山 ヨ つ ](../media/Basic-Lecture-18--Fork-Consistency,-Certificate-Transparency-image1.png){width="5.0in" height="3.78125in"}
+![つ 0 ↓ 沼 ス つ を 」 ツ び ダ ~ 亠 」 ↓ 80 日 山 ヨ つ ](../media/Basic-Lecture-18--Fork-Consistency,-Certificate-Transparency-image1.png){width="5.0in" height="3.7777777777777777in"}
 
 
 

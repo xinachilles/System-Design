@@ -8,7 +8,7 @@ Modified: 2021-05-29 09:49:26 -0600
 
 
 
-![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1 · 2 理 解 需 求 匹 配 乘 客 和 司 机 (Matching) 预 计 等 待 时 间 (ETA) 高 扩 展 性 ， 海 量 用 户 极 高 可 用 性 ， 随 时 能 打 车 能 乘 车 高 效 性 ， 合 理 匹 配 乘 客 和 司 机 定 价 (Pricing/Surge) ](../../media/Location-Service-Uber-Uber---ACE-image1.png){width="10.083333333333334in" height="5.645833333333333in"}
+![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1 · 2 理 解 需 求 匹 配 乘 客 和 司 机 (Matching) 预 计 等 待 时 间 (ETA) 高 扩 展 性 ， 海 量 用 户 极 高 可 用 性 ， 随 时 能 打 车 能 乘 车 高 效 性 ， 合 理 匹 配 乘 客 和 司 机 定 价 (Pricing/Surge) ](../../media/Location-Service-Uber-Uber---ACE-image1.png){width="5.0in" height="2.78125in"}
 
 There are two type of users in our system 1) Drivers 2) Customers.
 
@@ -55,23 +55,23 @@ Non function requirement
 
 
 
-![假 设 瓶 颈 1 · 3 资 源 估 算 1 M MAU ， 平 均 每 人 每 月 叫 车 5 次 平 均 每 人 每 月 读 取 预 计 等 待 时 间 20 次 平 均 乘 车 时 长 巧 分 钟 每 4 秒 客 户 端 和 服 务 器 同 步 位 置 信 息 # ofOngoing Sessions 位 置 信 息 同 步 QPS 读 取 预 计 等 待 时 间 QPS ](../../media/Location-Service-Uber-Uber---ACE-image2.png){width="10.083333333333334in" height="5.239583333333333in"}
+![假 设 瓶 颈 1 · 3 资 源 估 算 1 M MAU ， 平 均 每 人 每 月 叫 车 5 次 平 均 每 人 每 月 读 取 预 计 等 待 时 间 20 次 平 均 乘 车 时 长 巧 分 钟 每 4 秒 客 户 端 和 服 务 器 同 步 位 置 信 息 # ofOngoing Sessions 位 置 信 息 同 步 QPS 读 取 预 计 等 待 时 间 QPS ](../../media/Location-Service-Uber-Uber---ACE-image2.png){width="5.0in" height="2.5729166666666665in"}
 
 
 
 
 
-![服 务 资 源 1 · 3 资 源 估 算 (cont.) # ofOngoing Sessions 1 M * 5 * 巧 * / （ 30 * 24 * 36 佣 ） 、 ： 170k 位 置 信 息 同 步 QPS 1 闐 M 5 巧 （ 60 / 4 ） / （ 30 24 * 3 ） 、 = 43k 匹 配 服 务 访 问 量 QPS 1 M 20 / （ 24 36 ） 、 = 7 佣 ](../../media/Location-Service-Uber-Uber---ACE-image3.png){width="10.083333333333334in" height="5.65625in"}
+![服 务 资 源 1 · 3 资 源 估 算 (cont.) # ofOngoing Sessions 1 M * 5 * 巧 * / （ 30 * 24 * 36 佣 ） 、 ： 170k 位 置 信 息 同 步 QPS 1 闐 M 5 巧 （ 60 / 4 ） / （ 30 24 * 3 ） 、 = 43k 匹 配 服 务 访 问 量 QPS 1 M 20 / （ 24 36 ） 、 = 7 佣 ](../../media/Location-Service-Uber-Uber---ACE-image3.png){width="5.0in" height="2.78125in"}
 
 
 
 
 
-![0 DriverbyGeohash (RedisSortedSet) DriverLocation 司 机 位 置 缓 存 Sort By TS Geohash DriverID DriverID (Latitude ， Longitude) ](../../media/Location-Service-Uber-Uber---ACE-image4.png){width="10.083333333333334in" height="5.489583333333333in"}
+![0 DriverbyGeohash (RedisSortedSet) DriverLocation 司 机 位 置 缓 存 Sort By TS Geohash DriverID DriverID (Latitude ， Longitude) ](../../media/Location-Service-Uber-Uber---ACE-image4.png){width="5.0in" height="2.6979166666666665in"}
 
 
 
-![1.4 系 统 设 计 图 到 达 时 间 预 测 匹 配 乘 客 和 司 机 (ETA) 定 价 服 务 乘 车 服 务 ](../../media/Location-Service-Uber-Uber---ACE-image5.png){width="10.083333333333334in" height="4.864583333333333in"}
+![1.4 系 统 设 计 图 到 达 时 间 预 测 匹 配 乘 客 和 司 机 (ETA) 定 价 服 务 乘 车 服 务 ](../../media/Location-Service-Uber-Uber---ACE-image5.png){width="5.0in" height="2.3854166666666665in"}
 
 
 
@@ -87,7 +87,7 @@ System has 4 part
 
 
 
-![0 @以Q队融斌，尢` 乜 c " Firewall @ 爱 思 版 权 所 有 禾 经 允 许 请 勿 录 制 或 传 播 acecodei ntervie ](../../media/Location-Service-Uber-Uber---ACE-image6.png){width="10.083333333333334in" height="6.072916666666667in"}
+![0 @以Q队融斌，尢` 乜 c " Firewall @ 爱 思 版 权 所 有 禾 经 允 许 请 勿 录 制 或 传 播 acecodei ntervie ](../../media/Location-Service-Uber-Uber---ACE-image6.png){width="5.0in" height="2.9895833333333335in"}
 
 
 
@@ -109,7 +109,7 @@ Detail:
 
 
 
-![思 考 题 当 司 机 穿 过 Geohash 界 限 时 如 何 删 除 前 一 个 Geohash 中 的 司 机 坐 标 ？ 不 删 除 使 用 另 一 个 Source of Truth 来 表 达 司 机 的 真 实 位 置 ](../../media/Location-Service-Uber-Uber---ACE-image7.png){width="10.083333333333334in" height="9.78125in"}
+![思 考 题 当 司 机 穿 过 Geohash 界 限 时 如 何 删 除 前 一 个 Geohash 中 的 司 机 坐 标 ？ 不 删 除 使 用 另 一 个 Source of Truth 来 表 达 司 机 的 真 实 位 置 ](../../media/Location-Service-Uber-Uber---ACE-image7.png){width="5.0in" height="4.84375in"}
 
 
 
@@ -119,7 +119,7 @@ Detail:
 
 
 
-![合 理 的 位 置 信 息 形 式 DriverbyGeohash (Redis Set) DriverLocation Geohash Driver ID DriverID ( Lati , Longitude) ](../../media/Location-Service-Uber-Uber---ACE-image8.png){width="10.083333333333334in" height="5.729166666666667in"}
+![合 理 的 位 置 信 息 形 式 DriverbyGeohash (Redis Set) DriverLocation Geohash Driver ID DriverID ( Lati , Longitude) ](../../media/Location-Service-Uber-Uber---ACE-image8.png){width="5.0in" height="2.8125in"}
 
 
 
@@ -133,7 +133,7 @@ When driver update his location 1 update driver location 2.. 3..
 
 
 
-![司 机 位 置 更 新 操 作 更 新 Driver Location 更 新 Driver by Geohash 删 除 超 过 30 秒 以 前 的 Driver by Geohash Entry ](../../media/Location-Service-Uber-Uber---ACE-image9.png){width="10.083333333333334in" height="5.666666666666667in"}
+![司 机 位 置 更 新 操 作 更 新 Driver Location 更 新 Driver by Geohash 删 除 超 过 30 秒 以 前 的 Driver by Geohash Entry ](../../media/Location-Service-Uber-Uber---ACE-image9.png){width="5.0in" height="2.7916666666666665in"}
 
 2.  How to find the driver
 
@@ -148,7 +148,7 @@ When driver update his location 1 update driver location 2.. 3..
 
 
 
-![第 三 步 找 到 合 适 的 司 机 0 计 算 ETA 批 处 理 一 系 列 匹 配 要 求 ](../../media/Location-Service-Uber-Uber---ACE-image10.png){width="10.083333333333334in" height="7.427083333333333in"}
+![第 三 步 找 到 合 适 的 司 机 0 计 算 ETA 批 处 理 一 系 列 匹 配 要 求 ](../../media/Location-Service-Uber-Uber---ACE-image10.png){width="5.0in" height="3.6666666666666665in"}
 
 Calculated the ETA with multiple customer and multiple driver together
 
@@ -156,7 +156,7 @@ Calculated the ETA with multiple customer and multiple driver together
 
 
 
-![e--- 0750 ](../../media/Location-Service-Uber-Uber---ACE-image11.png){width="10.083333333333334in" height="5.083333333333333in"}
+![e--- 0750 ](../../media/Location-Service-Uber-Uber---ACE-image11.png){width="5.0in" height="2.4895833333333335in"}
 
 [Each node is communication with gossip, when driver first will send his information to any node and node will forward the information to destination node]{.mark}
 
@@ -166,7 +166,7 @@ Each node will have a hash range, the node will just for this range of driver in
 
 
 
-![一 致 性 ？ Best-effort 没 有 备 份 宕 机 即 丢 失 数 据 不 保 证 一 致 性 ](../../media/Location-Service-Uber-Uber---ACE-image12.png){width="10.083333333333334in" height="4.84375in"}
+![一 致 性 ？ Best-effort 没 有 备 份 宕 机 即 丢 失 数 据 不 保 证 一 致 性 ](../../media/Location-Service-Uber-Uber---ACE-image12.png){width="5.0in" height="2.375in"}
 
 
 
@@ -176,7 +176,7 @@ Consistency --- best effort, not backup --
 
 
 
-![Trip Table BASE trip_uuidl STATUS NOTES FARE ADJS. ](../../media/Location-Service-Uber-Uber---ACE-image13.png){width="10.083333333333334in" height="6.21875in"}
+![Trip Table BASE trip_uuidl STATUS NOTES FARE ADJS. ](../../media/Location-Service-Uber-Uber---ACE-image13.png){width="5.0in" height="3.0625in"}
 
 
 
@@ -196,25 +196,17 @@ API -- websocket
 
 
 
-![SEND destination : /vl/locations "user uuid": 123e4567-e89b-12d3-a456-426614174eee, "lat": 23 2 "long": -123.2, "driver mode": false ](../../media/Location-Service-Uber-Uber---ACE-image14.png){width="10.083333333333334in" height="8.916666666666666in"}
+![SEND destination : /vl/locations "user uuid": 123e4567-e89b-12d3-a456-426614174eee, "lat": 23 2 "long": -123.2, "driver mode": false ](../../media/Location-Service-Uber-Uber---ACE-image14.png){width="5.0in" height="4.416666666666667in"}
 
 
 
 
 
-![Home Page Response . 4, "long 23.3 "drivers " : {"lat": {"lat": 23 , "long -122.2}, 't: -122.1}, ](../../media/Location-Service-Uber-Uber---ACE-image15.png){width="10.083333333333334in" height="8.177083333333334in"}
+![Home Page Response . 4, "long 23.3 "drivers " : {"lat": {"lat": 23 , "long -122.2}, 't: -122.1}, ](../../media/Location-Service-Uber-Uber---ACE-image15.png){width="5.0in" height="4.041666666666667in"}
 
 
 
-![SEND destination : /vl/match "user uuid": 123e4567-e89b-12d3-a456-426614174ØOØ, "pickup_lat": 23 2 "pickup_long . -123.2, "dropoff_lat": 23 1 "dropoff_long ": -123.1, ](../../media/Location-Service-Uber-Uber---ACE-image16.png){width="10.083333333333334in" height="8.59375in"}
-
-
-
-
-
-
-
-![服 务 器 存 储 1 · 8 扩 展 性 Websocket ， Stateless Service 分 布 式 缓 存 ， 分 布 式 数 据 库 ](../../media/Location-Service-Uber-Uber---ACE-image17.png){width="10.083333333333334in" height="5.625in"}
+![SEND destination : /vl/match "user uuid": 123e4567-e89b-12d3-a456-426614174ØOØ, "pickup_lat": 23 2 "pickup_long . -123.2, "dropoff_lat": 23 1 "dropoff_long ": -123.1, ](../../media/Location-Service-Uber-Uber---ACE-image16.png){width="5.0in" height="4.25in"}
 
 
 
@@ -222,13 +214,21 @@ API -- websocket
 
 
 
+![服 务 器 存 储 1 · 8 扩 展 性 Websocket ， Stateless Service 分 布 式 缓 存 ， 分 布 式 数 据 库 ](../../media/Location-Service-Uber-Uber---ACE-image17.png){width="5.0in" height="2.7604166666666665in"}
 
 
-![服 务 器 存 储 1 · 9 容 灾 设 计 使 用 客 户 端 恢 复 服 务 器 状 态 Replication ()B ， Cache) ](../../media/Location-Service-Uber-Uber---ACE-image18.png){width="10.083333333333334in" height="5.59375in"}
 
 
 
-![Availability 1 · 10 监 控 警 报 Request Latency Cache Capacity ](../../media/Location-Service-Uber-Uber---ACE-image19.png){width="10.083333333333334in" height="4.854166666666667in"}
+
+
+
+
+![服 务 器 存 储 1 · 9 容 灾 设 计 使 用 客 户 端 恢 复 服 务 器 状 态 Replication ()B ， Cache) ](../../media/Location-Service-Uber-Uber---ACE-image18.png){width="5.0in" height="2.75in"}
+
+
+
+![Availability 1 · 10 监 控 警 报 Request Latency Cache Capacity ](../../media/Location-Service-Uber-Uber---ACE-image19.png){width="5.0in" height="2.3854166666666665in"}
 
 
 
@@ -238,11 +238,11 @@ Option: surge 1.2 price
 
 
 
-![](../../media/Location-Service-Uber-Uber---ACE-image20.png){width="10.083333333333334in" height="10.208333333333334in"}
+![](../../media/Location-Service-Uber-Uber---ACE-image20.png){width="5.0in" height="5.052083333333333in"}
 
 
 
-![价 格 算 法 上 车 区 域 的 司 机 数 上 车 区 域 的 乘 客 数 上 下 车 位 置 ](../../media/Location-Service-Uber-Uber---ACE-image21.png){width="10.083333333333334in" height="5.541666666666667in"}
+![价 格 算 法 上 车 区 域 的 司 机 数 上 车 区 域 的 乘 客 数 上 下 车 位 置 ](../../media/Location-Service-Uber-Uber---ACE-image21.png){width="5.0in" height="2.71875in"}
 
 
 
@@ -254,11 +254,11 @@ Some tradeoff
 
 
 
-![最 简 单 的 位 置 信 息 形 式 Region Driver ID Latitude Longitude ](../../media/Location-Service-Uber-Uber---ACE-image22.png){width="10.083333333333334in" height="5.020833333333333in"}
+![最 简 单 的 位 置 信 息 形 式 Region Driver ID Latitude Longitude ](../../media/Location-Service-Uber-Uber---ACE-image22.png){width="5.0in" height="2.4583333333333335in"}
 
 
 
-![思 考 题 这 个 简 单 的 位 置 信 息 形 式 有 什 么 问 题 ？ 已 经 下 线 的 司 机 无 法 删 除 区 域 无 法 Shard ， 需 要 进 一 步 细 分 司 机 穿 过 两 个 区 域 时 无 法 删 除 上 一 个 区 域 里 的 信 息 ](../../media/Location-Service-Uber-Uber---ACE-image23.png){width="10.083333333333334in" height="9.0625in"}
+![思 考 题 这 个 简 单 的 位 置 信 息 形 式 有 什 么 问 题 ？ 已 经 下 线 的 司 机 无 法 删 除 区 域 无 法 Shard ， 需 要 进 一 步 细 分 司 机 穿 过 两 个 区 域 时 无 法 删 除 上 一 个 区 域 里 的 信 息 ](../../media/Location-Service-Uber-Uber---ACE-image23.png){width="5.0in" height="4.489583333333333in"}
 
 Region 太大....
 

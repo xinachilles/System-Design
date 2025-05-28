@@ -562,7 +562,7 @@ For more information about AWS Training and Certification, see *<https://aws.ama
 
 
 
-![](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image3.png){width="3.1354166666666665in" height="13.083333333333334in"}
+![](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image3.png){width="1.5208333333333333in" height="6.5in"}
 
 
 

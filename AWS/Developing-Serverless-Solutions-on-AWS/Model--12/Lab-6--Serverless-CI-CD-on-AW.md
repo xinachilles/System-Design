@@ -24,7 +24,7 @@ To support these types of small, frequent updates, you would like to automate th
 
 The following diagram shows the architecture components that have been or will be deployed in this lab.
 
-![AWS architecture diagram showing the components of the serverless architecture that have or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image1.png){width="13.083333333333334in" height="8.739583333333334in"}
+![AWS architecture diagram showing the components of the serverless architecture that have or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image1.png){width="6.5in" height="4.322916666666667in"}
 
 This lab uses the following services:
 
@@ -80,7 +80,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image2.png){width="13.083333333333334in" height="2.8333333333333335in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image2.png){width="6.5in" height="1.375in"}
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -713,7 +713,7 @@ Type: Canary10Percent5Minutes
 
 **Note** The indentation for the code snippet above should appear as follows when pasted into the **template.yaml** file:
 
-![Image of getBookmark function](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image3.png){width="9.25in" height="10.125in"}
+![Image of getBookmark function](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image3.png){width="4.583333333333333in" height="5.020833333333333in"}
 
 1.  Save the file.
 
@@ -774,7 +774,7 @@ Value: !GetAtt getBookmark.Version.Version
 
 **Note** It is important to maintain the indentation when inserting the new code. The indentation should look like the following under the **getBookmark** function definition:
 
-![Image of Canary Alarm](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image4.png){width="11.583333333333334in" height="10.708333333333334in"}
+![Image of Canary Alarm](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image4.png){width="5.75in" height="5.3125in"}
 
 1.  In the **template.yaml** file, copy and paste the following lines at line 121 under the **DeploymentPreference** section of the **getBookmark** function definition:
 
@@ -783,7 +783,7 @@ Alarms:
 
 **Note** It is important to maintain the indentation when inserting the new lines. The indentation should align with the **DeploymentPreference** section as follows:
 
-![Image of Alarm](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image5.png){width="10.0625in" height="10.604166666666666in"}
+![Image of Alarm](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image5.png){width="4.989583333333333in" height="5.25in"}
 
 1.  In the **template.yaml** file, in the **api** section, find the following **uri** at line 46 for the **/bookmarks/{id}** get method:
 
@@ -928,7 +928,7 @@ Follow these steps to close the console and end your lab.
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image6.png){width="0.84375in" height="13.083333333333334in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image6.png){width="0.375in" height="6.5in"}
 
 
 

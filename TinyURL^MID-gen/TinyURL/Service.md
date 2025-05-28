@@ -6,7 +6,7 @@ Modified: 2017-10-09 16:40:26 -0600
 
 ---
 
-![](../../media/TinyURL^MID-gen-TinyURL-Service-image1.png){width="10.083333333333334in" height="5.739583333333333in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Service-image1.png){width="5.0in" height="2.8229166666666665in"}
 
 
 

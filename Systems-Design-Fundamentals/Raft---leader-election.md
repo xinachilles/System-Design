@@ -402,7 +402,7 @@ if we just follow the figure 2 rules the log just keeps on growing may end up yo
 
 the log looks like
 
-![`= 1 넣=7 ](../media/Systems-Design-Fundamentals-Raft---leader-election-image1.png){width="10.083333333333334in" height="4.208333333333333in"}
+![`= 1 넣=7 ](../media/Systems-Design-Fundamentals-Raft---leader-election-image1.png){width="5.0in" height="2.0520833333333335in"}
 
 
 
@@ -434,7 +434,7 @@ index 3 ,with the snapshot in hand, if we persist it to disk rats persistent to 
 
 snapshot as of a certain log index plus the log after that index as long as that's persisted to disk,we never going to need to log before that and so this is what raft does the raft ask the application for snapshot gets the snapshot saves it to disk with the log after that it just throws away this log here
 
-![](../media/Systems-Design-Fundamentals-Raft---leader-election-image2.png){width="10.083333333333334in" height="5.885416666666667in"}
+![](../media/Systems-Design-Fundamentals-Raft---leader-election-image2.png){width="5.0in" height="2.8958333333333335in"}
 
 
 

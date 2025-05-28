@@ -8,11 +8,11 @@ Modified: 2021-04-25 19:17:49 -0600
 
 
 
-![operational transformation Access Service client Gateway Load balancer client Websocket service Doc DB Log DB Document Service ](../../media/Memeory-Google-Doc-Summary-image1.png){width="10.083333333333334in" height="5.625in"}
+![operational transformation Access Service client Gateway Load balancer client Websocket service Doc DB Log DB Document Service ](../../media/Memeory-Google-Doc-Summary-image1.png){width="5.0in" height="2.7708333333333335in"}
 
 
 
-![DPS7W.14 OSPM e__ *vano 70vxyas a.po) ](../../media/Memeory-Google-Doc-Summary-image2.png){width="10.083333333333334in" height="4.59375in"}
+![DPS7W.14 OSPM e__ *vano 70vxyas a.po) ](../../media/Memeory-Google-Doc-Summary-image2.png){width="5.0in" height="2.25in"}
 
 [Feature]{.mark}
 
@@ -60,7 +60,7 @@ Peek QPS
 
 Storage:
 
-![服 务 资 源 存 储 资 源 # ofOngoing Sessions 1 M * 10 ％ （ 假 设 10 ％ 的 DAU 保 持 长 连 接 ） ： 10M 1 M 5 * 1 / （ 24 3 ） 、 = 580k 文 档 存 储 1 佣 M * 100KB = IOTB ](../../media/Memeory-Google-Doc-Summary-image3.png){width="10.083333333333334in" height="2.9791666666666665in"}
+![服 务 资 源 存 储 资 源 # ofOngoing Sessions 1 M * 10 ％ （ 假 设 10 ％ 的 DAU 保 持 长 连 接 ） ： 10M 1 M 5 * 1 / （ 24 3 ） 、 = 580k 文 档 存 储 1 佣 M * 100KB = IOTB ](../../media/Memeory-Google-Doc-Summary-image3.png){width="5.0in" height="1.4479166666666667in"}
 
 
 
@@ -103,10 +103,10 @@ For this edit, you can **insert** or **delete** text characters. Each character 
 
 [Operation table :]{.mark}
 
-![Primary Key -> (Document ID, Timestamp) Base Version Operation ID Document ID Operation ID Timestamp ](../../media/Memeory-Google-Doc-Summary-image4.png){width="10.083333333333334in" height="2.9375in"}
+![Primary Key -> (Document ID, Timestamp) Base Version Operation ID Document ID Operation ID Timestamp ](../../media/Memeory-Google-Doc-Summary-image4.png){width="5.0in" height="1.4270833333333333in"}
 
 7.  Document table
-8.  ![Document ID Content ](../../media/Memeory-Google-Doc-Summary-image5.png){width="10.083333333333334in" height="2.4166666666666665in"}
+8.  ![Document ID Content ](../../media/Memeory-Google-Doc-Summary-image5.png){width="5.0in" height="1.15625in"}
 9.  The current state of the document as of the last processed change. ( document id 可以有version number)
 
 
@@ -183,7 +183,7 @@ If client A has multiple pending changes on the client side, it can merge the ch
 
 Only the server needs to be aware or remember of the document's history and only the clients need to be aware of uncommitted changes
 
-![@ o.cecodeld-ecvìQoJ. Se,$ve.m @r./Siçt stbd•e.- PocutvIe.4a5& S ecvlc-.e-- Ufonou.t version ](../../media/Memeory-Google-Doc-Summary-image6.png){width="10.083333333333334in" height="4.09375in"}
+![@ o.cecodeld-ecvìQoJ. Se,$ve.m @r./Siçt stbd•e.- PocutvIe.4a5& S ecvlc-.e-- Ufonou.t version ](../../media/Memeory-Google-Doc-Summary-image6.png){width="5.0in" height="2.0in"}
 
 1.  Client edit the doc
 2.  Push the change to Q
@@ -265,7 +265,7 @@ P2p
 
 API
 
-![Operations SEND destination: /operations "document id" : 123, "user id": 456, "base version id": "operations" • "operation_type": "insert" , "pos " • "char": " a" ](../../media/Memeory-Google-Doc-Summary-image7.png){width="10.083333333333334in" height="9.364583333333334in"}
+![Operations SEND destination: /operations "document id" : 123, "user id": 456, "base version id": "operations" • "operation_type": "insert" , "pos " • "char": " a" ](../../media/Memeory-Google-Doc-Summary-image7.png){width="5.0in" height="4.635416666666667in"}
 
 
 

@@ -6,7 +6,7 @@ Modified: 2021-04-27 14:34:29 -0600
 
 ---
 
-![quad tree Geo service Gateway Load balancer User Blender cache POI DB Service Gateway Load balancer Owner In Index services Quadtree code -> loadcation id ](../../media/Location-Service-Yelp-Summary-3-image1.png){width="10.083333333333334in" height="3.9375in"}
+![quad tree Geo service Gateway Load balancer User Blender cache POI DB Service Gateway Load balancer Owner In Index services Quadtree code -> loadcation id ](../../media/Location-Service-Yelp-Summary-3-image1.png){width="5.0in" height="1.9270833333333333in"}
 
 
 

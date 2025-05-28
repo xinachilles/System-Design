@@ -74,7 +74,7 @@ we also can use multiple nginx and using Round Robin DNS to distribute different
 
 
 
-![Scale 一 一 如 何 扩 展 ？ · 什 么 时 候 需 要 多 台 数 据 库 服 务 器 ？ · Cache 资 源 不 够 · 写 操 作 越 来 越 多 ． 越 来 越 多 的 请 求 无 法 通 过 Cache 满 足 · 增 加 多 台 数 据 库 服 务 器 可 以 优 化 什 么 ？ ， 解 决 " 存 不 下 " 的 问 题 一 一 Storage 的 角 度 · 解 决 " 忙 不 过 " 的 问 题 ---QPS 的 角 度 · Tiny URL 主 要 是 什 么 问 题 ？ 如 何 将 数 据 分 配 到 多 台 机 器 ？ ](../media/Basic-CAP-image1.png){width="5.0in" height="3.78125in"}
+![Scale 一 一 如 何 扩 展 ？ · 什 么 时 候 需 要 多 台 数 据 库 服 务 器 ？ · Cache 资 源 不 够 · 写 操 作 越 来 越 多 ． 越 来 越 多 的 请 求 无 法 通 过 Cache 满 足 · 增 加 多 台 数 据 库 服 务 器 可 以 优 化 什 么 ？ ， 解 决 " 存 不 下 " 的 问 题 一 一 Storage 的 角 度 · 解 决 " 忙 不 过 " 的 问 题 ---QPS 的 角 度 · Tiny URL 主 要 是 什 么 问 题 ？ 如 何 将 数 据 分 配 到 多 台 机 器 ？ ](../media/Basic-CAP-image1.png){width="5.0in" height="3.7777777777777777in"}
 
 
 

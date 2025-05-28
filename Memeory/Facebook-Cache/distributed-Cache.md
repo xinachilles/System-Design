@@ -20,7 +20,7 @@ Memcache clients use a sliding window mechanism to control the rate of requests 
 
 
 
-![Region (Master) Front•End Clusters Web Server M e m cache Storage Cluster (Master) Region (Slave) Fm nt•E nd C I usters Web Server Mencache Cluster Figure 2: Overall architecture ](../../media/Memeory-Facebook-Cache-distributed-Cache-image1.png){width="7.5in" height="5.9375in"}
+![Region (Master) Front•End Clusters Web Server M e m cache Storage Cluster (Master) Region (Slave) Fm nt•E nd C I usters Web Server Mencache Cluster Figure 2: Overall architecture ](../../media/Memeory-Facebook-Cache-distributed-Cache-image1.png){width="3.6979166666666665in" height="2.9166666666666665in"}
 
 
 
@@ -52,11 +52,11 @@ When a memcached client receives no response to its get request, the client assu
 
 one Storage cluster(houses backing store) and multiple frontend clusters(houses web server and memcache) are combined into a region; mcsqueal, are deployed on each database which parse the queries, extract and group delete statements and broadcast them to all the front end cluster in the region. The batched delete operations are sent to**mcrouter**instances in each frontend cluster, which then unpack the individual deletes and route them to the concerned Memcache server.
 
-![M crouter _ e Se Ne Commit ](../../media/Memeory-Facebook-Cache-distributed-Cache-image2.png){width="8.270833333333334in" height="4.4375in"}
+![M crouter _ e Se Ne Commit ](../../media/Memeory-Facebook-Cache-distributed-Cache-image2.png){width="4.09375in" height="2.1666666666666665in"}
 
 
 
-![Databases invalidate caches cluster n ](../../media/Memeory-Facebook-Cache-distributed-Cache-image3.png){width="8.9375in" height="5.020833333333333in"}
+![Databases invalidate caches cluster n ](../../media/Memeory-Facebook-Cache-distributed-Cache-image3.png){width="4.427083333333333in" height="2.46875in"}
 
 
 
@@ -88,7 +88,7 @@ Clusters comprising a storage cluster and several front end clusters are deploye
 
 The presence of a marker indicates that data in the replica is stale and the query is redirected to the master region. When a webserver updates a key*k*, it sets a remote marker*rk*in the region, performs the write to the master database having key*k*and deletes*k*in the local cluster. When it tries to read*k*next time, it will experience a cache miss, will check if*rk*exists and will redirect its query to the master cluster. Had*rk*not been set, the query would have gone to the local cluster itself. Here latency is introduced to make sure most updated data is read.
 
-![Remote markers Set a special flag that indicates whether a race is likely Read miss path: If marker set read from master DB else read from replica DB Web Set RepliQ ](../../media/Memeory-Facebook-Cache-distributed-Cache-image4.png){width="9.520833333333334in" height="7.458333333333333in"}
+![Remote markers Set a special flag that indicates whether a race is likely Read miss path: If marker set read from master DB else read from replica DB Web Set RepliQ ](../../media/Memeory-Facebook-Cache-distributed-Cache-image4.png){width="4.71875in" height="3.6875in"}
 
 
 

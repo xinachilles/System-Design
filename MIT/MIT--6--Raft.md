@@ -212,7 +212,7 @@ when the leader execute it and reply yes to the client
 
 
 
-![5 Z ](../media/MIT-MIT--6--Raft-image3.png){width="2.7708333333333335in" height="1.1770833333333333in"}
+![5 Z ](../media/MIT-MIT--6--Raft-image3.png){width="2.7708333333333335in" height="1.1736111111111112in"}
 
 
 
@@ -778,7 +778,7 @@ if we just follow the figure 2 rules the log just keeps on growing may end up yo
 
 the log looks like
 
-![`= 1 넣=7 ](../media/MIT-MIT--6--Raft-image4.png){width="2.7708333333333335in" height="1.1354166666666667in"}
+![`= 1 넣=7 ](../media/MIT-MIT--6--Raft-image4.png){width="2.7708333333333335in" height="1.1319444444444444in"}
 
 
 

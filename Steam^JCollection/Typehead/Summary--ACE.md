@@ -6,7 +6,7 @@ Modified: 2021-05-25 23:09:25 -0600
 
 ---
 
-![AC 老 功 能 性 需 求 非 功 能 性 非 需 求 1 ． 2 理 解 需 求 基 于 流 行 关 键 词 进 行 补 全 （ 搜 索 次 数 越 多 ， 搜 索 越 新 ， 越 流 行 ） 补 全 选 项 至 多 10 个 用 户 体 验 极 低 延 迟 ， 延 迟 低 于 本 地 打 字 速 度 自 动 补 全 基 于 的 数 据 更 新 允 许 一 小 时 的 延 迟 可 靠 性 ， 补 全 的 关 键 词 的 流 行 程 度 为 前 十 高 扩 展 性 ， 亿 级 DAU 拼 写 检 查 ， 非 英 文 支 持 ， 个 性 化 补 全 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image1.png){width="10.083333333333334in" height="6.229166666666667in"}
+![AC 老 功 能 性 需 求 非 功 能 性 非 需 求 1 ． 2 理 解 需 求 基 于 流 行 关 键 词 进 行 补 全 （ 搜 索 次 数 越 多 ， 搜 索 越 新 ， 越 流 行 ） 补 全 选 项 至 多 10 个 用 户 体 验 极 低 延 迟 ， 延 迟 低 于 本 地 打 字 速 度 自 动 补 全 基 于 的 数 据 更 新 允 许 一 小 时 的 延 迟 可 靠 性 ， 补 全 的 关 键 词 的 流 行 程 度 为 前 十 高 扩 展 性 ， 亿 级 DAU 拼 写 检 查 ， 非 英 文 支 持 ， 个 性 化 补 全 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image1.png){width="5.0in" height="3.0625in"}
 
 **[Function Requirement]{.mark}**
 
@@ -44,13 +44,13 @@ The popularity should be update every hour
 
 
 
-![假 设 瓶 颈 服 务 资 源 1 ． 3 资 源 估 算 IBDAU 每 人 每 天 平 均 进 行 10 次 搜 索 每 次 搜 索 发 出 5 次 补 全 请 求 读 写 QPS 读 QPS 一 1B 5 / （ 24 36 闐 ） 、 一 Ok 写 QPS 一 0 / （ 24 36 闐 ） 、 = 120k ](../../media/Steam^JCollection-Typehead-Summary--ACE-image2.png){width="10.083333333333334in" height="5.864583333333333in"}
+![假 设 瓶 颈 服 务 资 源 1 ． 3 资 源 估 算 IBDAU 每 人 每 天 平 均 进 行 10 次 搜 索 每 次 搜 索 发 出 5 次 补 全 请 求 读 写 QPS 读 QPS 一 1B 5 / （ 24 36 闐 ） 、 一 Ok 写 QPS 一 0 / （ 24 36 闐 ） 、 = 120k ](../../media/Steam^JCollection-Typehead-Summary--ACE-image2.png){width="5.0in" height="2.8854166666666665in"}
 
-![0 关 键 词 采 集 计 数 数 据 流 补 全 预 处 理 处 理 补 全 请 求 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image3.png){width="10.083333333333334in" height="6.427083333333333in"}
+![0 关 键 词 采 集 计 数 数 据 流 补 全 预 处 理 处 理 补 全 请 求 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image3.png){width="5.0in" height="3.1666666666666665in"}
 
 
 
-![e- *asa vpo--oS qac quo @ 1/1'D-noaS ](../../media/Steam^JCollection-Typehead-Summary--ACE-image4.png){width="10.083333333333334in" height="4.427083333333333in"}
+![e- *asa vpo--oS qac quo @ 1/1'D-noaS ](../../media/Steam^JCollection-Typehead-Summary--ACE-image4.png){width="5.0in" height="2.1666666666666665in"}
 
 
 
@@ -68,7 +68,7 @@ The popularity should be update every hour
 
 
 
-![思 考 题 关 键 词 计 数 选 择 stream Processing 还 是 M 叩 R e ？ 根 据 实 时 性 要 求 ， 选 择 MapReduce ](../../media/Steam^JCollection-Typehead-Summary--ACE-image5.png){width="10.083333333333334in" height="7.854166666666667in"}
+![思 考 题 关 键 词 计 数 选 择 stream Processing 还 是 M 叩 R e ？ 根 据 实 时 性 要 求 ， 选 择 MapReduce ](../../media/Steam^JCollection-Typehead-Summary--ACE-image5.png){width="5.0in" height="3.875in"}
 
 
 
@@ -76,7 +76,7 @@ The popularity should be update every hour
 
 
 
-![关 键 词 采 集 计 数 搜 索 关 键 词 MapReduce 进 Kafka 消 息 发 出 行 计 数 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image6.png){width="10.083333333333334in" height="6.010416666666667in"}
+![关 键 词 采 集 计 数 搜 索 关 键 词 MapReduce 进 Kafka 消 息 发 出 行 计 数 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image6.png){width="5.0in" height="2.9583333333333335in"}
 
 
 
@@ -107,7 +107,7 @@ Keyword/prefix word -> top10 ... A list of top 10 { word/prefix word , score }
 
 
 
-![流 行 指 数 计 算 对 于 每 一 个 关 键 词 新 流 行 指 数 ： 旧 流 行 指 数 * 0 · 99 + 一 分 钟 内 的 访 问 次 数 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image7.png){width="10.083333333333334in" height="4.541666666666667in"}
+![流 行 指 数 计 算 对 于 每 一 个 关 键 词 新 流 行 指 数 ： 旧 流 行 指 数 * 0 · 99 + 一 分 钟 内 的 访 问 次 数 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image7.png){width="5.0in" height="2.21875in"}
 
 
 
@@ -127,7 +127,7 @@ Trie solution -- we can build the trie from leaf to root, base on {word, score }
 
 
 
-![* some scores omitted for presentation purposes root c (car: 30, [cold, coin, cod, [car, cart J* car cart ca [cart] * : cart: 10, cat :901 cat cod cart. car) * co coi coin cat, col cold ](../../media/Steam^JCollection-Typehead-Summary--ACE-image8.png){width="10.083333333333334in" height="6.34375in"}
+![* some scores omitted for presentation purposes root c (car: 30, [cold, coin, cod, [car, cart J* car cart ca [cart] * : cart: 10, cat :901 cat cod cart. car) * co coi coin cat, col cold ](../../media/Steam^JCollection-Typehead-Summary--ACE-image8.png){width="5.0in" height="3.125in"}
 
 
 
@@ -137,13 +137,13 @@ Each node has top 10 node for this prefix
 
 [Hash table solution]{.mark}
 
-![](../../media/Steam^JCollection-Typehead-Summary--ACE-image9.png){width="10.083333333333334in" height="11.708333333333334in"}
+![](../../media/Steam^JCollection-Typehead-Summary--ACE-image9.png){width="5.0in" height="5.802083333333333in"}
 
 
 
 
 
-![Trie vs HashTab1e Trie Hash Table Read 0(1) Disk Usage Less More Distributed System Custom Distributed Cache ](../../media/Steam^JCollection-Typehead-Summary--ACE-image10.png){width="10.083333333333334in" height="5.510416666666667in"}
+![Trie vs HashTab1e Trie Hash Table Read 0(1) Disk Usage Less More Distributed System Custom Distributed Cache ](../../media/Steam^JCollection-Typehead-Summary--ACE-image10.png){width="5.0in" height="2.7083333333333335in"}
 
 Trie solution Is not easy sharding, hash table has distributed cache solution
 
@@ -181,7 +181,7 @@ For hot word--- we can user master slaver structure
 
 
 
-![思 考 题 用 户 每 打 一 个 字 母 都 发 一 个 Request 吗 ？ 出 现 短 暂 停 顿 时 预 加 载 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image11.png){width="10.083333333333334in" height="9.114583333333334in"}
+![思 考 题 用 户 每 打 一 个 字 母 都 发 一 个 Request 吗 ？ 出 现 短 暂 停 顿 时 预 加 载 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image11.png){width="5.0in" height="4.510416666666667in"}
 
 
 
@@ -189,29 +189,29 @@ For hot word--- we can user master slaver structure
 
 
 
-![Autocomplete (Redis) Prefix Top Ten Popular Autocomplete ](../../media/Steam^JCollection-Typehead-Summary--ACE-image12.png){width="10.083333333333334in" height="5.354166666666667in"}
+![Autocomplete (Redis) Prefix Top Ten Popular Autocomplete ](../../media/Steam^JCollection-Typehead-Summary--ACE-image12.png){width="5.0in" height="2.6354166666666665in"}
 
 
 
-![Autocomplete // Request GET /vl/autocomplete?prefix=th // Response keywords: [ "thank" , "thing" , prefetch: { "thea" : "theatre" , ](../../media/Steam^JCollection-Typehead-Summary--ACE-image13.png){width="10.083333333333334in" height="11.489583333333334in"}
-
-
-
-
-
-
-
-![服 务 器 存 储 1.8 扩 展 性 Kafka Event Bus ， MapReduce 分 布 式 缓 存 ， 分 布 式 数 据 库 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image14.png){width="10.083333333333334in" height="5.458333333333333in"}
+![Autocomplete // Request GET /vl/autocomplete?prefix=th // Response keywords: [ "thank" , "thing" , prefetch: { "thea" : "theatre" , ](../../media/Steam^JCollection-Typehead-Summary--ACE-image13.png){width="5.0in" height="5.697916666666667in"}
 
 
 
 
 
-![Autocomplete Latency 1.10 Data Update Cache Capacity Latency ](../../media/Steam^JCollection-Typehead-Summary--ACE-image15.png){width="10.083333333333334in" height="5.760416666666667in"}
+
+
+![服 务 器 存 储 1.8 扩 展 性 Kafka Event Bus ， MapReduce 分 布 式 缓 存 ， 分 布 式 数 据 库 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image14.png){width="5.0in" height="2.6875in"}
 
 
 
-![思 考 题 如 何 高 效 生 成 每 个 前 缀 的 前 十 流 行 关 诞 词 ？ MapReduce Trie Builder ](../../media/Steam^JCollection-Typehead-Summary--ACE-image16.png){width="10.083333333333334in" height="9.041666666666666in"}
+
+
+![Autocomplete Latency 1.10 Data Update Cache Capacity Latency ](../../media/Steam^JCollection-Typehead-Summary--ACE-image15.png){width="5.0in" height="2.8333333333333335in"}
+
+
+
+![思 考 题 如 何 高 效 生 成 每 个 前 缀 的 前 十 流 行 关 诞 词 ？ MapReduce Trie Builder ](../../media/Steam^JCollection-Typehead-Summary--ACE-image16.png){width="5.0in" height="4.479166666666667in"}
 
 
 
@@ -223,7 +223,7 @@ When last time data update
 
 
 
-![服 务 器 存 储 1 ． 9 容 灾 设 计 MapReduce Replication ()B ， Cache) ](../../media/Steam^JCollection-Typehead-Summary--ACE-image17.png){width="10.083333333333334in" height="5.427083333333333in"}
+![服 务 器 存 储 1 ． 9 容 灾 设 计 MapReduce Replication ()B ， Cache) ](../../media/Steam^JCollection-Typehead-Summary--ACE-image17.png){width="5.0in" height="2.6666666666666665in"}
 
 
 

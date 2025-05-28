@@ -51,7 +51,7 @@ Modified: 2021-01-21 17:39:09 -0600
 
 3. High-level Architecture
 
-![&annç mns q0 Xoqdaao ](../../media/File-System-Drop-box-Drop-box-image1.png){width="7.677083333333333in" height="5.114583333333333in"}
+![&annç mns q0 Xoqdaao ](../../media/File-System-Drop-box-Drop-box-image1.png){width="3.7916666666666665in" height="2.5104166666666665in"}
 
 4. 核心子服务设计
 
@@ -74,7 +74,7 @@ Dropbox 的核心服务是将电脑本地的文件夹在云上做一个实时备
 
 4.1.1 云端文件格式
 
-![](../../media/File-System-Drop-box-Drop-box-image2.png){width="7.677083333333333in" height="3.59375in"}
+![](../../media/File-System-Drop-box-Drop-box-image2.png){width="3.7916666666666665in" height="1.75in"}
 
 Dropbox File Format. Nipunn Koorapati. (2014). Streaming File Synchronization
 
@@ -147,7 +147,7 @@ Blob Storage 采用内容寻址存储，即 [CAS (Content-addressable Storage)](
 
 4.4 数据流
 
-![previews Storage Servers JOJ • • Previews Storage Service Pleview data stoted in enctypted chunks previews Servers Previews Processing Service Prev.ew data processed into Chunks Block Storage Servers • glock Storage Service File data stored in encrypted blocks a SSUTLS Block Servers Block Processing & Previews Delivery Service File data into encrypted blocks debvered to users a SSUTLS not Metadata Pn Information a: name & type) ](../../media/File-System-Drop-box-Drop-box-image3.png){width="7.677083333333333in" height="4.447916666666667in"}
+![previews Storage Servers JOJ • • Previews Storage Service Pleview data stoted in enctypted chunks previews Servers Previews Processing Service Prev.ew data processed into Chunks Block Storage Servers • glock Storage Service File data stored in encrypted blocks a SSUTLS Block Servers Block Processing & Previews Delivery Service File data into encrypted blocks debvered to users a SSUTLS not Metadata Pn Information a: name & type) ](../../media/File-System-Drop-box-Drop-box-image3.png){width="3.7916666666666665in" height="2.1770833333333335in"}
 
 Dropbox Service Architecture from How Dropbox Keeps Your Files Secure
 
@@ -162,13 +162,13 @@ Dropbox Service Architecture from How Dropbox Keeps Your Files Secure
 - 元数据服务检查 1）Blocklist 中的哈希值是否已经存在以及 2）该用户的 Namespace 是不是允许访问这些哈希值对应的文件。
 - 假设文件并不存在，元数据服务会返回 "Need Blocks" 说明文件不存在，需要上传。
 
-![, "/video.avi", "hi ](../../media/File-System-Drop-box-Drop-box-image4.png){width="7.677083333333333in" height="5.645833333333333in"}
+![, "/video.avi", "hi ](../../media/File-System-Drop-box-Drop-box-image4.png){width="3.7916666666666665in" height="2.7708333333333335in"}
 
 Upload Client Initial Commit. Nipunn Koorapati. (2014). Streaming File Synchronization
 
 5. 客户端直接联系文件存储服务添加文件，如果文件过大，则将文件切成 8MB 的分段后上传。（注意这里的 8MB 只是文件上传时的分段，目的是为了提高 HTTP Call 里上传文件的成功率，跟云端文件系统里的 4MB 的文件段大小不一致也不需要一致。）
 
-![UL Client store([hl, h21, [bl, b21) h41, [b3, b41) ](../../media/File-System-Drop-box-Drop-box-image5.png){width="7.677083333333333in" height="7.65625in"}
+![UL Client store([hl, h21, [bl, b21) h41, [b3, b41) ](../../media/File-System-Drop-box-Drop-box-image5.png){width="3.7916666666666665in" height="3.78125in"}
 
 Upload Client Store. Nipunn Koorapati. (2014). Streaming File Synchronization
 
@@ -178,7 +178,7 @@ Upload Client Store. Nipunn Koorapati. (2014). Streaming File Synchronization
 
 8. 元数据服务将 Blocklist 存储并向客户端返回成功的确认。
 
-![UL Cîent commit(nsid=l , "/video.avi", ](../../media/File-System-Drop-box-Drop-box-image6.png){width="7.677083333333333in" height="5.65625in"}
+![UL Cîent commit(nsid=l , "/video.avi", ](../../media/File-System-Drop-box-Drop-box-image6.png){width="3.7916666666666665in" height="2.78125in"}
 
 Upload Client Final Commit. Nipunn Koorapati. (2014). Streaming File Synchronization
 
@@ -190,7 +190,7 @@ Upload Client Final Commit. Nipunn Koorapati. (2014). Streaming File Synchroniza
 - 客户端会为每一个本地的 Namespace 存储最后一次同步之后的 Journal ID。这个 Journal ID 可以看做是文件日志 (Server File Journal) 里的一个指针。客户端此时将 Namespace 和 最后一次同步的 Journal ID 组成 "list" call 发送给元数据服务器，以此来请求比这个 Journal ID 更新的文件信息。
 - 元数据服务器返回客户端上缺失的文件信息。
 
-![Metaserver list(nsids_and_jids={l: 14, 2: 29)}) ](../../media/File-System-Drop-box-Drop-box-image7.png){width="7.677083333333333in" height="5.885416666666667in"}
+![Metaserver list(nsids_and_jids={l: 14, 2: 29)}) ](../../media/File-System-Drop-box-Drop-box-image7.png){width="3.7916666666666665in" height="2.8958333333333335in"}
 
 Download Client List Request. Nipunn Koorapati. (2014). Streaming File Synchronization
 
@@ -202,7 +202,7 @@ Download Client List Request. Nipunn Koorapati. (2014). Streaming File Synchroni
 
 7. 客户端根据元数据服务提供的信息整合下载的文件段存到本地文件夹。
 
-![Blockserver retrieve([hl, h2]) retrieve([h3, h41) ](../../media/File-System-Drop-box-Drop-box-image8.png){width="7.677083333333333in" height="8.270833333333334in"}
+![Blockserver retrieve([hl, h2]) retrieve([h3, h41) ](../../media/File-System-Drop-box-Drop-box-image8.png){width="3.7916666666666665in" height="4.09375in"}
 
 Download Client Block Request. Nipunn Koorapati. (2014). Streaming File Synchronization
 
@@ -210,13 +210,13 @@ Download Client Block Request. Nipunn Koorapati. (2014). Streaming File Synchron
 
 了解完了上传和下载的数据流之后，同步文件的完整数据流就很清晰了。
 
-![UL Client Metaserver commit store store commit ok Blockserve ](../../media/File-System-Drop-box-Drop-box-image9.png){width="7.677083333333333in" height="11.052083333333334in"}
+![UL Client Metaserver commit store store commit ok Blockserve ](../../media/File-System-Drop-box-Drop-box-image9.png){width="3.7916666666666665in" height="5.479166666666667in"}
 
 End-to-end Request Flow. Nipunn Koorapati. (2014). Streaming File Synchronization
 
 上图中下载客户端只有在文件上传完成之后才能进行下载操作。为了实现更快地同步，我们可以考虑压缩这个过程，在第一个文件段完成上传之后就开始下载流程。
 
-![UL Client Metaserver commit store store commit ok Blockserver pil list ret ](../../media/File-System-Drop-box-Drop-box-image10.png){width="7.677083333333333in" height="10.8125in"}
+![UL Client Metaserver commit store store commit ok Blockserver pil list ret ](../../media/File-System-Drop-box-Drop-box-image10.png){width="3.7916666666666665in" height="5.364583333333333in"}
 
 Optimized End-to-end Request Flow. Nipunn Koorapati. (2014). Streaming File Synchronization
 

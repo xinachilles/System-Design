@@ -24,7 +24,7 @@ In this lab, you add a new feature to the bookmark application to address the co
 
 The following diagram shows the architecture components that have been or will be deployed in this lab.
 
-![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image1.png){width="13.083333333333334in" height="13.65625in"}
+![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image1.png){width="6.5in" height="6.78125in"}
 
 **Objectives**
 
@@ -65,7 +65,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image2.png){width="13.083333333333334in" height="2.8333333333333335in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image2.png){width="6.5in" height="1.375in"}
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -571,7 +571,7 @@ Follow these steps to close the console and end your lab.
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image3.png){width="1.5625in" height="13.083333333333334in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image3.png){width="0.7395833333333334in" height="6.5in"}
 
 
 

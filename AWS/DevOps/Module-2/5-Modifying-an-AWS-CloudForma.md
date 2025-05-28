@@ -24,59 +24,59 @@ Facts
 
 
 
-![What is drift? Drift detection enables you to detect whether a stack's actual configuration differs, or has drifted, from its expected configuration. Use CloudFormation to detect drift on an entire stack, or on individual resources within the stack. A resource is considered to have drifted if any of its actual property values differ from the expected property values. This includes if the property or resource has been deleted. A stack is considered to have drifted if one or more of its resources have drifted. To determine whether a resource has drifted, CloudFormation determines the expected resource property values, as defined in the stack template and any values specified as template parameters. CloudFormation then compares those expected values with the actual values of those resource properties as they currently exist in the stack. A resource is considered to have drifted if one or more of its properties have been deleted, or had their value changed. CloudFormation generates detailed information on each resource in the stack that has drifted. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image1.png){width="10.083333333333334in" height="6.604166666666667in"}
+![What is drift? Drift detection enables you to detect whether a stack's actual configuration differs, or has drifted, from its expected configuration. Use CloudFormation to detect drift on an entire stack, or on individual resources within the stack. A resource is considered to have drifted if any of its actual property values differ from the expected property values. This includes if the property or resource has been deleted. A stack is considered to have drifted if one or more of its resources have drifted. To determine whether a resource has drifted, CloudFormation determines the expected resource property values, as defined in the stack template and any values specified as template parameters. CloudFormation then compares those expected values with the actual values of those resource properties as they currently exist in the stack. A resource is considered to have drifted if one or more of its properties have been deleted, or had their value changed. CloudFormation generates detailed information on each resource in the stack that has drifted. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image1.png){width="5.0in" height="3.2604166666666665in"}
 
 
 
-![Drift detection status codes Flip each card below to learn more about the status codes CloudFormation assigns to stack drift detection operations. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image2.png){width="10.083333333333334in" height="1.7083333333333333in"}
+![Drift detection status codes Flip each card below to learn more about the status codes CloudFormation assigns to stack drift detection operations. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image2.png){width="5.0in" height="0.8020833333333334in"}
 
 
 
-![DETECTION COMPLETE ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image3.png){width="10.083333333333334in" height="10.15625in"}
+![DETECTION COMPLETE ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image3.png){width="5.0in" height="5.03125in"}
 
 
 
-![The stack drift detection operation has successfully completed for all resources in the stack that support drift detection. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image4.png){width="10.083333333333334in" height="10.020833333333334in"}
+![The stack drift detection operation has successfully completed for all resources in the stack that support drift detection. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image4.png){width="5.0in" height="4.958333333333333in"}
 
 
 
-![DETECTION FAILED ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image5.png){width="10.083333333333334in" height="9.989583333333334in"}
+![DETECTION FAILED ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image5.png){width="5.0in" height="4.947916666666667in"}
 
 
 
-![The stack drift detection operation has failed for at least one resource in the stack. Results will be available for resources on which CloudFormation successfully completed drift detection. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image6.png){width="10.083333333333334in" height="10.020833333333334in"}
+![The stack drift detection operation has failed for at least one resource in the stack. Results will be available for resources on which CloudFormation successfully completed drift detection. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image6.png){width="5.0in" height="4.958333333333333in"}
 
 
 
-![DETECTION IN PROGRESS ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image7.png){width="10.083333333333334in" height="10.104166666666666in"}
+![DETECTION IN PROGRESS ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image7.png){width="5.0in" height="5.010416666666667in"}
 
 
 
-![The stack drift detection operation is currently in progress. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image8.png){width="10.083333333333334in" height="10.0625in"}
+![The stack drift detection operation is currently in progress. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image8.png){width="5.0in" height="4.979166666666667in"}
 
 
 
-![DRIFTED ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image9.png){width="10.083333333333334in" height="10.010416666666666in"}
+![DRIFTED ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image9.png){width="5.0in" height="4.958333333333333in"}
 
 
 
-![For stacks: The stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted. For stack instances: A stack instance is considered to have drifted if the stack associated with it has drifted. For stack sets: A stack set is considered to have drifted if one or more stack instances has drifted. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image10.png){width="10.083333333333334in" height="10.145833333333334in"}
+![For stacks: The stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted. For stack instances: A stack instance is considered to have drifted if the stack associated with it has drifted. For stack sets: A stack set is considered to have drifted if one or more stack instances has drifted. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image10.png){width="5.0in" height="5.03125in"}
 
 
 
-![NOT CHECKED ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image11.png){width="10.083333333333334in" height="10.15625in"}
+![NOT CHECKED ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image11.png){width="5.0in" height="5.03125in"}
 
 
 
-![CloudFormation has not checked if the stack, stack set, or stack instance differs from its expected template configuration. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image12.png){width="10.083333333333334in" height="9.979166666666666in"}
+![CloudFormation has not checked if the stack, stack set, or stack instance differs from its expected template configuration. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image12.png){width="5.0in" height="4.9375in"}
 
 
 
-![IN_SYNC ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image13.png){width="10.083333333333334in" height="10.0625in"}
+![IN_SYNC ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image13.png){width="5.0in" height="4.979166666666667in"}
 
 
 
-![The current configuration of each supported resource matches its expected template configuration. A stack, stack set, or stack instance with no resources that support drift detection will also have a status of IN SYNC. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image14.png){width="10.083333333333334in" height="10.125in"}
+![The current configuration of each supported resource matches its expected template configuration. A stack, stack set, or stack instance with no resources that support drift detection will also have a status of IN SYNC. ](../../../media/AWS-DevOps-Module-2-5-Modifying-an-AWS-CloudFormation-Template-image14.png){width="5.0in" height="5.020833333333333in"}
 
 
 

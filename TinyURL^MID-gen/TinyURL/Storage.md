@@ -47,7 +47,7 @@ we just random generate a 6 digitals for given long URL, if this short URL is no
 
 
 
-![public String longToShortCString url) { while (true) { String shortURL = randomShortURL(); if C! database. exists() { database. longURL=url); return shortURL; ](../../media/TinyURL^MID-gen-TinyURL-Storage-image2.png){width="10.083333333333334in" height="3.3229166666666665in"}
+![public String longToShortCString url) { while (true) { String shortURL = randomShortURL(); if C! database. exists() { database. longURL=url); return shortURL; ](../../media/TinyURL^MID-gen-TinyURL-Storage-image2.png){width="5.0in" height="1.6145833333333333in"}
 
 
 
@@ -63,15 +63,15 @@ it should be very quick at the begin and will very slow when the url grow
 
 
 
-![](../../media/TinyURL^MID-gen-TinyURL-Storage-image3.png){width="10.083333333333334in" height="4.489583333333333in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Storage-image3.png){width="5.0in" height="2.1979166666666665in"}
 
 
 
-![NoSQL Cassandra row row Long Short _key=longURL, column_key=ShortURL, value=null or timestamp Short Long _key=shortURL, column_key=LongURL, value-null or timestamp ](../../media/TinyURL^MID-gen-TinyURL-Storage-image4.png){width="10.083333333333334in" height="4.270833333333333in"}
+![NoSQL Cassandra row row Long Short _key=longURL, column_key=ShortURL, value=null or timestamp Short Long _key=shortURL, column_key=LongURL, value-null or timestamp ](../../media/TinyURL^MID-gen-TinyURL-Storage-image4.png){width="5.0in" height="2.09375in"}
 
 
 
-![](../../media/TinyURL^MID-gen-TinyURL-Storage-image5.png){width="10.083333333333334in" height="5.125in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Storage-image5.png){width="5.0in" height="2.5104166666666665in"}
 
 
 

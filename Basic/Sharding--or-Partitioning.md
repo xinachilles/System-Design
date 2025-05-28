@@ -10,7 +10,7 @@ Modified: 2020-01-08 15:25:39 -0600
 
 
 
-![Vertical Sharding • Etgnfifi User Table . Email • Username • Password • push_preference . avatar • email / username / password • push_preference, avatar • User Table User Profile Table • UserProfile Table User iE#$Jåßå • :Vertical Sharding ? ](../media/Basic-Sharding--or-Partitioning-image2.png){width="5.0in" height="3.8645833333333335in"}
+![Vertical Sharding • Etgnfifi User Table . Email • Username • Password • push_preference . avatar • email / username / password • push_preference, avatar • User Table User Profile Table • UserProfile Table User iE#$Jåßå • :Vertical Sharding ? ](../media/Basic-Sharding--or-Partitioning-image2.png){width="5.0in" height="3.861111111111111in"}
 
 
 

@@ -6,7 +6,7 @@ Modified: 2016-07-19 17:33:17 -0600
 
 ---
 
-![](../media/Question-Synchronous-vs-Asynchronous-image1.png){width="3.65625in" height="6.5in"}
+![](../media/Question-Synchronous-vs-Asynchronous-image1.png){width="3.6597222222222223in" height="6.5in"}
 
 
 

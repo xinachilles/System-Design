@@ -88,7 +88,7 @@ PSP: payment service provider.
 
 10 mins: High Level Architecture
 
-![Payment Grants Accounting Service Integration Online API for PSP A Payment Integration Router File-based Integration API for Bank B PSP A Bank B Area of Focu ](../../media/Payment^JTrade-Payment-Payment-image1.png){width="12.625in" height="5.020833333333333in"}
+![Payment Grants Accounting Service Integration Online API for PSP A Payment Integration Router File-based Integration API for Bank B PSP A Bank B Area of Focu ](../../media/Payment^JTrade-Payment-Payment-image1.png){width="6.270833333333333in" height="2.46875in"}
 
 Client (mobile/web) end trip -> frontend webservice ---emit--> trip end event --async--> payment service -> downstream service (PSP(Payment Service Provider), bank, credit cards, etc.)
 
@@ -213,6 +213,6 @@ After finished the trip, Uber system emit a trip ending event, this event will a
 
 
 
-![Request Life Cycle 1. Trip end event from event queue (durable) 2. ban several backend pull the same event? 3. FE: check mysql database, see whether the request already exist or not a. If it's already exist, and status is or failure(non-retryable), then retum response directly b. Anything else, return and add that request to queue 4. Web client dose the connection and check back for status update ](../../media/Payment^JTrade-Payment-Payment-image2.png){width="10.083333333333334in" height="2.71875in"}
+![Request Life Cycle 1. Trip end event from event queue (durable) 2. ban several backend pull the same event? 3. FE: check mysql database, see whether the request already exist or not a. If it's already exist, and status is or failure(non-retryable), then retum response directly b. Anything else, return and add that request to queue 4. Web client dose the connection and check back for status update ](../../media/Payment^JTrade-Payment-Payment-image2.png){width="5.0in" height="1.3125in"}
 
 

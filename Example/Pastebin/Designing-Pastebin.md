@@ -76,7 +76,7 @@ Last_update_time
 
 
 
-![ID generation Meta data Paste service Clean up URL service service client Web services URL ](../../media/Example-Pastebin-Designing-Pastebin-image1.png){width="10.083333333333334in" height="4.96875in"}
+![ID generation Meta data Paste service Clean up URL service service client Web services URL ](../../media/Example-Pastebin-Designing-Pastebin-image1.png){width="5.0in" height="2.4375in"}
 
 
 

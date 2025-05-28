@@ -174,7 +174,7 @@ Many implementations allow you to create indexes over specific columns in a colu
 
 
 
-![](../media/Basic-How-to-chose-data-store-image2.jpeg){width="2.7708333333333335in" height="1.2395833333333333in"}
+![](../media/Basic-How-to-chose-data-store-image2.jpeg){width="2.7708333333333335in" height="1.2361111111111112in"}
 
 
 

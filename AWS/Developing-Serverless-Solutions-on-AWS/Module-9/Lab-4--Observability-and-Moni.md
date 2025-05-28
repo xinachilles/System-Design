@@ -36,7 +36,7 @@ Logs, metrics, and distributed tracing are often known as the three pillars of o
 
 The following architecture diagram shows the components that have been or will be deployed in this lab.
 
-![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image1.png){width="13.083333333333334in" height="17.9375in"}
+![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image1.png){width="6.5in" height="8.916666666666666in"}
 
 **Objectives**
 
@@ -77,7 +77,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image2.png){width="13.083333333333334in" height="2.8333333333333335in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image2.png){width="6.5in" height="1.375in"}
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -331,7 +331,7 @@ Here you can see the percent of traces with 200 ok responses and 502 response er
 
 The **Timeline** view shows a hierarchy of segments and subsegments. The first entry in the list is the segment, which represents all of the data that the service recorded for a single request, as shown in the following image.
 
-![Showing timeline segment](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image3.png){width="13.083333333333334in" height="6.03125in"}
+![Showing timeline segment](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image3.png){width="6.5in" height="2.96875in"}
 
 Below the segment are subsegments.
 
@@ -507,7 +507,7 @@ The service map indicates the health of each node by color. It is based on the r
 
 This is shown in the following image.
 
-![X-Ray Service map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image4.png){width="13.083333333333334in" height="2.8854166666666665in"}
+![X-Ray Service map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image4.png){width="6.5in" height="1.3958333333333333in"}
 
 Next, use CloudWatch ServiceLens, which gives you unified access to metrics, logs, traces, and canaries and enables performance monitoring from end user interaction to infrastructure layer insights.
 
@@ -515,7 +515,7 @@ Next, use CloudWatch ServiceLens, which gives you unified access to metrics, log
 
 The following image shows the Map view within the Service Map console.
 
-![ServiceLens Service map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image5.png){width="13.083333333333334in" height="4.354166666666667in"}
+![ServiceLens Service map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image5.png){width="6.5in" height="2.125in"}
 
 1.  Choose a node to get a quick view of latency, errors, requests, and alarm summary.
 2.  To see latency statistics for an edge connection, choose the lines between each node that represent these connections.
@@ -537,11 +537,11 @@ This shows the incoming and outgoing connections for a node.
 4.  Choose View traces
 5.  Under **Query refiners**, for **Refine query by**, select **HTTP status code** from the dropdown list.
 
-![Query Refiners](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image6.png){width="13.083333333333334in" height="9.09375in"}
+![Query Refiners](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image6.png){width="6.5in" height="4.5in"}
 
 1.  Navigate down the page to see the histogram representing the **response time distribution**.
 
-![Response time](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image7.png){width="13.083333333333334in" height="5.479166666666667in"}
+![Response time](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image7.png){width="6.5in" height="2.6979166666666665in"}
 
 1.  Under the **Traces** section, select a trace ID from the list.
 
@@ -621,7 +621,7 @@ await new Promise(resolve => setTimeout(resolve, 10000));
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image8.png){width="1.09375in" height="13.083333333333334in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image8.png){width="0.5in" height="6.5in"}
 
 
 

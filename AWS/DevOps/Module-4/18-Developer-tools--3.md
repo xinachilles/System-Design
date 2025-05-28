@@ -31,7 +31,7 @@ Facts
 
 
 
-![Understanding revisions Revision 1 aws training and -7 certification Source code files Revision 2 AppSpec file Revision 3 Deployable content Pulls Revision 1 AWS CodeDeploy Amazon S3 Amazon EC2 Instances Or GitHub Pulls AWS CodeDepIoy 46 ](../../../media/AWS-DevOps-Module-4-18-Developer-tools--3-image1.png){width="10.083333333333334in" height="5.645833333333333in"}
+![Understanding revisions Revision 1 aws training and -7 certification Source code files Revision 2 AppSpec file Revision 3 Deployable content Pulls Revision 1 AWS CodeDeploy Amazon S3 Amazon EC2 Instances Or GitHub Pulls AWS CodeDepIoy 46 ](../../../media/AWS-DevOps-Module-4-18-Developer-tools--3-image1.png){width="5.0in" height="2.78125in"}
 
 
 

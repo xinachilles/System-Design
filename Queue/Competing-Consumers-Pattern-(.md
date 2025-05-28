@@ -10,7 +10,7 @@ Modified: 2020-09-09 11:36:00 -0600
 
 
 
-![Video web content titled: Queue: Competing Consumers Pattern](../media/Queue-Competing-Consumers-Pattern-(no-need)-image1.png){width="10.083333333333334in" height="5.708333333333333in"}
+![Video web content titled: Queue: Competing Consumers Pattern](../media/Queue-Competing-Consumers-Pattern-(no-need)-image1.jpg){width="5.0in" height="2.8020833333333335in"}
 
 
 

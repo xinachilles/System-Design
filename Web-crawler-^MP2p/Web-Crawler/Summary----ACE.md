@@ -12,7 +12,7 @@ The web crawler has 5 part: seed URL, URL frontier, fetcher and render, webpage 
 
 
 
-![@ 0 （ 。 £ 《 ； 厂 办 J COM- RTW(L 巧 s 0 爰 思 版 权 所 有 未 经 允 许 诺 勿 录 制 或 传 播 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image1.png){width="10.083333333333334in" height="6.21875in"}
+![@ 0 （ 。 £ 《 ； 厂 办 J COM- RTW(L 巧 s 0 爰 思 版 权 所 有 未 经 允 许 诺 勿 录 制 或 传 播 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image1.png){width="5.0in" height="3.0625in"}
 
 
 
@@ -40,7 +40,7 @@ Politeness means we should have some delay between each crawl for same website a
 
 
 
-![e ACE 1.5 URL Frontier CQZke- input PO eoe.LSS acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image2.png){width="10.083333333333334in" height="6.25in"}
+![e ACE 1.5 URL Frontier CQZke- input PO eoe.LSS acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image2.png){width="5.0in" height="3.0833333333333335in"}
 
 
 
@@ -116,7 +116,7 @@ If we have different protocol, we need remember which crawler user which type pr
 
 After we download the page first we need to save the html page to bigtable and update the domine DB and web crawl history DB
 
-![一 CDCl•ve 一 0 0 CS PB ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image3.png){width="10.083333333333334in" height="8.09375in"}
+![一 CDCl•ve 一 0 0 CS PB ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image3.png){width="5.0in" height="4.0in"}
 
 
 
@@ -214,7 +214,7 @@ For example, if we found one webstie's content is always not changing. We can se
 
 
 
-![ACE Web Page Crawl History Table Shard Key Intended URL ID URL Domain1D Last Crawl Frequency Crawl 'IS can be modeled as SW or wide-column Content Group ID acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image4.png){width="10.083333333333334in" height="6.145833333333333in"}
+![ACE Web Page Crawl History Table Shard Key Intended URL ID URL Domain1D Last Crawl Frequency Crawl 'IS can be modeled as SW or wide-column Content Group ID acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image4.png){width="5.0in" height="3.03125in"}
 
 
 
@@ -226,7 +226,7 @@ Base on the ~~web page crawl history table~~ robot.txt we need to update the
 
 
 
-![Domain ID Domain Policy Table DomainURL CrawlFrequencyLimit " , N | el | " Key - Ⅶ | , le -0 , h 皿 S . data | 爰 思 版 所 有 未 经 允 许 勿 制 或 传 acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image5.png){width="10.083333333333334in" height="6.208333333333333in"}
+![Domain ID Domain Policy Table DomainURL CrawlFrequencyLimit " , N | el | " Key - Ⅶ | , le -0 , h 皿 S . data | 爰 思 版 所 有 未 经 允 许 勿 制 或 传 acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image5.png){width="5.0in" height="3.0520833333333335in"}
 
 [Domine police DB]{.mark} also has a priority column, it base on the frequency of the content it is changing
 
@@ -244,29 +244,29 @@ Base on the ~~web page crawl history table~~ robot.txt we need to update the
 
 
 
-![思 考 题 十 绥 存 的 应 用 场 景 ？ Domain PolicyTable HTM L 网 页 爬 取 完 毕 存 入 缓 存 等 待 处 理 午 请 勿 录 制 或 传 播 acecodeinterwew.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image6.png){width="10.083333333333334in" height="9.572916666666666in"}
+![思 考 题 十 绥 存 的 应 用 场 景 ？ Domain PolicyTable HTM L 网 页 爬 取 完 毕 存 入 缓 存 等 待 处 理 午 请 勿 录 制 或 传 播 acecodeinterwew.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image6.png){width="5.0in" height="4.739583333333333in"}
 
 
 
-![1 · 9 接 囗 设 计 Robots.txt ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image7.png){width="10.083333333333334in" height="8.09375in"}
+![1 · 9 接 囗 设 计 Robots.txt ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image7.png){width="5.0in" height="4.0in"}
 
 
 
-![:IIIZ # Block googLebot from example. com/directoryl/... example. com/directory2/.. # but al Low access to directory2/subdirectory1/... and # ALL other directories on the site are allowed by default. User-agent; googlebot Disallow: /directoryl/ Disallow: /directory2/ Allow: /directory2/subdirectoryI/ # Block the entire site from anothercrawLer. User-agent: anothercrawler Disallow: / ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image8.png){width="10.083333333333334in" height="6.34375in"}
+![:IIIZ # Block googLebot from example. com/directoryl/... example. com/directory2/.. # but al Low access to directory2/subdirectory1/... and # ALL other directories on the site are allowed by default. User-agent; googlebot Disallow: /directoryl/ Disallow: /directory2/ Allow: /directory2/subdirectoryI/ # Block the entire site from anothercrawLer. User-agent: anothercrawler Disallow: / ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image8.png){width="5.0in" height="3.125in"}
 
 
 
-![服 务 器 存 储 1 · 10 扩 展 性 URLFrontierQueues ， Fetcher&RendererWorkers Bigtable ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image9.png){width="10.083333333333334in" height="5.322916666666667in"}
+![服 务 器 存 储 1 · 10 扩 展 性 URLFrontierQueues ， Fetcher&RendererWorkers Bigtable ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image9.png){width="5.0in" height="2.6145833333333335in"}
 
 If system has problem , worker is staless
 
-![服 务 器 存 储 1 · 11 容 灾 设 计 QueuePersistence ， MultipleMachines/Worken Master-slaveReplication （ G ， 佣 ， Ca 山 e ） ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image10.png){width="10.083333333333334in" height="5.166666666666667in"}
+![服 务 器 存 储 1 · 11 容 灾 设 计 QueuePersistence ， MultipleMachines/Worken Master-slaveReplication （ G ， 佣 ， Ca 山 e ） ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image10.png){width="5.0in" height="2.5416666666666665in"}
 
 
 
-![1.12 Queue Health Crawler Trap Availability Async Load Cache Hit Rate DB load ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image11.png){width="10.083333333333334in" height="4.479166666666667in"}
+![1.12 Queue Health Crawler Trap Availability Async Load Cache Hit Rate DB load ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image11.png){width="5.0in" height="2.1875in"}
 
-![0 b 0 ， " 0 伍 ` 0 屮 @"e。彘法""每 " 以 山 p ． HTML 》 · 以 L 出 ． 一 三 诀 [叵@] 0 《 Uaext' 、 凼一 （ " S 哼 血 | 0 爰 思 版 权 所 有 未 经 允 许 诺 勿 录 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image12.png){width="10.083333333333334in" height="6.208333333333333in"}
+![0 b 0 ， " 0 伍 ` 0 屮 @"e。彘法""每 " 以 山 p ． HTML 》 · 以 L 出 ． 一 三 诀 [叵@] 0 《 Uaext' 、 凼一 （ " S 哼 血 | 0 爰 思 版 权 所 有 未 经 允 许 诺 勿 录 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image12.png){width="5.0in" height="3.0520833333333335in"}
 
 
 
@@ -278,27 +278,27 @@ How to store: big table
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image13.png){width="10.083333333333334in" height="3.8541666666666665in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image13.png){width="5.0in" height="1.875in"}
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image14.png){width="10.083333333333334in" height="2.7604166666666665in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image14.png){width="5.0in" height="1.3333333333333333in"}
 
 
 
-![Bigrable 数 据 模 型 ColumnFamiIy Timestamps (row:string ， column:string ， time:int64) - s 囝 0 爱 思 版 权 所 有 末 经 允 许 请 勿 录 制 或 传 指 acecode ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image15.png){width="10.083333333333334in" height="7.21875in"}
+![Bigrable 数 据 模 型 ColumnFamiIy Timestamps (row:string ， column:string ， time:int64) - s 囝 0 爱 思 版 权 所 有 末 经 允 许 请 勿 录 制 或 传 指 acecode ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image15.png){width="5.0in" height="3.5625in"}
 
 
 
-![e ACE Sentence A: Sentence B: "The "The words: the I dog Ill MinHash dog is brown" dog is happy" I is I brown I happy I sunshine Ill Ill acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image16.png){width="10.083333333333334in" height="5.6875in"}
+![e ACE Sentence A: Sentence B: "The "The words: the I dog Ill MinHash dog is brown" dog is happy" I is I brown I happy I sunshine Ill Ill acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image16.png){width="5.0in" height="2.8020833333333335in"}
 
 
 
-![0 爰 思 版 权 所 有 未 经 允 许 诺 勿 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image17.png){width="10.083333333333334in" height="6.229166666666667in"}
+![0 爰 思 版 权 所 有 未 经 允 许 诺 勿 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image17.png){width="5.0in" height="3.0729166666666665in"}
 
 
 
-![0 思 考 题 七 判 定 一 个 URL 需 不 需 要 爬 取 要 考 虑 哪 些 因 素 ？ Robots.txt 提 示 的 更 新 频 率 Robots.txt 规 定 的 爬 取 范 围 上 次 爬 取 该 网 页 的 时 间 上 次 爬 取 类 似 网 页 的 时 间 避 免 过 高 频 率 爬 取 同 一 域 名 下 的 URL 过 去 爬 取 该 网 页 及 域 名 时 的 经 验 0 爱 思 版 权 所 有 耒 经 允 许 请 勿 录 制 或 传 播 acecodeinterwew.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image18.png){width="10.083333333333334in" height="6.302083333333333in"}
+![0 思 考 题 七 判 定 一 个 URL 需 不 需 要 爬 取 要 考 虑 哪 些 因 素 ？ Robots.txt 提 示 的 更 新 频 率 Robots.txt 规 定 的 爬 取 范 围 上 次 爬 取 该 网 页 的 时 间 上 次 爬 取 类 似 网 页 的 时 间 避 免 过 高 频 率 爬 取 同 一 域 名 下 的 URL 过 去 爬 取 该 网 页 及 域 名 时 的 经 验 0 爱 思 版 权 所 有 耒 经 允 许 请 勿 录 制 或 传 播 acecodeinterwew.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image18.png){width="5.0in" height="3.1041666666666665in"}
 
 
 

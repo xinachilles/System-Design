@@ -6,7 +6,7 @@ Modified: 2021-04-26 16:59:36 -0600
 
 ---
 
-![Client Load Balancer + gateway Cache Web service ID generator DB ](../../media/TinyURL^MID-gen-TinyURL-summary-image1.png){width="10.083333333333334in" height="7.15625in"}
+![Client Load Balancer + gateway Cache Web service ID generator DB ](../../media/TinyURL^MID-gen-TinyURL-summary-image1.png){width="5.0in" height="3.53125in"}
 
 
 
@@ -88,7 +88,7 @@ Inside the service we have IDToShortURL(int id), ShortURLToID(Stromh
 
 **Database**:
 
-![URL Hash: varchar(lé) OriginalURL: varchar(512) CreationDate: datetime ExpirationDate: datatime UserlD: int PK User UserlD: int Name: varchar(20) Email: varchar(32) CreationDate: datetime LastLogin: ](../../media/TinyURL^MID-gen-TinyURL-summary-image2.png){width="10.083333333333334in" height="4.302083333333333in"}
+![URL Hash: varchar(lé) OriginalURL: varchar(512) CreationDate: datetime ExpirationDate: datatime UserlD: int PK User UserlD: int Name: varchar(20) Email: varchar(32) CreationDate: datetime LastLogin: ](../../media/TinyURL^MID-gen-TinyURL-summary-image2.jpg){width="5.0in" height="2.1041666666666665in"}
 
 Database : id (generate by id generator) | Original URL | time | user id ...
 

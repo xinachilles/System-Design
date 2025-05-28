@@ -212,7 +212,7 @@ several load balancers. And by spreading load balancers across several
 
 data centers, we improve both availability and performance.
 
-![Distributed-Message- Queue.domain.com Client VIP 1 Load Balancer VIP 2 Load Balancer VIP 3 Load Balancer rontEnd-Host-1.domain.co rontEnd-Host-2.domain.co rontEnd-Host-3.domain.co rontEnd-Host-4.domain.co rontEnd-Host-5.domain.co rontEnd-Host-6.domain.co Data Center A Data Center B Data Center C ](../media/Queue-Summary-image1.png){width="10.083333333333334in" height="4.604166666666667in"}
+![Distributed-Message- Queue.domain.com Client VIP 1 Load Balancer VIP 2 Load Balancer VIP 3 Load Balancer rontEnd-Host-1.domain.co rontEnd-Host-2.domain.co rontEnd-Host-3.domain.co rontEnd-Host-4.domain.co rontEnd-Host-5.domain.co rontEnd-Host-6.domain.co Data Center A Data Center B Data Center C ](../media/Queue-Summary-image1.png){width="5.0in" height="2.25in"}
 
 
 
@@ -446,7 +446,7 @@ We need a component that will help us with leader election and management. Let's
 
 
 
-![BackEnd Service Option A: Leader-Follower relationship FE send Queue ID = qi Queue ID q2 1626 / 2617 receive Queue ID = qi E D In-cluster Manager e. Zoo Leader Host B Followers ](../media/Queue-Summary-image2.png){width="10.083333333333334in" height="5.979166666666667in"}
+![BackEnd Service Option A: Leader-Follower relationship FE send Queue ID = qi Queue ID q2 1626 / 2617 receive Queue ID = qi E D In-cluster Manager e. Zoo Leader Host B Followers ](../media/Queue-Summary-image2.png){width="5.0in" height="2.9479166666666665in"}
 
 
 
@@ -482,7 +482,7 @@ the q1 queue, we once again call a randomly selected host and retrieve the messa
 
 As you may see, we no longer need a component for leader election, but we still need something that will help us to manage queue to cluster assignments. Let's call this component an Out-cluster manager. And this component will be responsible for maintaining a mapping between queues and clusters.
 
-![send = qI MS BackEnd Service Option B: Small cluster of independent hosts c Out-cluster Manager receive Queue ID = ql MS Queue ID Cluster ID cl ](../media/Queue-Summary-image3.png){width="10.083333333333334in" height="5.614583333333333in"}
+![send = qI MS BackEnd Service Option B: Small cluster of independent hosts c Out-cluster Manager receive Queue ID = ql MS Queue ID Cluster ID cl ](../media/Queue-Summary-image3.png){width="5.0in" height="2.7604166666666665in"}
 
 ~~Is out-cluster manager a simpler component than in-cluster manager? It turns out that not really.~~
 

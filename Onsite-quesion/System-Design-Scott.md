@@ -38,7 +38,7 @@ or we can update the cache first, then write to db, if durability is not import
 
 
 
-![System design principles he s •stem should continue to '*Ork correctly the Correct lunction at the •rlornun en ill the face of (liard'.vare or ale faults. and cn hillilan ith that )vet tilnc, Inan diliercnt 'eo will "01k on the s and the svsteni nev,' use cases). there should inecrin ' and o 'elations. bolll Inaintaitlin and they Should all bc able to on it ](../media/Onsite-quesion-System-Design-Scott-image1.png){width="5.0in" height="2.5104166666666665in"}
+![System design principles he s •stem should continue to '*Ork correctly the Correct lunction at the •rlornun en ill the face of (liard'.vare or ale faults. and cn hillilan ith that )vet tilnc, Inan diliercnt 'eo will "01k on the s and the svsteni nev,' use cases). there should inecrin ' and o 'elations. bolll Inaintaitlin and they Should all bc able to on it ](../media/Onsite-quesion-System-Design-Scott-image1.png){width="5.0in" height="2.513888888888889in"}
 
 
 
@@ -92,7 +92,7 @@ graph database : vertices and edges
 
 [Chapter 5 Replication]{.mark}
 
-![](../media/Onsite-quesion-System-Design-Scott-image2.png){width="5.0in" height="3.21875in"}
+![](../media/Onsite-quesion-System-Design-Scott-image2.png){width="5.0in" height="3.2222222222222223in"}
 
 
 
@@ -100,7 +100,7 @@ graph database : vertices and edges
 
 
 
-![](../media/Onsite-quesion-System-Design-Scott-image3.png){width="5.0in" height="2.8645833333333335in"}
+![](../media/Onsite-quesion-System-Design-Scott-image3.png){width="5.0in" height="2.8680555555555554in"}
 
 
 
@@ -112,7 +112,7 @@ Set up new followers -> copy snapshot -> append the new log with new transaction
 
 Snapshot
 
-![Set up new Followers I •co data tiles trom one node to another t icall not sutticient: clients are constantl writin to database. and the data is alwa •s in flux, so a standard tile copy uould see ditlQrent parts ot•the database at differen- I'0ints in time. The result miL'ht not make anv sense iou could make the tiles on disk consistent l'n•kin:' the llnak'ltl!' it linaxail.lhle 'A Tites), hut a•-'a111St our '_'oal Ili'_'h ax Glilahilit•i I-ake a consistent sna of the leader-s database at sonle int in tilne---lf sslble. without takin ' a IOC k 0'. - entire database. Most databases have this feature. as it is also reauired for hackli In cases :hird- Yart tools are Ileeded. such as in'loback'l XlvSQl Co • the sna shot to the new follower node The follower connects to the leader and re uests all the data chan •es that have ha )ened since the sna •.vas taken. This re uires that the sna shot is associated with an exact sition in the leader's re lication Iou'. sition has various It the hinlo ' coordinate.v When the follower has rocessed the backlo ' of dala chan it the • call 'es since the sna 'sli0t. it ](../media/Onsite-quesion-System-Design-Scott-image4.png){width="5.0in" height="3.1145833333333335in"}
+![Set up new Followers I •co data tiles trom one node to another t icall not sutticient: clients are constantl writin to database. and the data is alwa •s in flux, so a standard tile copy uould see ditlQrent parts ot•the database at differen- I'0ints in time. The result miL'ht not make anv sense iou could make the tiles on disk consistent l'n•kin:' the llnak'ltl!' it linaxail.lhle 'A Tites), hut a•-'a111St our '_'oal Ili'_'h ax Glilahilit•i I-ake a consistent sna of the leader-s database at sonle int in tilne---lf sslble. without takin ' a IOC k 0'. - entire database. Most databases have this feature. as it is also reauired for hackli In cases :hird- Yart tools are Ileeded. such as in'loback'l XlvSQl Co • the sna shot to the new follower node The follower connects to the leader and re uests all the data chan •es that have ha )ened since the sna •.vas taken. This re uires that the sna shot is associated with an exact sition in the leader's re lication Iou'. sition has various It the hinlo ' coordinate.v When the follower has rocessed the backlo ' of dala chan it the • call 'es since the sna 'sli0t. it ](../media/Onsite-quesion-System-Design-Scott-image4.png){width="5.0in" height="3.111111111111111in"}
 
 
 
@@ -126,7 +126,7 @@ For 2 phrase commit, we should not change the ladder
 
 
 
-![In certain fault scenarios, it could ha en that two nodes both believe that the arc the leader. This situation is calleé , 'lit brain. and it is dangerous: ifboth leaders acce t Mites. and there is no rocess for resolvin conflicts (see shut down one node if two leaders are if this is not caret-tillv (lesi•.'ned. vou call enc with both nodes bein ' shut dowrv N."hat is the ri 'ht titneout before the leader is declared dead? A Ion 'er timeout Incans a Ion 'er tinie to recove In tllc ase where the leader fails, Ilowch cr. if the timeout is too short. there could bc unnecessa ' For exani le_ ra load s ike could cause a node's res nse tirne to increase above the titneout. or a network 'litch coul•. •ause dela ed ckets. It-the s stem is alread stru 'line ivith hik•h load or network problems, an unnecessar•, ](../media/Onsite-quesion-System-Design-Scott-image6.png){width="5.0in" height="1.46875in"}
+![In certain fault scenarios, it could ha en that two nodes both believe that the arc the leader. This situation is calleé , 'lit brain. and it is dangerous: ifboth leaders acce t Mites. and there is no rocess for resolvin conflicts (see shut down one node if two leaders are if this is not caret-tillv (lesi•.'ned. vou call enc with both nodes bein ' shut dowrv N."hat is the ri 'ht titneout before the leader is declared dead? A Ion 'er timeout Incans a Ion 'er tinie to recove In tllc ase where the leader fails, Ilowch cr. if the timeout is too short. there could bc unnecessa ' For exani le_ ra load s ike could cause a node's res nse tirne to increase above the titneout. or a network 'litch coul•. •ause dela ed ckets. It-the s stem is alread stru 'line ivith hik•h load or network problems, an unnecessar•, ](../media/Onsite-quesion-System-Design-Scott-image6.png){width="5.0in" height="1.4722222222222223in"}
 
 
 
@@ -140,7 +140,7 @@ Statement based log : new() function
 
 Write ahead log: sequence of bytes, for durability, unreadable, leader and follower need to be the same data structure
 
-![Replication Logs 2: Write ahead log replication erv v. rite is to a In the case of a 10 '-structured stora 'e en 'Inc (sce "SS-I-ables and [-SV1--l-rees•• L this loc' is the tnain place f"'r In the case Of a B-tree (see ••B-Trees•• which ox, erwrites individual disk blocks, ery is first v. ritten to . •.vrite-ahead 102 so that the index can he restored to a consistent state after a crash ill cither case, the 10 ' IS an a end-onl sc ucncc b 'tes containin ' all writes to the database. can use the exact salli I" ' to build a re lica on another node: besides writin ' the 10 ' to disk. the leader also sends it across the network to its :Ollouers_ the follower nrocesses this 102. t builds conv of the exact sarne data structures as found on the leade: I his Inethod of re lication is used in l)ostoreS L and Oracle. anion ' others. I he Inain disadvanta 'e is that the 10 ' de*cribv• data on a vet low level: a WAL contains details of which b tes were chan •ed in disk blocks. This ntakc_ lication closel Cou led to the stora 'c en 'inc. It" the re lication rotocol allows the tbllower to use a newer softwalQ ersion than the leader. ou can •rform a zero-downtime u 'rade of the database software b ' first u 'radin ' the follower, Ind tlten eriOr•1nin ' a er to tnake one of tlleu 'raded nodes the neu leader. If the re licati011 all.•v, trades re aire downtinl,• tllis version mismatch, as is often the case with WAI. shi in such u ](../media/Onsite-quesion-System-Design-Scott-image8.png){width="5.0in" height="2.8854166666666665in"}
+![Replication Logs 2: Write ahead log replication erv v. rite is to a In the case of a 10 '-structured stora 'e en 'Inc (sce "SS-I-ables and [-SV1--l-rees•• L this loc' is the tnain place f"'r In the case Of a B-tree (see ••B-Trees•• which ox, erwrites individual disk blocks, ery is first v. ritten to . •.vrite-ahead 102 so that the index can he restored to a consistent state after a crash ill cither case, the 10 ' IS an a end-onl sc ucncc b 'tes containin ' all writes to the database. can use the exact salli I" ' to build a re lica on another node: besides writin ' the 10 ' to disk. the leader also sends it across the network to its :Ollouers_ the follower nrocesses this 102. t builds conv of the exact sarne data structures as found on the leade: I his Inethod of re lication is used in l)ostoreS L and Oracle. anion ' others. I he Inain disadvanta 'e is that the 10 ' de*cribv• data on a vet low level: a WAL contains details of which b tes were chan •ed in disk blocks. This ntakc_ lication closel Cou led to the stora 'c en 'inc. It" the re lication rotocol allows the tbllower to use a newer softwalQ ersion than the leader. ou can •rform a zero-downtime u 'rade of the database software b ' first u 'radin ' the follower, Ind tlten eriOr•1nin ' a er to tnake one of tlleu 'raded nodes the neu leader. If the re licati011 all.•v, trades re aire downtinl,• tllis version mismatch, as is often the case with WAI. shi in such u ](../media/Onsite-quesion-System-Design-Scott-image8.png){width="5.0in" height="2.888888888888889in"}
 
 
 
@@ -148,7 +148,7 @@ Logical log replication : main goal is for replication, old value ,new value, if
 
 
 
-![Replication Log 3: logical log replication Il a relational IS llstlälllv a sec uence 'if records v.vritc•s d:llahase• tables at roil I-or an Inserted row. the 10 ' contains the new •values of all colulnn» For a deleted row, the 10 ' contains enou 'h int•orlnation to uni uel ' identit' the row that deleted. 'l icall t be the rima ke , but if there is no rima ke on the table. the old values of all columns need to be 10 'ed For an u dated row. the 10 ' contains enou 'h intlutnation to uni identif•. the u alid the values transaction that Inodllies several rows 'enerates several such 10 ' records, tOllowed b a record indicatin ' that Nance a 10 ICal 10 is decou )led lioni the stora e ell Internals, it can tnore easil be ke t backvsard coin )atlble. leader and the töllouer to run ditlZ•rent versions of the database sotlqare. or even dif]érent storage engines ;IIIO'.'.  10 'iCal 10 ' iOr1nat is also easier external a lications to arse. -I-his as ect is usetUl if ou want to send the contents 01 database to an external s 'stem, such as a data kvarehousæ for oi)line analAis. or for hilil'iin'! lnalexes alul cache• I his technique is called ](../media/Onsite-quesion-System-Design-Scott-image9.png){width="5.0in" height="3.09375in"}
+![Replication Log 3: logical log replication Il a relational IS llstlälllv a sec uence 'if records v.vritc•s d:llahase• tables at roil I-or an Inserted row. the 10 ' contains the new •values of all colulnn» For a deleted row, the 10 ' contains enou 'h int•orlnation to uni uel ' identit' the row that deleted. 'l icall t be the rima ke , but if there is no rima ke on the table. the old values of all columns need to be 10 'ed For an u dated row. the 10 ' contains enou 'h intlutnation to uni identif•. the u alid the values transaction that Inodllies several rows 'enerates several such 10 ' records, tOllowed b a record indicatin ' that Nance a 10 ICal 10 is decou )led lioni the stora e ell Internals, it can tnore easil be ke t backvsard coin )atlble. leader and the töllouer to run ditlZ•rent versions of the database sotlqare. or even dif]érent storage engines ;IIIO'.'.  10 'iCal 10 ' iOr1nat is also easier external a lications to arse. -I-his as ect is usetUl if ou want to send the contents 01 database to an external s 'stem, such as a data kvarehousæ for oi)line analAis. or for hilil'iin'! lnalexes alul cache• I his technique is called ](../media/Onsite-quesion-System-Design-Scott-image9.png){width="5.0in" height="3.0902777777777777in"}
 
 
 
@@ -176,7 +176,7 @@ Solution: write and read own profile from leader, read other's profile from foll
 
 
 
-![Read your write... A roaches that re unre remenlbenn ' the timestalll of the user's last u date becotne tnore diliicult, because .11e code runnin ' on one device doesn't kilotv "'llat u llave 'ened the device This ill need to be centralized If our re licas are distributed across ditlerent datacellters. there IS no •uarantee that connections ditTerent devices VA-ill be routed to the satnc datacenter. (For exarn lg. if the user•s deskto com uter uses th. broadband connection alid their Inobile ice uses the cellular data net" ork. the devices • netuork Ina be com Ictel ditTerent.) If our a roach re uires readine om the leader. ntay first need oute reauests from all ofa user's (lei ices to the same datacenter ](../media/Onsite-quesion-System-Design-Scott-image11.png){width="5.0in" height="2.03125in"}
+![Read your write... A roaches that re unre remenlbenn ' the timestalll of the user's last u date becotne tnore diliicult, because .11e code runnin ' on one device doesn't kilotv "'llat u llave 'ened the device This ill need to be centralized If our re licas are distributed across ditlerent datacellters. there IS no •uarantee that connections ditTerent devices VA-ill be routed to the satnc datacenter. (For exarn lg. if the user•s deskto com uter uses th. broadband connection alid their Inobile ice uses the cellular data net" ork. the devices • netuork Ina be com Ictel ditTerent.) If our a roach re uires readine om the leader. ntay first need oute reauests from all ofa user's (lei ices to the same datacenter ](../media/Onsite-quesion-System-Design-Scott-image11.png){width="5.0in" height="2.0277777777777777in"}
 
 Monotonic read : read the new data first then old data, will not see time go backward
 
@@ -192,7 +192,7 @@ sync()
 
 
 
-![Replication Lag 2: monotonic read in ser t into (author. revAy_to. message) values( 1234. 55555. •Sounds time User 1234 Follower 1 Follower 2 User 2345 insert into insert result select • from comments where reply_to 55555 insert into no reqAts' select • from where repty_to SSSSS Ine wa of achle•.'in:' Ilionotonic reads is llake sure that each s makes their read iiotn the satne re lic. ditTercnt users can read 'rom different re licas) l•or exant le. there lic.: an be chosen based on liash of the user ID, rathel han randoml . Howeve: it' that re lica fails. the user •s ueries v. ill need rerouted to anothe- Figure 5---4. A user a replica. then from a stale replica. Time ta go To prevent anomaly. we need ](../media/Onsite-quesion-System-Design-Scott-image13.png){width="5.0in" height="2.65625in"}
+![Replication Lag 2: monotonic read in ser t into (author. revAy_to. message) values( 1234. 55555. •Sounds time User 1234 Follower 1 Follower 2 User 2345 insert into insert result select • from comments where reply_to 55555 insert into no reqAts' select • from where repty_to SSSSS Ine wa of achle•.'in:' Ilionotonic reads is llake sure that each s makes their read iiotn the satne re lic. ditTercnt users can read 'rom different re licas) l•or exant le. there lic.: an be chosen based on liash of the user ID, rathel han randoml . Howeve: it' that re lica fails. the user •s ueries v. ill need rerouted to anothe- Figure 5---4. A user a replica. then from a stale replica. Time ta go To prevent anomaly. we need ](../media/Onsite-quesion-System-Design-Scott-image13.png){width="5.0in" height="2.6527777777777777in"}
 
 
 
@@ -246,7 +246,7 @@ Each replica has a uuid, larger uuid will overwrite the smaller uuid, more chanc
 
 
 
-![r.USTOM CONFLICT RESOLUTION LOGIC the most a ro mate wav ot resolun ' a contllct mav de •nd on thea licatlon. most multi-leader repltc'.lt:on tools let vow rite con t)ict resolution application code. That code tnav be executed on rite or on read soon as the database svstem detects a contltct tn the 10 ofre heated chan es. It calls the conflict handler, For exam le I allows to write a sni •t Of tv •ackt•ronnd roce« and It execute iliekl•. hen a conflict is detected. all the conthctin ' 'Mites are stored. The next titne the data IS read, these multi le scrsion.s of thk fata are returned to thea lication. heation rolli t the user or automaticallv resol'.e the conthct_ and '.&Tite thk esult back to the database. ('ouchl)B orks this tisr Note that conflict resolution usuall',• lies at the of an tndi'.adual row or document. not tor an enure transaction Ifvou a transaction that atonucallv several ditiérent 'Mites, each w "te •ill con€idered separatelv tar 'h. ](../media/Onsite-quesion-System-Design-Scott-image19.png){width="5.0in" height="2.5520833333333335in"}
+![r.USTOM CONFLICT RESOLUTION LOGIC the most a ro mate wav ot resolun ' a contllct mav de •nd on thea licatlon. most multi-leader repltc'.lt:on tools let vow rite con t)ict resolution application code. That code tnav be executed on rite or on read soon as the database svstem detects a contltct tn the 10 ofre heated chan es. It calls the conflict handler, For exam le I allows to write a sni •t Of tv •ackt•ronnd roce« and It execute iliekl•. hen a conflict is detected. all the conthctin ' 'Mites are stored. The next titne the data IS read, these multi le scrsion.s of thk fata are returned to thea lication. heation rolli t the user or automaticallv resol'.e the conthct_ and '.&Tite thk esult back to the database. ('ouchl)B orks this tisr Note that conflict resolution usuall',• lies at the of an tndi'.adual row or document. not tor an enure transaction Ifvou a transaction that atonucallv several ditiérent 'Mites, each w "te •ill con€idered separatelv tar 'h. ](../media/Onsite-quesion-System-Design-Scott-image19.png){width="5.0in" height="2.5555555555555554in"}
 
 
 
@@ -276,7 +276,7 @@ Temporarily and write it back to 1 and 2 when 1 and 2 are available
 
 
 
-![arc not necessaril • ma it onl that the sets nodes used bv the read and write € •rations In at least one node. a stnaller and r vou are more likelv to read stale because it's more likelv that lidn•t include the node with the latest xalue. the u side, this conti •uration a110','.s 10',scr latencv and hi •he: es.en with w r n. there are likelv to he 'A here stale are returned T hoe depend implementation h'it It-a slo uorum IS used the end u on dit-térent nodes th.•n the r there no 2 uaranteed overla between the r nodes and the w node If two vaites occur concurrentlv. it is not clear one ha •ned tirst. In this case. the -ner •e the concurrent 'Mites. last write 'suns can be lost due to clock skev. If a "Tite ha •ns concurrentlv "ith a read. the write Inav be reflected on onlv sotne ot the re Itcas If a write succeeded on sotne re licas but failed on others (tor exatn lc because the disks on some nodes are lull). en succeeded on than re licas, it is not rolled back on the re luca.s where it succeeded. read If a node carn in ' a new fails. and its data is restored front a re lica carrvine an old x alue. the nutnber c Itc.xs storin ' the new mav fall below breakin ' the not-um condition en if e•.ervthirv-' is •aorkill'-' there are eclee cases in v.hich x ou can ect unluckv the tinnn• I hus. although uortllns a •ar to guarantee that a read returns the latest written '.alue, In r actice It not so IV I le databases are encrallv o titnwcd t0r use that can tolerate eusntual consistency. '[he Illoxs vou to ad list the robahllitv of •tale 'values IRIn ' read. hut it's to not take them absolute •uarantees ](../media/Onsite-quesion-System-Design-Scott-image20.png){width="5.0in" height="3.0104166666666665in"}
+![arc not necessaril • ma it onl that the sets nodes used bv the read and write € •rations In at least one node. a stnaller and r vou are more likelv to read stale because it's more likelv that lidn•t include the node with the latest xalue. the u side, this conti •uration a110','.s 10',scr latencv and hi •he: es.en with w r n. there are likelv to he 'A here stale are returned T hoe depend implementation h'it It-a slo uorum IS used the end u on dit-térent nodes th.•n the r there no 2 uaranteed overla between the r nodes and the w node If two vaites occur concurrentlv. it is not clear one ha •ned tirst. In this case. the -ner •e the concurrent 'Mites. last write 'suns can be lost due to clock skev. If a "Tite ha •ns concurrentlv "ith a read. the write Inav be reflected on onlv sotne ot the re Itcas If a write succeeded on sotne re licas but failed on others (tor exatn lc because the disks on some nodes are lull). en succeeded on than re licas, it is not rolled back on the re luca.s where it succeeded. read If a node carn in ' a new fails. and its data is restored front a re lica carrvine an old x alue. the nutnber c Itc.xs storin ' the new mav fall below breakin ' the not-um condition en if e•.ervthirv-' is •aorkill'-' there are eclee cases in v.hich x ou can ect unluckv the tinnn• I hus. although uortllns a •ar to guarantee that a read returns the latest written '.alue, In r actice It not so IV I le databases are encrallv o titnwcd t0r use that can tolerate eusntual consistency. '[he Illoxs vou to ad list the robahllitv of •tale 'values IRIn ' read. hut it's to not take them absolute •uarantees ](../media/Onsite-quesion-System-Design-Scott-image20.png){width="5.0in" height="3.0069444444444446in"}
 
 
 
@@ -292,7 +292,7 @@ Horizonal partition
 
 
 
-![Partition by Hash key or artlt:ontra' u vses. the hash tunction need not to Incall ' stron v: tor I", Mongol)B use, sitn lc hash tuncttons built in (as thev are used hash tables). but they Ina not h. suitable tor • rtitionint• Ior e.xaln le. in Jat.a•s . ( ' and Rubv•s c,h. the ••ame kev tnav haxe a antaee: Lose the abilit%. to do efliuent ran•-'c assandra achiescs a com rorntsc between the artlttomn strategies. A table 111 Cassandra can be declared com »ound wimarv kev consistin ' ot- colutnns. ()nlv the first • rt ot- that kev is hashed to detertnine 'atlltion. but the other columns are used as a concatenated Index tor sortin ' the data tn Cassandra •s SSI'ablcs- A uerv therefore cannot search for a range otÄalues 1.0thin the tirst column of a com 'und kev. hut if it s •cities I'nrtlar-v kev iParition kev sort ](../media/Onsite-quesion-System-Design-Scott-image21.png){width="5.0in" height="2.8020833333333335in"}
+![Partition by Hash key or artlt:ontra' u vses. the hash tunction need not to Incall ' stron v: tor I", Mongol)B use, sitn lc hash tuncttons built in (as thev are used hash tables). but they Ina not h. suitable tor • rtitionint• Ior e.xaln le. in Jat.a•s . ( ' and Rubv•s c,h. the ••ame kev tnav haxe a antaee: Lose the abilit%. to do efliuent ran•-'c assandra achiescs a com rorntsc between the artlttomn strategies. A table 111 Cassandra can be declared com »ound wimarv kev consistin ' ot- colutnns. ()nlv the first • rt ot- that kev is hashed to detertnine 'atlltion. but the other columns are used as a concatenated Index tor sortin ' the data tn Cassandra •s SSI'ablcs- A uerv therefore cannot search for a range otÄalues 1.0thin the tirst column of a com 'und kev. hut if it s •cities I'nrtlar-v kev iParition kev sort ](../media/Onsite-quesion-System-Design-Scott-image21.png){width="5.0in" height="2.798611111111111in"}
 
 
 
@@ -312,7 +312,7 @@ Global secondary index, (partition the global index) in one partition (partition
 
 
 
-![Partitioning Secondary Indexes by Term Rather than each partition having its own secondary index (a local index), we can construct a global indexthat covers data in all partitions. However, we can't just store that index on one node, since it would likely become a bottleneck and defeat the purpose of partitioning. A global index must also be partitioned, but it can be partitioned differently from the primary key index. Figure 6-5 illustrates what this could look like: red cars from all partitions appear under color : red in the index, but the index is partitioned so that colors starting with the letters a to r appear in partition O and colors starting with sto z appear in ](../media/Onsite-quesion-System-Design-Scott-image22.png){width="5.0in" height="4.427083333333333in"}
+![Partitioning Secondary Indexes by Term Rather than each partition having its own secondary index (a local index), we can construct a global indexthat covers data in all partitions. However, we can't just store that index on one node, since it would likely become a bottleneck and defeat the purpose of partitioning. A global index must also be partitioned, but it can be partitioned differently from the primary key index. Figure 6-5 illustrates what this could look like: red cars from all partitions appear under color : red in the index, but the index is partitioned so that colors starting with the letters a to r appear in partition O and colors starting with sto z appear in ](../media/Onsite-quesion-System-Design-Scott-image22.png){width="5.0in" height="4.430555555555555in"}
 
 
 
@@ -340,7 +340,7 @@ Incorrect
 
 
 
-![HOW NOT TO DO IT HASH MOD m Vhen artltionin ' the hash of a kev. •we said earlier (Fi ure that it •s hest to the hashes int. an 'cs and assiL'11 each rance t') a •tr•tition c' _ to oar-tition 0 if •z ho. to I if • Perha s vou 'A (tndered v, h v-,'C don•t 1 the o tnan•, •ratntntn Ian '[la •ct.), For I". lush(kev) mod 10 would return a nunnber between 0 and 9 (if '"Tite the hash as a decimal number. the hash 10 would he the last If we have O to 9 that like an of each kC'_ I he roblelll With the a roach is that It the number of nodes ,V chan 'CES. tuost of the kc •s Will need to he 1 234.S6. lt- vou initiallv 10 nodes, that kev stan nosed from one node to another. For exarn le. s-a hush(kev) - "It on node 6 (because mod 10 = 6), vou •row to I I nodes. the kev needs to to 3 ( nod Il --- and '011 'row to 12 it to l) ](../media/Onsite-quesion-System-Design-Scott-image23.png){width="5.0in" height="2.46875in"}
+![HOW NOT TO DO IT HASH MOD m Vhen artltionin ' the hash of a kev. •we said earlier (Fi ure that it •s hest to the hashes int. an 'cs and assiL'11 each rance t') a •tr•tition c' _ to oar-tition 0 if •z ho. to I if • Perha s vou 'A (tndered v, h v-,'C don•t 1 the o tnan•, •ratntntn Ian '[la •ct.), For I". lush(kev) mod 10 would return a nunnber between 0 and 9 (if '"Tite the hash as a decimal number. the hash 10 would he the last If we have O to 9 that like an of each kC'_ I he roblelll With the a roach is that It the number of nodes ,V chan 'CES. tuost of the kc •s Will need to he 1 234.S6. lt- vou initiallv 10 nodes, that kev stan nosed from one node to another. For exarn le. s-a hush(kev) - "It on node 6 (because mod 10 = 6), vou •row to I I nodes. the kev needs to to 3 ( nod Il --- and '011 'row to 12 it to l) ](../media/Onsite-quesion-System-Design-Scott-image23.png){width="5.0in" height="2.4722222222222223in"}
 
 
 
@@ -382,7 +382,7 @@ Consist hash
 
 
 
-![Service Discovery get •foo• choose O get •foo• •outmg 3 client connect direct}' to 2 •foo• lives rode 2 •foo• lives on node 2 node O node 1 2 1 node 2 rode O node rode 2 = the knowledge of which partition is assigned to which node Firer 6-7. right , ](../media/Onsite-quesion-System-Design-Scott-image27.png){width="5.0in" height="2.78125in"}
+![Service Discovery get •foo• choose O get •foo• •outmg 3 client connect direct}' to 2 •foo• lives rode 2 •foo• lives on node 2 node O node 1 2 1 node 2 rode O node rode 2 = the knowledge of which partition is assigned to which node Firer 6-7. right , ](../media/Onsite-quesion-System-Design-Scott-image27.png){width="5.0in" height="2.7777777777777777in"}
 1.  Each node know other nodes -- p2p
 2.  Routing tire --
 3.  Client know (another service, payment service or internal service )
@@ -415,7 +415,7 @@ User A need go to the leader X
 
 
 
-![](../media/Onsite-quesion-System-Design-Scott-image29.png){width="3.0104166666666665in" height="0.625in"}![](../media/Onsite-quesion-System-Design-Scott-image30.png){width="0.22916666666666666in" height="0.5833333333333334in"}![](../media/Onsite-quesion-System-Design-Scott-image31.png){width="3.9895833333333335in" height="1.0833333333333333in"}
+![](../media/Onsite-quesion-System-Design-Scott-image29.png){width="3.0069444444444446in" height="0.625in"}![](../media/Onsite-quesion-System-Design-Scott-image30.png){width="0.22916666666666666in" height="0.5833333333333334in"}![](../media/Onsite-quesion-System-Design-Scott-image31.png){width="3.9930555555555554in" height="1.0833333333333333in"}
 
 
 
@@ -435,7 +435,7 @@ The consistency
 
 
 
-![JAP IS sometimes presented as Cons'stency, Avanabtbty, Partition tolerance. peck 2 out of 3. Unfortunatedy, putting It this wav _ misleading because network partitions are a kind of fault. so they aren't something about which you have a choice: they will Of C would e. ther Partition whether like it Or not a better ](../media/Onsite-quesion-System-Design-Scott-image33.png){width="5.0in" height="0.4270833333333333in"}
+![JAP IS sometimes presented as Cons'stency, Avanabtbty, Partition tolerance. peck 2 out of 3. Unfortunatedy, putting It this wav _ misleading because network partitions are a kind of fault. so they aren't something about which you have a choice: they will Of C would e. ther Partition whether like it Or not a better ](../media/Onsite-quesion-System-Design-Scott-image33.png){width="5.0in" height="0.4236111111111111in"}
 
 
 
@@ -443,7 +443,7 @@ The consistency
 
 
 
-![• Membership and Coordination service / ooKcc •r and etcd are desi 'ned to hold small atnounts of data that can tit enurelv in tnctnor•. although thev still write to dusk vou wouldn't to store all of your a Itcatton lata here. That amount of data is replicated across all the no-cl+ using a fault-tolerant total orde aleorithm Allocating work to nodes kind ot- data mana •ed bv /ooKec is (lite 'in it re resents information like •ethe nod runnin ' on IP address 10. I. I .2 g is the leader t0r rtltion and such asswnrnents usuallv chan•-'e on Service discovery ](../media/Onsite-quesion-System-Design-Scott-image35.png){width="5.0in" height="2.0104166666666665in"}
+![• Membership and Coordination service / ooKcc •r and etcd are desi 'ned to hold small atnounts of data that can tit enurelv in tnctnor•. although thev still write to dusk vou wouldn't to store all of your a Itcatton lata here. That amount of data is replicated across all the no-cl+ using a fault-tolerant total orde aleorithm Allocating work to nodes kind ot- data mana •ed bv /ooKec is (lite 'in it re resents information like •ethe nod runnin ' on IP address 10. I. I .2 g is the leader t0r rtltion and such asswnrnents usuallv chan•-'e on Service discovery ](../media/Onsite-quesion-System-Design-Scott-image35.png){width="5.0in" height="2.0069444444444446in"}
 
 
 

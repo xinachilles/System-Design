@@ -274,7 +274,7 @@ does this make sense a reasonable kind of approach recommendation engine that I 
 
 
 
-![StoreVideo (Admin API call) Centra Video Storag e store: 33 GCS) Relational Database (postgres  MySQL) user Metadata (ratings, progress) Sharded based on userld Machine Learn Relational Database (Postgres MySQL) Stanc Content (cast. duration. views....) MapReduce Job Content Scoring user Activity Storage (HDFS) IXP / Popula 'XP / Pop Cache Populator Netflix Video Cache ISP IXP (or CDN POP) IXP Pop Populator API Servers Netflix Video Cache ISP 'XP (or CDN POP) Servers Load Balancing Round Robin Servers Cache ](../../media/Netfilx-Netflix-Netflix-and-Recommendation-image1.png){width="5.635416666666667in" height="4.145833333333333in"}
+![StoreVideo (Admin API call) Centra Video Storag e store: 33 GCS) Relational Database (postgres  MySQL) user Metadata (ratings, progress) Sharded based on userld Machine Learn Relational Database (Postgres MySQL) Stanc Content (cast. duration. views....) MapReduce Job Content Scoring user Activity Storage (HDFS) IXP / Popula 'XP / Pop Cache Populator Netflix Video Cache ISP IXP (or CDN POP) IXP Pop Populator API Servers Netflix Video Cache ISP 'XP (or CDN POP) Servers Load Balancing Round Robin Servers Cache ](../../media/Netfilx-Netflix-Netflix-and-Recommendation-image1.png){width="2.7708333333333335in" height="2.03125in"}
 
 ![](../../media/Netfilx-Netflix-Netflix-and-Recommendation-image2.png){width="0.20833333333333334in" height="0.20833333333333334in"}
 

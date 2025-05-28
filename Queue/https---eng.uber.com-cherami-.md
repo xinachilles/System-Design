@@ -14,7 +14,7 @@ Cherami's users are defined as either*producers*or*consumers*.*Producers*enqueue
 
 Cherami also supports multiple consumer groups, where each consumer group receives all tasks in the queue. Each consumer group is associated with a[dead letter queue](https://en.wikipedia.org/wiki/Dead_letter_queue). Tasks that exceed the maximum retry count (for example, "poison pills") land in dead letter queue ~~this queue~~ so that the consumer group can continue processing other messages. ~~These consumer handling features both distinguish Cherami from the simple message buses that are typically used in big data ingestion and analytics (e.g.[Apache Kafka](https://kafka.apache.org/)), and make Cherami advantageous in task queue use cases.~~
 
-![Producers enqueue tasks into queues A and B. Queue A feeds to two consumers groups that both receive all tasks, distributed across consumers within the respective group. Queue B feeds to only one consumer group.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image1.png){width="12.583333333333334in" height="8.541666666666666in"}
+![Producers enqueue tasks into queues A and B. Queue A feeds to two consumers groups that both receive all tasks, distributed across consumers within the respective group. Queue B feeds to only one consumer group.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image1.png){width="6.25in" height="4.21875in"}
 
 Producers enqueue tasks into queues A and B. Queue A feeds to two consumers groups that both receive all tasks, distributed across consumers within the respective group. Queue B feeds to only one consumer group.
 
@@ -53,7 +53,7 @@ The append-only property allows a queue to remain available for publishing durin
 
 ~~A Cherami queue consists of one or more*extents*, which are conceptual substreams within a queue that independently support appending messages. Extents are replicated to the storage layer by a role called*input host*. When an extent is created,~~ [its metadata contains an immutable host information tuple (input host and list of storage hosts).]{.mark} ~~In each storage host, the replicated copy of the extent is called a*replica*, and a storage host can host many replicas of different extents. If a single storage host fails, we don't lose messages because the extent is still readable from other replicas.~~
 
-![Cherami handles a storage host failure.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image2.png){width="12.583333333333334in" height="7.125in"}
+![Cherami handles a storage host failure.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image2.gif){width="6.25in" height="3.5104166666666665in"}
 
 Cherami handles a storage host failure.
 
@@ -65,7 +65,7 @@ Pipelining means the input host does not wait for an ack before writing the next
 
 Within each extent, messages are ordered due to the pipelining property. This ensures messages across all replicas are consistent, except for the tails where a storage host has yet to persist the messages.
 
-![Input host only receives acks for the first three messages from all storage hosts. It acks the first three messages to the producer, as those messages are guaranteed to be fully replicated.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image3.png){width="12.583333333333334in" height="7.583333333333333in"}
+![Input host only receives acks for the first three messages from all storage hosts. It acks the first three messages to the producer, as those messages are guaranteed to be fully replicated.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image3.png){width="6.25in" height="3.75in"}
 
 Input host only receives acks for the first three messages from all storage hosts. It acks the first three messages to the producer, as those messages are guaranteed to be fully replicated.
 
@@ -81,15 +81,15 @@ We choose to use sealing as a recovery mechanism because it is simple to impleme
 
 Extents within Cherami are shared-nothing substreams. Cherami observes the throughput on each extent. As write load to a particular queue increases and some extents exceed their throughput limit, Cherami creates additional extents (input 2) for that queue automatically. The new extents receive part of the write load, alleviating the load on existing extents.
 
-![Scaling of writes](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image4.png){width="12.583333333333334in" height="7.125in"}
+![Scaling of writes](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image4.gif){width="6.25in" height="3.5104166666666665in"}
 
 
 
-![2. Message traffic volume spikes Extent 1 Input 1 Extent 1 Input 2 Extent 1 ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image5.png){width="10.083333333333334in" height="5.989583333333333in"}
+![2. Message traffic volume spikes Extent 1 Input 1 Extent 1 Input 2 Extent 1 ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image5.png){width="5.0in" height="2.9479166666666665in"}
 
 
 
-![3. A new extent is created and placed at different hosts to absorb increased traffic Input 1 Input 2 Extent 1 Extent 1 Extent 2 Extent 1 Extent 2 Extent 2 Storage Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image6.png){width="10.083333333333334in" height="5.739583333333333in"}
+![3. A new extent is created and placed at different hosts to absorb increased traffic Input 1 Input 2 Extent 1 Extent 1 Extent 2 Extent 1 Extent 2 Extent 2 Storage Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image6.png){width="5.0in" height="2.8229166666666665in"}
 
 As write load decreases, Cherami seals some of the extents without replacing them with new ones. In this way Cherami reduces some overhead (memory, network connections, and other maintenance) required to maintain an open extent.
 
@@ -109,39 +109,39 @@ the ACK should store in the output extent
 
 
 
-![Output host handles out-of-order acks from workers.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image7.png){width="12.583333333333334in" height="7.125in"}
+![Output host handles out-of-order acks from workers.](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image7.gif){width="6.25in" height="3.5104166666666665in"}
 
 Output host handles out-of-order acks from workers.
 
 
 
-![2. Worker 1 received Message O; internal timer started for that message Extent 1 Consumer GroLQ 1 : ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image8.png){width="10.083333333333334in" height="6.041666666666667in"}
+![2. Worker 1 received Message O; internal timer started for that message Extent 1 Consumer GroLQ 1 : ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image8.png){width="5.0in" height="2.9791666666666665in"}
 
 
 
-![3. Other three workers received one message each Extent 1 Consumer GroLQ 1 : ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image9.png){width="10.083333333333334in" height="5.604166666666667in"}
+![3. Other three workers received one message each Extent 1 Consumer GroLQ 1 : ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image9.png){width="5.0in" height="2.75in"}
 
 
 
-![4. Worker 4 completes processing Message 2 and acknowledges it, but consumed cursor cannot move yet Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image10.png){width="10.083333333333334in" height="5.84375in"}
+![4. Worker 4 completes processing Message 2 and acknowledges it, but consumed cursor cannot move yet Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image10.png){width="5.0in" height="2.875in"}
 
 
 
-![5. Worker 4 continues to process a new message Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image11.png){width="10.083333333333334in" height="5.927083333333333in"}
+![5. Worker 4 continues to process a new message Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image11.png){width="5.0in" height="2.9166666666666665in"}
 
 
 
 
 
-![6. Worker 2 completes Message 1 , then, continues to Message 5 Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image12.png){width="10.083333333333334in" height="6.208333333333333in"}
+![6. Worker 2 completes Message 1 , then, continues to Message 5 Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image12.png){width="5.0in" height="3.0625in"}
 
 
 
-![7. Worker 1 completes Message O; now consumed cursor can advance Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image13.png){width="10.083333333333334in" height="6.4375in"}
+![7. Worker 1 completes Message O; now consumed cursor can advance Extent 1 Consumer GroLQ 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image13.png){width="5.0in" height="3.1770833333333335in"}
 
 
 
-![8. Worker 1 gets a new message; consumed cursor advances to the first unacknowledged message Extent 1 ÖÖÖ Consumer Grocp 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image14.png){width="10.083333333333334in" height="6.520833333333333in"}
+![8. Worker 1 gets a new message; consumed cursor advances to the first unacknowledged message Extent 1 ÖÖÖ Consumer Grocp 1 : Output host handles out-of-order acks from workers. ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image14.png){width="5.0in" height="3.21875in"}
 
 
 
@@ -159,53 +159,53 @@ Messages in Cherami are durably stored on disks. On the storage hosts, we chose[
 
 With RocksDB, we can also easily implement timer queues, which are queues where each message is associated with a delay time. In such a case, the message is only delivered after the specified delay. For timer queues, we construct the key to contain the delivery time in high order bits, and sequence number in low order bits. Since RocksDB provides a sorted iterator, the keys are iterated in order of delivery time, while the sequence number of the lower bits ensures uniqueness of the keys:
 
-![1. Timer queues uses indexed storage, and gates messages by current time •ononuaanaa ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image15.png){width="10.083333333333334in" height="5.708333333333333in"}
+![1. Timer queues uses indexed storage, and gates messages by current time •ononuaanaa ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image15.gif){width="5.0in" height="2.8125in"}
 
 
 
-![2. Messages are indexed by delivery timestamp 16100 •ononuaanaa ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image16.png){width="10.083333333333334in" height="5.708333333333333in"}
+![2. Messages are indexed by delivery timestamp 16100 •ononuaanaa ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image16.gif){width="5.0in" height="2.8125in"}
 
 
 
-![3. We can only insert into the future 16100 8 ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image17.png){width="10.083333333333334in" height="5.708333333333333in"}
+![3. We can only insert into the future 16100 8 ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image17.gif){width="5.0in" height="2.8125in"}
 
 
 
-![4. New future event (16100) inserted ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image18.png){width="10.083333333333334in" height="5.708333333333333in"}
+![4. New future event (16100) inserted ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image18.gif){width="5.0in" height="2.8125in"}
 
 System Architecture
 
 Cherami consists of several different roles. In addition to the input, storage, and output roles we already introduced, there's*controller*, and*frontend*. A typical Cherami deployment consists of several instances of each role:
 
-![1. Cherami consists of several roles, and provides a client-side library Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane Co Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image19.png){width="10.083333333333334in" height="5.708333333333333in"}
+![1. Cherami consists of several roles, and provides a client-side library Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane Co Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image19.gif){width="5.0in" height="2.8125in"}
 
 
 
-![2. Producer first uses routing API on frontend host to look up which input host to connect to Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image20.png){width="10.083333333333334in" height="5.708333333333333in"}
+![2. Producer first uses routing API on frontend host to look up which input host to connect to Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image20.gif){width="5.0in" height="2.8125in"}
 
 
 
-![3. Producer establishes stream to specific input host to publish messages Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image21.png){width="10.083333333333334in" height="5.708333333333333in"}
+![3. Producer establishes stream to specific input host to publish messages Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image21.gif){width="5.0in" height="2.8125in"}
 
 
 
-![4. Input host replicates the messages to three storage hosts Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image22.png){width="10.083333333333334in" height="5.708333333333333in"}
+![4. Input host replicates the messages to three storage hosts Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image22.gif){width="5.0in" height="2.8125in"}
 
 
 
-![5 consumer first uses routing API on frontend host to 100k up which output host to connect to Producer Client Lib Consumer Client Lib CD Control plane Data plane Output Hosts Input Hosts Frontend Hosts Controller etadäti (Cassandra) Storage Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image23.png){width="10.083333333333334in" height="5.708333333333333in"}
+![5 consumer first uses routing API on frontend host to 100k up which output host to connect to Producer Client Lib Consumer Client Lib CD Control plane Data plane Output Hosts Input Hosts Frontend Hosts Controller etadäti (Cassandra) Storage Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image23.gif){width="5.0in" height="2.8125in"}
 
 
 
-![6. Consumer establishes stream to specific output host to receive messages Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image24.png){width="10.083333333333334in" height="5.708333333333333in"}
+![6. Consumer establishes stream to specific output host to receive messages Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image24.gif){width="5.0in" height="2.8125in"}
 
 
 
-![7. All data plane roles report current load to the controller Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane Co Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image25.png){width="10.083333333333334in" height="5.708333333333333in"}
+![7. All data plane roles report current load to the controller Input Hosts Producer Client Lib Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane Co Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image25.gif){width="5.0in" height="2.8125in"}
 
 
 
-![8. If controller creates new extents, it Producer notifies producer Client Lib and consumer to connect to them Input Hosts Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image26.png){width="10.083333333333334in" height="5.708333333333333in"}
+![8. If controller creates new extents, it Producer notifies producer Client Lib and consumer to connect to them Input Hosts Consumer Client Lib Frontend Hosts Controller ea a (Cassandra) Storage Hosts Control plane CO Data Plane Output Hosts ](../media/Queue-https---eng.uber.com-cherami-message-queue-system--image26.gif){width="5.0in" height="2.8125in"}
 
 Interaction of Cherami's system components.
 

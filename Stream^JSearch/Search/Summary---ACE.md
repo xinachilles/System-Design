@@ -26,11 +26,11 @@ When user search used like key word search, the search query will go to query pr
 
 
 
-![O Ace ĹodQlÍ/t+ervie,wr. conn I Star s ](../../media/Stream^JSearch-Search-Summary---ACE-image1.png){width="10.083333333333334in" height="5.145833333333333in"}
+![O Ace ĹodQlÍ/t+ervie,wr. conn I Star s ](../../media/Stream^JSearch-Search-Summary---ACE-image1.png){width="5.0in" height="2.5208333333333335in"}
 
 
 
-![4 QFS Qeg.Go•31e) C)ùagrant- extraoéivn ReseZ+ @ acecodeinterv ](../../media/Stream^JSearch-Search-Summary---ACE-image2.png){width="10.083333333333334in" height="6.09375in"}
+![4 QFS Qeg.Go•31e) C)ùagrant- extraoéivn ReseZ+ @ acecodeinterv ](../../media/Stream^JSearch-Search-Summary---ACE-image2.png){width="5.0in" height="3.0in"}
 
 
 
@@ -48,7 +48,7 @@ do the tokenization, normalization(vehicle= car), stemming and lemmatization
 
 
 
-![和 分 e 仑 docs-google.com 加 resentatio 可 引 litC3B NZ 」 YBW8G82eP•wDs 、 0 ^ 《 Z V6DLbCu18 ℃ 口 hE 在 巧 巧 # ide = ． p 英 语 词 的 提 取 请 会 请 多 0 Alle 标 识 化 标 准 化 词 干 提 取 & 词 形 还 原 Tokenization Normalization Stemming & Lemmatization 词 组 词 性 姓 名 同 义 词 单 复 数 邮 箱 网 站 时 态 带 标 点 的 词 @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ on ](../../media/Stream^JSearch-Search-Summary---ACE-image3.png){width="10.083333333333334in" height="6.0625in"}
+![和 分 e 仑 docs-google.com 加 resentatio 可 引 litC3B NZ 」 YBW8G82eP•wDs 、 0 ^ 《 Z V6DLbCu18 ℃ 口 hE 在 巧 巧 # ide = ． p 英 语 词 的 提 取 请 会 请 多 0 Alle 标 识 化 标 准 化 词 干 提 取 & 词 形 还 原 Tokenization Normalization Stemming & Lemmatization 词 组 词 性 姓 名 同 义 词 单 复 数 邮 箱 网 站 时 态 带 标 点 的 词 @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ on ](../../media/Stream^JSearch-Search-Summary---ACE-image3.png){width="5.0in" height="2.9895833333333335in"}
 
 
 
@@ -82,7 +82,7 @@ Keyword ->url+position
 
 
 
-![1.5 Indexer Sarcla @ acecoclQ-iA±ervi2AA. extra VRC, Peclucex ](../../media/Stream^JSearch-Search-Summary---ACE-image4.png){width="10.083333333333334in" height="5.041666666666667in"}
+![1.5 Indexer Sarcla @ acecoclQ-iA±ervi2AA. extra VRC, Peclucex ](../../media/Stream^JSearch-Search-Summary---ACE-image4.png){width="5.0in" height="2.4791666666666665in"}
 
 
 
@@ -102,7 +102,7 @@ Termed based or document based: Document id ( stored the web page as document)
 
 
 
-![Document- Partitioned Index Term- Partitioned Index Advantages Posting Lists are Smaller Easy to manage and scale Intersections are local to a machine Index updates can be done dynamically and one partition at a time Only a subset of machines are used for each query Disadvantages All machines are contacted for each query Merging results from all machines can be expensive Network traffic to all machines can be expensive Remote intersections can be expensive as entire posting lists need to be copied over network Index updates need to be done for entire index ](../../media/Stream^JSearch-Search-Summary---ACE-image5.png){width="10.083333333333334in" height="4.791666666666667in"}
+![Document- Partitioned Index Term- Partitioned Index Advantages Posting Lists are Smaller Easy to manage and scale Intersections are local to a machine Index updates can be done dynamically and one partition at a time Only a subset of machines are used for each query Disadvantages All machines are contacted for each query Merging results from all machines can be expensive Network traffic to all machines can be expensive Remote intersections can be expensive as entire posting lists need to be copied over network Index updates need to be done for entire index ](../../media/Stream^JSearch-Search-Summary---ACE-image5.png){width="5.0in" height="2.3541666666666665in"}
 
 
 
@@ -182,7 +182,7 @@ Termed based or document based: Document id ( stored the web page as document)
 
 
 
-![Doc ID Posting List Term Frequency Impact ](../../media/Stream^JSearch-Search-Summary---ACE-image6.png){width="10.083333333333334in" height="5.21875in"}
+![Doc ID Posting List Term Frequency Impact ](../../media/Stream^JSearch-Search-Summary---ACE-image6.png){width="5.0in" height="2.5625in"}
 
 
 
@@ -202,7 +202,7 @@ In each posting list, we sort the doc base on the doc id; or we also can conside
 
 
 
-![硬 盘 索 引 更 新 模 式 0 重 建 Rebuild 间 断 合 并 Intermittent Merge 渐 进 更 新 Incremental Update ](../../media/Stream^JSearch-Search-Summary---ACE-image7.png){width="10.083333333333334in" height="4.802083333333333in"}
+![硬 盘 索 引 更 新 模 式 0 重 建 Rebuild 间 断 合 并 Intermittent Merge 渐 进 更 新 Incremental Update ](../../media/Stream^JSearch-Search-Summary---ACE-image7.png){width="5.0in" height="2.3541666666666665in"}
 
 [Intermitted merge -- build the new posting list n other place then merge together ( better one)]{.mark}
 
@@ -210,11 +210,11 @@ In each posting list, we sort the doc base on the doc id; or we also can conside
 
 [Incremental update -- when user just search a key words, update this key words at the same time]{.mark}
 
-![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1.2 理 解 需 求 通 过 关 键 词 快 速 及 时 地 找 到 相 关 信 息 高 扩 展 性 ， 支 持 全 网 索 引 对 于 核 心 网 站 ， 低 延 迟 索 引 对 于 用 户 ， 低 延 迟 返 回 搜 索 结 果 高 可 靠 性 ， 返 回 内 容 与 关 键 词 相 关 非 英 语 支 持 ， 爬 虫 ， 搜 索 结 果 排 序 ](../../media/Stream^JSearch-Search-Summary---ACE-image8.png){width="10.083333333333334in" height="5.666666666666667in"}
+![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1.2 理 解 需 求 通 过 关 键 词 快 速 及 时 地 找 到 相 关 信 息 高 扩 展 性 ， 支 持 全 网 索 引 对 于 核 心 网 站 ， 低 延 迟 索 引 对 于 用 户 ， 低 延 迟 返 回 搜 索 结 果 高 可 靠 性 ， 返 回 内 容 与 关 键 词 相 关 非 英 语 支 持 ， 爬 虫 ， 搜 索 结 果 排 序 ](../../media/Stream^JSearch-Search-Summary---ACE-image8.png){width="5.0in" height="2.78125in"}
 
 
 
-![单 一 关 键 词 搜 索 查 询 结 果 LAU 缓 存 内 存 索 引 2 ． a. 智 能 排 序 Posting List b. Doc ID 扫 《 序 Posting List 硬 盘 索 引 3 ， a. 内 存 中 尚 未 合 并 的 索 引 b. 智 能 排 序 Posting List c. Doc ID 扌 非 序 Posting List ](../../media/Stream^JSearch-Search-Summary---ACE-image9.png){width="10.083333333333334in" height="10.5in"}
+![单 一 关 键 词 搜 索 查 询 结 果 LAU 缓 存 内 存 索 引 2 ． a. 智 能 排 序 Posting List b. Doc ID 扫 《 序 Posting List 硬 盘 索 引 3 ， a. 内 存 中 尚 未 合 并 的 索 引 b. 智 能 排 序 Posting List c. Doc ID 扌 非 序 Posting List ](../../media/Stream^JSearch-Search-Summary---ACE-image9.png){width="5.0in" height="5.197916666666667in"}
 
 [We can temporarily store the result of each search in memory]{.mark}
 
@@ -248,11 +248,11 @@ In each posting list, we sort the doc base on the doc id; or we also can conside
 
 LRU= frequent query cache
 
-![Posting List Keyword [(doc_id_l, pos_l, pos_2), (doc_id_2, pos_3), ...l ](../../media/Stream^JSearch-Search-Summary---ACE-image10.png){width="10.083333333333334in" height="1.8854166666666667in"}
+![Posting List Keyword [(doc_id_l, pos_l, pos_2), (doc_id_2, pos_3), ...l ](../../media/Stream^JSearch-Search-Summary---ACE-image10.png){width="5.0in" height="0.8958333333333334in"}
 
 
 
-![思 考 题 五 Posting List 存 在 内 存 还 是 硬 盘 ？ 多 数 放 内 存 常 用 放 内 存 扌 番 acecodeinterview.com ](../../media/Stream^JSearch-Search-Summary---ACE-image11.png){width="10.083333333333334in" height="12.166666666666666in"}
+![思 考 题 五 Posting List 存 在 内 存 还 是 硬 盘 ？ 多 数 放 内 存 常 用 放 内 存 扌 番 acecodeinterview.com ](../../media/Stream^JSearch-Search-Summary---ACE-image11.png){width="5.0in" height="6.041666666666667in"}
 
 [Document partition index:]{.mark}
 
@@ -289,7 +289,7 @@ Expensive for index update
 
 Cannot store in memory
 
-![BigTable Tablet Read/Write memtable Memory GFS tablet log Write Op Read Op SSTab1e Files Figure 5: Tablet Representation ](../../media/Stream^JSearch-Search-Summary---ACE-image12.png){width="10.083333333333334in" height="6.885416666666667in"}
+![BigTable Tablet Read/Write memtable Memory GFS tablet log Write Op Read Op SSTab1e Files Figure 5: Tablet Representation ](../../media/Stream^JSearch-Search-Summary---ACE-image12.png){width="5.0in" height="3.3958333333333335in"}
 
 indexer Index maintainer + on disk index storage = big table
 
@@ -309,7 +309,7 @@ SStable is for disk index
 
 
 
-![D sk ](../../media/Stream^JSearch-Search-Summary---ACE-image13.png){width="10.083333333333334in" height="2.1979166666666665in"}
+![D sk ](../../media/Stream^JSearch-Search-Summary---ACE-image13.png){width="5.0in" height="1.0520833333333333in"}
 
 
 
@@ -325,7 +325,7 @@ Then it will fresh into the disk periodically
 
 
 
-![索 引 的 内 存 数 据 结 构 Linked List of Singly Linked List Variable Length Array Fixed_size Array ](../../media/Stream^JSearch-Search-Summary---ACE-image14.png){width="10.083333333333334in" height="5.729166666666667in"}
+![索 引 的 内 存 数 据 结 构 Linked List of Singly Linked List Variable Length Array Fixed_size Array ](../../media/Stream^JSearch-Search-Summary---ACE-image14.png){width="5.0in" height="2.8125in"}
 
 
 
@@ -337,7 +337,7 @@ Linked list fixed size array -- multiple fixed size array linked with array
 
 
 
-![索 引 的 硬 盘 数 据 结 构 - Gap Variable Byte Encoding ](../../media/Stream^JSearch-Search-Summary---ACE-image15.png){width="10.083333333333334in" height="5.895833333333333in"}
+![索 引 的 硬 盘 数 据 结 构 - Gap Variable Byte Encoding ](../../media/Stream^JSearch-Search-Summary---ACE-image15.png){width="5.0in" height="2.8958333333333335in"}
 
 Doc gap: store the first doc id then rest just store the difference between previous one and current one (docid2 - docid1)
 
@@ -351,11 +351,11 @@ We can use doc gap and variable bytes encoding at same time
 
 
 
-![思 考 题 六 多 关 键 词 搜 索 (AND) 使 用 什 么 算 法 ？ 双 指 针 (Two Pointer) 跳 表 (Skip List) ](../../media/Stream^JSearch-Search-Summary---ACE-image16.png){width="10.083333333333334in" height="8.645833333333334in"}![思 考 题 二 如 何 通 过 索 引 来 实 现 多 个 单 词 的 搜 索 ？ 对 于 Posting List 取 交 集 ](../../media/Stream^JSearch-Search-Summary---ACE-image17.png){width="10.083333333333334in" height="8.09375in"}
+![思 考 题 六 多 关 键 词 搜 索 (AND) 使 用 什 么 算 法 ？ 双 指 针 (Two Pointer) 跳 表 (Skip List) ](../../media/Stream^JSearch-Search-Summary---ACE-image16.png){width="5.0in" height="4.270833333333333in"}![思 考 题 二 如 何 通 过 索 引 来 实 现 多 个 单 词 的 搜 索 ？ 对 于 Posting List 取 交 集 ](../../media/Stream^JSearch-Search-Summary---ACE-image17.png){width="5.0in" height="4.0in"}
 
 
 
-![思 考 题 七 关 键 词 组 搜 索 怎 么 实 现 ？ 利 用 位 置 信 息 关 键 词 组 索 引 ](../../media/Stream^JSearch-Search-Summary---ACE-image18.png){width="10.083333333333334in" height="8.572916666666666in"}![田 考 题 三 如 何 进 行 索 引 来 实 现 连 续 的 词 组 搜 索 ？ Posting List 存 入 位 置 信 息 特 定 词 作 为 整 体 索 引 (e.g. New York, Doctor Who) ](../../media/Stream^JSearch-Search-Summary---ACE-image19.png){width="10.083333333333334in" height="8.447916666666666in"}
+![思 考 题 七 关 键 词 组 搜 索 怎 么 实 现 ？ 利 用 位 置 信 息 关 键 词 组 索 引 ](../../media/Stream^JSearch-Search-Summary---ACE-image18.png){width="5.0in" height="4.239583333333333in"}![田 考 题 三 如 何 进 行 索 引 来 实 现 连 续 的 词 组 搜 索 ？ Posting List 存 入 位 置 信 息 特 定 词 作 为 整 体 索 引 (e.g. New York, Doctor Who) ](../../media/Stream^JSearch-Search-Summary---ACE-image19.png){width="4.989583333333333in" height="4.177083333333333in"}
 
 
 
@@ -369,17 +369,17 @@ Or build index for "New York" , "new York "is the keyword
 
 API:
 
-![• euempueqoe „ asuodsay // 139 *sanbay // ](../../media/Stream^JSearch-Search-Summary---ACE-image20.png){width="10.083333333333334in" height="7.09375in"}
+![• euempueqoe „ asuodsay // 139 *sanbay // ](../../media/Stream^JSearch-Search-Summary---ACE-image20.png){width="5.0in" height="3.5in"}
 
 Start = 30 : start 3th page (each page has 10 item) ( index update is not very frequency)
 
-![Instagram GET /vl/feed? image_count={image count}& last_timestamp={ts} ](../../media/Stream^JSearch-Search-Summary---ACE-image21.png){width="10.083333333333334in" height="6.46875in"}![1.10 MapReduce Bigtable, Document-based Partition, Cache ](../../media/Stream^JSearch-Search-Summary---ACE-image22.png){width="10.083333333333334in" height="5.4375in"}![服 务 器 存 储 L11 容 灾 设 计 MapReduce Persistency Master-slave Replication (GFS ， DB ， Cache) ](../../media/Stream^JSearch-Search-Summary---ACE-image23.png){width="10.083333333333334in" height="4.927083333333333in"}
+![Instagram GET /vl/feed? image_count={image count}& last_timestamp={ts} ](../../media/Stream^JSearch-Search-Summary---ACE-image21.png){width="5.0in" height="3.1875in"}![1.10 MapReduce Bigtable, Document-based Partition, Cache ](../../media/Stream^JSearch-Search-Summary---ACE-image22.png){width="5.0in" height="2.6770833333333335in"}![服 务 器 存 储 L11 容 灾 设 计 MapReduce Persistency Master-slave Replication (GFS ， DB ， Cache) ](../../media/Stream^JSearch-Search-Summary---ACE-image23.png){width="5.0in" height="2.4166666666666665in"}
 
 Mapreduce will store the result in GFS
 
 
 
-![Mapper/Reducer Ratio 1.12 Index Freshness DB Load Cache Hit Rate ](../../media/Stream^JSearch-Search-Summary---ACE-image24.png){width="10.083333333333334in" height="4.770833333333333in"}
+![Mapper/Reducer Ratio 1.12 Index Freshness DB Load Cache Hit Rate ](../../media/Stream^JSearch-Search-Summary---ACE-image24.png){width="5.0in" height="2.3333333333333335in"}
 
 Index freshness:
 
@@ -389,7 +389,7 @@ We need to check if we update the index for those website
 
 
 
-![1 · 13 Twitter Hashtag Search vs Google Search 逆 向 索 引 存 储 排 序 因 素 Hashtag Search 仅 Hashtag 内 存 作 者 +retweet Google Search 提 取 全 文 单 词 内 存 + 硬 盘 ](../../media/Stream^JSearch-Search-Summary---ACE-image25.png){width="10.083333333333334in" height="5.354166666666667in"}
+![1 · 13 Twitter Hashtag Search vs Google Search 逆 向 索 引 存 储 排 序 因 素 Hashtag Search 仅 Hashtag 内 存 作 者 +retweet Google Search 提 取 全 文 单 词 内 存 + 硬 盘 ](../../media/Stream^JSearch-Search-Summary---ACE-image25.png){width="5.0in" height="2.6354166666666665in"}
 
 
 

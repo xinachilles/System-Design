@@ -540,7 +540,7 @@ file that elite ready is going to generate a notification and that notification 
 
 
 
-![](../media/MIT-Zookeeper-image2.png){width="5.0in" height="1.9270833333333333in"}
+![](../media/MIT-Zookeeper-image2.png){width="5.0in" height="1.9236111111111112in"}
 
 
 

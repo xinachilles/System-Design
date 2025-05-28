@@ -6,7 +6,7 @@ Modified: 2021-04-26 16:37:08 -0600
 
 ---
 
-![( 叫 メ ・ 9 の お 中 0 爿 , つ レ ! : d 9 - の ? ノ ~ れ 礬 。 祕 フ 0 〇 ル 、 ろ ](../../media/Metric-Watchdog-Summary-image1.png){width="10.083333333333334in" height="4.479166666666667in"}
+![( 叫 メ ・ 9 の お 中 0 爿 , つ レ ! : d 9 - の ? ノ ~ れ 礬 。 祕 フ 0 〇 ル 、 ろ ](../../media/Metric-Watchdog-Summary-image1.png){width="5.0in" height="2.1979166666666665in"}
 
 
 

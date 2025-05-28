@@ -6,7 +6,7 @@ Modified: 2021-04-24 11:28:25 -0600
 
 ---
 
-![Log generation Log the term in the memory user API gateway Blender Service Fast Process DB Partition rocessor Data Partition Filter File s stem Tire Cache Top Map Disk ](../../media/Steam^JCollection-Typehead-Summary--2-image1.png){width="10.083333333333334in" height="5.541666666666667in"}
+![Log generation Log the term in the memory user API gateway Blender Service Fast Process DB Partition rocessor Data Partition Filter File s stem Tire Cache Top Map Disk ](../../media/Steam^JCollection-Typehead-Summary--2-image1.png){width="5.0in" height="2.7291666666666665in"}
 
 
 

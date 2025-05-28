@@ -246,7 +246,7 @@ The key is the word the values are all ones, we don't like here about them we on
 
 
 
-![](../../media/Stream^JSearch-Mapreduce-MIT-image1.png){width="7.145833333333333in" height="4.104166666666667in"}
+![](../../media/Stream^JSearch-Mapreduce-MIT-image1.png){width="3.53125in" height="2.0104166666666665in"}
 
 
 
@@ -1264,7 +1264,7 @@ need it and now it's like the expensive part of the MapReduce yeah
 
 
 
-![](../../media/Stream^JSearch-Mapreduce-MIT-image2.png){width="10.083333333333334in" height="4.833333333333333in"}
+![](../../media/Stream^JSearch-Mapreduce-MIT-image2.png){width="5.0in" height="2.375in"}
 
 
 

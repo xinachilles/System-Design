@@ -29,71 +29,71 @@ Facts
 
 
 
-![Use the AWS CDK with an IDE to write code that CloudFormation deploys To learn more about each aspect of the CloudFormation deployment, choose each hotspot. Application Stacks Resources Constructs source code INITIALIZE SYNTHESIZE DEPLOY AWS CDK CLI Templates and assets AWS CloudFormation cloud assembly ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image1.png){width="10.083333333333334in" height="4.875in"}
+![Use the AWS CDK with an IDE to write code that CloudFormation deploys To learn more about each aspect of the CloudFormation deployment, choose each hotspot. Application Stacks Resources Constructs source code INITIALIZE SYNTHESIZE DEPLOY AWS CDK CLI Templates and assets AWS CloudFormation cloud assembly ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image1.png){width="5.0in" height="2.3958333333333335in"}
 
 
 
 
 
-![Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image2.png){width="7.854166666666667in" height="4.375in"}
+![Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image2.png){width="3.8854166666666665in" height="2.1354166666666665in"}
 
 
 
-![Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image3.png){width="7.770833333333333in" height="3.125in"}
+![Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image3.png){width="3.84375in" height="1.5208333333333333in"}
 
 
 
-![Constructs and resources Each construct defines one or more concrete AWS resources, such as S3 buckets and Lambda functions. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image4.png){width="7.8125in" height="3.625in"}
+![Constructs and resources Each construct defines one or more concrete AWS resources, such as S3 buckets and Lambda functions. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image4.png){width="3.8541666666666665in" height="1.7708333333333333in"}
 
 
 
-![AWS CDK CLI The AWS CDK Toolkit (also called the CLI command cdk) is a command-line tool for working with your AWS CDK applications and stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image5.png){width="8.041666666666666in" height="4.166666666666667in"}
+![AWS CDK CLI The AWS CDK Toolkit (also called the CLI command cdk) is a command-line tool for working with your AWS CDK applications and stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image5.png){width="3.9791666666666665in" height="2.0416666666666665in"}
 
 
 
-![Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image6.png){width="7.854166666666667in" height="4.75in"}
+![Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image6.png){width="3.8854166666666665in" height="2.3229166666666665in"}
 
 
 
-![Deploy The constructs are deployed using CloudFormation. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image7.png){width="7.958333333333333in" height="3.375in"}
+![Deploy The constructs are deployed using CloudFormation. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image7.png){width="3.9375in" height="1.6458333333333333in"}
 
 
 
 
 
-![Constructs Constructs are the basic building blocks of an application built using AWS CDK. A construct can be an AWS resource, a worker queue or a dashboard. The AWS CDK includes a collection of constructs, known as AWS Construct Library. The constructs are abstracted at three levels, referred to as Ll constructs, L2 cosntructs and L3 constructs. To learn more expand each of the following three categories. Ll constructs Ll constructs, are the resources directly available in AWS CloudFormation, such as S3 bucket, EC2 instance and so on. When you use Ll constructs, you must explicitly configure all the resource properties. L2 constructs L2 constructs also represent AWS resources, but with a higher-level, intent-based API. They provide similar functionality, but incorporate the defaults, boilerplate, and glue logic. L3 constructs L3 constructs are also referred to as patterns. These constructs are designed to help you complete common tasks in AWS, often involving multiple kinds of resources. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image8.png){width="10.083333333333334in" height="11.135416666666666in"}
+![Constructs Constructs are the basic building blocks of an application built using AWS CDK. A construct can be an AWS resource, a worker queue or a dashboard. The AWS CDK includes a collection of constructs, known as AWS Construct Library. The constructs are abstracted at three levels, referred to as Ll constructs, L2 cosntructs and L3 constructs. To learn more expand each of the following three categories. Ll constructs Ll constructs, are the resources directly available in AWS CloudFormation, such as S3 bucket, EC2 instance and so on. When you use Ll constructs, you must explicitly configure all the resource properties. L2 constructs L2 constructs also represent AWS resources, but with a higher-level, intent-based API. They provide similar functionality, but incorporate the defaults, boilerplate, and glue logic. L3 constructs L3 constructs are also referred to as patterns. These constructs are designed to help you complete common tasks in AWS, often involving multiple kinds of resources. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image8.png){width="5.0in" height="5.520833333333333in"}
 
 
 
-![AWS Cloud Development Kit (AWS CDK), is an open-source software development framework for defining cloud infrastructure as code (laC) with modern programming languages and deploying it through AWS CloudFormation. Use the AWS CDK framework to author AWS CDK projects, which are run to generate CloudFormation templates. The AWS CDK is generally available in JavaScript, TypeScript, Python, Java, C#, and Go (in Developer Preview). ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image9.png){width="10.083333333333334in" height="4.5in"}
+![AWS Cloud Development Kit (AWS CDK), is an open-source software development framework for defining cloud infrastructure as code (laC) with modern programming languages and deploying it through AWS CloudFormation. Use the AWS CDK framework to author AWS CDK projects, which are run to generate CloudFormation templates. The AWS CDK is generally available in JavaScript, TypeScript, Python, Java, C#, and Go (in Developer Preview). ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image9.png){width="5.0in" height="2.1979166666666665in"}
 
 
 
-![Use the AWS CDK with an IDE to write code that CloudFormation deploys To learn more about each aspect of the CloudFormation deployment, choose each hotspot. Application Stacks INITIALIZE SYNTHESIZE DEPLOY AWS CDK Resources CLI Constructs source code Templates and assets AWS CloudFormation cloud assembly ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image10.png){width="10.083333333333334in" height="5.458333333333333in"}
+![Use the AWS CDK with an IDE to write code that CloudFormation deploys To learn more about each aspect of the CloudFormation deployment, choose each hotspot. Application Stacks INITIALIZE SYNTHESIZE DEPLOY AWS CDK Resources CLI Constructs source code Templates and assets AWS CloudFormation cloud assembly ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image10.png){width="5.0in" height="2.6875in"}
 
 
 
-![App Sta c O Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image11.png){width="10.083333333333334in" height="6.697916666666667in"}
+![App Sta c O Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image11.png){width="5.0in" height="3.3020833333333335in"}
 
 
 
-![App Stac Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image12.png){width="10.083333333333334in" height="5.0in"}
+![App Stac Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image12.png){width="5.0in" height="2.4479166666666665in"}
 
 
 
-![Stac Constructs and resources Each construct defines one or more concrete AWS resources, such as S3 buckets and Lambda functions. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image13.png){width="10.083333333333334in" height="5.604166666666667in"}
+![Stac Constructs and resources Each construct defines one or more concrete AWS resources, such as S3 buckets and Lambda functions. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image13.png){width="5.0in" height="2.7604166666666665in"}
 
 
 
-![AWS CDK CLI The AWS CDK Toolkit (also called the CLI command cdk) is a command-line tool for working with your AWS CDK applications and stacks. PLC ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image14.png){width="10.083333333333334in" height="5.885416666666667in"}
+![AWS CDK CLI The AWS CDK Toolkit (also called the CLI command cdk) is a command-line tool for working with your AWS CDK applications and stacks. PLC ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image14.png){width="5.0in" height="2.8958333333333335in"}
 
 
 
-![SYN Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. orm ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image15.png){width="10.083333333333334in" height="6.989583333333333in"}
+![SYN Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. orm ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image15.png){width="5.0in" height="3.4479166666666665in"}
 
 
 
-![Deploy The constructs are deployed using CloudFormation. CLI DEP ssets ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image16.png){width="10.083333333333334in" height="5.729166666666667in"}
+![Deploy The constructs are deployed using CloudFormation. CLI DEP ssets ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image16.png){width="5.0in" height="2.8229166666666665in"}
 
 
 

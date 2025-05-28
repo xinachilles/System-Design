@@ -58,7 +58,7 @@ It does not scale well when a server is added or removed.
 
 
 
-![My SQL My SQL ı, 3,5. 2, 4,6. Web servers ](../../media/TinyURL^MID-gen-ID-or-Key-Generation-2-Key--Generation-image1.png){width="9.875in" height="4.916666666666667in"}
+![My SQL My SQL ı, 3,5. 2, 4,6. Web servers ](../../media/TinyURL^MID-gen-ID-or-Key-Generation-2-Key--Generation-image1.png){width="4.895833333333333in" height="2.4166666666666665in"}
 
 
 
@@ -188,7 +188,7 @@ id |= (5001 % 1024)
 
 For the Twitter snowflaker
 
-![bit 41 bits timestamp 5 bits 5 bits 12 bits sequence number datacenter ID machine ID Figure 7-6 ](../../media/TinyURL^MID-gen-ID-or-Key-Generation-2-Key--Generation-image2.png){width="10.083333333333334in" height="2.1770833333333335in"}
+![bit 41 bits timestamp 5 bits 5 bits 12 bits sequence number datacenter ID machine ID Figure 7-6 ](../../media/TinyURL^MID-gen-ID-or-Key-Generation-2-Key--Generation-image2.png){width="5.0in" height="1.0416666666666667in"}
 
 
 

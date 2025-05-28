@@ -84,7 +84,7 @@ we can store the photo in the sql database
 
 
 
-![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image1.png){width="5.333333333333333in" height="6.375in"}
+![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image1.png){width="2.625in" height="3.1354166666666665in"}
 
 [Change the photo path to photo ID or the photo is just storage path, web service may need update the URL base on the CDN or cache]{.mark}
 
@@ -118,7 +118,7 @@ the url is the location of object database
 
 
 
-![](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image2.png){width="10.083333333333334in" height="4.166666666666667in"}
+![](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image2.png){width="5.0in" height="2.03125in"}
 
 so we need the cdn, cache, machine id and logical volume
 

@@ -29,7 +29,7 @@ Design Slack
 
 High-level architecture and APIs
 
-![au al uoo dnouo B5eSSöv•'I xapul Bäessöfl aolAJOS elpon•mnn 96eJ01s a5essöp,1 Jamas dnojo uogaauuOO 'asn 'amos uogeougoN ](../../media/Message-Slack-Design-Slack-image1.png){width="11.979166666666666in" height="6.791666666666667in"}
+![au al uoo dnouo B5eSSöv•'I xapul Bäessöfl aolAJOS elpon•mnn 96eJ01s a5essöp,1 Jamas dnojo uogaauuOO 'asn 'amos uogeougoN ](../../media/Message-Slack-Design-Slack-image1.png){width="5.9375in" height="3.3541666666666665in"}
 
 **Needs to go over the flow when high-level architecture is ready**
 
@@ -121,7 +121,7 @@ Architecture & Database
 
 **Message search service**: manage messaging search index and lookup.
 
-![Load Channel service Balancer user redis Account service Friend service Group service media service Notification service Message Storage servlce Message Search servlce Emoji service Redis / memcache CDN Kafka DAX/ Redis elastic search Redis SQL Amazon Amazon DynamoDB ](../../media/Message-Slack-Design-Slack-image2.png){width="12.416666666666666in" height="12.0in"}
+![Load Channel service Balancer user redis Account service Friend service Group service media service Notification service Message Storage servlce Message Search servlce Emoji service Redis / memcache CDN Kafka DAX/ Redis elastic search Redis SQL Amazon Amazon DynamoDB ](../../media/Message-Slack-Design-Slack-image2.png){width="6.15625in" height="5.958333333333333in"}
 
 
 

@@ -78,7 +78,7 @@ client side will periodically check the booking table via the request id
 
 
 
-![](../../media/Payment^JTrade-秒杀-12306-ticket-image1.png){width="10.083333333333334in" height="7.958333333333333in"}
+![](../../media/Payment^JTrade-秒杀-12306-ticket-image1.png){width="5.0in" height="3.9375in"}
 
 
 
@@ -96,7 +96,7 @@ Booking table indexed on passenger id, request id and route, primary key is auto
 
 moved the old record to historical log database
 
-![](../../media/Payment^JTrade-秒杀-12306-ticket-image2.png){width="10.083333333333334in" height="6.770833333333333in"}
+![](../../media/Payment^JTrade-秒杀-12306-ticket-image2.png){width="5.0in" height="3.34375in"}
 
 
 

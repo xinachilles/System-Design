@@ -41,7 +41,7 @@ Want to use p machine
 
 Round 1
 
-![de-c Md? '1 Ah) > ' NemoteAccess • Ittps //cratrdstatemrnuq!à: Play (k) ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image1.png){width="10.083333333333334in" height="5.427083333333333in"}
+![de-c Md? '1 Ah) > ' NemoteAccess • Ittps //cratrdstatemrnuq!à: Play (k) ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image1.png){width="5.0in" height="2.6666666666666665in"}
 
 
 
@@ -59,7 +59,7 @@ reducer
 
 
 
-![、 5 s 。 丶 十 冖 ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image2.png){width="10.083333333333334in" height="4.177083333333333in"}
+![、 5 s 。 丶 十 冖 ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image2.png){width="5.0in" height="2.0416666666666665in"}
 
 
 

@@ -578,7 +578,7 @@ this address in order to get fetch this object
 
 
 
-![( ー り ケ = ← ぐ 6 の を レ 価 を ど 5 」 pp 。 -(QC) ル っ を = 。 朝 日 ゝ も ](../media/MIT-Lecture-14-Optimistic-Concurrency-Control-image1.png){width="10.083333333333334in" height="7.510416666666667in"}
+![( ー り ケ = ← ぐ 6 の を レ 価 を ど 5 」 pp 。 -(QC) ル っ を = 。 朝 日 ゝ も ](../media/MIT-Lecture-14-Optimistic-Concurrency-Control-image1.png){width="5.0in" height="3.7083333333333335in"}
 
 
 
@@ -588,7 +588,7 @@ memory, so one part is that the server has in its memory, if it's it's replicati
 
 
 
-![](../media/MIT-Lecture-14-Optimistic-Concurrency-Control-image2.png){width="10.083333333333334in" height="4.083333333333333in"}
+![](../media/MIT-Lecture-14-Optimistic-Concurrency-Control-image2.png){width="5.0in" height="2.0in"}
 
 
 

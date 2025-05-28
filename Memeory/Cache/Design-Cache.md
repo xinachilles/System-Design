@@ -114,7 +114,7 @@ entry)
 
 As mentioned above, to minimize fragmentation, Memcached doesn't support arbitrarily sized entry allocations. It predefines several dozens of size classes, called "slab classes", from around 100 bytes, to the value (~ entry, too) size limit, which defaults to 1 MB but could be configured up to 128 MB, with a reasonable step, which defaults to 1.25.
 
-![Slab 0 Slab Slab Slab N-2 Slab Slab it ---S I ist stab poanters slab, or zero it none Slab class N-3 Slab class N-2 Slab class N-l Slab class N ncmncmn ](../../media/Memeory-Cache-Design-Cache-image1.png){width="10.083333333333334in" height="7.739583333333333in"}
+![Slab 0 Slab Slab Slab N-2 Slab Slab it ---S I ist stab poanters slab, or zero it none Slab class N-3 Slab class N-2 Slab class N-l Slab class N ncmncmn ](../../media/Memeory-Cache-Design-Cache-image1.png){width="5.0in" height="3.8229166666666665in"}
 
 
 
@@ -163,11 +163,11 @@ QPS， how many machines
 
 
 
-![Q: What is the number of machines required to cache? A: A cache has to be inherently of low latency. Which means all cache data has to reside in main memory. A production level caching machine would be 72G or 144G of RAM. Assuming beefier cache machines, we have 72G of main memory for 1 machine. Min. number of machine required 30 TB / 72G which is close to 420 machines. Do know that this is the absolute minimum. Its possible we might need more machines because the QPS per machine is higherthan we want it to be. ](../../media/Memeory-Cache-Design-Cache-image2.png){width="10.083333333333334in" height="2.1041666666666665in"}
+![Q: What is the number of machines required to cache? A: A cache has to be inherently of low latency. Which means all cache data has to reside in main memory. A production level caching machine would be 72G or 144G of RAM. Assuming beefier cache machines, we have 72G of main memory for 1 machine. Min. number of machine required 30 TB / 72G which is close to 420 machines. Do know that this is the absolute minimum. Its possible we might need more machines because the QPS per machine is higherthan we want it to be. ](../../media/Memeory-Cache-Design-Cache-image2.png){width="5.0in" height="1.0104166666666667in"}
 
 
 
-![](../../media/Memeory-Cache-Design-Cache-image3.png){width="10.083333333333334in" height="2.1041666666666665in"}
+![](../../media/Memeory-Cache-Design-Cache-image3.png){width="5.0in" height="1.0in"}
 
 4 is 4 core
 
@@ -179,11 +179,11 @@ QPS， how many machines
 
 
 
-![Memcached Internals Data structures: Putting it all together (Locks) Thread safety Head LRU Hash buckets B ket I Slabs Global lock Tail LAU Cache lock Slabs lock ](../../media/Memeory-Cache-Design-Cache-image4.png){width="10.083333333333334in" height="7.40625in"}
+![Memcached Internals Data structures: Putting it all together (Locks) Thread safety Head LRU Hash buckets B ket I Slabs Global lock Tail LAU Cache lock Slabs lock ](../../media/Memeory-Cache-Design-Cache-image4.jpeg){width="5.0in" height="3.65625in"}
 
 
 
-![Memcached Internals Data structures: Putting it all together (Links) Slab levels Head LRU Hash buckets Slabs LRU links Hash table links Free list links Tail LRU Slab levels ](../../media/Memeory-Cache-Design-Cache-image5.png){width="10.083333333333334in" height="7.395833333333333in"}
+![Memcached Internals Data structures: Putting it all together (Links) Slab levels Head LRU Hash buckets Slabs LRU links Hash table links Free list links Tail LRU Slab levels ](../../media/Memeory-Cache-Design-Cache-image5.jpeg){width="5.0in" height="3.6458333333333335in"}
 
 
 

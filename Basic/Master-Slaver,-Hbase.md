@@ -6,7 +6,7 @@ Modified: 2020-01-31 15:34:01 -0600
 
 ---
 
-![Master 一 Slave · 原 理 Write Ah ead Log · SQL 数 据 库 的 任 何 操 作 ， 都 会 以 Log 的 形 式 做 一 份 记 录 · 比 如 数 据 A 在 B 时 刻 从 C 改 到 了 D · Slave 被 激 活 后 ， 告 诉 master 我 在 了 · Master 每 次 有 任 何 操 作 就 通 知 slave 来 读 ℃ g · 因 此 Slave 上 的 数 据 是 有 " 延 迟 " 的 · Master 挂 了 怎 么 办 ？ · 将 一 台 Slave 升 级 (promote) 为 Master, 接 受 读 + 写 · 可 能 会 造 成 一 定 程 度 的 数 据 丢 失 和 不 一 致 master slavel slave2 ](../media/Basic-Master-Slaver,-Hbase-image1.png){width="5.0in" height="2.15625in"}
+![Master 一 Slave · 原 理 Write Ah ead Log · SQL 数 据 库 的 任 何 操 作 ， 都 会 以 Log 的 形 式 做 一 份 记 录 · 比 如 数 据 A 在 B 时 刻 从 C 改 到 了 D · Slave 被 激 活 后 ， 告 诉 master 我 在 了 · Master 每 次 有 任 何 操 作 就 通 知 slave 来 读 ℃ g · 因 此 Slave 上 的 数 据 是 有 " 延 迟 " 的 · Master 挂 了 怎 么 办 ？ · 将 一 台 Slave 升 级 (promote) 为 Master, 接 受 读 + 写 · 可 能 会 造 成 一 定 程 度 的 数 据 丢 失 和 不 一 致 master slavel slave2 ](../media/Basic-Master-Slaver,-Hbase-image1.png){width="5.0in" height="2.1597222222222223in"}
 
 from HBase
 

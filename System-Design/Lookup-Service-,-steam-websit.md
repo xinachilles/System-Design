@@ -24,9 +24,9 @@ Modified: 2017-05-07 16:34:44 -0600
 
 
 
-![How do Slave Server store the key value on disk? 5. Look up ke•F'A' on server O Slave Server O client 1. Look Up 10. Return [Ahumpl 6. Look Up key Return chunk 01 Memory 8. Find chu 01 4, Return Slave Server() Master 2. Look up Hash( BIOOO Retum Slave ServerO Consistent Hash Map Chunk Chunk Offset t Return chunk index 01 A hump D mother Slave Server Oneclient ](../media/System-Design-Lookup-Service-,-steam-website-image3.png){width="5.0in" height="2.8020833333333335in"}
+![How do Slave Server store the key value on disk? 5. Look up ke•F'A' on server O Slave Server O client 1. Look Up 10. Return [Ahumpl 6. Look Up key Return chunk 01 Memory 8. Find chu 01 4, Return Slave Server() Master 2. Look up Hash( BIOOO Retum Slave ServerO Consistent Hash Map Chunk Chunk Offset t Return chunk index 01 A hump D mother Slave Server Oneclient ](../media/System-Design-Lookup-Service-,-steam-website-image3.png){width="5.0in" height="2.798611111111111in"}
 
-![](../media/System-Design-Lookup-Service-,-steam-website-image4.png){width="6.458333333333333in" height="1.8645833333333333in"}
+![](../media/System-Design-Lookup-Service-,-steam-website-image4.png){width="6.458333333333333in" height="1.8680555555555556in"}
 
 这个表只有读过一遍以后才会生成
 

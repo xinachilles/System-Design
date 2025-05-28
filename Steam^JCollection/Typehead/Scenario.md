@@ -12,7 +12,7 @@ Modified: 2017-10-20 22:33:09 -0600
 
 
 
-![Design a Typeahead Google Suggestion 1 Scenario: prefix -> top n search keywords DAU: 500m Search: 6 * 6 * 500m = 18b QPS = 18b / 86400 200k Peak QPS = QPS * 2 400k ](../../media/Steam^JCollection-Typehead-Scenario-image1.png){width="10.083333333333334in" height="6.479166666666667in"}
+![Design a Typeahead Google Suggestion 1 Scenario: prefix -> top n search keywords DAU: 500m Search: 6 * 6 * 500m = 18b QPS = 18b / 86400 200k Peak QPS = QPS * 2 400k ](../../media/Steam^JCollection-Typehead-Scenario-image1.png){width="5.0in" height="3.1875in"}
 
 
 

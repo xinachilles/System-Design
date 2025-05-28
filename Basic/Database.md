@@ -14,11 +14,11 @@ Modified: 2018-01-04 17:39:44 -0600
 
 
 
-![数 据 库 选 择 原 则 3 你 想 不 想 偷 懒 很 大 程 度 决 定 了 选 什 么 数 据 库 SQL 更 成 熟 帮 你 做 了 很 多 事 儿 NoSQL 很 多 事 儿 都 要 亲 力 亲 为 (Serialization, MultiIndexes, Sharding) ](../media/Basic-Database-image3.png){width="5.0in" height="2.28125in"}
+![数 据 库 选 择 原 则 3 你 想 不 想 偷 懒 很 大 程 度 决 定 了 选 什 么 数 据 库 SQL 更 成 熟 帮 你 做 了 很 多 事 儿 NoSQL 很 多 事 儿 都 要 亲 力 亲 为 (Serialization, MultiIndexes, Sharding) ](../media/Basic-Database-image3.png){width="5.0in" height="2.2777777777777777in"}
 
 
 
-![数 据 库 选 择 原 则 4 如 果 想 省 点 服 务 器 获 得 更 高 的 性 能 NoSQL 就 更 好 硬 盘 型 的 NoSQL 比 SQL 一 般 都 要 快 10 倍 以 上 ](../media/Basic-Database-image4.png){width="5.0in" height="2.7395833333333335in"}
+![数 据 库 选 择 原 则 4 如 果 想 省 点 服 务 器 获 得 更 高 的 性 能 NoSQL 就 更 好 硬 盘 型 的 NoSQL 比 SQL 一 般 都 要 快 10 倍 以 上 ](../media/Basic-Database-image4.png){width="5.0in" height="2.736111111111111in"}
 
 
 
@@ -30,7 +30,7 @@ Modified: 2018-01-04 17:39:44 -0600
 
 
 
-![SQL vs NoSQL --- ? • Transaction ? • • SQL Query? • NoSQLfiSQL • Web Framework 5 SQL • SQL auto-increment fi Sequential ID • NoSQLfiID#-FZ Sequential fi ](../media/Basic-Database-image6.png){width="5.0in" height="4.239583333333333in"}
+![SQL vs NoSQL --- ? • Transaction ? • • SQL Query? • NoSQLfiSQL • Web Framework 5 SQL • SQL auto-increment fi Sequential ID • NoSQLfiID#-FZ Sequential fi ](../media/Basic-Database-image6.png){width="5.0in" height="4.236111111111111in"}
 
 
 
@@ -38,7 +38,7 @@ Modified: 2018-01-04 17:39:44 -0600
 
 
 
-![Web server 1k QPS SQL DB 1k QPS NoSQL DB( Cassandra, MongoDB NoSQL DB (Redis) 100k QPS NoSQL DB (memcached) 1M QPS ..) 10k ops ](../media/Basic-Database-image8.png){width="5.0in" height="1.53125in"}
+![Web server 1k QPS SQL DB 1k QPS NoSQL DB( Cassandra, MongoDB NoSQL DB (Redis) 100k QPS NoSQL DB (memcached) 1M QPS ..) 10k ops ](../media/Basic-Database-image8.png){width="5.0in" height="1.5277777777777777in"}
 
 
 

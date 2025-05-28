@@ -20,7 +20,7 @@ Clipped from : <https://engineering.linkedin.com/blog/2018/01/now-you-see-me--no
 
 **Problem 1: How do we know when a member is connected to LinkedIn?**
 
-![realtimepresence2](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image1.png){width="18.833333333333332in" height="3.8541666666666665in"}
+![realtimepresence2](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image1.png){width="9.375in" height="1.875in"}
 
 We needed to provide a way to access a member's current online status, and if the member is offline, to provide their last active timestamp. Moreover, we needed a way to distribute changes in a member's presence status to a potentially huge number of the member's connections who could be currently viewing the member's presence status anywhere on LinkedIn.
 
@@ -32,15 +32,15 @@ To solve this problem, we leveraged LinkedIn's [Real-time delivery platform](htt
 
 When member "Alice" opens LinkedIn on her mobile device or a browser, a persistent connection is established with the Real-time Platform. The existence of this connection is a clear indication that Alice is currently online.
 
-![realtimepresence3](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image2.png){width="20.166666666666668in" height="7.375in"}
+![realtimepresence3](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image2.png){width="10.041666666666666in" height="3.6354166666666665in"}
 
 [Secondly, Alice may be interested in viewing whether Bob is currently online. For that, the Real-time Platform allows Alice to subscribe to a topic for Bob's presence status.]{.mark}
 
-![realtimepresence4](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image3.png){width="19.708333333333332in" height="7.833333333333333in"}
+![realtimepresence4](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image3.png){width="9.8125in" height="3.875in"}
 
 [When Bob opens his app, we need our Presence Platform to know that Bob has come online and to publish an online event on the topic for Bob's presence status. The Real-time Platform then sends the event published on that topic to all of its subscribers, including Alice. Thus, Alice would see Bob's presence indicator turn green.]{.mark}
 
-![realtimepresence5](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image4.png){width="20.916666666666668in" height="11.979166666666666in"}
+![realtimepresence5](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image4.png){width="10.416666666666666in" height="5.9375in"}
 
 As you can see above, [our Presence Platform needs to be able to detect the existence of the persistent connection to determine when a member comes online.]{.mark} Subsequently, it needs to publish events to the presence status topic for that member on the Real-time Platform. That would allow the Real-time Platform to distribute that event to the member's connections. However, there is another big problem we need to solve.
 
@@ -52,11 +52,11 @@ If we ignored this problem, their presence status would constantly bounce betwee
 
 At this point, let's dive into the architecture of LinkedIn's Presence Platform to look at how we solved this problem using periodic heartbeats for currently connected members.
 
-![realtimepresence6](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image5.png){width="20.916666666666668in" height="12.354166666666666in"}
+![realtimepresence6](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image5.png){width="10.416666666666666in" height="6.125in"}
 
 As we discussed before, [when a member opens their LinkedIn application, it results in a persistent connection being established with the Real-time Platform]{.mark}. [The Real-time Platform, in turn, starts emitting periodic heartbeats with the member's ID with a fixed duration of d seconds between successive heartbeats]{.mark}. This duration acts as the guard against fluctuations in a member's presence status. [As long as a heartbeat is received every d seconds, our Presence Platform will deem the member to be online.]{.mark} Thus, if a member runs into a bad network condition, drops their connection and then reconnects within d seconds, we will continue to deem them as online, as long as the next heartbeat is emitted for their connection. This handles jitter gracefully and prevents unnecessary fluctuations. Next, let's look at the internals of our Presence Platform to understand how each of these heartbeats are processed.
 
-![realtimepresence7](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image6.png){width="20.916666666666668in" height="12.125in"}
+![realtimepresence7](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image6.png){width="10.416666666666666in" height="6.020833333333333in"}
 
 The first part of the Presence Platform is the process heartbeats step.
 
@@ -73,7 +73,7 @@ As you can see, processing heartbeats and detecting when a member goes online is
 
 To determine that a member went offline, we need to detect the absence of a heartbeat. For this, [we built what we called a delayed trigger for each member that is currently online]{.mark}. We'll talk about the technology we used to build this in the next section, but for now, assume that for each online member, [we are able to start a timer that will fire later to allow us to check whether the heartbeat stored for that member has expired or not. Since heartbeats expire in d + ε seconds, we need the timer to fire a little after that or in d + 2ε seconds.]{.mark}
 
-![realtimepresence8](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image7.png){width="20.916666666666668in" height="12.0625in"}
+![realtimepresence8](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image7.png){width="10.416666666666666in" height="5.989583333333333in"}
 
 Thus, during the process heartbeat step, [we create this delayed trigger if it doesn't yet exist for the member. If it already exists, we simply reset it to fire in another d + 2ε seconds. When the delayed trigger for an online member fires, we check whether the member's heartbeat has expired in our K/V store. If it has, we publish an offline event on the presence status topic for that member on the Real-time Platform to distribute the fact that the member has gone offline to the member's connections.]{.mark}
 
@@ -85,11 +85,11 @@ On LinkedIn, thousands of members go online or offline per second. There are mil
 
 [Akka](https://akka.io/) is a toolkit for building highly concurrent, distributed, and resilient message-driven applications, and it works well with the [Play Framework](https://www.playframework.com/) that we use at LinkedIn. [Actors](https://doc.akka.io/docs/akka/current/general/actors.html) are objects which encapsulate state and the behavior defining what they should do when they receive certain messages. Each Actor has a mailbox and they communicate exclusively by exchanging messages. An Actor is assigned a lightweight thread when available, which reads the message from the mailbox and alters the state of the Actor based on the behavior defined for that message.
 
-![realtimepresence9](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image8.png){width="20.916666666666668in" height="11.104166666666666in"}
+![realtimepresence9](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image8.png){width="10.416666666666666in" height="5.5in"}
 
 Since Actors are so lightweight, there can be millions of Actors in the system, each with their own state and behavior. A relatively small number of threads proportional to the number of cores on the system can serve the Actors to execute their behavior when they receive these messages. As each Actor receives a message, a thread is assigned to execute its behavior for that message and then, it is free to be assigned to the next Actor.
 
-![realtimepresence10](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image9.png){width="20.916666666666668in" height="10.395833333333334in"}
+![realtimepresence10](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image9.png){width="10.416666666666666in" height="5.15625in"}
 
 We can basically create one Actor per online member to act as the delayed trigger for that member and treat a heartbeat like a message in its mailbox.
 
@@ -106,7 +106,7 @@ A note on the value of d, the duration between consecutive heartbeats: If it's t
 
 Let's briefly go back to Alice and Bob to put this all together.
 
-![realtimepresence11](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image10.png){width="19.875in" height="16.020833333333332in"}
+![realtimepresence11](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image10.png){width="9.885416666666666in" height="7.96875in"}
 
 1.  [When Alice is interested in Bob's presence status, she queries the Presence Platform through its GET API to get Bob's current presence status (offline) and his last heartbeat timestamp. At the same time, she subscribes to changes in Bob's presence status through the Real-time Platform.]{.mark}
 2.  When Bob comes online, the Presence Platform detects that and publishes an online event to Bob's presence status topic on the Real-time Platform.
@@ -114,7 +114,7 @@ Let's briefly go back to Alice and Bob to put this all together.
 
 This platform is built for massive scale. Each node in the Presence Platform can handle approximately 1.8K QPS of incoming requests (process heartbeat requests, GET API requests, etc.) and the platform itself is horizontally scalable as described above. Using all the above technology, we are now able to display real-time presence status for a member's connections across LinkedIn messaging, feed, notifications, etc. on both mobile and web for hundreds of millions of LinkedIn members across the globe.
 
-![realtimepresence12](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image11.png){width="18.833333333333332in" height="11.958333333333334in"}
+![realtimepresence12](../../media/Message-Read-Time-Comments-Now-You-See-Me,-Now-You-Don’t--LinkedIn’s-Real-Time-Presence-Platform---LinkedIn-Engineering-image11.png){width="9.375in" height="5.9375in"}
 
 This has made our LinkedIn experience come alive and we can visually interact with our friends and colleagues on things that matter to us the most. We have seen increased engagement across the site and received positive feedback from LinkedIn members since we launched this feature. We hope that this technical deep-dive inspires you to try these techniques in your own projects. Feel free to reach out to us to discuss your own ideas at [@agupta03](https://twitter.com/agupta03) and [Meng Lay](https://www.linkedin.com/in/menglay).
 

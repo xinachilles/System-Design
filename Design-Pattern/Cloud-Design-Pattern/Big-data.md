@@ -64,7 +64,7 @@ IoT architecture
 
 Internet of Things (IoT) is a specialized subset of big data solutions. The following diagram shows a possible logical architecture for IoT. The diagram emphasizes the event-streaming components of the architecture.
 
-![Devices Devices Field Gateway Command and control Cloud Gatew ay Provisioning API Oev•ce Reg&ry Cold firage Batch analvtics gukend Stream processing Hot path analytics Notifications ](../../media/Design-Pattern-Cloud-Design-Pattern-Big-data-image1.png){width="10.083333333333334in" height="4.354166666666667in"}
+![Devices Devices Field Gateway Command and control Cloud Gatew ay Provisioning API Oev•ce Reg&ry Cold firage Batch analvtics gukend Stream processing Hot path analytics Notifications ](../../media/Design-Pattern-Cloud-Design-Pattern-Big-data-image1.png){width="5.0in" height="2.125in"}
 
 Thecloud gatewayingests device events at the cloud boundary, using a reliable, low latency messaging system.
 

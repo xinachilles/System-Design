@@ -20,7 +20,7 @@ Before you'll be able to make this application available outside of your develop
 
 The following architecture diagram shows the components that have been and will be deployed:
 
-![Architecture diagram showing the components of the serverless architecture that have been and will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image1.png){width="13.083333333333334in" height="15.614583333333334in"}
+![Architecture diagram showing the components of the serverless architecture that have been and will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image1.png){width="6.5in" height="7.760416666666667in"}
 
 This lab uses the following services:
 
@@ -79,7 +79,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image2.png){width="13.083333333333334in" height="2.8333333333333335in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image2.png){width="6.5in" height="1.375in"}
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -1191,7 +1191,7 @@ For more information about AWS Training and Certification, see *<https://aws.ama
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image3.png){width="0.8020833333333334in" height="13.083333333333334in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image3.png){width="0.3541666666666667in" height="6.5in"}
 
 
 

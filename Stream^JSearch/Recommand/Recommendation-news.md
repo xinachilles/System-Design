@@ -204,7 +204,7 @@ If the system thinks the user A and user B is similar, the system will recommend
 
 
 
-![crawl the news article processing: bag words message queue key values database: store articles rank and recommendations ](../../media/Stream^JSearch-Recommand-Recommendation-news-image1.png){width="10.083333333333334in" height="3.7291666666666665in"}
+![crawl the news article processing: bag words message queue key values database: store articles rank and recommendations ](../../media/Stream^JSearch-Recommand-Recommendation-news-image1.png){width="5.0in" height="1.8125in"}
 
 
 

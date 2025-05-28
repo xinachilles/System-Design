@@ -78,7 +78,7 @@ Constraints:
 
 Architecture
 
-![User Service API gateway User work queue Online Compile AWS lambda SQL Compute Service ](../../media/Example-Leetcode-Summary-image1.png){width="12.4375in" height="6.833333333333333in"}
+![User Service API gateway User work queue Online Compile AWS lambda SQL Compute Service ](../../media/Example-Leetcode-Summary-image1.png){width="6.177083333333333in" height="3.375in"}
 
 For API gateway
 

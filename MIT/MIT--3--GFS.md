@@ -524,7 +524,7 @@ this scheme we have good properties for appends that the primary sent back a suc
 
 
 
-![](../media/MIT-MIT--3--GFS-image1.png){width="3.78125in" height="2.1979166666666665in"}
+![](../media/MIT-MIT--3--GFS-image1.png){width="3.7777777777777777in" height="2.201388888888889in"}
 
 
 

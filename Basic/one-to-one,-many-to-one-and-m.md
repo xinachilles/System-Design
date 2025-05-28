@@ -6,7 +6,7 @@ Modified: 2017-05-07 17:22:23 -0600
 
 ---
 
-![customer name table cust id primary key, link to cust id of customer details table firstn ame customer details table cust id height weight dateoffirth primary key, link to cust id of customer name table ](../media/Basic-one-to-one,-many-to-one-and-many-to-many-image1.png){width="4.90625in" height="3.65625in"}
+![customer name table cust id primary key, link to cust id of customer details table firstn ame customer details table cust id height weight dateoffirth primary key, link to cust id of customer name table ](../media/Basic-one-to-one,-many-to-one-and-many-to-many-image1.png){width="4.902777777777778in" height="3.6597222222222223in"}
 
 
 

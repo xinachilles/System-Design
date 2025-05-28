@@ -26,7 +26,7 @@ In this lab, you deploy the backend application and front-end application in var
 
 The following diagram shows the architecture components that have been or will be deployed in this lab.
 
-![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image1.png){width="12.09375in" height="9.6875in"}
+![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image1.png){width="6.0in" height="4.791666666666667in"}
 
 This lab uses the following software stack:
 
@@ -79,7 +79,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image2.png){width="12.09375in" height="2.625in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image2.png){width="6.0in" height="1.2708333333333333in"}
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -478,7 +478,7 @@ cd ..
 
 The changed file should look like the following image:
 
-![Example of the updated aws-exports.js file](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image3.png){width="12.09375in" height="4.9375in"}
+![Example of the updated aws-exports.js file](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image3.png){width="6.0in" height="2.4270833333333335in"}
 
 **Note** The parameters provided in the **aws-exports.js** file enable the front-end of the application to connect to the backend. The URL provided is the backend URL for the application that was deployed through AWS SAM.
 

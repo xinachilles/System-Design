@@ -12,13 +12,13 @@ Clipped from : <https://cloud.google.com/datastore/docs/articles/fast-and-reliab
 
 Tomoaki Suzuki (Figure 1), an App Engine lead engineer at [Applibot](http://www.applibot.co.jp/en), has been trying to solve the very common, yet very difficult problem faced by every large gaming service: **Ranking**.
 
-![](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image1.png){width="5.635416666666667in" height="3.0in"}
+![](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image1.jpeg){width="2.7708333333333335in" height="1.4583333333333333in"}
 
 Figure 1: Tomoaki Suzuki, App Engine lead engineer at Applibot, Inc.
 
 [Applibot](http://www.applibot.co.jp/en) is one of the major social application providers in Japan. The uniqueness of the company is their extensive knowledge and experience in building super-scalable social game services on [Google App Engine](https://cloud.google.com/appengine), the Platform as a Service (PaaS) offering from Google. Leveraging the power of the platform, Applibot has been quite successful in capturing business opportunities in the social game market, not only in Japan, but also in the United States. Applibot can certainly attest to its success. Legend of the Cryptids (Figure 2), one of their largest titles, hit #1 in the Apple AppStore North America gaming category in Oct 2012. The Legend series recorded 4.7 million downloads. Another title, Gang Road, hit #1 on the AppStore Japan total sales ranking in Dec 2012.
 
-![](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image2.png){width="5.635416666666667in" height="4.729166666666667in"}
+![](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image2.jpg){width="2.7708333333333335in" height="2.3125in"}
 
 Figure 2: Legend of the Criptids, #1 ranked game in the Apple AppStore in Oct 2012.
 
@@ -32,7 +32,7 @@ However, up-to-date player ranking is not an easy problem to solve, not for Tomo
 
 **How do you calculate a rank?**
 
-![kaz (score = 123) baz (score - - 1000) foo (score = 5) alex (score = 500) bar (score = 20) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image3.png){width="5.635416666666667in" height="2.3541666666666665in"}
+![kaz (score = 123) baz (score - - 1000) foo (score = 5) alex (score = 500) bar (score = 20) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image3.png){width="2.7708333333333335in" height="1.1354166666666667in"}
 
 Figure 3: Each player has a score. How do you calculate their rank?
 
@@ -44,7 +44,7 @@ This query counts all the players who have a higher score than yours (Figure 4).
 
 Tomoaki initially implemented this approach, but it took a few seconds to get each response. This was too slow, too expensive, and performed progressively worse as scale increased.
 
-![You don't know the rank of the worst player before scanning all entities! baz (score = 1000) alex (score = 500) kaz (score - - 123) bar (score = 20) foo (score = 5) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image4.png){width="5.635416666666667in" height="2.9791666666666665in"}
+![You don't know the rank of the worst player before scanning all entities! baz (score = 1000) alex (score = 500) kaz (score - - 123) bar (score = 20) foo (score = 5) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image4.png){width="2.7708333333333335in" height="1.4375in"}
 
 Figure 4: The easiest way: Scan all players.
 
@@ -77,7 +77,7 @@ This Python-based library exposes two methods:
 
 [As player-score pairs are created and updated with the SetScore method, the Code Jam ranking library builds an N-ary tree^1^.]{.mark} For example, let's consider a tertiary tree that [can count the number of players with scores in the range from 0 to 80]{.mark} (Figure 5). The library stores the root node, which holds three numbers, as one entity. Each number corresponds to the number of players with scores in the sub-ranges 0 - 26, 27 - 53 and 54 - 80, respectively. [The root node has a child node for each range, holding in turn three values for players in the sub-ranges of the sub-range.]{.mark} The hierarchy needs four levels to store the number of players for 81 different score values.
 
-![(0-26] (27-53) (54. 1] [27] [28] [291 • 17] [18-261 5] Rank(30) [27-35] [3 (36-38) (39-41] [0-26] [27-53] [54-811 [45-471 [48-501 [51-53) 1301 [33] [34] [351 - 22 ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image5.png){width="5.635416666666667in" height="3.3333333333333335in"}
+![(0-26] (27-53) (54. 1] [27] [28] [291 • 17] [18-261 5] Rank(30) [27-35] [3 (36-38) (39-41] [0-26] [27-53] [54-811 [45-471 [48-501 [51-53) 1301 [33] [34] [351 - 22 ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image5.png){width="2.7708333333333335in" height="1.6145833333333333in"}
 
 Figure 5: Getting the rank of a score in a tertiary tree.
 

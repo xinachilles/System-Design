@@ -302,27 +302,27 @@ CRAQ preserving linearise ability and preserving the strong consistency
 
 
 
-![](../media/MIT-CRAQ-image1.png){width="0.3020833333333333in" height="0.6145833333333334in"}![](../media/MIT-CRAQ-image2.png){width="0.3645833333333333in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image3.png){width="0.2708333333333333in" height="0.6354166666666666in"}
+![](../media/MIT-CRAQ-image1.png){width="0.3055555555555556in" height="0.6180555555555556in"}![](../media/MIT-CRAQ-image2.png){width="0.3680555555555556in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image3.png){width="0.2708333333333333in" height="0.6388888888888888in"}
 
 
 
-![](../media/MIT-CRAQ-image4.png){width="0.2604166666666667in" height="0.2604166666666667in"}![](../media/MIT-CRAQ-image5.png){width="0.3229166666666667in" height="0.46875in"}![](../media/MIT-CRAQ-image6.png){width="7.958333333333333in" height="0.4270833333333333in"}![](../media/MIT-CRAQ-image7.png){width="4.59375in" height="0.4375in"}![](../media/MIT-CRAQ-image8.png){width="2.3854166666666665in" height="0.4375in"}![](../media/MIT-CRAQ-image9.png){width="7.739583333333333in" height="0.40625in"}![](../media/MIT-CRAQ-image10.png){width="8.1875in" height="0.4166666666666667in"}![](../media/MIT-CRAQ-image11.png){width="8.072916666666666in" height="0.4895833333333333in"}![](../media/MIT-CRAQ-image12.png){width="1.21875in" height="0.875in"}![](../media/MIT-CRAQ-image13.png){width="4.0625in" height="0.3958333333333333in"}![](../media/MIT-CRAQ-image14.png){width="1.2604166666666667in" height="0.59375in"}![](../media/MIT-CRAQ-image15.png){width="0.71875in" height="0.5104166666666666in"}![](../media/MIT-CRAQ-image16.png){width="0.375in" height="0.23958333333333334in"}![](../media/MIT-CRAQ-image17.png){width="0.22916666666666666in" height="0.23958333333333334in"}
+![](../media/MIT-CRAQ-image4.png){width="0.2638888888888889in" height="0.2638888888888889in"}![](../media/MIT-CRAQ-image5.png){width="0.3263888888888889in" height="0.4652777777777778in"}![](../media/MIT-CRAQ-image6.png){width="7.958333333333333in" height="0.4236111111111111in"}![](../media/MIT-CRAQ-image7.png){width="4.590277777777778in" height="0.4375in"}![](../media/MIT-CRAQ-image8.png){width="2.3819444444444446in" height="0.4375in"}![](../media/MIT-CRAQ-image9.png){width="7.743055555555555in" height="0.4027777777777778in"}![](../media/MIT-CRAQ-image10.png){width="8.1875in" height="0.4166666666666667in"}![](../media/MIT-CRAQ-image11.png){width="8.07638888888889in" height="0.4861111111111111in"}![](../media/MIT-CRAQ-image12.png){width="1.2152777777777777in" height="0.875in"}![](../media/MIT-CRAQ-image13.png){width="4.0625in" height="0.3958333333333333in"}![](../media/MIT-CRAQ-image14.png){width="1.2569444444444444in" height="0.5972222222222222in"}![](../media/MIT-CRAQ-image15.png){width="0.7222222222222222in" height="0.5069444444444444in"}![](../media/MIT-CRAQ-image16.png){width="0.375in" height="0.24305555555555555in"}![](../media/MIT-CRAQ-image17.png){width="0.22916666666666666in" height="0.24305555555555555in"}
 
 
 
-![](../media/MIT-CRAQ-image18.png){width="0.9270833333333334in" height="0.4375in"}![](../media/MIT-CRAQ-image19.png){width="0.3958333333333333in" height="0.46875in"}![](../media/MIT-CRAQ-image20.png){width="0.53125in" height="0.9270833333333334in"}![](../media/MIT-CRAQ-image21.png){width="0.2604166666666667in" height="0.2708333333333333in"}![](../media/MIT-CRAQ-image22.png){width="0.46875in" height="0.5625in"}![](../media/MIT-CRAQ-image23.png){width="0.6041666666666666in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image24.png){width="0.375in" height="0.4270833333333333in"}![](../media/MIT-CRAQ-image25.png){width="0.3854166666666667in" height="0.4479166666666667in"}![](../media/MIT-CRAQ-image26.png){width="0.22916666666666666in" height="0.3229166666666667in"}
+![](../media/MIT-CRAQ-image18.png){width="0.9236111111111112in" height="0.4375in"}![](../media/MIT-CRAQ-image19.png){width="0.3958333333333333in" height="0.4652777777777778in"}![](../media/MIT-CRAQ-image20.png){width="0.5277777777777778in" height="0.9236111111111112in"}![](../media/MIT-CRAQ-image21.png){width="0.2638888888888889in" height="0.2708333333333333in"}![](../media/MIT-CRAQ-image22.png){width="0.4652777777777778in" height="0.5625in"}![](../media/MIT-CRAQ-image23.png){width="0.6041666666666666in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image24.png){width="0.375in" height="0.4236111111111111in"}![](../media/MIT-CRAQ-image25.png){width="0.3819444444444444in" height="0.4444444444444444in"}![](../media/MIT-CRAQ-image26.png){width="0.22916666666666666in" height="0.3263888888888889in"}
 
 
 
-![](../media/MIT-CRAQ-image27.png){width="0.3854166666666667in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image28.png){width="1.34375in" height="0.5625in"}
+![](../media/MIT-CRAQ-image27.png){width="0.3819444444444444in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image28.png){width="1.3472222222222223in" height="0.5625in"}
 
 
 
-![](../media/MIT-CRAQ-image29.png){width="0.3020833333333333in" height="0.65625in"}
+![](../media/MIT-CRAQ-image29.png){width="0.3055555555555556in" height="0.6597222222222222in"}
 
 
 
-![](../media/MIT-CRAQ-image30.png){width="5.614583333333333in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image31.png){width="1.8333333333333333in" height="0.4895833333333333in"}
+![](../media/MIT-CRAQ-image30.png){width="5.618055555555555in" height="0.4583333333333333in"}![](../media/MIT-CRAQ-image31.png){width="1.8333333333333333in" height="0.4861111111111111in"}
 
 
 
@@ -334,11 +334,11 @@ CRAQ preserving linearise ability and preserving the strong consistency
 
 
 
-![](../media/MIT-CRAQ-image34.png){width="7.770833333333333in" height="0.4270833333333333in"}![](../media/MIT-CRAQ-image35.png){width="8.416666666666666in" height="0.4791666666666667in"}
+![](../media/MIT-CRAQ-image34.png){width="7.770833333333333in" height="0.4236111111111111in"}![](../media/MIT-CRAQ-image35.png){width="8.416666666666666in" height="0.4791666666666667in"}
 
 
 
-![](../media/MIT-CRAQ-image36.png){width="7.1875in" height="0.4479166666666667in"}
+![](../media/MIT-CRAQ-image36.png){width="7.1875in" height="0.4444444444444444in"}
 
 
 

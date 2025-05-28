@@ -10,7 +10,7 @@ Modified: 2021-04-27 15:12:08 -0600
 
 
 
-![](../../media/Location-Service-Comments-Comments-image1.png){width="10.083333333333334in" height="5.333333333333333in"}
+![](../../media/Location-Service-Comments-Comments-image1.png){width="5.0in" height="2.6145833333333335in"}
 
 
 
