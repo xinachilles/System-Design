@@ -40,11 +40,11 @@ Facts
 
 
 
-![Parameters Parameters (optional): Inputs into template ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image6.png){width="5.0in" height="1.65625in"}
+![Parameters Parameters (optional): Inputs into template ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image6.png){width="5.0in" height="1.6527777777777777in"}
 
 
 
-![Mappings Mappings (optional): Static variables; key-value pairs ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image7.png){width="5.0in" height="2.09375in"}
+![Mappings Mappings (optional): Static variables; key-value pairs ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image7.png){width="5.0in" height="2.0972222222222223in"}
 
 
 
@@ -76,7 +76,7 @@ Facts
 
 
 
-![The previous templates are centered around a single Amazon EC2 instance; however, CloudFormation templates have additional capabilities that you can use to build complex sets of resources and reuse those templates in multiple contexts. For example, you can add input parameters whose values are specified when you create a CloudFormation stacl<. In other words, you can specify a value like the instance type when you create a stack instead of when you create the template, making the template easier to reuse in different situations. For more information about template creation and capabilities, see Template anatomy. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image15.png){width="5.0in" height="1.90625in"}
+![The previous templates are centered around a single Amazon EC2 instance; however, CloudFormation templates have additional capabilities that you can use to build complex sets of resources and reuse those templates in multiple contexts. For example, you can add input parameters whose values are specified when you create a CloudFormation stacl<. In other words, you can specify a value like the instance type when you create a stack instead of when you create the template, making the template easier to reuse in different situations. For more information about template creation and capabilities, see Template anatomy. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image15.png){width="5.0in" height="1.9027777777777777in"}
 
 
 

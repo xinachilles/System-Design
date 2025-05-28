@@ -10,7 +10,7 @@ Modified: 2020-12-19 14:18:19 -0600
 
 
 
-![](../../media/Steam^JCollection-Leaderboard-Redis--Swiss-army-knife-image1.jpg){width="3.6979166666666665in" height="2.0729166666666665in"}
+![](../../media/Steam^JCollection-Leaderboard-Redis--Swiss-army-knife-image1.jpg){width="3.701388888888889in" height="2.076388888888889in"}
 
 
 

@@ -58,15 +58,15 @@ Cdn close to the exchange point iXP
 
 
 
-![ISP Network Small Peenng Location Large Peering/Origin Location AWS S3 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image3.png){width="5.0in" height="3.1145833333333335in"}
+![ISP Network Small Peenng Location Large Peering/Origin Location AWS S3 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image3.png){width="5.0in" height="3.111111111111111in"}
 
 
 
-![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image4.png){width="5.0in" height="2.8020833333333335in"}
+![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image4.png){width="5.0in" height="2.798611111111111in"}
 
 
 
-![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image5.png){width="5.0in" height="2.96875in"}
+![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image5.png){width="5.0in" height="2.9722222222222223in"}
 
 Client will request the video clip, each clip may just 1-2 min, before first clip finish,
 
@@ -116,7 +116,7 @@ CDN may request different resolution of this video from AWS
 
 All the video store in a folder
 
-![Popularon N ~ IVEROALE S P A C E L 0 5 T ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image7.png){width="5.0in" height="3.0104166666666665in"}
+![Popularon N ~ IVEROALE S P A C E L 0 5 T ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image7.png){width="5.0in" height="3.0069444444444446in"}
 
 
 
@@ -124,15 +124,15 @@ All the video store in a folder
 
 
 
-![Artwork Service ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image9.png){width="5.0in" height="4.28125in"}
+![Artwork Service ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image9.png){width="5.0in" height="4.277777777777778in"}
 
 
 
-![Details Service 电 影 剧 集 信 息 分 集 信 息 视 频 播 放 信 息 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image10.png){width="5.0in" height="3.15625in"}
+![Details Service 电 影 剧 集 信 息 分 集 信 息 视 频 播 放 信 息 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image10.png){width="5.0in" height="3.1527777777777777in"}
 
 
 
-![阿 ル 、 屮 。 叩 ! ハ ー ga O ん 。 ハ ) 佖 ぉ 学 で ・ 叩 い 一 p れ ← と / 51 ル d 0 》 や ! へ *O フ 、 07 叭 ノ 2 よ 、 フ 2 ) ( 互 ) ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image11.png){width="5.0in" height="2.4270833333333335in"}
+![阿 ル 、 屮 。 叩 ! ハ ー ga O ん 。 ハ ) 佖 ぉ 学 で ・ 叩 い 一 p れ ← と / 51 ル d 0 》 や ! へ *O フ 、 07 叭 ノ 2 よ 、 フ 2 ) ( 互 ) ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image11.png){width="5.0in" height="2.423611111111111in"}
 
 Gateway accept the first request and forward to certain service nexttime
 
@@ -152,13 +152,13 @@ Gateway accept the first request and forward to certain service nexttime
 
 Offer id
 
-![内 容 数 据 库 Content ID Parent Description ContentID Content ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image15.png){width="5.0in" height="2.5520833333333335in"}
+![内 容 数 据 库 Content ID Parent Description ContentID Content ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image15.png){width="5.0in" height="2.5555555555555554in"}
 
 Documents store
 
 
 
-![Video Video ID 视 频 数 据 库 Thumbnail ContentID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image16.png){width="5.0in" height="2.46875in"}
+![Video Video ID 视 频 数 据 库 Thumbnail ContentID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image16.png){width="5.0in" height="2.4722222222222223in"}
 
 
 

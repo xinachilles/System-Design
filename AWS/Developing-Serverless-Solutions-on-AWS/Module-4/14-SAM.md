@@ -37,7 +37,7 @@ Facts
 
 
 
-![Make code changes Identify changes needed IDE integrated with SAM Deploy locally with SAM CLI Local debugging and testing Deploy SAM Template to AWS ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-14-SAM-image4.png){width="5.0in" height="2.7395833333333335in"}
+![Make code changes Identify changes needed IDE integrated with SAM Deploy locally with SAM CLI Local debugging and testing Deploy SAM Template to AWS ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-14-SAM-image4.png){width="5.0in" height="2.736111111111111in"}
 
 
 
@@ -45,11 +45,11 @@ Facts
 
 
 
-![Following is the hello_world.py used in the demo. def lambda _ handler ( event, return hello" context) : Following is the code of SAM template used in the demo. AWSTemp1ateFormatVersion: ' Transform: AWS: : Description: > first---sam Resources : Hell oWor1 dFunction : Type: AWS: : Serverless: : Function properties : CodeUri : Handler : Runtime : hello world/ hello. lambda handler python3.9 ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-14-SAM-image6.png){width="5.0in" height="4.010416666666667in"}
+![Following is the hello_world.py used in the demo. def lambda _ handler ( event, return hello" context) : Following is the code of SAM template used in the demo. AWSTemp1ateFormatVersion: ' Transform: AWS: : Description: > first---sam Resources : Hell oWor1 dFunction : Type: AWS: : Serverless: : Function properties : CodeUri : Handler : Runtime : hello world/ hello. lambda handler python3.9 ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-14-SAM-image6.png){width="5.0in" height="4.013888888888889in"}
 
 
 
-![G) You can access the transformed template in the AWS console when you execute the demo. So far you have learned about different deployment frameworks for hosted and serverless applications. The final lesson focuses on deploying mobile and web applications using AWS Amplify. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-14-SAM-image7.png){width="5.0in" height="1.71875in"}
+![G) You can access the transformed template in the AWS console when you execute the demo. So far you have learned about different deployment frameworks for hosted and serverless applications. The final lesson focuses on deploying mobile and web applications using AWS Amplify. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-14-SAM-image7.png){width="5.0in" height="1.7222222222222223in"}
 
 
 

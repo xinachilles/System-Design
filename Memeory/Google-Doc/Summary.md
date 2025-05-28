@@ -60,7 +60,7 @@ Peek QPS
 
 Storage:
 
-![服 务 资 源 存 储 资 源 # ofOngoing Sessions 1 M * 10 ％ （ 假 设 10 ％ 的 DAU 保 持 长 连 接 ） ： 10M 1 M 5 * 1 / （ 24 3 ） 、 = 580k 文 档 存 储 1 佣 M * 100KB = IOTB ](../../media/Memeory-Google-Doc-Summary-image3.png){width="5.0in" height="1.4479166666666667in"}
+![服 务 资 源 存 储 资 源 # ofOngoing Sessions 1 M * 10 ％ （ 假 设 10 ％ 的 DAU 保 持 长 连 接 ） ： 10M 1 M 5 * 1 / （ 24 3 ） 、 = 580k 文 档 存 储 1 佣 M * 100KB = IOTB ](../../media/Memeory-Google-Doc-Summary-image3.png){width="5.0in" height="1.4513888888888888in"}
 
 
 
@@ -103,10 +103,10 @@ For this edit, you can **insert** or **delete** text characters. Each character 
 
 [Operation table :]{.mark}
 
-![Primary Key -> (Document ID, Timestamp) Base Version Operation ID Document ID Operation ID Timestamp ](../../media/Memeory-Google-Doc-Summary-image4.png){width="5.0in" height="1.4270833333333333in"}
+![Primary Key -> (Document ID, Timestamp) Base Version Operation ID Document ID Operation ID Timestamp ](../../media/Memeory-Google-Doc-Summary-image4.png){width="5.0in" height="1.4305555555555556in"}
 
 7.  Document table
-8.  ![Document ID Content ](../../media/Memeory-Google-Doc-Summary-image5.png){width="5.0in" height="1.15625in"}
+8.  ![Document ID Content ](../../media/Memeory-Google-Doc-Summary-image5.png){width="5.0in" height="1.1527777777777777in"}
 9.  The current state of the document as of the last processed change. ( document id 可以有version number)
 
 
@@ -265,7 +265,7 @@ P2p
 
 API
 
-![Operations SEND destination: /operations "document id" : 123, "user id": 456, "base version id": "operations" • "operation_type": "insert" , "pos " • "char": " a" ](../../media/Memeory-Google-Doc-Summary-image7.png){width="5.0in" height="4.635416666666667in"}
+![Operations SEND destination: /operations "document id" : 123, "user id": 456, "base version id": "operations" • "operation_type": "insert" , "pos " • "char": " a" ](../../media/Memeory-Google-Doc-Summary-image7.png){width="5.0in" height="4.631944444444445in"}
 
 
 

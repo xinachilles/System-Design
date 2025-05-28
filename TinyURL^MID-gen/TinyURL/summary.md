@@ -6,7 +6,7 @@ Modified: 2021-04-26 16:59:36 -0600
 
 ---
 
-![Client Load Balancer + gateway Cache Web service ID generator DB ](../../media/TinyURL^MID-gen-TinyURL-summary-image1.png){width="5.0in" height="3.53125in"}
+![Client Load Balancer + gateway Cache Web service ID generator DB ](../../media/TinyURL^MID-gen-TinyURL-summary-image1.png){width="5.0in" height="3.5277777777777777in"}
 
 
 

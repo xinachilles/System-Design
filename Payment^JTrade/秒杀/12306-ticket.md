@@ -96,7 +96,7 @@ Booking table indexed on passenger id, request id and route, primary key is auto
 
 moved the old record to historical log database
 
-![](../../media/Payment^JTrade-秒杀-12306-ticket-image2.png){width="5.0in" height="3.34375in"}
+![](../../media/Payment^JTrade-秒杀-12306-ticket-image2.png){width="5.0in" height="3.3472222222222223in"}
 
 
 

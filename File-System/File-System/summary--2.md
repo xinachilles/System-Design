@@ -162,11 +162,11 @@ chunk service will sent heartbeat to master periodically
 
 
 
-![How to write a file? 1, write Chunk index---I 2, Assign CSI client 4. Write Finish 3. Transfer Data= lgfs/home/dengchao. mp4-01-Of-09 ChunkServer1 4. Write Finish info N gchao. master Chunk O I •>ChunkServerI Chunk 02 •>ChunkServerI Chunk 03->ChunkServer2 Key • Master clientfiötchunk ChunkServer2 ](../../media/File-System-File-System-summary--2-image1.png){width="5.0in" height="2.53125in"}
+![How to write a file? 1, write Chunk index---I 2, Assign CSI client 4. Write Finish 3. Transfer Data= lgfs/home/dengchao. mp4-01-Of-09 ChunkServer1 4. Write Finish info N gchao. master Chunk O I •>ChunkServerI Chunk 02 •>ChunkServerI Chunk 03->ChunkServer2 Key • Master clientfiötchunk ChunkServer2 ](../../media/File-System-File-System-summary--2-image1.png){width="5.0in" height="2.5347222222222223in"}
 
 
 
-![One time to write, Many time to read. hfflN/gfs/home/dengchao.mp4 ](../../media/File-System-File-System-summary--2-image2.png){width="5.0in" height="2.0104166666666665in"}
+![One time to write, Many time to read. hfflN/gfs/home/dengchao.mp4 ](../../media/File-System-File-System-summary--2-image2.png){width="5.0in" height="2.0069444444444446in"}
 
 
 

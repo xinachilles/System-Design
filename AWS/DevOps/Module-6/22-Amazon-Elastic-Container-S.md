@@ -16,7 +16,7 @@ Facts
 
 
 
-- ![Amazon Elastic Container Service (Amazon ECS) Build images and store using ECR or any other repository Amazon Elastic Container Service Define your app Select container images and resources needed for your app Launch containers on EC2 Launch containers on Fargate training and -y certification O Manage containers Amazon ECS scales your app and manages your containers for availability ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image1.png){width="5.0in" height="2.71875in"}
+- ![Amazon Elastic Container Service (Amazon ECS) Build images and store using ECR or any other repository Amazon Elastic Container Service Define your app Select container images and resources needed for your app Launch containers on EC2 Launch containers on Fargate training and -y certification O Manage containers Amazon ECS scales your app and manages your containers for availability ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image1.png){width="5.0in" height="2.7152777777777777in"}
 - Fargate offers a serverless environment for running containers, eliminating the need to manage EC2 instances.
 
 
@@ -29,7 +29,7 @@ Facts
 
 
 
-![Amazon ECS task definitions • Required to run Docker containers in Amazon ECS • Contains information such as: Which Docker images to use How much CPU and memory to use with each container aws training and certification Ports from the container that are mapped to the host container instance Data volumes Any environment variables passed to the container IAM role of tasks ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image3.png){width="5.0in" height="2.71875in"}
+![Amazon ECS task definitions • Required to run Docker containers in Amazon ECS • Contains information such as: Which Docker images to use How much CPU and memory to use with each container aws training and certification Ports from the container that are mapped to the host container instance Data volumes Any environment variables passed to the container IAM role of tasks ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image3.png){width="5.0in" height="2.7152777777777777in"}
 
 - ECS tasks can be assigned specific roles, ensuring that permissions are container-specific and not tied to the EC2 instance.
 - ECS integrates with other AWS services, allowing for a workflow where Docker files are built, images are stored in ECR, and tasks are placed on EC2 instances.
@@ -46,7 +46,7 @@ Facts
 
 
 
-![Amazon ECR Build images and store using ECR or any other repository Amazon Elastic Container Service Define your app Select container images and resources needed for your app Launch containers on EC2 Launch containers on Far ate O Manage containers Amazon ECS scales your app and manages your containers for availability ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image5.png){width="5.0in" height="1.8854166666666667in"}
+![Amazon ECR Build images and store using ECR or any other repository Amazon Elastic Container Service Define your app Select container images and resources needed for your app Launch containers on EC2 Launch containers on Far ate O Manage containers Amazon ECS scales your app and manages your containers for availability ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image5.png){width="5.0in" height="1.8819444444444444in"}
 
 
 
@@ -66,7 +66,7 @@ Facts
 
 
 
-![On-dem On-demand workloads ask Tasks are managed by the task scheduler and are ideal for on-demand workloads. You can run Managed by tasks once or at intervals, they are great for scheduler batch jobs, and you can use the RunTask API or Run once or even a custom Start Task command. More effecti jobs ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image10.png){width="5.0in" height="2.6770833333333335in"}
+![On-dem On-demand workloads ask Tasks are managed by the task scheduler and are ideal for on-demand workloads. You can run Managed by tasks once or at intervals, they are great for scheduler batch jobs, and you can use the RunTask API or Run once or even a custom Start Task command. More effecti jobs ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image10.png){width="5.0in" height="2.673611111111111in"}
 
 
 
@@ -76,7 +76,7 @@ Facts
 
 
 
-![Amazon ECS glossary terms • Cluster: logical grouping of tasks or services • Container instances: runs tasks • Agent: Instructs EC2 instance to start/stop containers • Task: required to run containers • Container definition: configurations to run container • Service: runs/maintains a specified number of tasks ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image12.png){width="5.0in" height="3.4479166666666665in"}
+![Amazon ECS glossary terms • Cluster: logical grouping of tasks or services • Container instances: runs tasks • Agent: Instructs EC2 instance to start/stop containers • Task: required to run containers • Container definition: configurations to run container • Service: runs/maintains a specified number of tasks ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image12.png){width="5.0in" height="3.4444444444444446in"}
 
 
 
@@ -88,7 +88,7 @@ Facts
 
 
 
-![Amazon ECS glossary terms • Cluster: logical grouping of tasks or services • Container instances: runs tasks • Agent: Instructs EC2 instance to start/stop containers • Task: required to run containers • Container definition: configurations to run container • Service: runs/maintains a specified number of tasks ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image12.png){width="5.0in" height="3.4479166666666665in"}
+![Amazon ECS glossary terms • Cluster: logical grouping of tasks or services • Container instances: runs tasks • Agent: Instructs EC2 instance to start/stop containers • Task: required to run containers • Container definition: configurations to run container • Service: runs/maintains a specified number of tasks ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image12.png){width="5.0in" height="3.4444444444444446in"}
 
 
 
@@ -96,7 +96,7 @@ Facts
 
 
 
-![Amazon Amazon CloudWatch Amazon ECS ECS event stream AWS Lambda Events Amazon CloudWatch Events Amazon SNS Amazon Elasticsearch Service training and certification o Amazon SNS topic Monitor on dashboard Use Amazon ECS cluster-state information to drive container placement 0 Arna.•on Web O' Al. rese•ved ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image14.png){width="5.0in" height="2.8229166666666665in"}
+![Amazon Amazon CloudWatch Amazon ECS ECS event stream AWS Lambda Events Amazon CloudWatch Events Amazon SNS Amazon Elasticsearch Service training and certification o Amazon SNS topic Monitor on dashboard Use Amazon ECS cluster-state information to drive container placement 0 Arna.•on Web O' Al. rese•ved ](../../../media/AWS-DevOps-Module-6-22-Amazon-Elastic-Container-Service-and-AWS-Fargate-image14.png){width="5.0in" height="2.826388888888889in"}
 
 
 

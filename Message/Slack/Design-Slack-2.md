@@ -20,7 +20,7 @@ one my sql services can handle 500 G
 
 cache will reduce 10-100 times
 
-![Data MOdel User Table (SQL): Id (shard key) uuid name Friend table (SQL): Shard_key: user_id_l user id 1 david id user id 1 Scott id user id 2 Scott id user id 2 david id Group membership Table (SQL): group_id uuid uuid User_id(shard key) david id Scott status Online connected date 1234355 connected date 1234355 join_date 1232r54 1234355 timezone Los Angeles Last view date 12345354 Last view date 34121455 role user Admin team safety Last view date Last sec. 124153456 ](../../media/Message-Slack-Design-Slack-image1.png){width="5.0in" height="4.760416666666667in"}
+![Data MOdel User Table (SQL): Id (shard key) uuid name Friend table (SQL): Shard_key: user_id_l user id 1 david id user id 1 Scott id user id 2 Scott id user id 2 david id Group membership Table (SQL): group_id uuid uuid User_id(shard key) david id Scott status Online connected date 1234355 connected date 1234355 join_date 1232r54 1234355 timezone Los Angeles Last view date 12345354 Last view date 34121455 role user Admin team safety Last view date Last sec. 124153456 ](../../media/Message-Slack-Design-Slack-image1.png){width="5.0in" height="4.763888888888889in"}
 
 
 
@@ -66,7 +66,7 @@ channel table is temp table just stored in the messory
 
 
 
-![1 ](../../media/Message-Slack-Design-Slack-image3.png){width="5.0in" height="4.28125in"}
+![1 ](../../media/Message-Slack-Design-Slack-image3.png){width="5.0in" height="4.277777777777778in"}
 
 
 

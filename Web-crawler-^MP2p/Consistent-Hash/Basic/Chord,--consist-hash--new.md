@@ -14,11 +14,11 @@ Modified: 2021-01-17 17:27:56 -0600
 
 
 
-![Chord: an example DHT N nodes in network --- Aim to distribute files amongst the nodes, and locate the files Consistent hashing is used to assign ID's to nodes and resources --- SHA-I hash of node IP address produces 160-bit ID --- SHA-I hash of file name produces 160-bit key, k Visualise nodes as circle, ordered by ID Resource with key k is stored at node with ID = k --- If node with ID = k does not exist, resource is stored at node with next highest ID Node n joins network: --- Need to reassign keys from successor(n) Node n leaves the network: --- Need to reassign keys to successor(n) ITS 413 • peer-to-peer systems 20 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image1.png){width="5.0in" height="3.7604166666666665in"}
+![Chord: an example DHT N nodes in network --- Aim to distribute files amongst the nodes, and locate the files Consistent hashing is used to assign ID's to nodes and resources --- SHA-I hash of node IP address produces 160-bit ID --- SHA-I hash of file name produces 160-bit key, k Visualise nodes as circle, ordered by ID Resource with key k is stored at node with ID = k --- If node with ID = k does not exist, resource is stored at node with next highest ID Node n joins network: --- Need to reassign keys from successor(n) Node n leaves the network: --- Need to reassign keys to successor(n) ITS 413 • peer-to-peer systems 20 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image1.png){width="5.0in" height="3.7569444444444446in"}
 
 
 
-![](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image2.png){width="5.0in" height="3.34375in"}
+![](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image2.png){width="5.0in" height="3.3472222222222223in"}
 
 
 
@@ -56,7 +56,7 @@ If node 13 join the network, the resource 12 and 13 will be re-assigned to node 
 
 Only one node need to be update, only one node need to be modified
 
-![12, 13, 14 14 New node joins: Hash(130.220.79.115) = 9 Keys 8 and 9 are re-assigned from node 11 to node 9 8, g, 10, Il 11 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image4.png){width="5.0in" height="3.4479166666666665in"}
+![12, 13, 14 14 New node joins: Hash(130.220.79.115) = 9 Keys 8 and 9 are re-assigned from node 11 to node 9 8, g, 10, Il 11 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image4.png){width="5.0in" height="3.4444444444444446in"}
 
 ![15, o 12, 13, 14 14 Node 6 leaves network Keys 4, 5 and 6 are re-assigned from node 6 to node 7 10, 11 11 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image5.png){width="5.0in" height="3.75in"}
 
@@ -74,7 +74,7 @@ Node 0 has a IP address of node 1
 
 
 
-![15, o Data13 12, 13, 14 14 10, 11 11 search(k=13) A simple approach is to route the search query through each successor but may be inefficient 7 9 1 3 31 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image6.png){width="5.0in" height="3.71875in"}
+![15, o Data13 12, 13, 14 14 10, 11 11 search(k=13) A simple approach is to route the search query through each successor but may be inefficient 7 9 1 3 31 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image6.png){width="5.0in" height="3.7222222222222223in"}
 
 
 
@@ -116,7 +116,7 @@ Interval = key space, use key space for search
 
 
 
-![15 14 13 Chord network with up to 12 24 = 16 possible nodes 11 10 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image8.png){width="5.0in" height="3.46875in"}
+![15 14 13 Chord network with up to 12 24 = 16 possible nodes 11 10 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image8.png){width="5.0in" height="3.4652777777777777in"}
 
 
 
@@ -170,7 +170,7 @@ Each node know on logN other nodes
 
 
 
-![Approach Unstructured (Gnutella) Directory Server (Napster) Full replication Super-peers (Fasttrack) DHT (Chord) Performance Comparison of P2P Techniques n = number of peers; C = number of super-peers Latency log(n) log(c) log(n) Messages 1 1 c log(n) Update cost Storage 1 1 1 log(n) n (max), 1 (avg) C (max), 1 (avg) log(n) 36 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image10.png){width="5.0in" height="3.71875in"}
+![Approach Unstructured (Gnutella) Directory Server (Napster) Full replication Super-peers (Fasttrack) DHT (Chord) Performance Comparison of P2P Techniques n = number of peers; C = number of super-peers Latency log(n) log(c) log(n) Messages 1 1 c log(n) Update cost Storage 1 1 1 log(n) n (max), 1 (avg) C (max), 1 (avg) log(n) 36 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Chord,--consist-hash--new-image10.png){width="5.0in" height="3.7222222222222223in"}
 
 
 

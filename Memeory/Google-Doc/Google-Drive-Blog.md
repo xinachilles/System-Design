@@ -6,7 +6,7 @@ Modified: 2021-01-18 18:23:58 -0600
 
 ---
 
-![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image1.png){width="0.6354166666666666in" height="0.5729166666666666in"}
+![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image1.png){width="0.6388888888888888in" height="0.5763888888888888in"}
 
 
 
@@ -55,7 +55,7 @@ Let's say Luiz starts by typing the word Hello at the beginning of the document.
 
 
 
-![Client: Luiz Last synced revision: O Sent changes Pending changes Revision bg Pencfig chmges Sent ent docum InsertText: •Hello' @1 Client. Luiz Last synced revisim: O Sent changes Pending changes InsertText: 'Hello' @1 Current docunænt (InsertText: @I Revision: O Client: Current docurrent Client: John synced O Pen dng changes rrent docume «ernpty> Idle Hello Client: Luiz Last synced revisim: O Send Change {InsertText: Hello'@1 Revision: O} Revision Sent changes InsertText: 'Heuo• Pending changes Current &xument Hello ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image2.png){width="5.0in" height="3.0729166666666665in"}
+![Client: Luiz Last synced revision: O Sent changes Pending changes Revision bg Pencfig chmges Sent ent docum InsertText: •Hello' @1 Client. Luiz Last synced revisim: O Sent changes Pending changes InsertText: 'Hello' @1 Current docunænt (InsertText: @I Revision: O Client: Current docurrent Client: John synced O Pen dng changes rrent docume «ernpty> Idle Hello Client: Luiz Last synced revisim: O Send Change {InsertText: Hello'@1 Revision: O} Revision Sent changes InsertText: 'Heuo• Pending changes Current &xument Hello ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image2.png){width="5.0in" height="3.0694444444444446in"}
 
 Luiz's client added the edit to his list of pending changes. He then sent the change to the server and [moved the change into his list of sent changes.]{.mark}
 
@@ -63,7 +63,7 @@ Luiz's client added the edit to his list of pending changes. He then sent the ch
 
 Luiz continues to type, adding the word world to his document. At the same time, John types an ! in his empty version of the document (remember he has not yet received Luiz's first change).
 
-![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image3.png){width="5.208333333333333in" height="2.1770833333333335in"}
+![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image3.png){width="5.208333333333333in" height="2.1805555555555554in"}
 
 Luiz's {InsertText ' world' @6} [change was placed in the pending list and wasn't sent to the server because we never send more than one pending change at a time.]{.mark} Until Luiz recieves an [acknowledgement]{.mark} of his first change, his client will keep all new changes in the pending list. Also notice that the server stored Luiz's first change in its revision log. [Next, the server will send John a message containing Luiz's first change and it will send Luiz a message acknowledging that it has processed that first change.]{.mark}
 
@@ -123,7 +123,7 @@ Labels: [documents](https://drive.googleblog.com/search/label/documents) , [Goog
 
 [](https://drive.googleblog.com/) [](https://drive.googleblog.com/2010/09/import-your-files-many-different-ways.html) [](https://drive.googleblog.com/2010/09/whats-different-about-new-google-docs_22.html)
 
-![316009 ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image9.png){width="0.9479166666666666in" height="0.375in"}
+![316009 ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image9.png){width="0.9513888888888888in" height="0.375in"}
 
 - [Google](https://www.google.com/)
 

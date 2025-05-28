@@ -478,7 +478,7 @@ cd ..
 
 The changed file should look like the following image:
 
-![Example of the updated aws-exports.js file](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image3.png){width="6.0in" height="2.4270833333333335in"}
+![Example of the updated aws-exports.js file](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-1--Deploying-a-Simple-Serverless-Application---Self-Paced-Labs-image3.png){width="6.0in" height="2.423611111111111in"}
 
 **Note** The parameters provided in the **aws-exports.js** file enable the front-end of the application to connect to the backend. The URL provided is the backend URL for the application that was deployed through AWS SAM.
 

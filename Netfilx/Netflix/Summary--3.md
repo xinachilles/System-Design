@@ -50,7 +50,7 @@ Assuming an upload:view ratio of 1:200, we would need 1TB/s outgoing bandwidth. 
 
 
 
-![服 务 资 源 存 储 资 源 1 ． 3 资 源 估 算 (cont.) 峰 值 Throughput 2 M * IGB 10 / （ 36 佣 24 ） 、 ： 23 TB/s 视 频 文 件 存 储 （ 不 包 含 CDN) 假 设 1 小 时 视 频 文 件 编 码 后 大 小 1- B 3 倍 的 Replication Factor 50k IOOGB * 3 = 巧 PB ](../../media/Netfilx-Netflix-Summary--3-image2.png){width="5.0in" height="2.3854166666666665in"}
+![服 务 资 源 存 储 资 源 1 ． 3 资 源 估 算 (cont.) 峰 值 Throughput 2 M * IGB 10 / （ 36 佣 24 ） 、 ： 23 TB/s 视 频 文 件 存 储 （ 不 包 含 CDN) 假 设 1 小 时 视 频 文 件 编 码 后 大 小 1- B 3 倍 的 Replication Factor 50k IOOGB * 3 = 巧 PB ](../../media/Netfilx-Netflix-Summary--3-image2.png){width="5.0in" height="2.3819444444444446in"}
 
 Each video store 3 copies
 
@@ -79,7 +79,7 @@ For separate of concerns principle, the following designs are broke into 4 parts
 
 Architecture
 
-![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--3-image3.png){width="6.1875in" height="4.802083333333333in"}
+![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--3-image3.png){width="6.1875in" height="4.805555555555555in"}
 
 
 
@@ -193,7 +193,7 @@ When the user deletes the video, the state will be changed to [DELETED_PENDING,]
 
 Architecture
 
-![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--3-image4.png){width="6.15625in" height="4.5in"}
+![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--3-image4.png){width="6.152777777777778in" height="4.5in"}
 
 - [Popularity service in charge of the views, likes, dislikes of the video,]{.mark} likes and dislikes of the comments. The popularity service will [periodically]{.mark} read all user activity logs and update the likes/views etc.
   - Popularity has massive read / write but ok with small chance of data loss, therefore use redis to store the data and async write back to DB.
@@ -381,7 +381,7 @@ Streaming requires prefill the metadata, thumbnail (if wanted), to make the stre
 
 6.  Viewers will watch the stream with a few seconds latency, therefore the live chat will be precisely displayed when the other user sends it.
 
-![-9 C docs.googIe.com/presentation/dÎIPV6haXKzIV181RcfUjeBZcet3hc2kaMWDxH19qT4b4E/editttslide=id.p @ QCącoAQirŔ-Qî1/lQ,.0 Corn --pco,.J Incognito (2) prouîdz.ł Gros OSU Ae-uice5 v'Ąą-o cŔ,hą se-" Vce C CDŔJ --- @ žBhŃł2Ffrfi acecodeinterview.com ](../../media/Netfilx-Netflix-Summary--3-image7.png){width="5.0in" height="3.0520833333333335in"}
+![-9 C docs.googIe.com/presentation/dÎIPV6haXKzIV181RcfUjeBZcet3hc2kaMWDxH19qT4b4E/editttslide=id.p @ QCącoAQirŔ-Qî1/lQ,.0 Corn --pco,.J Incognito (2) prouîdz.ł Gros OSU Ae-uice5 v'Ąą-o cŔ,hą se-" Vce C CDŔJ --- @ žBhŃł2Ffrfi acecodeinterview.com ](../../media/Netfilx-Netflix-Summary--3-image7.png){width="5.0in" height="3.048611111111111in"}
 
 
 

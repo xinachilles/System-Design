@@ -51,11 +51,11 @@ Facts
 
 
 
-![What is AWS Serverless Application Model (AWS SAM)? The AWS Serverless Application Model (AWS SAM) is an open-source framework that you can use to build serverless applications on AWS. Remember that a serverless application is a combination of Lambda functions, event sources, and other resources that work together to perform tasks. A serverless application is more than only a Lambda function---it can include additional resources such as API operations, databases, and event source mappings. You can use AWS SAM to define your serverless applications. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image4.png){width="5.0in" height="2.3854166666666665in"}
+![What is AWS Serverless Application Model (AWS SAM)? The AWS Serverless Application Model (AWS SAM) is an open-source framework that you can use to build serverless applications on AWS. Remember that a serverless application is a combination of Lambda functions, event sources, and other resources that work together to perform tasks. A serverless application is more than only a Lambda function---it can include additional resources such as API operations, databases, and event source mappings. You can use AWS SAM to define your serverless applications. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image4.png){width="5.0in" height="2.3819444444444446in"}
 
 
 
-![SINGLE- DEPLOYMENT CONFIGURATI... EXTENSION OF BUILT-IN BEST AWS PRACTICES CLOUDFORMATI... LOCAL DEBUGGING AND TESTING WIT Using AWS SAM, you can organize related components and resources, and operate on a single stack. You can use AWS SAM to share configuration (such as memory and timeouts) between resources. You can also use it to deploy all related resources together as a single, versioned entity. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image5.png){width="5.0in" height="2.0104166666666665in"}
+![SINGLE- DEPLOYMENT CONFIGURATI... EXTENSION OF BUILT-IN BEST AWS PRACTICES CLOUDFORMATI... LOCAL DEBUGGING AND TESTING WIT Using AWS SAM, you can organize related components and resources, and operate on a single stack. You can use AWS SAM to share configuration (such as memory and timeouts) between resources. You can also use it to deploy all related resources together as a single, versioned entity. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image5.png){width="5.0in" height="2.0069444444444446in"}
 
 
 
@@ -63,11 +63,11 @@ Facts
 
 
 
-![SINGLE- DEPLOYMENT CONFIGURATI... EXTENSION OF BUILT-IN BEST AWS PRACTICES CLOUDFORMATI... LOCAL DEBUGGING AND TESTING WIT You can use AWS SAM to define and deploy your infrastructure as config. This makes it possible for you to use and enforce best practices such as code reviews. Also, with a few lines of configuration, you can enable safe deployments through AWS CodeDeploy and enable tracing by using AWS X-Ray. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image7.png){width="5.0in" height="2.21875in"}
+![SINGLE- DEPLOYMENT CONFIGURATI... EXTENSION OF BUILT-IN BEST AWS PRACTICES CLOUDFORMATI... LOCAL DEBUGGING AND TESTING WIT You can use AWS SAM to define and deploy your infrastructure as config. This makes it possible for you to use and enforce best practices such as code reviews. Also, with a few lines of configuration, you can enable safe deployments through AWS CodeDeploy and enable tracing by using AWS X-Ray. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image7.png){width="5.0in" height="2.2222222222222223in"}
 
 
 
-![SINGLE- DEPLOYMENT CONFIGURATI... EXTENSION OF BUILT-IN BEST AWS PRACTICES CLOUDFORMATI... LOCAL DEBUGGING AND TESTING WIT The AWS SAM CLI lets you locally build, test, and debug serverless applications that are defined by AWS SAM templates. The CLI provides a Lambda-like runtime environment locally. It helps you catch issues upfront by providing parity with the actual Lambda runtime environment. To step through and debug your code to understand what the code is doing, you can use AWS SAM with AWS toolkits, such as: • AWS Toolkit for JetBrains • AWS Toolkit for PyCharm • AWS Toolkit for IntelliJ • AWS Toolkit for Visual Studio Code This tightens the feedback loop by making it possible for you to find and troubleshoot issues that you might run into in the cloud. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image8.png){width="5.0in" height="3.4895833333333335in"}
+![SINGLE- DEPLOYMENT CONFIGURATI... EXTENSION OF BUILT-IN BEST AWS PRACTICES CLOUDFORMATI... LOCAL DEBUGGING AND TESTING WIT The AWS SAM CLI lets you locally build, test, and debug serverless applications that are defined by AWS SAM templates. The CLI provides a Lambda-like runtime environment locally. It helps you catch issues upfront by providing parity with the actual Lambda runtime environment. To step through and debug your code to understand what the code is doing, you can use AWS SAM with AWS toolkits, such as: • AWS Toolkit for JetBrains • AWS Toolkit for PyCharm • AWS Toolkit for IntelliJ • AWS Toolkit for Visual Studio Code This tightens the feedback loop by making it possible for you to find and troubleshoot issues that you might run into in the cloud. ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image8.png){width="5.0in" height="3.486111111111111in"}
 
 
 
@@ -75,7 +75,7 @@ Facts
 
 
 
-![AWS SAM template AWSTemp1 ateForma t Ver s ion. • '2010-09-09' Transform: AWS: : server less---2016---10---31 Resources : GetHtm1Funct ion : : Server less: : Function Type: AWS: Properties : s 3: / list. zip CodeUri : index. gethtml Handler : Runt ime : nodejs6.10 Policies : Amazon DynamoDBReadOn1yAccess Events : GetHtm1 : Type: Api Properties : Path: / {proxy+} Method: ANY ListTab1e : Type: AWS: : Server less: : SimpleTab1e ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image10.png){width="5.0in" height="3.6770833333333335in"}
+![AWS SAM template AWSTemp1 ateForma t Ver s ion. • '2010-09-09' Transform: AWS: : server less---2016---10---31 Resources : GetHtm1Funct ion : : Server less: : Function Type: AWS: Properties : s 3: / list. zip CodeUri : index. gethtml Handler : Runt ime : nodejs6.10 Policies : Amazon DynamoDBReadOn1yAccess Events : GetHtm1 : Type: Api Properties : Path: / {proxy+} Method: ANY ListTab1e : Type: AWS: : Server less: : SimpleTab1e ](../../../media/AWS-DevOps-Module-7-25-AWS-Serverless-Application-Repository-and-AWS-SAM-image10.png){width="5.0in" height="3.6805555555555554in"}
 
 
 

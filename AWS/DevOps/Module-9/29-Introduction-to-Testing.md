@@ -30,7 +30,7 @@ Facts
 
 
 
-- ![Testing and DevOps With frequent code check-ins, you can close the feedback loop with quality by having a good testing strategy as part of your CI/CD pipeline. Keeping a robust pipeline ensures that you can continue to deliver quality products and features faster. Tests are a critical part of software development because they ensure software quality. More importantly, they help find issues early in the development phase, lowering the cost of fixing them later during the project. Tests come in many forms: unit tests, performance tests, user acceptance tests, or integration tests. All require IT resources to run. Thus, test teams face the same challenges as development teams---the need to have enough IT resources, but only during the limited duration of the test runs. Test environments change frequently and are different from project to project, and as a result may require different IT infrastructure or have varying capacity needs. Continuous testing is important in balancing the CI/CD pipeline. Though adding software features at a rapid pace is a good practice, ensuring that the features adhere to the right level of quality is achieved by continuous testing. ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image3.png){width="5.0in" height="3.7395833333333335in"}
+- ![Testing and DevOps With frequent code check-ins, you can close the feedback loop with quality by having a good testing strategy as part of your CI/CD pipeline. Keeping a robust pipeline ensures that you can continue to deliver quality products and features faster. Tests are a critical part of software development because they ensure software quality. More importantly, they help find issues early in the development phase, lowering the cost of fixing them later during the project. Tests come in many forms: unit tests, performance tests, user acceptance tests, or integration tests. All require IT resources to run. Thus, test teams face the same challenges as development teams---the need to have enough IT resources, but only during the limited duration of the test runs. Test environments change frequently and are different from project to project, and as a result may require different IT infrastructure or have varying capacity needs. Continuous testing is important in balancing the CI/CD pipeline. Though adding software features at a rapid pace is a good practice, ensuring that the features adhere to the right level of quality is achieved by continuous testing. ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image3.png){width="5.0in" height="3.7430555555555554in"}
 
 
 
@@ -38,11 +38,11 @@ Facts
 
 
 
-- ![Test Release Test Deploy Develop Test Build Test ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image5.png){width="5.0in" height="4.447916666666667in"}
+- ![Test Release Test Deploy Develop Test Build Test ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image5.png){width="5.0in" height="4.451388888888889in"}
 
 
 
-- ![Testing scenarios in the CI/CD pipeline Continuous Integration Continuous Delivery/Deployment . Unit Tests • Static Code Analysis • Integration Testing Component Testing Regression Testing System Testing Performance Testing Load Testing Compliance Testing IJAT A/B Testing Canary Analysis ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image6.png){width="5.0in" height="3.0729166666666665in"}
+- ![Testing scenarios in the CI/CD pipeline Continuous Integration Continuous Delivery/Deployment . Unit Tests • Static Code Analysis • Integration Testing Component Testing Regression Testing System Testing Performance Testing Load Testing Compliance Testing IJAT A/B Testing Canary Analysis ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image6.png){width="5.0in" height="3.0694444444444446in"}
 
 
 
@@ -58,7 +58,7 @@ Facts
 
 
 
-- ![Production phase In the production phase, a strategy, such as A/B testing or canary analysis, is used to test the new application version. In A/B testing, the new application version is deployed to a small percentage of production servers and tested for user feedback. Gradually, depending on how well the new application is received by the users, the deployment is increased to span all production servers. ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image10.png){width="5.0in" height="1.8229166666666667in"}
+- ![Production phase In the production phase, a strategy, such as A/B testing or canary analysis, is used to test the new application version. In A/B testing, the new application version is deployed to a small percentage of production servers and tested for user feedback. Gradually, depending on how well the new application is received by the users, the deployment is increased to span all production servers. ](../../../media/AWS-DevOps-Module-9-29-Introduction-to-Testing-image10.png){width="5.0in" height="1.8263888888888888in"}
 - 
 
 

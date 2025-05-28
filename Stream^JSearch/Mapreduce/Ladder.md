@@ -10,7 +10,7 @@ Modified: 2017-06-25 11:15:55 -0600
 
 
 
-![Top K Frequent Words (Map Reduce) Description D Notes Testcase Judge Find top k frequent words with map reduce framework. The mapper's key is the document id, value is the content of the document, words in a document are split by spaces. For reducer, the output should be at most k key-value pairs, which are the top k words and their frequencies in this reducer. The judge will take care about how to merge different reducers' results to get the global top k frequent words, so you don't need to care about that part. The k is given in the constructor ofTopK class. i Notice For the words with same frequency, rank them with alphabet. Have you met this question in a real interview? Yes Example Given document A = tintcode is the best online judge I love tintcode and document B = tintcode is an online judge for coding interview ](../../media/Stream^JSearch-Mapreduce-Ladder-image2.png){width="2.7916666666666665in" height="2.9479166666666665in"}
+![Top K Frequent Words (Map Reduce) Description D Notes Testcase Judge Find top k frequent words with map reduce framework. The mapper's key is the document id, value is the content of the document, words in a document are split by spaces. For reducer, the output should be at most k key-value pairs, which are the top k words and their frequencies in this reducer. The judge will take care about how to merge different reducers' results to get the global top k frequent words, so you don't need to care about that part. The k is given in the constructor ofTopK class. i Notice For the words with same frequency, rank them with alphabet. Have you met this question in a real interview? Yes Example Given document A = tintcode is the best online judge I love tintcode and document B = tintcode is an online judge for coding interview ](../../media/Stream^JSearch-Mapreduce-Ladder-image2.png){width="2.7916666666666665in" height="2.951388888888889in"}
 
 
 
@@ -22,7 +22,7 @@ Modified: 2017-06-25 11:15:55 -0600
 
 
 
-![public void Integer> output) { // Output the top k pairs <word, times> into output buffer. // Ps. output. collect(String key, Integer value); pairs new ArrayList<Pai while { pairs. add(Q. poll O) ; // reverse result int n pairs.size(); for (int Pair pair pairs.get(i); output.collect(pair. key, pair value); ](../../media/Stream^JSearch-Mapreduce-Ladder-image5.png){width="2.7916666666666665in" height="1.40625in"}
+![public void Integer> output) { // Output the top k pairs <word, times> into output buffer. // Ps. output. collect(String key, Integer value); pairs new ArrayList<Pai while { pairs. add(Q. poll O) ; // reverse result int n pairs.size(); for (int Pair pair pairs.get(i); output.collect(pair. key, pair value); ](../../media/Stream^JSearch-Mapreduce-Ladder-image5.png){width="2.7916666666666665in" height="1.4097222222222223in"}
 
 
 
@@ -30,11 +30,11 @@ Modified: 2017-06-25 11:15:55 -0600
 
 
 
-![Anagram (Map Reduce) ("cd", "dc"] , Description D Notes Testcase Judge Use Map Reduce to find anagrams in a given list of words. Have you met this question in a real interview? Yes Example Given ["lint", "intl", 'lint t", "code"] , return [n lint", "inlt", "int l" ] , ["code"] . Given ["abn, "bal', "cd", "dc", , return ("ab", "bal'], Tags • Related Problems • ](../../media/Stream^JSearch-Mapreduce-Ladder-image6.png){width="2.7916666666666665in" height="1.9479166666666667in"}
+![Anagram (Map Reduce) ("cd", "dc"] , Description D Notes Testcase Judge Use Map Reduce to find anagrams in a given list of words. Have you met this question in a real interview? Yes Example Given ["lint", "intl", 'lint t", "code"] , return [n lint", "inlt", "int l" ] , ["code"] . Given ["abn, "bal', "cd", "dc", , return ("ab", "bal'], Tags • Related Problems • ](../../media/Stream^JSearch-Mapreduce-Ladder-image6.png){width="2.7916666666666665in" height="1.9444444444444444in"}
 
 
 
-![public class Anagram { public static class Map { public void map(String key, String value, OutputC01 lector<String, String> output) { // Write your code here // Output the results into output buffer. // Ps. output. collect(String key, String value); StringTokenizer tokenizer new StringTokenizerCvalue); while (tokenizer .hasMoreTokensO) { String word tokenizer. nextTokenC); String original word; char C] chars original .toCharArray(); Arrays. sort(chars) ; String sorted new String(chars); output. collect(sorted, word); public static Class Reduce { public void reduce(String key, Iterator<String> values, OutputC011ector<String, List<String» output) { // Write your code here // Output the results into output buffer. // Ps. output. collect(String key, value); results new while (values . hasNextO) { results. add(values. next()) ; output. collect(key, results); ](../../media/Stream^JSearch-Mapreduce-Ladder-image7.png){width="2.7916666666666665in" height="2.6145833333333335in"}
+![public class Anagram { public static class Map { public void map(String key, String value, OutputC01 lector<String, String> output) { // Write your code here // Output the results into output buffer. // Ps. output. collect(String key, String value); StringTokenizer tokenizer new StringTokenizerCvalue); while (tokenizer .hasMoreTokensO) { String word tokenizer. nextTokenC); String original word; char C] chars original .toCharArray(); Arrays. sort(chars) ; String sorted new String(chars); output. collect(sorted, word); public static Class Reduce { public void reduce(String key, Iterator<String> values, OutputC011ector<String, List<String» output) { // Write your code here // Output the results into output buffer. // Ps. output. collect(String key, value); results new while (values . hasNextO) { results. add(values. next()) ; output. collect(key, results); ](../../media/Stream^JSearch-Mapreduce-Ladder-image7.png){width="2.7916666666666665in" height="2.6180555555555554in"}
 
 invert index
 
@@ -56,7 +56,7 @@ output collection will store in the lock disk,
 
 sort
 
-![Input 0: abacdd l:abccdb Split 0: abacdd Machine 2 l:abbccd Map a, a. c, a, C, c, Partition sort d.l Fetch a,l b,l d,l d,l d,l Merge sort a, [1,1.1] c. [1.1,11 d, [1.1,1] Reduce a, [31 Machine 4 d, [31 Output b, [31 ](../../media/Stream^JSearch-Mapreduce-Ladder-image10.png){width="5.0in" height="1.9270833333333333in"}
+![Input 0: abacdd l:abccdb Split 0: abacdd Machine 2 l:abbccd Map a, a. c, a, C, c, Partition sort d.l Fetch a,l b,l d,l d,l d,l Merge sort a, [1,1.1] c. [1.1,11 d, [1.1,1] Reduce a, [31 Machine 4 d, [31 Output b, [31 ](../../media/Stream^JSearch-Mapreduce-Ladder-image10.png){width="5.0in" height="1.9236111111111112in"}
 
 
 

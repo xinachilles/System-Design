@@ -14,7 +14,7 @@ Modified: 2023-10-22 17:44:31 -0600
 
 
 
-![](../../../media/AWS-DevOps-Module-9-31-Product-and-Service-Integrations-image3.png){width="5.0in" height="2.9479166666666665in"}
+![](../../../media/AWS-DevOps-Module-9-31-Product-and-Service-Integrations-image3.png){width="5.0in" height="2.951388888888889in"}
 
 
 

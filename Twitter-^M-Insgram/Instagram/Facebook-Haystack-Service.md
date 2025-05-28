@@ -10,7 +10,7 @@ Figure 1 depicts the steps from the moment when a user visits a page containing 
 
 
 
-![Haystack Directory Web Server Haystack Store 7 Haystack : o 6 5 CDN 10 Figure 3: Serving a photo 8 9 1 4 ](../../media/Twitter-^M-Insgram-Instagram-Facebook-Haystack-Service-image1.png){width="5.0in" height="3.9895833333333335in"}
+![Haystack Directory Web Server Haystack Store 7 Haystack : o 6 5 CDN 10 Figure 3: Serving a photo 8 9 1 4 ](../../media/Twitter-^M-Insgram-Instagram-Facebook-Haystack-Service-image1.png){width="5.0in" height="3.9930555555555554in"}
 
 
 
@@ -106,7 +106,7 @@ During restarts, a Store machine sequentially examines each orphan, creates a ma
 
 Since index records do not reflect deleted photos, Store machine may retrieve a photo that has in fact been deleted. To address this issue, after a Store machine reads the entire needle for a photo, that machine can then inspect the deleted flag. If a needle is marked as deleted the Store machine updates its in-memory mapping
 
-![Figure 6: Layout of Haystack Index file Field Key Alternate key Flags Offset Size Table 2: Explanation 64-bit key 32-bit alternate key Currently unused Needle offset in the Haystack Store Needle data size Explanation of fields in index file. ](../../media/Twitter-^M-Insgram-Instagram-Facebook-Haystack-Service-image3.jpeg){width="5.0in" height="3.40625in"}
+![Figure 6: Layout of Haystack Index file Field Key Alternate key Flags Offset Size Table 2: Explanation 64-bit key 32-bit alternate key Currently unused Needle offset in the Haystack Store Needle data size Explanation of fields in index file. ](../../media/Twitter-^M-Insgram-Instagram-Facebook-Haystack-Service-image3.jpeg){width="5.0in" height="3.4027777777777777in"}
 
 
 

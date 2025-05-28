@@ -41,5 +41,5 @@ Reference [1]:[kubernetes.io/docs/concepts/overview/components/](http://kubernet
 
 
 
-![I What is Kubernetes? ](../media/Kubernetes-Kubernetes-image1.jpg){width="3.6979166666666665in" height="2.0729166666666665in"}
+![I What is Kubernetes? ](../media/Kubernetes-Kubernetes-image1.jpg){width="3.701388888888889in" height="2.076388888888889in"}
 

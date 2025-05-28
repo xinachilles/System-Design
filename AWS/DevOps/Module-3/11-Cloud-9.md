@@ -27,11 +27,11 @@ Facts
 
 
 
-![Dread---(n)extreme fear or feeling that something is going to happen or might happen (adj) cause fear and worry (v)to feel extremely worried or frightened about something that is going to happen or that might happen: Screw up---(n)a situation in which you do something badly or make a big mistake: There's been a screw up with the experiment in our class. Gross Cybercafe Scatter ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image1.png){width="5.0in" height="2.84375in"}
+![Dread---(n)extreme fear or feeling that something is going to happen or might happen (adj) cause fear and worry (v)to feel extremely worried or frightened about something that is going to happen or that might happen: Screw up---(n)a situation in which you do something badly or make a big mistake: There's been a screw up with the experiment in our class. Gross Cybercafe Scatter ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image1.png){width="5.0in" height="2.8472222222222223in"}
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Introducing AWS Cloud9 AWS Cloud9 is a useful tool for your DevOps projects. AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code using a browser. It includes a code editor, debugger, and terminal. AWS Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don't need to install files or configure your development machine to start new projects. AWS Cloud9 IDE is cloud-based, so you can work on your projects from your office, home, or anywhere using an internet-connected machine. AWS Cloud9 also provides a seamless experience for developing serverless applications so that you can easily define resources, debug, and switch between local and remote execution of serverless applications. To learn more, expand each of the following. ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image2.png){width="5.0in" height="3.96875in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Introducing AWS Cloud9 AWS Cloud9 is a useful tool for your DevOps projects. AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code using a browser. It includes a code editor, debugger, and terminal. AWS Cloud9 comes prepackaged with essential tools for popular programming languages, including JavaScript, Python, PHP, and more, so you don't need to install files or configure your development machine to start new projects. AWS Cloud9 IDE is cloud-based, so you can work on your projects from your office, home, or anywhere using an internet-connected machine. AWS Cloud9 also provides a seamless experience for developing serverless applications so that you can easily define resources, debug, and switch between local and remote execution of serverless applications. To learn more, expand each of the following. ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image2.png){width="5.0in" height="3.9722222222222223in"}
 
 
 
@@ -43,11 +43,11 @@ Facts
 
 
 
-![Direct terminal access AWS Cloud9 comes with the following components or features: A terminal that includes sudo permissions to the managed Amazon EC2 instance that is hosting your development environment A pre-authenticated AWS Command Line Interface (AWS CLI). This makes it easy for you to quickly run commands and directly access AWS services. ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image5.png){width="5.0in" height="2.1979166666666665in"}
+![Direct terminal access AWS Cloud9 comes with the following components or features: A terminal that includes sudo permissions to the managed Amazon EC2 instance that is hosting your development environment A pre-authenticated AWS Command Line Interface (AWS CLI). This makes it easy for you to quickly run commands and directly access AWS services. ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image5.png){width="5.0in" height="2.201388888888889in"}
 
 
 
-![How does AWS Cloud9 work? The following diagram shows a high-level overview of how AWS Cloud9 works. From the diagram (starting at the bottom), you use the AWS Cloud9 IDE, running in a web browser on your local computer, to interact with your AWS Cloud9 environment. A computing resource (for example, an Amazon EC2 instance or your own server) connects to that environment. Finally, your work is stored in an AWS CodeCommit repository or other type of remote repository. AWS CodeCommit repository Amazon EC2 instance + AVVS Cloudg environment Y our computer Other remote repository type Your serva- + AVVS Cloudg environment AWS Cloud9 IDE in a web browser ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image6.png){width="5.0in" height="5.46875in"}
+![How does AWS Cloud9 work? The following diagram shows a high-level overview of how AWS Cloud9 works. From the diagram (starting at the bottom), you use the AWS Cloud9 IDE, running in a web browser on your local computer, to interact with your AWS Cloud9 environment. A computing resource (for example, an Amazon EC2 instance or your own server) connects to that environment. Finally, your work is stored in an AWS CodeCommit repository or other type of remote repository. AWS CodeCommit repository Amazon EC2 instance + AVVS Cloudg environment Y our computer Other remote repository type Your serva- + AVVS Cloudg environment AWS Cloud9 IDE in a web browser ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image6.png){width="5.0in" height="5.472222222222222in"}
 
 
 
@@ -59,15 +59,15 @@ Facts
 
 
 
-![• Working with code in several programming languages and the AWS Cloud Development Kit (AWS CDK). Working with code in a running Docker container. Using online code repositories. Collaborating with others in real time. • Interacting with various database and website technologies. • Targeting AWS Lambda, Amazon API Gateway, and AWS Serverless Applications. • Taking advantage of other AWS products such as Amazon Lightsail, AWS CodeStar, and AWS CodePipeline. ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image9.png){width="5.0in" height="2.4895833333333335in"}
+![• Working with code in several programming languages and the AWS Cloud Development Kit (AWS CDK). Working with code in a running Docker container. Using online code repositories. Collaborating with others in real time. • Interacting with various database and website technologies. • Targeting AWS Lambda, Amazon API Gateway, and AWS Serverless Applications. • Taking advantage of other AWS products such as Amazon Lightsail, AWS CodeStar, and AWS CodePipeline. ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image9.png){width="5.0in" height="2.4930555555555554in"}
 
 
 
-![AWS Cloud9 features To learn more expand each of the following features. Editor Use the AWS Cloud9 browser-based editor to write, run, and debug your projects. As you type, code completion and code hinting suggestions appear in the editor, helping you code faster and avoid errors. Code completion is based on the identifiers within your files and on standard libraries. The editor also enables you to fully customize your view. You can adjust your panels in any direction by dragging a panel to the location you want. Multiple panels Code hinting Code ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image10.png){width="5.0in" height="4.239583333333333in"}
+![AWS Cloud9 features To learn more expand each of the following features. Editor Use the AWS Cloud9 browser-based editor to write, run, and debug your projects. As you type, code completion and code hinting suggestions appear in the editor, helping you code faster and avoid errors. Code completion is based on the identifiers within your files and on standard libraries. The editor also enables you to fully customize your view. You can adjust your panels in any direction by dragging a panel to the location you want. Multiple panels Code hinting Code ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image10.png){width="5.0in" height="4.236111111111111in"}
 
 
 
-![Run configurations AWS Cloud9 supports more than 40 programming languages and application types, including JavaScript, Python, PHP, Ruby, Go, and C++. You can either choose from the default run configurations or define custom configurations by specifying environment variables, file names, and command line options. View Goto Run Tools Run Run Last Run With Run Wndow Support ctrl* ctrl-shft-c Preview O Run lambda_functionpy x co ffeeScript Java Node .js PHP tililtqn web server) pHp Python 2 Python 3 Ruby indexjs Run *story configurations Run Configur atbns Show Debugger at Ere* Cancel Build Build System Show Build Resdt Autornabcally asild Supported Files Save N on ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image11.png){width="5.0in" height="3.8854166666666665in"}
+![Run configurations AWS Cloud9 supports more than 40 programming languages and application types, including JavaScript, Python, PHP, Ruby, Go, and C++. You can either choose from the default run configurations or define custom configurations by specifying environment variables, file names, and command line options. View Goto Run Tools Run Run Last Run With Run Wndow Support ctrl* ctrl-shft-c Preview O Run lambda_functionpy x co ffeeScript Java Node .js PHP tililtqn web server) pHp Python 2 Python 3 Ruby indexjs Run *story configurations Run Configur atbns Show Debugger at Ere* Cancel Build Build System Show Build Resdt Autornabcally asild Supported Files Save N on ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image11.png){width="5.0in" height="3.8819444444444446in"}
 
 
 
@@ -83,7 +83,7 @@ Facts
 
 
 
-![Collaborative editing/chat With AWS Cloud9, you can share your development environment with your team. By sharing, multiple developers on your team can actively see each other type and pair-program together on the same file. AWS Cloud9 enables you to use the built-in chat capability to communicate with your team without having to leave the IDE. Track team inputs Online team members Access control Team chat ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image15.png){width="5.0in" height="3.6979166666666665in"}
+![Collaborative editing/chat With AWS Cloud9, you can share your development environment with your team. By sharing, multiple developers on your team can actively see each other type and pair-program together on the same file. AWS Cloud9 enables you to use the built-in chat capability to communicate with your team without having to leave the IDE. Track team inputs Online team members Access control Team chat ](../../../media/AWS-DevOps-Module-3-11-Cloud-9-image15.png){width="5.0in" height="3.701388888888889in"}
 
 
 

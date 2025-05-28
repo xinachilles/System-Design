@@ -303,7 +303,7 @@ This splits the lower pane. Your terminal is now to the left and a browser windo
 
 1.  Select the address bar within the browser and move your cursor to the far right of the displayed address.
 
-![Cloud9 Browser Screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image4.png){width="6.5in" height="1.3229166666666667in"}
+![Cloud9 Browser Screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image4.png){width="6.5in" height="1.3263888888888888in"}
 
 *Image shows the browser with an example message about a missing authentication token.*
 
@@ -317,7 +317,7 @@ after the last forward slash (/) and press **Enter** on your keyboard.
 
 In the terminal, you see the lab4 application process your request and return a **GET**. The browser window updates when the application outputs the **GET** and displays the message *hello world*.
 
-![SAM Preview Output](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image5.png){width="3.8541666666666665in" height="1.6145833333333333in"}
+![SAM Preview Output](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image5.png){width="3.8541666666666665in" height="1.6111111111111112in"}
 
 *Image depicts browser example of the hello world message being displayed.*
 
@@ -709,7 +709,7 @@ Your Deploy stage still needs some work but you have to fix that after the pipel
 3.  For **Choose a stop mode for the execution**, choose **Stop and abandon**.
 4.  Choose Stop .
 
-![stop execution screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image6.png){width="6.40625in" height="6.40625in"}
+![stop execution screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image6.png){width="6.402777777777778in" height="6.402777777777778in"}
 
 *Image show the stop execution window screen as an example of what options should be chosen.*
 

@@ -393,7 +393,7 @@ you know my SQL is a little bit rusty so I hope that I won't make mistakes
 
 
 
-![QUEUE-5 3 一 44 / 59 : 58 ](../../media/Example-Code-build-and-deployment-Code-deployment-system-image1.png){width="5.0in" height="1.8020833333333333in"}
+![QUEUE-5 3 一 44 / 59 : 58 ](../../media/Example-Code-build-and-deployment-Code-deployment-system-image1.png){width="5.0in" height="1.8055555555555556in"}
 
 
 

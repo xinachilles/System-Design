@@ -70,7 +70,7 @@ we can store the photo in the sql database
 
 
 
-![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image1.png){width="2.625in" height="3.1354166666666665in"}
+![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image1.png){width="2.625in" height="3.1319444444444446in"}
 
 
 
@@ -92,7 +92,7 @@ We aslo need the photo location table in the location service ( dictionary servi
 
 the url is like
 
-![](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image2.png){width="5.0in" height="2.03125in"}
+![](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image2.png){width="5.0in" height="2.0277777777777777in"}
 
 so we need the cdn, cache, machine id and logical vloumn
 

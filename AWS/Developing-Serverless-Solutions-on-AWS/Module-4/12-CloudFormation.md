@@ -30,7 +30,7 @@ Facts
 
 
 
-![CloudFormation uses templates to create your stacks CODE • Write templates in YAML or JSON COMMIT Save the template in an Amazon S3 bucket o. CREATE • Create stacks from templates using the console, AWS CLI, or AWS SDK • Create stack sets across multiple accounts and Regions DEPLOY Create and manage stacks, stack sets, and resources in a uniform way ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image2.png){width="5.0in" height="2.7395833333333335in"}
+![CloudFormation uses templates to create your stacks CODE • Write templates in YAML or JSON COMMIT Save the template in an Amazon S3 bucket o. CREATE • Create stacks from templates using the console, AWS CLI, or AWS SDK • Create stack sets across multiple accounts and Regions DEPLOY Create and manage stacks, stack sets, and resources in a uniform way ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image2.png){width="5.0in" height="2.736111111111111in"}
 
 
 
@@ -38,15 +38,15 @@ Facts
 
 
 
-![CloudFormation Template A CloudFormation template is a JSON or YAML formatted text file. You can save these files with any extension, such as .json, .yaml, .template, or .txt. CloudFormation uses these templates as blueprints for building your AWS resources. Following is an example of a CloudFormation template that's used to create a database instance. To learn more about each element of the CloudFormation template, choose the hotspot. AWSTemp1 ate FormatVe r s i on : parameters: DatabaseName: Stri ng TYPe : Resources: MYDatabase : 2010-09-09 AWS: :RDS: :DB1nstance Type : properti es : ! Ref DatabaseName DBName : Al 1 ocatedstorage : DBInstanceC1 ass: db .m5 . large Engi ne: MYSQL Deletionpolicy: snapshot Parameters are input variables that you can specify during provisioning. Resources are a list of the resources that compose your infrastructure stack with their corresponding configuration. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image4.png){width="5.0in" height="3.71875in"}
+![CloudFormation Template A CloudFormation template is a JSON or YAML formatted text file. You can save these files with any extension, such as .json, .yaml, .template, or .txt. CloudFormation uses these templates as blueprints for building your AWS resources. Following is an example of a CloudFormation template that's used to create a database instance. To learn more about each element of the CloudFormation template, choose the hotspot. AWSTemp1 ate FormatVe r s i on : parameters: DatabaseName: Stri ng TYPe : Resources: MYDatabase : 2010-09-09 AWS: :RDS: :DB1nstance Type : properti es : ! Ref DatabaseName DBName : Al 1 ocatedstorage : DBInstanceC1 ass: db .m5 . large Engi ne: MYSQL Deletionpolicy: snapshot Parameters are input variables that you can specify during provisioning. Resources are a list of the resources that compose your infrastructure stack with their corresponding configuration. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image4.png){width="5.0in" height="3.7222222222222223in"}
 
 
 
-![Template version The AWSTemplateFormatVersion section (optional) identifies the capabilities of the template. The latest template format version is 2010-09-09 and is currently the only valid value. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image5.png){width="4.5in" height="3.0729166666666665in"}
+![Template version The AWSTemplateFormatVersion section (optional) identifies the capabilities of the template. The latest template format version is 2010-09-09 and is currently the only valid value. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image5.png){width="4.5in" height="3.0694444444444446in"}
 
 
 
-![Parameters use the optional Parameters section to customize your templates. You can use parameters to input custom values to your template each time you create or update a stack. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image6.png){width="4.5625in" height="3.0729166666666665in"}
+![Parameters use the optional Parameters section to customize your templates. You can use parameters to input custom values to your template each time you create or update a stack. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image6.png){width="4.5625in" height="3.0694444444444446in"}
 
 
 

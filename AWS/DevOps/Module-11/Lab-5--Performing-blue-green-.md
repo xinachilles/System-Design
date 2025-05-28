@@ -94,7 +94,7 @@ In some cases, certain pop-up or script blocker web browser extensions might pre
 
 ### Lab environment
 
-![High-level architecture](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image2.png){width="6.5in" height="2.8854166666666665in"}
+![High-level architecture](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image2.png){width="6.5in" height="2.888888888888889in"}
 
 *The diagram outlines a web application pipeline where images are retrieved and stored into ECR repos during the build process, and finally deploying into ECS containers using the Blue-Green deployment method.*
 
@@ -370,7 +370,7 @@ my-webapp-build-project
 
 The *Details* page for the *my-webapp-pipeline* is displayed. You can observe the progress of each stage of your pipeline.
 
-![my-webapp-pipeline build success](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image4.png){width="6.5in" height="4.697916666666667in"}
+![my-webapp-pipeline build success](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image4.png){width="6.5in" height="4.701388888888889in"}
 
 *Images shows the different stages of the pipeline.*
 
@@ -399,7 +399,7 @@ The task definition is the blueprint for your task and references the container 
 
 Once the changes are made as suggested, your *taskdef.json* should appear similar to:
 
-![taskdef_final1](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image5.png){width="6.5in" height="3.3854166666666665in"}
+![taskdef_final1](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image5.png){width="6.5in" height="3.3819444444444446in"}
 
 *Image shows examples for the executionRoleArn format and the image URI.*
 
@@ -490,7 +490,7 @@ image placeholder.
 
 Once the changes are made as suggested, your *taskdef.json* should appear similar to:
 
-![taskdef_final2](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image6.png){width="6.5in" height="3.4895833333333335in"}
+![taskdef_final2](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image6.png){width="6.5in" height="3.486111111111111in"}
 
 *Image shows example of the taskdef.json file highlighting the format of the executionRoleArn and the image property.*
 
@@ -893,7 +893,7 @@ The pipeline is now ready to automate application deployments using a blue/green
 
 ## 
 
-![@ InvalidActionDecLarationException Input Artifact Bundle BuildArtifact in action my-webapp-deploy is not declared as Output Artifact Bundle in any of the preceding actions x ](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image10.png){width="5.0in" height="0.2604166666666667in"}
+![@ InvalidActionDecLarationException Input Artifact Bundle BuildArtifact in action my-webapp-deploy is not declared as Output Artifact Bundle in any of the preceding actions x ](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image10.png){width="5.0in" height="0.2638888888888889in"}
 
 ## 
 
@@ -995,7 +995,7 @@ You can also view the effects of traffic shifting in the web application by refr
 
 1.  Return to the browser you opened with the **load balancer's public DNS name**. Keep refreshing the browser and you observe the application website shift from a **blue** to a **green** background.
 
-![web-app deployment green](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image12.png){width="6.5in" height="2.5520833333333335in"}
+![web-app deployment green](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image12.png){width="6.5in" height="2.5555555555555554in"}
 
 *Image depicts the green background after completing the blue-green deployment.*
 

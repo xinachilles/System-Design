@@ -29,11 +29,11 @@ Facts
 
 
 
-![With security of the pipeline, what should you focus on? User management Least privilege Detective controls Infrastructure controls ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image2.png){width="5.0in" height="2.0729166666666665in"}
+![With security of the pipeline, what should you focus on? User management Least privilege Detective controls Infrastructure controls ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image2.png){width="5.0in" height="2.076388888888889in"}
 
 
 
-![IAM policy example The following shows an example of a permissions policy that allows a user to enable and disable all stage transitions in the pipeline named MyFirstPipeline in the us-west-2 region. "Version "2012-10-17" , " Statement " . "Effect" : " Allow" , " Action " " codepipeline : EnableStageTransition " , " codep ipeline : DisableStageTransition " " Resource " " arn : aws : codepipeline : : 111222 3334 44 : MyFirstPipe1ine " ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image3.png){width="5.0in" height="3.6979166666666665in"}
+![IAM policy example The following shows an example of a permissions policy that allows a user to enable and disable all stage transitions in the pipeline named MyFirstPipeline in the us-west-2 region. "Version "2012-10-17" , " Statement " . "Effect" : " Allow" , " Action " " codepipeline : EnableStageTransition " , " codep ipeline : DisableStageTransition " " Resource " " arn : aws : codepipeline : : 111222 3334 44 : MyFirstPipe1ine " ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image3.png){width="5.0in" height="3.701388888888889in"}
 
 
 
@@ -49,19 +49,19 @@ Facts
 
 
 
-![Multi-factor authentication (MFA) MFA requires users to enter a unique authentication code when accessing AWS website or services. It can be used for CLI-, API-, and console-based access. It also acts as an additional layer of security. MFA is strongly recommended for key users and it is recommended to assign a unique MFA device (hardware or virtual) to each IAM user. Possible MFA mechanisms listed below. Do you use any of these? Virtual MFA device IJ2F security key Hardware MFA device SMS text message-based MFA ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image7.png){width="5.0in" height="3.90625in"}
+![Multi-factor authentication (MFA) MFA requires users to enter a unique authentication code when accessing AWS website or services. It can be used for CLI-, API-, and console-based access. It also acts as an additional layer of security. MFA is strongly recommended for key users and it is recommended to assign a unique MFA device (hardware or virtual) to each IAM user. Possible MFA mechanisms listed below. Do you use any of these? Virtual MFA device IJ2F security key Hardware MFA device SMS text message-based MFA ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image7.png){width="5.0in" height="3.9027777777777777in"}
 
 
 
-![](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image8.png){width="5.0in" height="4.28125in"}
+![](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image8.png){width="5.0in" height="4.277777777777778in"}
 
 
 
-![Pipeline security It is important to change to the mindset of treating the pipeline as a resource. It is useful to look at the security of your pipeline, and here are some areas to consider: • Who can commit • Who can build • Who deploys to test/production The Security Perspective of the Cloud Adoption Framework The Security Cloud Adoption Framework (CAF) whitepaper provides prescriptive controls to improve the security posture of your AWS accounts. To embed the DevSecOps discipline in the enterprise, AWS customers are automating CAF controls using a combination of AWS and third- party solutions. To learn more, flip each flash card. ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image9.png){width="5.0in" height="4.21875in"}
+![Pipeline security It is important to change to the mindset of treating the pipeline as a resource. It is useful to look at the security of your pipeline, and here are some areas to consider: • Who can commit • Who can build • Who deploys to test/production The Security Perspective of the Cloud Adoption Framework The Security Cloud Adoption Framework (CAF) whitepaper provides prescriptive controls to improve the security posture of your AWS accounts. To embed the DevSecOps discipline in the enterprise, AWS customers are automating CAF controls using a combination of AWS and third- party solutions. To learn more, flip each flash card. ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image9.png){width="5.0in" height="4.215277777777778in"}
 
 
 
-![To learn more, flip each flash card. Directive Preventive Responsive Detective ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image10.png){width="5.0in" height="3.6145833333333335in"}
+![To learn more, flip each flash card. Directive Preventive Responsive Detective ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image10.png){width="5.0in" height="3.6180555555555554in"}
 
 
 
@@ -73,7 +73,7 @@ Facts
 
 
 
-![Best practices for creating parameters in a Parameter Store training and -7 certification • Develop a naming system for easier access, uniformity, and long-term maintenance • Create a naming system that follows this pattern to identify key information: • (type of configuration data)-(computing environment)-(region) • For example: License-manager-PROD-uswest1 ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image13.png){width="5.0in" height="2.84375in"}
+![Best practices for creating parameters in a Parameter Store training and -7 certification • Develop a naming system for easier access, uniformity, and long-term maintenance • Create a naming system that follows this pattern to identify key information: • (type of configuration data)-(computing environment)-(region) • For example: License-manager-PROD-uswest1 ](../../../media/AWS-DevOps-Module-10-35-Security-of-the-Pipeline-3-image13.png){width="5.0in" height="2.8472222222222223in"}
 
 
 

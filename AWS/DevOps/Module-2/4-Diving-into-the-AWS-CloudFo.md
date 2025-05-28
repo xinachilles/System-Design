@@ -30,7 +30,7 @@ Facts
 
 
 
-![Converting templates into YAML or JSON You can convert a valid template back and forth between JSON and YAML by selecting the appropriate radio button in Choose template language. Designer can only convert valid YAML or valid JSON templates. If the conversion succeeds, the Messages pane displays a message like: Successfully converted the template to YAML. Important: We recommend that you don't add # YAML comments to your templates in Designer. If your YAML template has # comments, Designer doesn't preserve those comments when editing the YAML or converting to JSON. If you edit or modify your template in Designer (for example, if you drag a resource on the canvas), your comments are lost. Once you choose a template language, any new resources you drag onto the canvas will be created in the language you have selected. To change back to another language, make sure your template is valid and then select YAML or JSON where it says Choose template language. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image1.png){width="5.0in" height="3.78125in"}
+![Converting templates into YAML or JSON You can convert a valid template back and forth between JSON and YAML by selecting the appropriate radio button in Choose template language. Designer can only convert valid YAML or valid JSON templates. If the conversion succeeds, the Messages pane displays a message like: Successfully converted the template to YAML. Important: We recommend that you don't add # YAML comments to your templates in Designer. If your YAML template has # comments, Designer doesn't preserve those comments when editing the YAML or converting to JSON. If you edit or modify your template in Designer (for example, if you drag a resource on the canvas), your comments are lost. Once you choose a template language, any new resources you drag onto the canvas will be created in the language you have selected. To change back to another language, make sure your template is valid and then select YAML or JSON where it says Choose template language. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image1.png){width="5.0in" height="3.7777777777777777in"}
 
 
 
@@ -38,7 +38,7 @@ Facts
 
 
 
-![Approaches to creating and managing AWS CloudFormation templates When you use AWS CloudFormation, you manage related resources as a single unit called a stack. You create, update, and delete a collection of resources by creating, updating, and deleting stacks. All the resources in a stack are defined by the stack's template. To learn more, expand each of the following four categories. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image3.png){width="5.0in" height="1.6770833333333333in"}
+![Approaches to creating and managing AWS CloudFormation templates When you use AWS CloudFormation, you manage related resources as a single unit called a stack. You create, update, and delete a collection of resources by creating, updating, and deleting stacks. All the resources in a stack are defined by the stack's template. To learn more, expand each of the following four categories. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image3.png){width="5.0in" height="1.6736111111111112in"}
 
 
 
@@ -46,7 +46,7 @@ Facts
 
 
 
-![Stacks: Nested stack approach Nested stacks are stacks created as part of other stacks. You create a nested stack within another stack by using the AWS::CloudFormation::Stack resource. As your infrastructure grows, common patterns can emerge in which you declare the same components in multiple templates. You can separate out these common components and create dedicated templates for them. Then use the Resource section in your template to reference other templates, creating nested stacks. Nested stacks give you more control when it comes to combining multiple, congruent templates. Everything is predefined in a parent template and AWS CloudFormation creates a stack for the parent and each referenced template. You can easily maintain dependencies across all related stacks by performing updates from the parent stack. Using nested stacks to declare common components is considered a best practice. Consider initiating certain stack operations, such as stack updates, from the root stack rather than having them performed directly on nested stacks themselves. Also, in some cases, nested stacks affect how stack operations are performed. When using nested stacks, you can use the Ref function to return values from an inline stack as the default value for a parameter in another stack. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image5.png){width="5.0in" height="3.5104166666666665in"}
+![Stacks: Nested stack approach Nested stacks are stacks created as part of other stacks. You create a nested stack within another stack by using the AWS::CloudFormation::Stack resource. As your infrastructure grows, common patterns can emerge in which you declare the same components in multiple templates. You can separate out these common components and create dedicated templates for them. Then use the Resource section in your template to reference other templates, creating nested stacks. Nested stacks give you more control when it comes to combining multiple, congruent templates. Everything is predefined in a parent template and AWS CloudFormation creates a stack for the parent and each referenced template. You can easily maintain dependencies across all related stacks by performing updates from the parent stack. Using nested stacks to declare common components is considered a best practice. Consider initiating certain stack operations, such as stack updates, from the root stack rather than having them performed directly on nested stacks themselves. Also, in some cases, nested stacks affect how stack operations are performed. When using nested stacks, you can use the Ref function to return values from an inline stack as the default value for a parameter in another stack. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image5.png){width="5.0in" height="3.5069444444444446in"}
 
 
 
@@ -54,7 +54,7 @@ Facts
 
 
 
-![](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image7.png){width="5.0in" height="4.09375in"}
+![](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image7.png){width="5.0in" height="4.097222222222222in"}
 
 
 
@@ -78,9 +78,9 @@ Facts
 
 
 
-![CreationPolicy attribute AppAutoSca1 ingGroup : Type: 'AWS: : AutoSca1ing: :AutoSca1ingGroup' Properties : MinSize . 2 CreationP01icy : ResourceSigna1 : Count: 2 Timeout: PT15M training and certification Defines a waiter for the EC2 Auto Scaling group. Defines how many signals that the creation policy needs to receive before the element is complete. Defines the time after which the element will fail if the signals aren't received. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image10.png){width="5.0in" height="2.8020833333333335in"}
+![CreationPolicy attribute AppAutoSca1 ingGroup : Type: 'AWS: : AutoSca1ing: :AutoSca1ingGroup' Properties : MinSize . 2 CreationP01icy : ResourceSigna1 : Count: 2 Timeout: PT15M training and certification Defines a waiter for the EC2 Auto Scaling group. Defines how many signals that the creation policy needs to receive before the element is complete. Defines the time after which the element will fail if the signals aren't received. ](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image10.png){width="5.0in" height="2.798611111111111in"}
 
-![](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image11.png){width="2.6145833333333335in" height="7.333333333333333in"}
+![](../../../media/AWS-DevOps-Module-2-4-Diving-into-the-AWS-CloudFormation-Template--2-image11.png){width="2.6180555555555554in" height="7.333333333333333in"}
 
 the vpcid !GEtAtt.. Is from the
 

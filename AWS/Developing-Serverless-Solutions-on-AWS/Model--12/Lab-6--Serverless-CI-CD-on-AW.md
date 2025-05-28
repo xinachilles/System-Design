@@ -24,7 +24,7 @@ To support these types of small, frequent updates, you would like to automate th
 
 The following diagram shows the architecture components that have been or will be deployed in this lab.
 
-![AWS architecture diagram showing the components of the serverless architecture that have or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image1.png){width="6.5in" height="4.322916666666667in"}
+![AWS architecture diagram showing the components of the serverless architecture that have or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image1.png){width="6.5in" height="4.326388888888889in"}
 
 This lab uses the following services:
 
@@ -783,7 +783,7 @@ Alarms:
 
 **Note** It is important to maintain the indentation when inserting the new lines. The indentation should align with the **DeploymentPreference** section as follows:
 
-![Image of Alarm](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image5.png){width="4.989583333333333in" height="5.25in"}
+![Image of Alarm](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Serverless-CI-CD-on-AWS---Self-Paced-Labs-image5.png){width="4.986111111111111in" height="5.25in"}
 
 1.  In the **template.yaml** file, in the **api** section, find the following **uri** at line 46 for the **/bookmarks/{id}** get method:
 

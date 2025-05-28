@@ -23,11 +23,11 @@ Facts
 
 
 
-![Monitoring and observability have a close relationship. However, monitoring and observability have slightly different meanings and are not considered the same thing in the DevOps process. To have products that are observable, you must make sure that your products can be monitored. Monitoring consists of collecting, logging, and processing data. The monitoring describes the performance and health of the system. Observability means that you can infer the internal states of a system based on the external outputs. Observability is then achieved after that data has been collected from the monitoring phase. Finally, you can analyze your data and products to create a better solution for your business or IT challenges. After the observability, the user would have to translate the log metrics into meaningful insights. ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image1.png){width="5.0in" height="2.3854166666666665in"}
+![Monitoring and observability have a close relationship. However, monitoring and observability have slightly different meanings and are not considered the same thing in the DevOps process. To have products that are observable, you must make sure that your products can be monitored. Monitoring consists of collecting, logging, and processing data. The monitoring describes the performance and health of the system. Observability means that you can infer the internal states of a system based on the external outputs. Observability is then achieved after that data has been collected from the monitoring phase. Finally, you can analyze your data and products to create a better solution for your business or IT challenges. After the observability, the user would have to translate the log metrics into meaningful insights. ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image1.png){width="5.0in" height="2.3819444444444446in"}
 
 
 
-![Observability and monitoring • Observability is not the same as monitoring • Your pipeline/products must be able to be monitored, to have observability • After you achieve observability, you will receive feedback and can analyze your data • Feedback (analysis) is necessary for the CI/CD process ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image2.png){width="5.0in" height="1.8645833333333333in"}
+![Observability and monitoring • Observability is not the same as monitoring • Your pipeline/products must be able to be monitored, to have observability • After you achieve observability, you will receive feedback and can analyze your data • Feedback (analysis) is necessary for the CI/CD process ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image2.png){width="5.0in" height="1.8680555555555556in"}
 
 
 
@@ -35,7 +35,7 @@ Facts
 
 
 
-![O O Monitoring (Metrics) Logging Tracing ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image4.png){width="5.0in" height="4.447916666666667in"}
+![O O Monitoring (Metrics) Logging Tracing ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image4.png){width="5.0in" height="4.451388888888889in"}
 
 
 
@@ -47,7 +47,7 @@ Facts
 
 
 
-![Tracing The last portion of the triangle is application trace data or traces. Think of traces as "traces" of data or information about a specific application. ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image7.png){width="5.0in" height="3.4895833333333335in"}
+![Tracing The last portion of the triangle is application trace data or traces. Think of traces as "traces" of data or information about a specific application. ](../../../media/AWS-DevOps-Module-12-43-Introduction-to-Observability-image7.png){width="5.0in" height="3.486111111111111in"}
 
 
 

@@ -23,7 +23,7 @@ Facts
 
 
 
-![AWS Config Configuration change occurs in your AWS resources AWS Config records and normalizes the changes into a consistent format Automatically evaluates the recorded configurations against what you specify AWS config APIs & Console Amazon SNS Amazon CloudWatch Amazon S3 Access change history and compliance results using the console or APIs. Amazon CloudWatch events or Amazon SNS alerts you when changes occur. Deliver change history and snapshot files to your S3 bucket for analysis. ](../../../media/AWS-DevOps-Module-11-39-AWS-Services-and-Tooling-for-Configuration-Management-image1.png){width="5.0in" height="2.84375in"}
+![AWS Config Configuration change occurs in your AWS resources AWS Config records and normalizes the changes into a consistent format Automatically evaluates the recorded configurations against what you specify AWS config APIs & Console Amazon SNS Amazon CloudWatch Amazon S3 Access change history and compliance results using the console or APIs. Amazon CloudWatch events or Amazon SNS alerts you when changes occur. Deliver change history and snapshot files to your S3 bucket for analysis. ](../../../media/AWS-DevOps-Module-11-39-AWS-Services-and-Tooling-for-Configuration-Management-image1.png){width="5.0in" height="2.8472222222222223in"}
 
 
 

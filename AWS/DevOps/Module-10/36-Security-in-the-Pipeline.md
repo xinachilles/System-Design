@@ -35,7 +35,7 @@ Facts
 
 
 
-![Build AMI. ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image4.png){width="5.0in" height="1.8229166666666667in"}
+![Build AMI. ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image4.png){width="5.0in" height="1.8263888888888888in"}
 
 
 
@@ -47,7 +47,7 @@ Facts
 
 
 
-![If all the tests succeed, then a final Lambda function is triggered to kill test instance. ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image7.png){width="5.0in" height="2.4270833333333335in"}
+![If all the tests succeed, then a final Lambda function is triggered to kill test instance. ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image7.png){width="5.0in" height="2.423611111111111in"}
 
 
 
@@ -55,7 +55,7 @@ Facts
 
 
 
-![1 Trigger pipeline on source change. Here you'll notice that the Source is ECR, so when a new container gets placed into the repository that triggers the pipeline. ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image9.png){width="5.0in" height="2.5729166666666665in"}
+![1 Trigger pipeline on source change. Here you'll notice that the Source is ECR, so when a new container gets placed into the repository that triggers the pipeline. ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image9.png){width="5.0in" height="2.576388888888889in"}
 
 
 
@@ -67,7 +67,7 @@ Facts
 
 
 
-![Execute UI tests. uil ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image12.png){width="5.0in" height="1.84375in"}
+![Execute UI tests. uil ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image12.png){width="5.0in" height="1.8472222222222223in"}
 
 
 
@@ -83,7 +83,7 @@ Facts
 
 
 
-![Deploy. in echc exil ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image16.png){width="5.0in" height="2.03125in"}
+![Deploy. in echc exil ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image16.png){width="5.0in" height="2.0277777777777777in"}
 
 
 
@@ -93,7 +93,7 @@ Facts
 
 
 
-![Looking at code analysis and dependencies • Using AWS CodeBuild: • WhiteSource integration to scan source repository • Using Amazon CloudFormation: training and -y certification • Static analysis on CloudFormation templates -Y checking your Infrastructure as Code • Vulnerability scans in your pipelines • Golden AMIs, and scanning using Trivy or Clair ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image17.png){width="5.0in" height="2.3229166666666665in"}
+![Looking at code analysis and dependencies • Using AWS CodeBuild: • WhiteSource integration to scan source repository • Using Amazon CloudFormation: training and -y certification • Static analysis on CloudFormation templates -Y checking your Infrastructure as Code • Vulnerability scans in your pipelines • Golden AMIs, and scanning using Trivy or Clair ](../../../media/AWS-DevOps-Module-10-36-Security-in-the-Pipeline-image17.png){width="5.0in" height="2.3194444444444446in"}
 
 
 

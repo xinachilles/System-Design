@@ -33,7 +33,7 @@ Facts
 
 
 
-- ![Switching roles • Allows practice of the least-privilege principle training and certification • You should have only the permission to perform the current task • Use elevated permissions only if the task requires them • Permissions can be removed after task is completed • Example: If you need to push a new version of an application to the production environment: 1. Switch roles to get deployment permissions in the production environment 2. Perform the tasks 3. Switch back to your normal user account ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image3.png){width="5.0in" height="2.4479166666666665in"}
+- ![Switching roles • Allows practice of the least-privilege principle training and certification • You should have only the permission to perform the current task • Use elevated permissions only if the task requires them • Permissions can be removed after task is completed • Example: If you need to push a new version of an application to the production environment: 1. Switch roles to get deployment permissions in the production environment 2. Perform the tasks 3. Switch back to your normal user account ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image3.png){width="5.0in" height="2.451388888888889in"}
 
 
 
@@ -54,17 +54,17 @@ Facts
 
 
 
-![](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image5.png){width="5.0in" height="2.8645833333333335in"}
+![](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image5.png){width="5.0in" height="2.8680555555555554in"}
 
 
 
-![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image6.png){width="5.0in" height="1.03125in"}
+![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image6.png){width="5.0in" height="1.0347222222222223in"}
 
 
 
 
 
-![AWS Config Use the Dashboard to see an overview of your resources, rules, conformance packs, and their compliance states and to visualize your AWS Config usage and success metrics with Amazon CloudWatch. This page helps you quickly identify the top resources in your AWS account, the conformance packs with the lowest level of compliance in your AWS account, what rules or resources are noncompliant in your AWS account, what traffic is driving your AWS Config usage, and key metrics for success and failure that have occurred in your workflows. To watch the instructor video, choose the play button. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image7.png){width="5.0in" height="2.1145833333333335in"}
+![AWS Config Use the Dashboard to see an overview of your resources, rules, conformance packs, and their compliance states and to visualize your AWS Config usage and success metrics with Amazon CloudWatch. This page helps you quickly identify the top resources in your AWS account, the conformance packs with the lowest level of compliance in your AWS account, what rules or resources are noncompliant in your AWS account, what traffic is driving your AWS Config usage, and key metrics for success and failure that have occurred in your workflows. To watch the instructor video, choose the play button. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image7.png){width="5.0in" height="2.1180555555555554in"}
 
 
 

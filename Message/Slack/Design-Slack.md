@@ -121,7 +121,7 @@ Architecture & Database
 
 **Message search service**: manage messaging search index and lookup.
 
-![Load Channel service Balancer user redis Account service Friend service Group service media service Notification service Message Storage servlce Message Search servlce Emoji service Redis / memcache CDN Kafka DAX/ Redis elastic search Redis SQL Amazon Amazon DynamoDB ](../../media/Message-Slack-Design-Slack-image2.png){width="6.15625in" height="5.958333333333333in"}
+![Load Channel service Balancer user redis Account service Friend service Group service media service Notification service Message Storage servlce Message Search servlce Emoji service Redis / memcache CDN Kafka DAX/ Redis elastic search Redis SQL Amazon Amazon DynamoDB ](../../media/Message-Slack-Design-Slack-image2.png){width="6.152777777777778in" height="5.958333333333333in"}
 
 
 

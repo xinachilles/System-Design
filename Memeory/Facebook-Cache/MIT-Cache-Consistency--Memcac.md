@@ -37,7 +37,7 @@ from class note:
 [FEs are stateless, all sharing (and concurrency control) via DB
 stateless -> any FE can serve any request, no harm from FE crash]{.mark}
 
-![6.82 q --- Memcached af Fac e ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image1.png){width="5.0in" height="3.6770833333333335in"}
+![6.82 q --- Memcached af Fac e ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image1.png){width="5.0in" height="3.6805555555555554in"}
 
 
 
@@ -81,7 +81,7 @@ other problem with adding was adding lots and lots of my sql , database servers 
 
 
 
-![](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image2.png){width="5.0in" height="3.8229166666666665in"}
+![](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image2.png){width="5.0in" height="3.8194444444444446in"}
 
 so the next architecture and this is now starting to resemble what [Facebook is using the next architecture still need users we still have a bunch of front end servers, running web servers in PHP and by now maybe a vast number of front end servers we still have our]{.mark}
 
@@ -219,7 +219,7 @@ all right so this is an invalidation, in particular it's not you could imagine a
 
 would send the new data to memcacheD, at this point but it doesn't actually do that instead of delete it, and actually in the context of facebook scheme the real reason why this delete is needed is so that we'll see their own writes because in fact in their scheme the database servers also send deletes, send the relevant deletes to the memcache servers that that might hold this key so the database servers will actually in stuff invalid memcache by-and-bye may take them a while, because that might take a while, [the front ends also delete the key, said that a front end won't see a stale value for data that it just updated]{.mark}
 
-![v23+4) ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image5.png){width="5.0in" height="3.6979166666666665in"}
+![v23+4) ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image5.png){width="5.0in" height="3.701388888888889in"}
 
 
 
@@ -305,7 +305,7 @@ we will left the value 1 in the memcachedD even the correct value in the databas
 
 
 
-![之 : x 冫 ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image7.png){width="5.0in" height="2.6979166666666665in"}
+![之 : x 冫 ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image7.png){width="5.0in" height="2.6944444444444446in"}
 
 [performance of partition vs replica]{.mark}
 
@@ -466,7 +466,7 @@ data and then they can turn off this cold feature and just use the local cluster
 
 
 
-![髫 な ( き ) 0 つ ロ フ ロ 戸 の ク 」 コ ク 〆 工 ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image8.png){width="5.0in" height="3.96875in"}
+![髫 な ( き ) 0 つ ロ フ ロ 戸 の ク 」 コ ク 〆 工 ](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image8.png){width="5.0in" height="3.9722222222222223in"}
 
 
 
@@ -548,7 +548,7 @@ these gutter servers aren't doing anything and don't cache anything and it doesn
 
 
 
-![](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image10.png){width="5.0in" height="3.28125in"}
+![](../../media/Memeory-Facebook-Cache-MIT-Cache-Consistency--Memcached-at-Facebook-image10.png){width="5.0in" height="3.2847222222222223in"}
 
 
 

@@ -222,11 +222,11 @@ little credits that it almost never gets crawled again. This will not happen wit
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-draft-image1.png){width="0.6041666666666666in" height="1.0208333333333333in"}![](../../media/Web-crawler-^MP2p-Web-Crawler-draft-image2.png){width="0.59375in" height="0.875in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-draft-image1.png){width="0.6041666666666666in" height="1.0208333333333333in"}![](../../media/Web-crawler-^MP2p-Web-Crawler-draft-image2.png){width="0.5972222222222222in" height="0.875in"}
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-draft-image3.png){width="4.479166666666667in" height="0.4895833333333333in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-draft-image3.png){width="4.479166666666667in" height="0.4861111111111111in"}
 
 
 

@@ -331,7 +331,7 @@ Here you can see the percent of traces with 200 ok responses and 502 response er
 
 The **Timeline** view shows a hierarchy of segments and subsegments. The first entry in the list is the segment, which represents all of the data that the service recorded for a single request, as shown in the following image.
 
-![Showing timeline segment](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image3.png){width="6.5in" height="2.96875in"}
+![Showing timeline segment](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image3.png){width="6.5in" height="2.9722222222222223in"}
 
 Below the segment are subsegments.
 
@@ -541,7 +541,7 @@ This shows the incoming and outgoing connections for a node.
 
 1.  Navigate down the page to see the histogram representing the **response time distribution**.
 
-![Response time](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image7.png){width="6.5in" height="2.6979166666666665in"}
+![Response time](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-4--Observability-and-Monitoring---Self-Paced-Labs-image7.png){width="6.5in" height="2.6944444444444446in"}
 
 1.  Under the **Traces** section, select a trace ID from the list.
 

@@ -10,23 +10,23 @@ Modified: 2023-10-22 17:42:28 -0600
 
 
 
-![](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image2.png){width="5.0in" height="4.322916666666667in"}
+![](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image2.png){width="5.0in" height="4.326388888888889in"}
 
 
 
-![In summary, take a look at moving off of those EC2 instances. They're great right now and they'll probably be great going forward for certain applications, but there's definitely situations where you can either look at running something in Lambda or in Fargate. Start moving away from having to manage that architecture yourself. We saw in that pipeline earlier, we wanna focus on testing. While we haven't talked about that testing yet, we wanna drill that point home, keep that in mind. Always have testing everywhere, along every step of the CI/CD pipeline we're building. Services we covered, Lambda, Fargate, SAM, Step Functions. ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image3.png){width="5.0in" height="1.6354166666666667in"}
+![In summary, take a look at moving off of those EC2 instances. They're great right now and they'll probably be great going forward for certain applications, but there's definitely situations where you can either look at running something in Lambda or in Fargate. Start moving away from having to manage that architecture yourself. We saw in that pipeline earlier, we wanna focus on testing. While we haven't talked about that testing yet, we wanna drill that point home, keep that in mind. Always have testing everywhere, along every step of the CI/CD pipeline we're building. Services we covered, Lambda, Fargate, SAM, Step Functions. ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image3.png){width="5.0in" height="1.6319444444444444in"}
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Serverless orchestration AWS Step Functions lets you coordinate multiple AWS services into serverless workflows so that you can build and update applications quickly. Using Step Functions, you can design and run workflows that stitch together services, such as AWS Lambda and Amazon Elastic Container Service (Amazon ECS), into feature-rich applications. There are many benefits to step functions. Some of them include: ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image4.png){width="5.0in" height="2.9895833333333335in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Serverless orchestration AWS Step Functions lets you coordinate multiple AWS services into serverless workflows so that you can build and update applications quickly. Using Step Functions, you can design and run workflows that stitch together services, such as AWS Lambda and Amazon Elastic Container Service (Amazon ECS), into feature-rich applications. There are many benefits to step functions. Some of them include: ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image4.png){width="5.0in" height="2.9930555555555554in"}
 
 
 
-![Build and update apps quickly AWS Step Functions lets you build visual workflows that enable fast translation of business requirements into technical requirements. You can build applications in a matter of minutes, and when needs change, you can swap or reorganize components without customizing any code. Built-in operational controls AWS Step Functions manages the logic of your application for you, and implements basic primitives such as branching, parallel runs, and timeouts. This removes extra code that may be repeated in your microservices and functions. Step Functions automatically manages error handling, retry logic, and state. With its built-in operational controls, Step Functions manages sequencing, error handling, retry logic, and state, removing a significant operational burden from your team. Improve resiliency AWS Step Functions manages state, checkpoints and restarts for you to make sure that your application runs in order and as expected. Built-in try/catch, retry and rollback capabilities deal with errors and exceptions automatically. ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image5.png){width="5.0in" height="2.7604166666666665in"}
+![Build and update apps quickly AWS Step Functions lets you build visual workflows that enable fast translation of business requirements into technical requirements. You can build applications in a matter of minutes, and when needs change, you can swap or reorganize components without customizing any code. Built-in operational controls AWS Step Functions manages the logic of your application for you, and implements basic primitives such as branching, parallel runs, and timeouts. This removes extra code that may be repeated in your microservices and functions. Step Functions automatically manages error handling, retry logic, and state. With its built-in operational controls, Step Functions manages sequencing, error handling, retry logic, and state, removing a significant operational burden from your team. Improve resiliency AWS Step Functions manages state, checkpoints and restarts for you to make sure that your application runs in order and as expected. Built-in try/catch, retry and rollback capabilities deal with errors and exceptions automatically. ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image5.png){width="5.0in" height="2.7569444444444446in"}
 
 
 
-![Succeed End Sta Seed the table For Loop Condition Read next message from Dynamo DB Send message to SQS Pop element from list This image shows a visual representation of the Transfer data records sample that copies data from DynamoDB to SQS. ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image6.png){width="5.0in" height="2.96875in"}
+![Succeed End Sta Seed the table For Loop Condition Read next message from Dynamo DB Send message to SQS Pop element from list This image shows a visual representation of the Transfer data records sample that copies data from DynamoDB to SQS. ](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image6.png){width="5.0in" height="2.9722222222222223in"}
 
 
 
@@ -34,7 +34,7 @@ Modified: 2023-10-22 17:42:28 -0600
 
 
 
-![](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image8.png){width="5.0in" height="3.1354166666666665in"}
+![](../../../media/AWS-DevOps-Module-7-26-AWS-Step-Functions-image8.png){width="5.0in" height="3.1319444444444446in"}
 
 
 

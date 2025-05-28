@@ -42,7 +42,7 @@ Data need transformation.
 
 If the application must perform some task on the data before it's stored or before it's sent to the client
 
-![](../../media/Design-Pattern-Data-Management-Valet-key-image1.png){width="3.71875in" height="0.5729166666666666in"}![](../../media/Design-Pattern-Data-Management-Valet-key-image2.png){width="5.135416666666667in" height="0.6875in"}![](../../media/Design-Pattern-Data-Management-Valet-key-image3.png){width="3.8020833333333335in" height="0.7916666666666666in"}
+![](../../media/Design-Pattern-Data-Management-Valet-key-image1.png){width="3.7222222222222223in" height="0.5763888888888888in"}![](../../media/Design-Pattern-Data-Management-Valet-key-image2.png){width="5.138888888888889in" height="0.6875in"}![](../../media/Design-Pattern-Data-Management-Valet-key-image3.png){width="3.798611111111111in" height="0.7916666666666666in"}
 
 
 

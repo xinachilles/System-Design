@@ -120,7 +120,7 @@ Memory pool: in the memory, there are lot of discontinuous memory, we can use th
 
 Dynamic rehashing: we can create a new memory space, use new hash algorithm to write the data to the new memory space , only use the old hash algorithm to read
 
-![思 考 题 如 何 在 增 加 Bucket 数 量 的 迁 移 工 作 进 行 时 维 持 服 务 ？ 创 建 新 的 内 存 空 间 将 Bucket 数 量 翻 倍 迁 移 过 程 中 使 用 两 种 哈 希 算 法 同 时 读 写 ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image6.png){width="5.0in" height="3.9479166666666665in"}
+![思 考 题 如 何 在 增 加 Bucket 数 量 的 迁 移 工 作 进 行 时 维 持 服 务 ？ 创 建 新 的 内 存 空 间 将 Bucket 数 量 翻 倍 迁 移 过 程 中 使 用 两 种 哈 希 算 法 同 时 读 写 ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image6.png){width="5.0in" height="3.951388888888889in"}
 
 
 
@@ -145,13 +145,13 @@ We can just replace the long LinkedList to binary search tree
 
 
 
-![Hash Table 优 化 策 Copy " 有 点 像 " 即 。 t 我 理 留 的 是 关 于 dynmic rehashing 地 那 ca h newchange* 地 很 难 " h up " changeW 翅 果 每 次 祁 是 完 全 新 的 庶 到 en N 9 to E 虍 我 记 得 归 ' ] h hm s 寞 坝 就 是 EST 代 替 linkedlist 》 亻 y 四 m " 開 here„. 0 使 用 BST 替 代 链 表 Rehash 增 加 Bucket 数 量 ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image7.png){width="5.0in" height="2.5729166666666665in"}
+![Hash Table 优 化 策 Copy " 有 点 像 " 即 。 t 我 理 留 的 是 关 于 dynmic rehashing 地 那 ca h newchange* 地 很 难 " h up " changeW 翅 果 每 次 祁 是 完 全 新 的 庶 到 en N 9 to E 虍 我 记 得 归 ' ] h hm s 寞 坝 就 是 EST 代 替 linkedlist 》 亻 y 四 m " 開 here„. 0 使 用 BST 替 代 链 表 Rehash 增 加 Bucket 数 量 ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image7.png){width="5.0in" height="2.576388888888889in"}
 
 
 
 
 
-![LRU vs Approx LRU 实 现 方 法 并 行 控 制 数 据 结 构 额 外 功 能 LRU 根 据 DLL 头 部 数 值 EVict 数 据 对 于 D 性 加 锁 双 向 链 表 无 Approx L,RU 随 机 读 取 多 个 Key Evict 最 老 的 数 据 无 对 于 Key 保 存 最 后 更 新 时 间 TTL Expire ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image8.png){width="5.0in" height="2.78125in"}
+![LRU vs Approx LRU 实 现 方 法 并 行 控 制 数 据 结 构 额 外 功 能 LRU 根 据 DLL 头 部 数 值 EVict 数 据 对 于 D 性 加 锁 双 向 链 表 无 Approx L,RU 随 机 读 取 多 个 Key Evict 最 老 的 数 据 无 对 于 Key 保 存 最 后 更 新 时 间 TTL Expire ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image8.png){width="5.0in" height="2.7777777777777777in"}
 
 
 
@@ -179,7 +179,7 @@ How to Memory allocation
 
 ![思 考 题 直 接 使 用 m 和 free 来 分 配 内 存 有 什 么 问 题 ？ Memory Fragmentation ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image10.png){width="5.0in" height="4.5625in"}
 
-![Memcached memory PAGE PAGE SLAB 1 PAGE U 'Z/" 7/" PAGE PAGE SLAB 2 PAGE PAGE ) EMPTY ; EMPTY : EMPTY • EMPTY PAGE EMPIY , EMPTY EMPTY : EMPTY PAGE EMPTY EM EMPTY EMPTY PAGE EMPTY 'EMPTY EMPTY 'EMPTY PAGE EMPTY EMPTY EMPTY EMPTY 80 byte item 96 byte chunk 72 byte item 96 byte chunk 56 byte item % byte chunk 90 byte item 96 byte chunk 12 out of 35 MB used Page allocated to slab 1 (for chunks from 1 to 96 bytes) ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image11.png){width="5.0in" height="3.0729166666666665in"}
+![Memcached memory PAGE PAGE SLAB 1 PAGE U 'Z/" 7/" PAGE PAGE SLAB 2 PAGE PAGE ) EMPTY ; EMPTY : EMPTY • EMPTY PAGE EMPIY , EMPTY EMPTY : EMPTY PAGE EMPTY EM EMPTY EMPTY PAGE EMPTY 'EMPTY EMPTY 'EMPTY PAGE EMPTY EMPTY EMPTY EMPTY 80 byte item 96 byte chunk 72 byte item 96 byte chunk 56 byte item % byte chunk 90 byte item 96 byte chunk 12 out of 35 MB used Page allocated to slab 1 (for chunks from 1 to 96 bytes) ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image11.png){width="5.0in" height="3.0694444444444446in"}
 
 The memory has different slab, in each slab, they have multiple pages,
 
@@ -217,7 +217,7 @@ Each slab has multiple pages, all pages is connected by the point, (the pages ar
 
 
 
-![引 内 存 分 配 策 略 浪 费 / 定 Memory Fragmentation ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image13.png){width="5.0in" height="4.239583333333333in"}
+![引 内 存 分 配 策 略 浪 费 / 定 Memory Fragmentation ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image13.png){width="5.0in" height="4.236111111111111in"}
 
 ![其 他 方 案 主 动 去 碎 片 化 ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image14.png){width="5.0in" height="4.5625in"}
 
@@ -241,7 +241,7 @@ Lock the resource
 
 
 
-![#include <pthread . count_mutex; long long count; void increment_count() count = count + 1; long long get_count() long long c; c = count; pthread_mutex_unlock (&count_mutex) ; return (c); ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image17.png){width="5.0in" height="4.90625in"}
+![#include <pthread . count_mutex; long long count; void increment_count() count = count + 1; long long get_count() long long c; c = count; pthread_mutex_unlock (&count_mutex) ; return (c); ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image17.png){width="5.0in" height="4.902777777777778in"}
 
 
 
@@ -265,7 +265,7 @@ Spin-lock ---- while() ..... Wait the lock release
 
 
 
-![思 考 题 如 果 需 要 实 现 悲 观 锁 ， 那 么 锁 需 要 放 在 什 么 层 面 上 ？ Bucket-level ， Shard-level ， Hash-table-level? Bucket-level 过 于 精 细 ， 内 存 消 耗 过 大 考 虑 Multi-bucket-level ， Page-level, Slab-level ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image20.png){width="5.0in" height="4.010416666666667in"}
+![思 考 题 如 果 需 要 实 现 悲 观 锁 ， 那 么 锁 需 要 放 在 什 么 层 面 上 ？ Bucket-level ， Shard-level ， Hash-table-level? Bucket-level 过 于 精 细 ， 内 存 消 耗 过 大 考 虑 Multi-bucket-level ， Page-level, Slab-level ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image20.png){width="5.0in" height="4.013888888888889in"}
 
 
 
@@ -273,7 +273,7 @@ Web service
 
 
 
-![思 考 题 服 务 器 如 何 接 受 请 求 ？ 其 中 的 各 个 线 程 如 何 分 工 ？ Acceptor Thread + Thread p00 《 ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image21.png){width="5.0in" height="4.96875in"}
+![思 考 题 服 务 器 如 何 接 受 请 求 ？ 其 中 的 各 个 线 程 如 何 分 工 ？ Acceptor Thread + Thread p00 《 ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image21.png){width="5.0in" height="4.965277777777778in"}
 
 
 
@@ -317,7 +317,7 @@ Client talk to any service and service will forward the request to another servi
 
 
 
-![• ddV ddV ddV ddV ugsn AX08d ugsn ugsn Æxo.1d ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image27.png){width="5.0in" height="3.71875in"}
+![• ddV ddV ddV ddV ugsn AX08d ugsn ugsn Æxo.1d ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image27.png){width="5.0in" height="3.7222222222222223in"}
 
 
 
@@ -325,11 +325,11 @@ Client talk to any service and service will forward the request to another servi
 
 
 
-![思 考 题 分 布 式 缓 存 服 务 器 可 能 有 宕 机 的 ， 有 新 加 入 的 如 何 维 持 服 务 ， 分 摊 请 求 ？ Consistent Hashing Replication ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image29.png){width="5.0in" height="3.96875in"}
+![思 考 题 分 布 式 缓 存 服 务 器 可 能 有 宕 机 的 ， 有 新 加 入 的 如 何 维 持 服 务 ， 分 摊 请 求 ？ Consistent Hashing Replication ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image29.png){width="5.0in" height="3.9722222222222223in"}
 
 
 
-![思 考 题 如 何 保 证 一 组 分 布 式 缓 存 服 务 器 对 每 台 负 责 的 Hash Range 的 认 识 是 一 致 的 ？ Gossip or Zookeeper ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image30.png){width="5.0in" height="4.239583333333333in"}
+![思 考 题 如 何 保 证 一 组 分 布 式 缓 存 服 务 器 对 每 台 负 责 的 Hash Range 的 认 识 是 一 致 的 ？ Gossip or Zookeeper ](../../media/Memeory-ACE-cache-Function-requirement--key-value-cache,-support-get,-set,-delete-and-support-LRU---least-recently-used-eviction-image30.png){width="5.0in" height="4.236111111111111in"}
 
 
 

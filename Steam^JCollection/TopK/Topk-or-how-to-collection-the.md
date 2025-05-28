@@ -18,7 +18,7 @@ Modified: 2021-02-04 18:42:00 -0600
 
 
 
-![System Design Interview Question Find the K most Searched keywords on Google Viewed videos on YouTube Played songs on Spotify ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image1.jpg){width="3.6979166666666665in" height="2.0729166666666665in"}
+![System Design Interview Question Find the K most Searched keywords on Google Viewed videos on YouTube Played songs on Spotify ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image1.jpg){width="3.701388888888889in" height="2.076388888888889in"}
 
 
 
@@ -244,7 +244,7 @@ We will use these logs for counting how many times each video was viewed.
 
 
 
-![Table 13-3 shows αη example ofthe 10g h1e. auery tree try toy try time 2019-10-01 2019-10-01 22:01:05 2019-10-01 2019-10-01 2019-10-02 2019-10-03 Table 13-3 ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image2.png){width="5.0in" height="3.1354166666666665in"}
+![Table 13-3 shows αη example ofthe 10g h1e. auery tree try toy try time 2019-10-01 2019-10-01 22:01:05 2019-10-01 2019-10-01 2019-10-02 2019-10-03 Table 13-3 ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image2.png){width="5.0in" height="3.1319444444444446in"}
 
 
 
@@ -371,7 +371,7 @@ We need to store the keys, but only K of them (or a bit more). Not all. When eve
 
 
 
-![High-level architecture Stor. SQL. Builds the final axjnt-min sketch and st«es a list Of top k elements for a period Of tinw Data is Distrbuted API Gateway fast path slow path ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image3.png){width="5.0in" height="2.71875in"}
+![High-level architecture Stor. SQL. Builds the final axjnt-min sketch and st«es a list Of top k elements for a period Of tinw Data is Distrbuted API Gateway fast path slow path ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image3.png){width="5.0in" height="2.7152777777777777in"}
 
 ~~Have you noticed how our data processing pipeline gradually decreases request rate?~~
 
@@ -473,7 +473,7 @@ Partition Processor may also send aggregated information to the Storage service.
 
 
 
-![High-level architecture Processor Distrbuted API Gatew" fast path slow path Stor. Distributed Messaøt% Partition Distributed Søtem Count Top K MapReduce Job ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image4.png){width="5.0in" height="2.6979166666666665in"}
+![High-level architecture Processor Distrbuted API Gatew" fast path slow path Stor. Distributed Messaøt% Partition Distributed Søtem Count Top K MapReduce Job ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image4.png){width="5.0in" height="2.6944444444444446in"}
 
 
 
@@ -531,7 +531,7 @@ And after aggregating information for several seconds, each Fast Processor host 
 
 Merging several count-min sketches together is as simple as summing up values in corresponding cells.
 
-![user 1 user 2 API Gateway Data flow, fast path Distrouted C•2 B. h3 h2 A.4 h2 hi ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image5.png){width="5.0in" height="2.28125in"}
+![user 1 user 2 API Gateway Data flow, fast path Distrouted C•2 B. h3 h2 A.4 h2 hi ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image5.png){width="5.0in" height="2.2777777777777777in"}
 
 
 
@@ -557,7 +557,7 @@ Frequency Count MapReduce job reads all such 5-minute files and creates a final 
 
 Top K MapReduce job then uses this information to calculate a list of k heavy hitters for that hour.
 
-![Data flow, slow path Distributed user 1 user 2 API Gateway 8-1 Partition File Systen Top K (e.g. 1) Frequency Count O +629 / ":17 ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image6.png){width="5.0in" height="2.8229166666666665in"}
+![Data flow, slow path Distributed user 1 user 2 API Gateway 8-1 Partition File Systen Top K (e.g. 1) Frequency Count O +629 / ":17 ](../../media/Steam^JCollection-TopK-Topk-or-how-to-collection-the-data-image6.png){width="5.0in" height="2.826388888888889in"}
 
 [And let's take a bit closer look at MapReduce jobs.]{.mark}
 

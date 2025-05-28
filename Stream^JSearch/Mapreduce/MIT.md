@@ -246,7 +246,7 @@ The key is the word the values are all ones, we don't like here about them we on
 
 
 
-![](../../media/Stream^JSearch-Mapreduce-MIT-image1.png){width="3.53125in" height="2.0104166666666665in"}
+![](../../media/Stream^JSearch-Mapreduce-MIT-image1.png){width="3.5277777777777777in" height="2.0069444444444446in"}
 
 
 

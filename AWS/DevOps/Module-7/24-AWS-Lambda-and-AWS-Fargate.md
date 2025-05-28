@@ -39,7 +39,7 @@ Facts
 
 
 
-- ![Common use cases Data processing Real time . Amazon EMR Batch • Real-time stream processing Activity tracking Metrics generation IOT device data telemetry and metering Backends Applications and services Mobile 10T Third-party API requests • • training and -7 certification IT automation Policy engines Extending AWS services Infrastructure management 0 2020 Ama.•on ','.'eb Inc O' Its Al re-sewed ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image1.png){width="5.0in" height="2.8229166666666665in"}
+- ![Common use cases Data processing Real time . Amazon EMR Batch • Real-time stream processing Activity tracking Metrics generation IOT device data telemetry and metering Backends Applications and services Mobile 10T Third-party API requests • • training and -7 certification IT automation Policy engines Extending AWS services Infrastructure management 0 2020 Ama.•on ','.'eb Inc O' Its Al re-sewed ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image1.png){width="5.0in" height="2.826388888888889in"}
 
 
 
@@ -49,11 +49,11 @@ Facts
 
 
 
-![Serverless application development enables you to build loosely coupled applications, with increased agility and lower total cost of ownership. AWS Lambda and AWS Fargate are compute services for serverless applications. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image2.png){width="5.0in" height="0.9270833333333334in"}
+![Serverless application development enables you to build loosely coupled applications, with increased agility and lower total cost of ownership. AWS Lambda and AWS Fargate are compute services for serverless applications. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image2.png){width="5.0in" height="0.9236111111111112in"}
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Why serverless? Serverless enables you to build modern applications with increased agility and lower total cost of ownership. Building serverless applications means that your developers can focus on their core product. They don't have to worry about managing and operating servers or runtimes, either in the cloud or on premises. This reduced overhead lets developers reclaim time and energy that can be spent on developing products that scale and are reliable. Another advantage, is the ability to bring your own code. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image3.png){width="5.0in" height="2.6979166666666665in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Why serverless? Serverless enables you to build modern applications with increased agility and lower total cost of ownership. Building serverless applications means that your developers can focus on their core product. They don't have to worry about managing and operating servers or runtimes, either in the cloud or on premises. This reduced overhead lets developers reclaim time and energy that can be spent on developing products that scale and are reliable. Another advantage, is the ability to bring your own code. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image3.png){width="5.0in" height="2.6944444444444446in"}
 
 
 
@@ -65,11 +65,11 @@ Facts
 
 
 
-![Key terms for AWS Lambda Function A function is a resource that you can invoke to run your code in AWS Lambda. Runtime Lambda runtimes allow functions in different languages to run in the same base runtime environment. You configure your function to use a runtime that matches your programming language. The runtime sits between the Lambda service and your function code, relaying invocation events, context information, and responses between the two. You can use runtimes provided by Lambda, or build your own. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image6.png){width="5.0in" height="3.4270833333333335in"}
+![Key terms for AWS Lambda Function A function is a resource that you can invoke to run your code in AWS Lambda. Runtime Lambda runtimes allow functions in different languages to run in the same base runtime environment. You configure your function to use a runtime that matches your programming language. The runtime sits between the Lambda service and your function code, relaying invocation events, context information, and responses between the two. You can use runtimes provided by Lambda, or build your own. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image6.png){width="5.0in" height="3.423611111111111in"}
 
 
 
-![Event An event is a JSON formatted document that contains data for a function to process. The Lambda runtime converts the event to an object and passes it to your function code. When you invoke a function, you determine the structure and contents of the event. When an AWS service invokes your function, the service defines the event. Concurrency Concurrency is the number of requests that your function is serving at any given time. When your function is invoked, Lambda provisions an instance of it to process the event. When the function code finishes running, it can handle another request. If the function is invoked again while a request is still being processed, another instance is provisioned, increasing the function's concurrency. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image7.png){width="5.0in" height="3.53125in"}
+![Event An event is a JSON formatted document that contains data for a function to process. The Lambda runtime converts the event to an object and passes it to your function code. When you invoke a function, you determine the structure and contents of the event. When an AWS service invokes your function, the service defines the event. Concurrency Concurrency is the number of requests that your function is serving at any given time. When your function is invoked, Lambda provisions an instance of it to process the event. When the function code finishes running, it can handle another request. If the function is invoked again while a request is still being processed, another instance is provisioned, increasing the function's concurrency. ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image7.png){width="5.0in" height="3.5277777777777777in"}
 
 
 
@@ -81,7 +81,7 @@ Facts
 
 
 
-![Serverless architecture examples O Object 00+p Data Message 1. File put into bucket 1. Data published to a topic I. Message inserted into a queue S3 bucket SNS topic Amazon Simple Queue Service 2. Lambda invoked 2. Lambda invoked 2. Lambda polls queue and invokes function Lambda function Lambda function Lambda function 3. Function Removes message from queue ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image10.png){width="5.0in" height="3.0520833333333335in"}
+![Serverless architecture examples O Object 00+p Data Message 1. File put into bucket 1. Data published to a topic I. Message inserted into a queue S3 bucket SNS topic Amazon Simple Queue Service 2. Lambda invoked 2. Lambda invoked 2. Lambda polls queue and invokes function Lambda function Lambda function Lambda function 3. Function Removes message from queue ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image10.png){width="5.0in" height="3.048611111111111in"}
 
 
 
@@ -103,7 +103,7 @@ first one is s3 notification function
 
 
 
-![Serverless computing with AWS Fargate example In this architecture example below, we show development with Bitbucket, an open-source tool that runs on AWS services. Some other possible options include AWS CodeCommit and GitHub. With AWS Fargate, organizations can take advantage of the serverless computing architecture to implement applications with convenience, leaving behind the need to manage clusters and enabling seamless scaling of the applications. g Bitbucket Developer push Application repo or tag Unit tests run Regression tests run Acceptance test analysis Python connector script Orchestrator repo Clone the application code Build the docker image Push the image to ECR Clone terraform code Run terraform code Deploy image to Ear.gate Run load tests Amazon Elastic Container Registry AWS Fargate ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image14.png){width="5.0in" height="3.5729166666666665in"}
+![Serverless computing with AWS Fargate example In this architecture example below, we show development with Bitbucket, an open-source tool that runs on AWS services. Some other possible options include AWS CodeCommit and GitHub. With AWS Fargate, organizations can take advantage of the serverless computing architecture to implement applications with convenience, leaving behind the need to manage clusters and enabling seamless scaling of the applications. g Bitbucket Developer push Application repo or tag Unit tests run Regression tests run Acceptance test analysis Python connector script Orchestrator repo Clone the application code Build the docker image Push the image to ECR Clone terraform code Run terraform code Deploy image to Ear.gate Run load tests Amazon Elastic Container Registry AWS Fargate ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image14.png){width="5.0in" height="3.576388888888889in"}
 
 
 
@@ -115,7 +115,7 @@ first one is s3 notification function
 
 
 
-![AWS Lambda functions Creating a function involves: • Defining permissions • Specifying what events trigger your function training and -y certification • Providing the code, dependencies, and libraries needed to execute your code • Configuring execution parameters • Memory, timeout, and concurrency ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image17.png){width="5.0in" height="2.1979166666666665in"}
+![AWS Lambda functions Creating a function involves: • Defining permissions • Specifying what events trigger your function training and -y certification • Providing the code, dependencies, and libraries needed to execute your code • Configuring execution parameters • Memory, timeout, and concurrency ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image17.png){width="5.0in" height="2.201388888888889in"}
 
 
 
@@ -125,7 +125,7 @@ first one is s3 notification function
 
 
 
-![Example: Lambda function in Node.js training and -y certification Object Amazon S3 Bucket with objects AWS Lambda Function handler "Records" : "object" : " 0 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved. exports. context, callback) { console. log(' Event: + JSON.stri ngify (event)) callback(null, 'Hello World! ') ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image19.png){width="5.0in" height="2.78125in"}
+![Example: Lambda function in Node.js training and -y certification Object Amazon S3 Bucket with objects AWS Lambda Function handler "Records" : "object" : " 0 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved. exports. context, callback) { console. log(' Event: + JSON.stri ngify (event)) callback(null, 'Hello World! ') ](../../../media/AWS-DevOps-Module-7-24-AWS-Lambda-and-AWS-Fargate-image19.png){width="5.0in" height="2.7777777777777777in"}
 
 
 

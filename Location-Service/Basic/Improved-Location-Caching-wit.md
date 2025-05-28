@@ -73,7 +73,7 @@ However, even if a user reported a perfectly accurate location there would still
 
 The easiest strategy to deal with this problem is to truncate the latitude and longitude values to a fixed number of decimal places. The following image is a visualization of the grid formed by truncating coordinates to 3 decimal places:
 
-![Grid visualization](../../media/Location-Service-Basic-Improved-Location-Caching-with-Quadtrees-image1.png){width="4.5625in" height="3.53125in"}
+![Grid visualization](../../media/Location-Service-Basic-Improved-Location-Caching-with-Quadtrees-image1.png){width="4.5625in" height="3.5277777777777777in"}
 
 Each cell in this grid is approximately 100m by 100m and represents all the coordinates that begin with the same 3 decimal places. By using lower precision location coordinates, small changes in location usually still map to the same cache key. The user in the previous example who crossed the street would most of the time still be in the same cell, and therefore our servers would be able to use the previously cached response.
 
@@ -93,7 +93,7 @@ We used our simulation framework to measure the cache hit ratio after truncating
 
 As we lowered precision (increasing the size of cells in the grid) the cache hit ratio went up, but this came with a different problem. Two users that are 10km apart are unlikely to have the same 20 nearby Xone businesses, especially in metropolitan areas. The following image shows two points that are 10km apart in New York:
 
-![Two locations 10km apart](../../media/Location-Service-Basic-Improved-Location-Caching-with-Quadtrees-image2.png){width="3.3229166666666665in" height="2.71875in"}
+![Two locations 10km apart](../../media/Location-Service-Basic-Improved-Location-Caching-with-Quadtrees-image2.png){width="3.326388888888889in" height="2.7152777777777777in"}
 
 By lowering the precision of location coordinates to 1 decimal place we were able to reach a reasonable cache hit ratio, but the cost is that the cached results were no longer valid. We define a set of results as *valid* if no business is excluded that is closer to the user than any business in their search results.
 

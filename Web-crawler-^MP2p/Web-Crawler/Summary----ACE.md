@@ -214,7 +214,7 @@ For example, if we found one webstie's content is always not changing. We can se
 
 
 
-![ACE Web Page Crawl History Table Shard Key Intended URL ID URL Domain1D Last Crawl Frequency Crawl 'IS can be modeled as SW or wide-column Content Group ID acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image4.png){width="5.0in" height="3.03125in"}
+![ACE Web Page Crawl History Table Shard Key Intended URL ID URL Domain1D Last Crawl Frequency Crawl 'IS can be modeled as SW or wide-column Content Group ID acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image4.png){width="5.0in" height="3.0277777777777777in"}
 
 
 
@@ -226,7 +226,7 @@ Base on the ~~web page crawl history table~~ robot.txt we need to update the
 
 
 
-![Domain ID Domain Policy Table DomainURL CrawlFrequencyLimit " , N | el | " Key - Ⅶ | , le -0 , h 皿 S . data | 爰 思 版 所 有 未 经 允 许 勿 制 或 传 acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image5.png){width="5.0in" height="3.0520833333333335in"}
+![Domain ID Domain Policy Table DomainURL CrawlFrequencyLimit " , N | el | " Key - Ⅶ | , le -0 , h 皿 S . data | 爰 思 版 所 有 未 经 允 许 勿 制 或 传 acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image5.png){width="5.0in" height="3.048611111111111in"}
 
 [Domine police DB]{.mark} also has a priority column, it base on the frequency of the content it is changing
 
@@ -244,7 +244,7 @@ Base on the ~~web page crawl history table~~ robot.txt we need to update the
 
 
 
-![思 考 题 十 绥 存 的 应 用 场 景 ？ Domain PolicyTable HTM L 网 页 爬 取 完 毕 存 入 缓 存 等 待 处 理 午 请 勿 录 制 或 传 播 acecodeinterwew.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image6.png){width="5.0in" height="4.739583333333333in"}
+![思 考 题 十 绥 存 的 应 用 场 景 ？ Domain PolicyTable HTM L 网 页 爬 取 完 毕 存 入 缓 存 等 待 处 理 午 请 勿 录 制 或 传 播 acecodeinterwew.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image6.png){width="5.0in" height="4.743055555555555in"}
 
 
 
@@ -256,7 +256,7 @@ Base on the ~~web page crawl history table~~ robot.txt we need to update the
 
 
 
-![服 务 器 存 储 1 · 10 扩 展 性 URLFrontierQueues ， Fetcher&RendererWorkers Bigtable ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image9.png){width="5.0in" height="2.6145833333333335in"}
+![服 务 器 存 储 1 · 10 扩 展 性 URLFrontierQueues ， Fetcher&RendererWorkers Bigtable ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image9.png){width="5.0in" height="2.6180555555555554in"}
 
 If system has problem , worker is staless
 
@@ -266,7 +266,7 @@ If system has problem , worker is staless
 
 ![1.12 Queue Health Crawler Trap Availability Async Load Cache Hit Rate DB load ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image11.png){width="5.0in" height="2.1875in"}
 
-![0 b 0 ， " 0 伍 ` 0 屮 @"e。彘法""每 " 以 山 p ． HTML 》 · 以 L 出 ． 一 三 诀 [叵@] 0 《 Uaext' 、 凼一 （ " S 哼 血 | 0 爰 思 版 权 所 有 未 经 允 许 诺 勿 录 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image12.png){width="5.0in" height="3.0520833333333335in"}
+![0 b 0 ， " 0 伍 ` 0 屮 @"e。彘法""每 " 以 山 p ． HTML 》 · 以 L 出 ． 一 三 诀 [叵@] 0 《 Uaext' 、 凼一 （ " S 哼 血 | 0 爰 思 版 权 所 有 未 经 允 许 诺 勿 录 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image12.png){width="5.0in" height="3.048611111111111in"}
 
 
 
@@ -290,11 +290,11 @@ How to store: big table
 
 
 
-![e ACE Sentence A: Sentence B: "The "The words: the I dog Ill MinHash dog is brown" dog is happy" I is I brown I happy I sunshine Ill Ill acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image16.png){width="5.0in" height="2.8020833333333335in"}
+![e ACE Sentence A: Sentence B: "The "The words: the I dog Ill MinHash dog is brown" dog is happy" I is I brown I happy I sunshine Ill Ill acecodeinterview.com ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image16.png){width="5.0in" height="2.798611111111111in"}
 
 
 
-![0 爰 思 版 权 所 有 未 经 允 许 诺 勿 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image17.png){width="5.0in" height="3.0729166666666665in"}
+![0 爰 思 版 权 所 有 未 经 允 许 诺 勿 制 或 传 地 acecodeinterview ℃ om ](../../media/Web-crawler-^MP2p-Web-Crawler-Summary----ACE-image17.png){width="5.0in" height="3.0694444444444446in"}
 
 
 

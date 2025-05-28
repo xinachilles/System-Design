@@ -6,7 +6,7 @@ Modified: 2021-05-28 15:27:01 -0600
 
 ---
 
-![User Id I Group Id I first time join the User DB Redis Group DB Client websocket service Client User service Friendship service Chat service group Friendship DB Session DB User id ->Safety: { unread_msg: 10; Last_msg preview: happy_hour_at_10:.. Timestamp: 21324 Chat DB History DB User lastime online Receiver ID I Send ID/ group ID I time stamp Message id I Encrypted Message I timestamp Receiver id I Sender id I message id I timestamp Message queue Chat service Online status 2 User A send a message B B is online A- > chat service -> chat DB -> historyDB-> online statu queue Service B is offline A -> chat service - >chat DB -> historyDB User B - > Friendship service -> Fried DB -> session DB ( for last stamp -> History DB for all unread message - > Chat DB ](../../media/Message-What's-up-Summary2-image1.png){width="5.0in" height="2.3020833333333335in"}
+![User Id I Group Id I first time join the User DB Redis Group DB Client websocket service Client User service Friendship service Chat service group Friendship DB Session DB User id ->Safety: { unread_msg: 10; Last_msg preview: happy_hour_at_10:.. Timestamp: 21324 Chat DB History DB User lastime online Receiver ID I Send ID/ group ID I time stamp Message id I Encrypted Message I timestamp Receiver id I Sender id I message id I timestamp Message queue Chat service Online status 2 User A send a message B B is online A- > chat service -> chat DB -> historyDB-> online statu queue Service B is offline A -> chat service - >chat DB -> historyDB User B - > Friendship service -> Fried DB -> session DB ( for last stamp -> History DB for all unread message - > Chat DB ](../../media/Message-What's-up-Summary2-image1.png){width="5.0in" height="2.298611111111111in"}
 
 
 

@@ -6,7 +6,7 @@ Modified: 2020-12-29 23:46:02 -0600
 
 ---
 
-![](../../media/Example-Leetcode-Leetcode-image1.png){width="5.0in" height="2.5520833333333335in"}
+![](../../media/Example-Leetcode-Leetcode-image1.png){width="5.0in" height="2.5555555555555554in"}
 
 
 
@@ -14,7 +14,7 @@ Modified: 2020-12-29 23:46:02 -0600
 
 
 
-![Uni States (Region 1) AumenbcabM1 Service AuthenticatiM1 Servi ce 3rd Party SOL Database Code Executdl Met*fata Code Executk»n User Metæfata Serve Code Executbn user Metælata Service Based Routing I-Jl I Static Assets (List of Questions and Solutions) DNS Load API Calls India (Region 2) SOL Database (user solutions) user Metadata Service User Metadata Service user Metadata Service Load Balancing Path Based Routing ](../../media/Example-Leetcode-Leetcode-image2.png){width="5.0in" height="4.510416666666667in"}
+![Uni States (Region 1) AumenbcabM1 Service AuthenticatiM1 Servi ce 3rd Party SOL Database Code Executdl Met*fata Code Executk»n User Metæfata Serve Code Executbn user Metælata Service Based Routing I-Jl I Static Assets (List of Questions and Solutions) DNS Load API Calls India (Region 2) SOL Database (user solutions) user Metadata Service User Metadata Service user Metadata Service Load Balancing Path Based Routing ](../../media/Example-Leetcode-Leetcode-image2.png){width="5.0in" height="4.506944444444445in"}
 
 
 
@@ -22,13 +22,13 @@ Modified: 2020-12-29 23:46:02 -0600
 
 
 
-![Database User table: SQL Id uuid User scott Creation 214145 password hashed Membership expiration 12435 payment Credit card Additional metadata Location, github link, linkedin etc Need a session table Submission table: (Sql row size is 8kb. Code can't be store directly here) Mongo document size is 16MB, better not store the state [runtime stats with the code. Id User Sub Code sess Id mit ts id langu age proble STATE m id 124 uuid 214 Codei Java Java d Runtime metrics Run time I memory consumption • State could be one of {submitted, running, success, error, aborted} ](../../media/Example-Leetcode-Leetcode-image3.png){width="5.0in" height="3.15625in"}
+![Database User table: SQL Id uuid User scott Creation 214145 password hashed Membership expiration 12435 payment Credit card Additional metadata Location, github link, linkedin etc Need a session table Submission table: (Sql row size is 8kb. Code can't be store directly here) Mongo document size is 16MB, better not store the state [runtime stats with the code. Id User Sub Code sess Id mit ts id langu age proble STATE m id 124 uuid 214 Codei Java Java d Runtime metrics Run time I memory consumption • State could be one of {submitted, running, success, error, aborted} ](../../media/Example-Leetcode-Leetcode-image3.png){width="5.0in" height="3.1527777777777777in"}
 
 
 
 
 
-![Problem table: Id uuid creator scott Creation 214145 title Linked list description Description id Input & output 10 id Additional metadata Accepted, submission id. ](../../media/Example-Leetcode-Leetcode-image4.png){width="5.0in" height="1.4895833333333333in"}
+![Problem table: Id uuid creator scott Creation 214145 title Linked list description Description id Input & output 10 id Additional metadata Accepted, submission id. ](../../media/Example-Leetcode-Leetcode-image4.png){width="5.0in" height="1.4930555555555556in"}
 
 
 

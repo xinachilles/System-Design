@@ -36,7 +36,7 @@ Modified: 2023-10-22 17:42:17 -0600
 
 
 
-![AMAZON ECR AMAZON ELASTIC KUBERNETES Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that you can use to run Kubernetes on AWS without needing to install and operate your own Kubernetes clusters. Challenges with Kubernetes Kubernetes is an open-source system for automating the deployment, scaling, and management of containerized applications. Operating Kubernetes for production applications presents a number of challenges: • You must manage the scaling and availability of your Kubernetes masters and persistence layer by ensuring that you have chosen appropriate instance types, ran them across multiple Availability Zones, monitored their health, and replaced unhealthy nodes. • You need to patch and upgrade your masters and worker nodes to provide that you are running the latest version of Kubernetes. This all requires expertise and a lot of manual work. Amazon Elastic Kubernetes Service With Amazon EKS, upgrades and high availability are managed for you by AWS. Amazon EKS runs three Kubernetes masters across three Availability Zones to provide high availability. Amazon EKS automatically detects and replaces unhealthy masters, and it provides automated version upgrades and patching for the masters. ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image8.png){width="5.0in" height="3.9479166666666665in"}
+![AMAZON ECR AMAZON ELASTIC KUBERNETES Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that you can use to run Kubernetes on AWS without needing to install and operate your own Kubernetes clusters. Challenges with Kubernetes Kubernetes is an open-source system for automating the deployment, scaling, and management of containerized applications. Operating Kubernetes for production applications presents a number of challenges: • You must manage the scaling and availability of your Kubernetes masters and persistence layer by ensuring that you have chosen appropriate instance types, ran them across multiple Availability Zones, monitored their health, and replaced unhealthy nodes. • You need to patch and upgrade your masters and worker nodes to provide that you are running the latest version of Kubernetes. This all requires expertise and a lot of manual work. Amazon Elastic Kubernetes Service With Amazon EKS, upgrades and high availability are managed for you by AWS. Amazon EKS runs three Kubernetes masters across three Availability Zones to provide high availability. Amazon EKS automatically detects and replaces unhealthy masters, and it provides automated version upgrades and patching for the masters. ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image8.png){width="5.0in" height="3.951388888888889in"}
 
 
 
@@ -44,11 +44,11 @@ Modified: 2023-10-22 17:42:17 -0600
 
 
 
-![Sample architecture for Amazon EKS and a CD pipeline Amazon Elastic Container Registry AWS CodeBuild Developer AWS CodeCommit AWS CodePipeline Amazon Elastic Kubernetes Service AWS Lambda Role Parameter Store ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image10.png){width="5.0in" height="3.0104166666666665in"}
+![Sample architecture for Amazon EKS and a CD pipeline Amazon Elastic Container Registry AWS CodeBuild Developer AWS CodeCommit AWS CodePipeline Amazon Elastic Kubernetes Service AWS Lambda Role Parameter Store ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image10.png){width="5.0in" height="3.0069444444444446in"}
 
 
 
-![last Ser SL iePi 1st Developers commit code to an AWS CodeCommit repository and create pull requests to review proposed changes to the production code. When the pull request is merged into the master branch in the AWS CodeCommit repository, AWS CodePipeline automatically detects the changes to the branch and starts processing the code changes through the pipeline. ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image11.png){width="5.0in" height="4.46875in"}
+![last Ser SL iePi 1st Developers commit code to an AWS CodeCommit repository and create pull requests to review proposed changes to the production code. When the pull request is merged into the master branch in the AWS CodeCommit repository, AWS CodePipeline automatically detects the changes to the branch and starts processing the code changes through the pipeline. ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image11.png){width="5.0in" height="4.472222222222222in"}
 
 
 
@@ -56,7 +56,7 @@ Modified: 2023-10-22 17:42:17 -0600
 
 
 
-![3rd The Docker image is pushed to Amazon ECR after a successful build or test stage. > Elastic Cont Registry S CodeBuild ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image13.png){width="5.0in" height="2.46875in"}
+![3rd The Docker image is pushed to Amazon ECR after a successful build or test stage. > Elastic Cont Registry S CodeBuild ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image13.png){width="5.0in" height="2.4722222222222223in"}
 
 
 
@@ -64,7 +64,7 @@ Modified: 2023-10-22 17:42:17 -0600
 
 
 
-![5th After the deployment manifest update is completed, AWS Lambda uploads it to Amazon EKS. AWS Lambda invokes the Kubernetes API to update the image in the Kubernetes application deployment. Ela ws ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image15.png){width="5.0in" height="3.5729166666666665in"}
+![5th After the deployment manifest update is completed, AWS Lambda uploads it to Amazon EKS. AWS Lambda invokes the Kubernetes API to update the image in the Kubernetes application deployment. Ela ws ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image15.png){width="5.0in" height="3.576388888888889in"}
 
 
 
@@ -108,7 +108,7 @@ Modified: 2023-10-22 17:42:17 -0600
 
 
 
-![Amazon Elastic Container Registry (Amazon ECR) Write code Write and package code as a Docker image Amazon ECR o Compress, encrypt, and control access to images O Version, tag, and manage image lifecycles Run containers Pull image and run containers anywhere training and -y certification Amazon ECS Amazon EKS AWS Cloud On-premises 0 Ama.•on Weh Inc O' AL rescued ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image25.png){width="5.0in" height="2.8020833333333335in"}
+![Amazon Elastic Container Registry (Amazon ECR) Write code Write and package code as a Docker image Amazon ECR o Compress, encrypt, and control access to images O Version, tag, and manage image lifecycles Run containers Pull image and run containers anywhere training and -y certification Amazon ECS Amazon EKS AWS Cloud On-premises 0 Ama.•on Weh Inc O' AL rescued ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image25.png){width="5.0in" height="2.798611111111111in"}
 
 
 
@@ -120,7 +120,7 @@ Modified: 2023-10-22 17:42:17 -0600
 
 
 
-![Integrate Amazon ECR with your CI system training and certification To publish Docker images to Amazon ECR or Docker Hub, use the Docker Build and Publish plugin with Jenkins. Jenkins Continuous Integration Server Pull Code Docker Build and Publish plugin Amazon ECR Publish Docker image Docker Hub ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image28.png){width="5.0in" height="2.78125in"}
+![Integrate Amazon ECR with your CI system training and certification To publish Docker images to Amazon ECR or Docker Hub, use the Docker Build and Publish plugin with Jenkins. Jenkins Continuous Integration Server Pull Code Docker Build and Publish plugin Amazon ECR Publish Docker image Docker Hub ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image28.png){width="5.0in" height="2.7777777777777777in"}
 
 
 
@@ -138,7 +138,7 @@ Modified: 2023-10-22 17:42:17 -0600
 
 
 
-![Example: Amazon EKS and CD pipeline training and -7 certification Amazon Elastic Container Registry 3. Developer 2. AWS CodeCommit 4. AWS CodeBuild Amazon Elastic Kubernetes Service 5. AWS Lambda Role AWS CodePipeline 0 2020 Ama.•on Weh Inc O' Its Al. Parameter Store ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image32.png){width="5.0in" height="2.8229166666666665in"}
+![Example: Amazon EKS and CD pipeline training and -7 certification Amazon Elastic Container Registry 3. Developer 2. AWS CodeCommit 4. AWS CodeBuild Amazon Elastic Kubernetes Service 5. AWS Lambda Role AWS CodePipeline 0 2020 Ama.•on Weh Inc O' Its Al. Parameter Store ](../../../media/AWS-DevOps-Module-6-23-Amazon-Elastic-Container-Registry-and-Amazon-Elastic-Kubernetes-Service-image32.png){width="5.0in" height="2.826388888888889in"}
 
 
 

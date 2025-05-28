@@ -292,17 +292,17 @@ yep exactly the speeds things up even more I think that is all that we really ne
 
 
 
-![Hosts Load Balancing Round Robin long) DeleteListing(listingld) API Servers API Servers API Servers Listings Geolocation Index EOLL0nER SQL Database Reservations Geolocation LEADER Geolocation Index EOLL%ER Renters GetListing(listingld) API Servers API Servers API Servers Load Balancing API-path-Based API Servers ReserveListing(listingld, dateRange) API Servers API Servers ListListings(lat, long, dateRange) ](../../media/Location-Service-Other-airbnb-image1.png){width="5.635416666666667in" height="3.40625in"}
+![Hosts Load Balancing Round Robin long) DeleteListing(listingld) API Servers API Servers API Servers Listings Geolocation Index EOLL0nER SQL Database Reservations Geolocation LEADER Geolocation Index EOLL%ER Renters GetListing(listingld) API Servers API Servers API Servers Load Balancing API-path-Based API Servers ReserveListing(listingld, dateRange) API Servers API Servers ListListings(lat, long, dateRange) ](../../media/Location-Service-Other-airbnb-image1.png){width="5.631944444444445in" height="3.4027777777777777in"}
 
 
 
 
 
-![A listing in our quadtree might look something like this: "unavailabilities : [ "range": n expiration • "range": "expiration : null "title": n Listing Title" , "description " : "Listing Description "thumbnailUr1" : "Listing Thumbnail URL" , "id": "Listing ID" ](../../media/Location-Service-Other-airbnb-image2.png){width="5.635416666666667in" height="3.0104166666666665in"}
+![A listing in our quadtree might look something like this: "unavailabilities : [ "range": n expiration • "range": "expiration : null "title": n Listing Title" , "description " : "Listing Description "thumbnailUr1" : "Listing Thumbnail URL" , "id": "Listing ID" ](../../media/Location-Service-Other-airbnb-image2.png){width="5.631944444444445in" height="3.0069444444444446in"}
 
 
 
-![](../../media/Location-Service-Other-airbnb-image3.png){width="4.177083333333333in" height="2.21875in"}
+![](../../media/Location-Service-Other-airbnb-image3.png){width="4.173611111111111in" height="2.2222222222222223in"}
 
 
 

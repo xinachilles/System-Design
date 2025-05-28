@@ -39,7 +39,7 @@ Facts
 
 
 
-![azon E :IDR: 10 rks S acks, y AWS OpsWorks for Puppet Enterprise AWS OpsWorks for Puppet Enterprise is a fully managed configuration management service that hosts Puppet Enterprise, a set of automation tools from Puppet, for infrastructure and application management. It maintains your Puppet master server by automatically patching, updating, and backing up your server. AWS OpsWorks eliminates the need to operate your own configuration management systems or worry about maintaining its infrastructure and gives you access to all of the Puppet Enterprise features. It also works seamlessly with your existing Puppet code. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image3.png){width="5.0in" height="5.802083333333333in"}
+![azon E :IDR: 10 rks S acks, y AWS OpsWorks for Puppet Enterprise AWS OpsWorks for Puppet Enterprise is a fully managed configuration management service that hosts Puppet Enterprise, a set of automation tools from Puppet, for infrastructure and application management. It maintains your Puppet master server by automatically patching, updating, and backing up your server. AWS OpsWorks eliminates the need to operate your own configuration management systems or worry about maintaining its infrastructure and gives you access to all of the Puppet Enterprise features. It also works seamlessly with your existing Puppet code. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image3.png){width="5.0in" height="5.798611111111111in"}
 
 
 
@@ -47,11 +47,11 @@ Facts
 
 
 
-![AWS OpsWorks Stacks With OpsWorks Stacks, you can model your application as a stack containing different layers, such as load balancing, database, and application servers. You can deploy and configure EC2 instances in each layer or connect other resources such as Amazon RDS databases. You run Chef recipes using Chef Solo, enabling you to automate tasks such as installing packages and languages or frameworks, and configuring software. The diagram below shows the basic architecture of AWS OpsWorks Stacks. Keep in mind this is an example, layers and apps are flexible and can be used as needed across a stack. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image5.png){width="5.0in" height="2.4479166666666665in"}
+![AWS OpsWorks Stacks With OpsWorks Stacks, you can model your application as a stack containing different layers, such as load balancing, database, and application servers. You can deploy and configure EC2 instances in each layer or connect other resources such as Amazon RDS databases. You run Chef recipes using Chef Solo, enabling you to automate tasks such as installing packages and languages or frameworks, and configuring software. The diagram below shows the basic architecture of AWS OpsWorks Stacks. Keep in mind this is an example, layers and apps are flexible and can be used as needed across a stack. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image5.png){width="5.0in" height="2.451388888888889in"}
 
 
 
-![Cookbook repo aws Cloud App code repo 00 AWS OpsWorks Stack Load balancing layer Application server layer Database layer ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image6.png){width="5.0in" height="2.5104166666666665in"}
+![Cookbook repo aws Cloud App code repo 00 AWS OpsWorks Stack Load balancing layer Application server layer Database layer ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image6.png){width="5.0in" height="2.513888888888889in"}
 
 
 
@@ -59,7 +59,7 @@ Facts
 
 
 
-!["Is Stack Layer A layer inside a stack represents a set of Amazon EC2 instances serving a purpose, such as application server layer, database layer, or load balancing layer. You can achieve granular control over each layer because of this isolation. Additional customizations can be achieved by extending the layers and modifying the default configurations. You can add Chef recipes to install additional packages. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image8.png){width="5.0in" height="4.239583333333333in"}
+!["Is Stack Layer A layer inside a stack represents a set of Amazon EC2 instances serving a purpose, such as application server layer, database layer, or load balancing layer. You can achieve granular control over each layer because of this isolation. Additional customizations can be achieved by extending the layers and modifying the default configurations. You can add Chef recipes to install additional packages. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image8.png){width="5.0in" height="4.236111111111111in"}
 
 
 
@@ -67,7 +67,7 @@ Facts
 
 
 
-![App App: Application files are stored in a repository, such as Amazon S3. Each application is called an app. When you deploy an app on an instance, AWS OpsWorks Stacks triggers a deploy lifecycle event and the layer's deploy recipes are run on the instance. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image10.png){width="5.0in" height="3.3854166666666665in"}
+![App App: Application files are stored in a repository, such as Amazon S3. Each application is called an app. When you deploy an app on an instance, AWS OpsWorks Stacks triggers a deploy lifecycle event and the layer's deploy recipes are run on the instance. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image10.png){width="5.0in" height="3.3819444444444446in"}
 
 
 
@@ -75,11 +75,11 @@ Facts
 
 
 
-![AMI OPTIONS: FULLY BUILT AMI OPTIONS: JEOS AMI OPTIONS: HYBRID AMI On one end of the spectrum is the most common method for AMI design that provisions a fully functional instance, including all necessary software for a specific role or even a single instance. Organizations often create a baseline AMI that conforms to minimal security and configuration requirements. It then builds on this baseline to create fully baked AMIs that are specific to applications or infrastructures for actual instance deployment. Fully baked AMIs are the simplest to deploy and provide the fastest launch times. For this reason, fully baked AMIS are useful to quickly deploy replacement instances or add additional capacity. Fully baked AMIS also require minimal changes when launched and can be used to capture manual installation and configuration steps that cannot be automated. The process of using fully baked AMIs is similar to how many organizations deploy virtual servers in their existing data centers. This makes this simple approach applicable to customers who are new to the AWS platform and are accustomed to image-based server deployments. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image12.png){width="5.0in" height="2.78125in"}
+![AMI OPTIONS: FULLY BUILT AMI OPTIONS: JEOS AMI OPTIONS: HYBRID AMI On one end of the spectrum is the most common method for AMI design that provisions a fully functional instance, including all necessary software for a specific role or even a single instance. Organizations often create a baseline AMI that conforms to minimal security and configuration requirements. It then builds on this baseline to create fully baked AMIs that are specific to applications or infrastructures for actual instance deployment. Fully baked AMIs are the simplest to deploy and provide the fastest launch times. For this reason, fully baked AMIS are useful to quickly deploy replacement instances or add additional capacity. Fully baked AMIS also require minimal changes when launched and can be used to capture manual installation and configuration steps that cannot be automated. The process of using fully baked AMIs is similar to how many organizations deploy virtual servers in their existing data centers. This makes this simple approach applicable to customers who are new to the AWS platform and are accustomed to image-based server deployments. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image12.png){width="5.0in" height="2.7777777777777777in"}
 
 
 
-![Operating System App Runtime ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image13.png){width="5.0in" height="2.9479166666666665in"}
+![Operating System App Runtime ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image13.png){width="5.0in" height="2.951388888888889in"}
 
 
 
@@ -91,7 +91,7 @@ Facts
 
 
 
-![AMI OPTIONS: FULLY BUILT AMI OPTIONS: JEOS AMI OPTIONS: HYBRID AMI Hybrid AMIs provide a subset of the software needed to produce a fully functional instance, falling between the fully built-in functionality and JeOS options on the AMI design spectrum. This approach creates a partially baked, generic infrastructure AMI that is further configured on first boot based on specific application requirements. The decision about what to build into the AMI and what to install and configure at launch is typically based on how reusable the underlying software package is across all instances and how long it takes to download, install, and configure the software component. For example, to reduce instance launch times, include server management agents and baseline security configurations into an AMI. To further reduce instance launch times, include the necessary software to create role-specific AMIs (for example, web servers, application servers, database servers). Hybrid AMIs combine the flexibility of post-launch changes with the speed of preinstalled and preconfigured infrastructure components. This can be especially useful for merging frequently changing software (such as application code or security updates) with infrequently changing software (such as management agents and security baselines). Customers who use this approach typically have a moderate amount of experience with AWS and configuration automation tools, and want to combine the deployment simplicity of a preconfigured image with the deployment flexibility that pulls the latest software builds and updates at launch. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image16.png){width="5.0in" height="3.90625in"}
+![AMI OPTIONS: FULLY BUILT AMI OPTIONS: JEOS AMI OPTIONS: HYBRID AMI Hybrid AMIs provide a subset of the software needed to produce a fully functional instance, falling between the fully built-in functionality and JeOS options on the AMI design spectrum. This approach creates a partially baked, generic infrastructure AMI that is further configured on first boot based on specific application requirements. The decision about what to build into the AMI and what to install and configure at launch is typically based on how reusable the underlying software package is across all instances and how long it takes to download, install, and configure the software component. For example, to reduce instance launch times, include server management agents and baseline security configurations into an AMI. To further reduce instance launch times, include the necessary software to create role-specific AMIs (for example, web servers, application servers, database servers). Hybrid AMIs combine the flexibility of post-launch changes with the speed of preinstalled and preconfigured infrastructure components. This can be especially useful for merging frequently changing software (such as application code or security updates) with infrequently changing software (such as management agents and security baselines). Customers who use this approach typically have a moderate amount of experience with AWS and configuration automation tools, and want to combine the deployment simplicity of a preconfigured image with the deployment flexibility that pulls the latest software builds and updates at launch. ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image16.png){width="5.0in" height="3.9027777777777777in"}
 
 
 
@@ -99,13 +99,13 @@ Facts
 
 
 
-![Creating a configuration strategy You can use different combinations of the technologies discussed in this module to manage your AMIs. The solution adopted by your company will depend on several factors, including your production workflow and your organizational standards. None of these techniques are mutually exclusive; they can all be used in tandem to craft a strategy that's right for your company. In general, placing software in AMIS is best reserved for foundational, slow-changing components that are truly required as standards throughout your company. Lastly, experiment! ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image18.png){width="5.0in" height="1.9270833333333333in"}
+![Creating a configuration strategy You can use different combinations of the technologies discussed in this module to manage your AMIs. The solution adopted by your company will depend on several factors, including your production workflow and your organizational standards. None of these techniques are mutually exclusive; they can all be used in tandem to craft a strategy that's right for your company. In general, placing software in AMIS is best reserved for foundational, slow-changing components that are truly required as standards throughout your company. Lastly, experiment! ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image18.png){width="5.0in" height="1.9236111111111112in"}
 
 
 
 
 
-![Using custom AMIS as a base configuration training and -7 certification • Create a foundational AMI with certain configuration, pre-installed software • Customize through user data, configuration software Install and configure Create AMI Internal tools, security packages, etc. 0 Ama.•on 'v'.'eb setv.ces, Inc O' AE re-sewed Running instance New AMI Create instances New instances 101010"1. 1010001110 Instance user data ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image19.png){width="5.0in" height="2.84375in"}
+![Using custom AMIS as a base configuration training and -7 certification • Create a foundational AMI with certain configuration, pre-installed software • Customize through user data, configuration software Install and configure Create AMI Internal tools, security packages, etc. 0 Ama.•on 'v'.'eb setv.ces, Inc O' AE re-sewed Running instance New AMI Create instances New instances 101010"1. 1010001110 Instance user data ](../../../media/AWS-DevOps-Module-11-42-AWS-Services-and-Tooling-for-Configuration-Management-3-image19.png){width="5.0in" height="2.8472222222222223in"}
 
 
 

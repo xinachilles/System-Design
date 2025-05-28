@@ -82,7 +82,7 @@ If these requests are successful, it's assumed that the fault that was previousl
 
 If any request fails, the circuit breaker assumes that the fault is still present so it reverts back to the Open state and restarts the timeout timer to give the system a further period of time to recover from the failure.
 
-![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image1.png){width="5.375in" height="0.4270833333333333in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image2.png){width="4.479166666666667in" height="0.4375in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image3.png){width="4.833333333333333in" height="0.4375in"}
+![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image1.png){width="5.375in" height="0.4236111111111111in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image2.png){width="4.479166666666667in" height="0.4375in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image3.png){width="4.833333333333333in" height="0.4375in"}
 
 
 

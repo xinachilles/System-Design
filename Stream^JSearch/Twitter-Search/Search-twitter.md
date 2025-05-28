@@ -70,7 +70,7 @@ So here's a high-level picture of our search architecture
 
 
 
-![Search Architecture RT stream raw tweets Weet archive raw HDFS tweets Analyzer/ Partitioner Mapreduce Analyzer analyzed tweets analyzqd tweets RT index (Earlybird) Search Blender requests Archive index writes ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image1.png){width="5.0in" height="3.53125in"}
+![Search Architecture RT stream raw tweets Weet archive raw HDFS tweets Analyzer/ Partitioner Mapreduce Analyzer analyzed tweets analyzqd tweets RT index (Earlybird) Search Blender requests Archive index writes ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image1.png){width="5.0in" height="3.5277777777777777in"}
 
 
 
@@ -214,7 +214,7 @@ and our in memory index
 
 
 
-![Cluster layout timeslice Complete timeslices ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image5.png){width="5.0in" height="3.6979166666666665in"}
+![Cluster layout timeslice Complete timeslices ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image5.png){width="5.0in" height="3.701388888888889in"}
 
 
 
@@ -350,7 +350,7 @@ something they've seen is catching up with lucence, now it's much easier for us 
 
 
 
-![Search Architecture Updates RT index (Earlybird) Engagement (e.g. retweets/favs) Archive index Search requests ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image9.png){width="5.0in" height="3.5104166666666665in"}
+![Search Architecture Updates RT index (Earlybird) Engagement (e.g. retweets/favs) Archive index Search requests ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image9.png){width="5.0in" height="3.5069444444444446in"}
 
 
 
@@ -510,7 +510,7 @@ the decoder knows okay I only need to read this one by it and then I know what m
 
 
 
-![Posting list encoding Doc IDs to encode: 5, 15, 9000, 9002, 100000, 100090 Delta encoding: Vint compression: 5 10 8985 2 90998 Values O <= delta 127 need one byte ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image11.png){width="5.0in" height="3.5520833333333335in"}
+![Posting list encoding Doc IDs to encode: 5, 15, 9000, 9002, 100000, 100090 Delta encoding: Vint compression: 5 10 8985 2 90998 Values O <= delta 127 need one byte ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image11.png){width="5.0in" height="3.548611111111111in"}
 
 
 
@@ -532,7 +532,7 @@ decoder knows ok I have I have read all bytes for this particular value, ~~so no
 
 
 
-![Posting list encoding Doc IDsto encode: 5, 15, 9000, 9002, 100000, 100090 Delta encoding: Vint compression: 5 10k 8985 2 90998 go • Variable number of bytes - a Vlnt-encoded posting can not be written as a primitive Java type; therefore it can not be written atomically ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image12.png){width="5.0in" height="3.5104166666666665in"}
+![Posting list encoding Doc IDsto encode: 5, 15, 9000, 9002, 100000, 100090 Delta encoding: Vint compression: 5 10k 8985 2 90998 go • Variable number of bytes - a Vlnt-encoded posting can not be written as a primitive Java type; therefore it can not be written atomically ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image12.png){width="5.0in" height="3.5069444444444446in"}
 
 
 
@@ -724,7 +724,7 @@ which is why we say we if we said okay 8 bits are not for the position and
 
 we kind of a reserved fixed number of bits for that reason
 
-![Posting list encoding in Earlybird VI int (32 bits) doc ID 24 bits max. 16.7M • Tweet text can only have 140 chars textPosi tion 8 bits max. 255 ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image13.png){width="5.0in" height="2.7395833333333335in"}
+![Posting list encoding in Earlybird VI int (32 bits) doc ID 24 bits max. 16.7M • Tweet text can only have 140 chars textPosi tion 8 bits max. 255 ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image13.png){width="5.0in" height="2.736111111111111in"}
 
 
 
@@ -938,7 +938,7 @@ the other target you you will understand why
 
 
 
-![Posting lists storage - Objectives • Store many single-linked lists of different lengths space-efficiently • The number of java objects should be independent of the number of lists or number of items in the lists • Every item should be a possible entry point into the lists for iterators, i.e. items should not be dependent on other items (e.g. no delta encoding) • Append and read possible by multiple threads in a lock-free fashion (single append thread. multiple reader threads) • Traversal in backwards order ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image14.png){width="5.0in" height="3.53125in"}
+![Posting lists storage - Objectives • Store many single-linked lists of different lengths space-efficiently • The number of java objects should be independent of the number of lists or number of items in the lists • Every item should be a possible entry point into the lists for iterators, i.e. items should not be dependent on other items (e.g. no delta encoding) • Append and read possible by multiple threads in a lock-free fashion (single append thread. multiple reader threads) • Traversal in backwards order ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image14.png){width="5.0in" height="3.5277777777777777in"}
 
 
 
@@ -1224,7 +1224,7 @@ performance that we're seeing right now
 
 
 
-![New posting list encoding • Objectives: • 32 bit positions and variable-length payloads • Store term frequency (TF) instead of repeating doclDs • Keep: • Concurrency model • Space-efficiency for short documents • Performance ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image19.png){width="5.0in" height="4.302083333333333in"}
+![New posting list encoding • Objectives: • 32 bit positions and variable-length payloads • Store term frequency (TF) instead of repeating doclDs • Keep: • Concurrency model • Space-efficiency for short documents • Performance ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image19.png){width="5.0in" height="4.298611111111111in"}
 
 
 
@@ -1254,7 +1254,7 @@ and then you can also continue using that memory storage model that I showed you
 
 
 
-![New posting list encoding DoclD, termFr 1 DoclD, termF 1 DoclD, termF Position, Pa oad Position, Pa ad, Position • Store TF instead of repeating the same DoclD Position, Pa oad • Store DoclD;TF pairs separately from position/payloads • find a way to synchronously decode the two streams without storing a pointer for each posting (expensive) ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image20.png){width="5.0in" height="3.5104166666666665in"}
+![New posting list encoding DoclD, termFr 1 DoclD, termF 1 DoclD, termF Position, Pa oad Position, Pa ad, Position • Store TF instead of repeating the same DoclD Position, Pa oad • Store DoclD;TF pairs separately from position/payloads • find a way to synchronously decode the two streams without storing a pointer for each posting (expensive) ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image20.png){width="5.0in" height="3.5069444444444446in"}
 
 so what you seen us and what we are going to do in Earlybird 2 ,we want to store them in separate data structures and separate streams and the upper one is basically what we talked , these yellow boxes is basically one integer and it contains the dock IDs before, but now it may actually contain the term frequency instead of the position for the 8 bits ,and all the positions and payloads can be stored on a separate data structure where for each posting we can have vary length bytes here
 
@@ -1346,7 +1346,7 @@ spectra leucine
 
 
 
-![New posting list encoding Slice header • Header contains: • Back-pointer to previous slice (as before) • Skip list • Slice id ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image22.png){width="5.0in" height="3.9895833333333335in"}
+![New posting list encoding Slice header • Header contains: • Back-pointer to previous slice (as before) • Skip list • Slice id ](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image22.png){width="5.0in" height="3.9930555555555554in"}
 
 
 
@@ -1450,7 +1450,7 @@ complicated reasons
 
 
 
-![](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image23.png){width="5.0in" height="3.3229166666666665in"}
+![](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image23.png){width="5.0in" height="3.326388888888889in"}
 
 
 
@@ -1584,7 +1584,7 @@ almost not noticeable and that is pretty
 
 much it
 
-![](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image23.png){width="5.0in" height="3.3229166666666665in"}
+![](../../media/Stream^JSearch-Twitter-Search-Search-twitter-image23.png){width="5.0in" height="3.326388888888889in"}
 
 
 

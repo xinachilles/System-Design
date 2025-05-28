@@ -50,7 +50,7 @@ First, using AWS Cloud9, you will modify an AWS CloudFormation template to build
 
 *Diagram: The diagram below is a visual of the previous steps.*
 
-![Lab Architecture](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image1.png){width="6.0in" height="2.90625in"}
+![Lab Architecture](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image1.png){width="6.0in" height="2.9097222222222223in"}
 
 ## Start lab
 
@@ -476,7 +476,7 @@ console explore the stack events.
 1.  When the status of the *Create Stack* job shows **CREATE_COMPLETE**, on the **Outputs** tab, launch the URL shown on another browser tab.
 2.  A webpage displaying a time-out error is expected to appear with the following message: **"This site can't be reached"**.
 
-![Website load failure](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image3.png){width="6.0in" height="2.5520833333333335in"}
+![Website load failure](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image3.png){width="6.0in" height="2.5555555555555554in"}
 
 *Image: Shows an example of **this site can't be reached** error message.*
 

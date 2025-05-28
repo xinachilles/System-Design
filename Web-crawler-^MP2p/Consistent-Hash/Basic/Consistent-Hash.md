@@ -6,7 +6,7 @@ Modified: 2020-12-21 17:26:58 -0600
 
 ---
 
-![Consistent Hashing 一 个 简 单 的 一 致 性 Hash 算 法 ， 将 key 模 一 个 很 大 的 数 ， 比 如 360 · 将 360 分 配 给 n 台 机 器 ， 每 个 机 器 负 责 一 段 区 间 · 区 间 分 配 信 息 记 录 为 一 张 表 存 在 Web Server 上 · 新 加 一 台 机 器 的 时 候 ， 在 表 中 选 择 一 个 位 置 插 入 ， 匀 走 相 邻 两 台 机 器 的 一 部 分 数 据 · 比 如 n 从 2 变 化 到 3 ， 只 有 1 / 3 的 数 据 移 动 DBI: DBO: DBI: 180 ～ 359 DBO: 0 ～ 179 240 、 359 0 、 1 19 DB2: 120 ～ 239 禁 止 录 像 与 传 播 录 像 ， 否 则 将 追 究 法 律 责 任 和 经 济 赔 第 44 页 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image1.png){width="5.0in" height="2.8020833333333335in"}
+![Consistent Hashing 一 个 简 单 的 一 致 性 Hash 算 法 ， 将 key 模 一 个 很 大 的 数 ， 比 如 360 · 将 360 分 配 给 n 台 机 器 ， 每 个 机 器 负 责 一 段 区 间 · 区 间 分 配 信 息 记 录 为 一 张 表 存 在 Web Server 上 · 新 加 一 台 机 器 的 时 候 ， 在 表 中 选 择 一 个 位 置 插 入 ， 匀 走 相 邻 两 台 机 器 的 一 部 分 数 据 · 比 如 n 从 2 变 化 到 3 ， 只 有 1 / 3 的 数 据 移 动 DBI: DBO: DBI: 180 ～ 359 DBO: 0 ～ 179 240 、 359 0 、 1 19 DB2: 120 ～ 239 禁 止 录 像 与 传 播 录 像 ， 否 则 将 追 究 法 律 责 任 和 经 济 赔 第 44 页 ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image1.png){width="5.0in" height="2.798611111111111in"}
 
 
 
@@ -48,19 +48,19 @@ Modified: 2020-12-21 17:26:58 -0600
 
 
 
-![i Notice 2A64fi, Have you met this question in a real interview? Yes Example create (lee, 3) addMachine(1) [3, 41, gø] getMachineIdByHashCode (4) addMachine(2) [11, 55, 831 getMachineIdByHashCode (61) getMachineIdByHashCode (91) ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image3.png){width="4.96875in" height="5.4375in"}
+![i Notice 2A64fi, Have you met this question in a real interview? Yes Example create (lee, 3) addMachine(1) [3, 41, gø] getMachineIdByHashCode (4) addMachine(2) [11, 55, 831 getMachineIdByHashCode (61) getMachineIdByHashCode (91) ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image3.png){width="4.965277777777778in" height="5.4375in"}
 
 
 
-![public class Solution { public int n, k; public Set<lnteger» ids null; public Map<lnteger, List<lnteger» machines // @param n a positive integer // @param k a positive integer // @return a Solution object getMachi neldByHashCode = null; public static Solution create(int n, int k) { // Write your code here Solution solution new Solution(); solution.n = n; solution. k solution. ids new solution. machines new HashMap<Integer, return solution; // @param machine_id an integer // @return a list of shard ids public List<lnteger» addMachine(int machine_id) { // Write your code here Random ra -new Random(); List<lnteger> random_nums = new for (int i int index ra.nextlnt(n); while (ids. contains(index)) index ra.nextlnt(n); ids . add(index); random_nums. add(i ndex) ; Coll ect ions. ; machines. random_nums); return random---nums; ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image4.png){width="5.0in" height="5.072916666666667in"}
+![public class Solution { public int n, k; public Set<lnteger» ids null; public Map<lnteger, List<lnteger» machines // @param n a positive integer // @param k a positive integer // @return a Solution object getMachi neldByHashCode = null; public static Solution create(int n, int k) { // Write your code here Solution solution new Solution(); solution.n = n; solution. k solution. ids new solution. machines new HashMap<Integer, return solution; // @param machine_id an integer // @return a list of shard ids public List<lnteger» addMachine(int machine_id) { // Write your code here Random ra -new Random(); List<lnteger> random_nums = new for (int i int index ra.nextlnt(n); while (ids. contains(index)) index ra.nextlnt(n); ids . add(index); random_nums. add(i ndex) ; Coll ect ions. ; machines. random_nums); return random---nums; ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image4.png){width="5.0in" height="5.076388888888889in"}
 
 
 
-![// @param hashcode an integer // @return a machine id public int getMachineIdByHashCode(int hashcode) { // Write your code here int distance n + 1; int machine_id Ø; for (Map. Entry<lnteger, entry : machines. entrySet()) { int key = entry .getKey(); List<lnteger> random_nums entry.getVa1ueC); for (Integer num . random_nums) { int d num - hashcode; if (d < 0) if Cd < distance) { distance = d; machine_id key; return ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image5.png){width="5.0in" height="3.0729166666666665in"}
+![// @param hashcode an integer // @return a machine id public int getMachineIdByHashCode(int hashcode) { // Write your code here int distance n + 1; int machine_id Ø; for (Map. Entry<lnteger, entry : machines. entrySet()) { int key = entry .getKey(); List<lnteger> random_nums entry.getVa1ueC); for (Integer num . random_nums) { int d num - hashcode; if (d < 0) if Cd < distance) { distance = d; machine_id key; return ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image5.png){width="5.0in" height="3.0694444444444446in"}
 
 
 
-![](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image6.png){width="5.0in" height="2.71875in"}
+![](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image6.png){width="5.0in" height="2.7152777777777777in"}
 
 
 
@@ -138,7 +138,7 @@ c4 is for 14 to 11
 
 
 
-![](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image10.png){width="1.4270833333333333in" height="2.3229166666666665in"}
+![](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Consistent-Hash-image10.png){width="1.4305555555555556in" height="2.3194444444444446in"}
 
 
 

@@ -29,11 +29,11 @@ Facts
 
 
 
-![• Dockerfile: used to build Docker image • Image: file for Docker containers at runtime • Registry: version control system for Docker images (centralized image repository) • Container: runnable instance of image • Host: machine that runs (or hosts) containers ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image1.png){width="5.0in" height="2.03125in"}
+![• Dockerfile: used to build Docker image • Image: file for Docker containers at runtime • Registry: version control system for Docker images (centralized image repository) • Container: runnable instance of image • Host: machine that runs (or hosts) containers ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image1.png){width="5.0in" height="2.0277777777777777in"}
 
 
 
-![Configuration Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. What are containers? 111b Code Dependencies (environmental consistency) Runtime engine Containers are a method of operating system virtualization that enables you to run an application and its dependencies in resource-isolated processes. Using containers, you can easily package an application's code, configurations, such as environmental settings, and dependencies into easy- to-use building blocks that deliver environmental consistency, operational efficiency, developer productivity, and version control. ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image2.png){width="5.0in" height="2.9479166666666665in"}
+![Configuration Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. What are containers? 111b Code Dependencies (environmental consistency) Runtime engine Containers are a method of operating system virtualization that enables you to run an application and its dependencies in resource-isolated processes. Using containers, you can easily package an application's code, configurations, such as environmental settings, and dependencies into easy- to-use building blocks that deliver environmental consistency, operational efficiency, developer productivity, and version control. ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image2.png){width="5.0in" height="2.951388888888889in"}
 
 
 
@@ -49,7 +49,7 @@ Facts
 
 
 
-![App Bins/ Libs os ed, but priate, More info Also note how App 2a, App 2b, and App 2c followed suit with separate bins and libs. Host OS ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image6.png){width="5.0in" height="2.4270833333333335in"}
+![App Bins/ Libs os ed, but priate, More info Also note how App 2a, App 2b, and App 2c followed suit with separate bins and libs. Host OS ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image6.png){width="5.0in" height="2.423611111111111in"}
 
 
 
@@ -61,7 +61,7 @@ Facts
 
 
 
-![CI/CD workflow on Docker DevOps Engineer Docker push (certified base images) Docker Hub or private regist Docker pull Version Control Commit to Master (including Dockerfile) Commit reproduction environment Hook Pull code Developer 0 2020 Amazon Web Services, Inc- or its Affiliates. All rights reserved. Continuous Integration Server Docker---acct/app : VI . 1 Docker Hub or private regist Docker pull QA Docker run Docker---acct/app : VI . 1 Instance ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image9.png){width="5.0in" height="2.4479166666666665in"}
+![CI/CD workflow on Docker DevOps Engineer Docker push (certified base images) Docker Hub or private regist Docker pull Version Control Commit to Master (including Dockerfile) Commit reproduction environment Hook Pull code Developer 0 2020 Amazon Web Services, Inc- or its Affiliates. All rights reserved. Continuous Integration Server Docker---acct/app : VI . 1 Docker Hub or private regist Docker pull QA Docker run Docker---acct/app : VI . 1 Instance ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image9.png){width="5.0in" height="2.451388888888889in"}
 
 
 
@@ -91,11 +91,11 @@ what the relationship between docker and continer?
 
 
 
-![Summary Docker is a platform that utilizes container technology to package, distribute, and run applications consistently across different environments. Facts • Containers are lightweight, standalone, executable software packages that encapsulate an application, its dependencies, libraries, and runtime in a consistent environment. This ensures that the application runs uniformly, regardless of where the container is deployed. Docker is a tool designed to facilitate the creation, deployment, and execution of applications using containers. It provides a comprehensive ecosystem around container management. • Docker uses its own containerization technology but is often used synonymously with containers due to its popularity and widespread adoption. • The Docker Engine is responsible for running containers. It takes the container images (created from Dockerfiles) and instantiates them as containers. Docker Hub is a registry service where users can share and pull container images, further emphasizing Docker's role in the container ecosystem. • While Docker is one of the most popular container platforms, there are others like Podman, rkt, and LXC. However, Docker's user-friendly CLI, API, and extensive documentation have made it a go-to choice for many developers and operations teams. G Rege ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image12.png){width="5.0in" height="4.510416666666667in"}
+![Summary Docker is a platform that utilizes container technology to package, distribute, and run applications consistently across different environments. Facts • Containers are lightweight, standalone, executable software packages that encapsulate an application, its dependencies, libraries, and runtime in a consistent environment. This ensures that the application runs uniformly, regardless of where the container is deployed. Docker is a tool designed to facilitate the creation, deployment, and execution of applications using containers. It provides a comprehensive ecosystem around container management. • Docker uses its own containerization technology but is often used synonymously with containers due to its popularity and widespread adoption. • The Docker Engine is responsible for running containers. It takes the container images (created from Dockerfiles) and instantiates them as containers. Docker Hub is a registry service where users can share and pull container images, further emphasizing Docker's role in the container ecosystem. • While Docker is one of the most popular container platforms, there are others like Podman, rkt, and LXC. However, Docker's user-friendly CLI, API, and extensive documentation have made it a go-to choice for many developers and operations teams. G Rege ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image12.png){width="5.0in" height="4.506944444444445in"}
 
 
 
-![Associate 1) Match the container terminology to the correct description. e Dockerfile -File used to build Docker image e Image -File for Docker containers at runtime e Registry -Version control system for Docker images (centralized repository) e Container -Runnable instance of an image e Host -Machine that containers are run on ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image13.png){width="5.0in" height="1.8020833333333333in"}
+![Associate 1) Match the container terminology to the correct description. e Dockerfile -File used to build Docker image e Image -File for Docker containers at runtime e Registry -Version control system for Docker images (centralized repository) e Container -Runnable instance of an image e Host -Machine that containers are run on ](../../../media/AWS-DevOps-Module-6-21-Deploying-Applications-with-Docker-image13.png){width="5.0in" height="1.8055555555555556in"}
 
 
 

@@ -46,15 +46,15 @@ Facts
 
 
 
-![Production phase In the production phase, a strategy, such as A/B testing or canary analysis, is used to test the new application version. In A/B testing, the new application version is deployed to a small percentage of production servers and tested for user feedback. Gradually, depending on how well the new application is received by the users, the deployment is increased to span all production servers. ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image1.png){width="5.0in" height="1.8229166666666667in"}
+![Production phase In the production phase, a strategy, such as A/B testing or canary analysis, is used to test the new application version. In A/B testing, the new application version is deployed to a small percentage of production servers and tested for user feedback. Gradually, depending on how well the new application is received by the users, the deployment is increased to span all production servers. ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image1.png){width="5.0in" height="1.8263888888888888in"}
 
 
 
-![Testing terminology: Match the types of testing (dragging and dropping) with the appropriate description. "Submit" when you're finished to see how well you've done. Unit testing Integration testing Fault tolerance testing Load testing Synthetic testing Smallest units individually tested Testing combined units and their interactions How system handles component failures Functionality tests under heavy load Testing to understand the user's experience ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image2.png){width="5.0in" height="4.09375in"}
+![Testing terminology: Match the types of testing (dragging and dropping) with the appropriate description. "Submit" when you're finished to see how well you've done. Unit testing Integration testing Fault tolerance testing Load testing Synthetic testing Smallest units individually tested Testing combined units and their interactions How system handles component failures Functionality tests under heavy load Testing to understand the user's experience ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image2.png){width="5.0in" height="4.097222222222222in"}
 
 
 
-![Unit tests and test-driven development (TDD) Unit testing and TDD go together. There are multiple benefits to TDD, but having a robust set of unit tests for the code is the most beneficial of all. This aligns with the recommended practice of creating the bull< of tests (70%) as unit tests. These are some testing options that can be performed predeployment. Integration tests Integration tests: • Test interaction between units or modules • Perform after unit testing and before system testing Here are some of the approaches. To learn more choose each hotspot. ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image3.png){width="5.0in" height="3.0520833333333335in"}
+![Unit tests and test-driven development (TDD) Unit testing and TDD go together. There are multiple benefits to TDD, but having a robust set of unit tests for the code is the most beneficial of all. This aligns with the recommended practice of creating the bull< of tests (70%) as unit tests. These are some testing options that can be performed predeployment. Integration tests Integration tests: • Test interaction between units or modules • Perform after unit testing and before system testing Here are some of the approaches. To learn more choose each hotspot. ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image3.png){width="5.0in" height="3.048611111111111in"}
 
 
 
@@ -66,7 +66,7 @@ Facts
 
 
 
-![Top down Testing starts from the top-level module (for example, GUI, and then subsequent modules are tested). Top down dule 6 ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image6.png){width="5.0in" height="2.5729166666666665in"}
+![Top down Testing starts from the top-level module (for example, GUI, and then subsequent modules are tested). Top down dule 6 ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image6.png){width="5.0in" height="2.576388888888889in"}
 
 
 
@@ -74,7 +74,7 @@ Facts
 
 
 
-![Fault tolerance testing This type of testing is recommended best practice for mission-critical applications. It can test how your application handles corner cases. When AWS is the target production environment for the application you've developed, some specific test practices provide insights into how the system will handle corner cases, such as component failures. AWS offers many options for building fault-tolerant systems. Some services are inherently fault- tolerant, such as: Amazon S3 Amazon DynamoDB Amazon SimpleDB Amazon Simple Queue Service (Amazon SQS) Amazon Route 53 Amazon CloudFront ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image8.png){width="5.0in" height="3.53125in"}
+![Fault tolerance testing This type of testing is recommended best practice for mission-critical applications. It can test how your application handles corner cases. When AWS is the target production environment for the application you've developed, some specific test practices provide insights into how the system will handle corner cases, such as component failures. AWS offers many options for building fault-tolerant systems. Some services are inherently fault- tolerant, such as: Amazon S3 Amazon DynamoDB Amazon SimpleDB Amazon Simple Queue Service (Amazon SQS) Amazon Route 53 Amazon CloudFront ](../../../media/AWS-DevOps-Module-9-30-Tests--Unit,-Integration,-Fault-Tolerance,-Load,-and-Synthetic-image8.png){width="5.0in" height="3.5277777777777777in"}
 
 
 

@@ -6,7 +6,7 @@ Modified: 2023-10-08 11:09:45 -0600
 
 ---
 
-![Lab 1 application requirements Functional requirements aws training and ---y certification • Allow a user to create a profile, add a bookmark to a data store for their own access, and recall the bookmark from the application • Include a simple UI with sign-in functionality that team members can use to test the functionality without knowledge of the backend Technical requirements • Use the AWS serverless stack • Allow the front end to be deployed separately from the backend Developer tools • AWS Cloud9 IDE • AWS SAM and AWS SAM CLI • Amplify ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab1-image1.png){width="5.0in" height="2.6979166666666665in"}
+![Lab 1 application requirements Functional requirements aws training and ---y certification • Allow a user to create a profile, add a bookmark to a data store for their own access, and recall the bookmark from the application • Include a simple UI with sign-in functionality that team members can use to test the functionality without knowledge of the backend Technical requirements • Use the AWS serverless stack • Allow the front end to be deployed separately from the backend Developer tools • AWS Cloud9 IDE • AWS SAM and AWS SAM CLI • Amplify ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab1-image1.png){width="5.0in" height="2.6944444444444446in"}
 
 
 
@@ -16,7 +16,7 @@ Modified: 2023-10-08 11:09:45 -0600
 
 
 
-![Front-end stack Vue UI (SPA) AWS Amplify User Amazon Cognito Backend stack Create Bookmark function {Amazon API Gateway getBookmark function Amazon DynamoDB )21 Amazon Web Services, Inc. or its Affiliates. All rights reserved. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab1-image3.png){width="5.0in" height="2.5520833333333335in"}
+![Front-end stack Vue UI (SPA) AWS Amplify User Amazon Cognito Backend stack Create Bookmark function {Amazon API Gateway getBookmark function Amazon DynamoDB )21 Amazon Web Services, Inc. or its Affiliates. All rights reserved. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab1-image3.png){width="5.0in" height="2.5555555555555554in"}
 
 
 

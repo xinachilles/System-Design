@@ -43,7 +43,7 @@ Facts
 
 
 
-![Relationships across teams are vital: without cross-team communication and collaboration, processes are likely to fail. Teams must collaborate with each other and get involved in the development and delivery process. All technical team members should have experience with the processes and tools involved in the development pipeline. To learn more, choose each hotspot. Continuous integration Infrastructure as code Continuous delivery Monitoring and logging Microservices Communication and collaboration ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image3.png){width="5.0in" height="3.71875in"}
+![Relationships across teams are vital: without cross-team communication and collaboration, processes are likely to fail. Teams must collaborate with each other and get involved in the development and delivery process. All technical team members should have experience with the processes and tools involved in the development pipeline. To learn more, choose each hotspot. Continuous integration Infrastructure as code Continuous delivery Monitoring and logging Microservices Communication and collaboration ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image3.png){width="5.0in" height="3.7222222222222223in"}
 
 
 
@@ -51,7 +51,7 @@ Facts
 
 
 
-![Continuous delivery Continuous delivery is a software development practice whereby code changes are automatically built, tested, and prepared for a release to production. It expands upon continuous integration by deploying all code changes to a testing environment, production environment, or both after the build stage. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image5.png){width="5.0in" height="3.5729166666666665in"}
+![Continuous delivery Continuous delivery is a software development practice whereby code changes are automatically built, tested, and prepared for a release to production. It expands upon continuous integration by deploying all code changes to a testing environment, production environment, or both after the build stage. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image5.png){width="5.0in" height="3.576388888888889in"}
 
 
 
@@ -63,11 +63,11 @@ Facts
 
 
 
-![Monitoring and logging Monitoring and Logging - Companies monitor metrics and logs to see how application and infrastructure performance impacts the experience of their product's user. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image8.png){width="5.0in" height="2.7395833333333335in"}
+![Monitoring and logging Monitoring and Logging - Companies monitor metrics and logs to see how application and infrastructure performance impacts the experience of their product's user. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image8.png){width="5.0in" height="2.736111111111111in"}
 
 
 
-![Communication and collaboration Increased communication and collaboration in an organization is one of the key cultural aspects of DevOps. The use of DevOps tooling and automation of the software delivery process establishes collaboration by physically bringing together the workflows and responsibilities of development and operations. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image9.png){width="5.0in" height="3.8645833333333335in"}
+![Communication and collaboration Increased communication and collaboration in an organization is one of the key cultural aspects of DevOps. The use of DevOps tooling and automation of the software delivery process establishes collaboration by physically bringing together the workflows and responsibilities of development and operations. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image9.png){width="5.0in" height="3.861111111111111in"}
 
 
 
@@ -75,19 +75,19 @@ Facts
 
 
 
-![Version control AWS CodeCommit: Version control service that enables you to privately store and manage Git repositories in the AWS Cloud. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image11.png){width="5.0in" height="1.3020833333333333in"}
+![Version control AWS CodeCommit: Version control service that enables you to privately store and manage Git repositories in the AWS Cloud. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image11.png){width="5.0in" height="1.2986111111111112in"}
 
 
 
-![CI/CD AWS CodePipeline: Continuous delivery service that enables you to model, visualize, and automate the steps required to release your software. AWS CodeBuild: Fully managed build service that compiles your source code, runs unit tests, and produces artifacts that are ready to deploy. AWS CodeDeploy: Deployment service that enables developers to automate the deployment of applications to instances and to update the applications as required. AWS CodeStar: Quickly develop, build, and deploy applications on AWS. AWS Cloud9: Cloud-based integrated development environment (IDE) that you use to write, run, and debug code. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image12.png){width="5.0in" height="3.0520833333333335in"}
+![CI/CD AWS CodePipeline: Continuous delivery service that enables you to model, visualize, and automate the steps required to release your software. AWS CodeBuild: Fully managed build service that compiles your source code, runs unit tests, and produces artifacts that are ready to deploy. AWS CodeDeploy: Deployment service that enables developers to automate the deployment of applications to instances and to update the applications as required. AWS CodeStar: Quickly develop, build, and deploy applications on AWS. AWS Cloud9: Cloud-based integrated development environment (IDE) that you use to write, run, and debug code. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image12.png){width="5.0in" height="3.048611111111111in"}
 
 
 
-![Microservices Amazon Elastic Container Service (Amazon ECS): Highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster of Amazon EC2 instances. AWS Lambda: Run code without provisioning or managing servers. Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image13.png){width="5.0in" height="2.1770833333333335in"}
+![Microservices Amazon Elastic Container Service (Amazon ECS): Highly scalable, fast, container management service that makes it easy to run, stop, and manage Docker containers on a cluster of Amazon EC2 instances. AWS Lambda: Run code without provisioning or managing servers. Lambda takes care of everything required to run and scale your code with high availability. You can set up your code to automatically trigger from other AWS services or call it directly from any web or mobile app. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image13.png){width="5.0in" height="2.1805555555555554in"}
 
 
 
-![Infrastructure as code AWS CloudFormation: Create and provision AWS infrastructure deployments predictably and repeatedly. AWS CloudFormation enables you to use a template file to create and delete a collection of resources together as a single unit (a stack). AWS Elastic Beanstalk: Quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications. AWS Elastic Beanstalk automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring. AWS OpsWorks: Create and manage stacks and applications. You can provision AWS resources, manage their configuration, deploy applications to those resources, and monitor their health. AWS Systems Manager: Provides a unified user interface so you can view operational data from multiple AWS services and enables you to automate operational tasks across your AWS resources. AWS Config: Provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships have changed over time. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image14.png){width="5.0in" height="4.010416666666667in"}
+![Infrastructure as code AWS CloudFormation: Create and provision AWS infrastructure deployments predictably and repeatedly. AWS CloudFormation enables you to use a template file to create and delete a collection of resources together as a single unit (a stack). AWS Elastic Beanstalk: Quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications. AWS Elastic Beanstalk automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring. AWS OpsWorks: Create and manage stacks and applications. You can provision AWS resources, manage their configuration, deploy applications to those resources, and monitor their health. AWS Systems Manager: Provides a unified user interface so you can view operational data from multiple AWS services and enables you to automate operational tasks across your AWS resources. AWS Config: Provides a detailed view of the resources associated with your AWS account, including how they are configured, how they are related to one another, and how the configurations and their relationships have changed over time. ](../../../media/AWS-DevOps-Module-1-1-Foundations-for-DevOps-image14.png){width="5.0in" height="4.013888888888889in"}
 
 
 

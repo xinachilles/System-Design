@@ -46,7 +46,7 @@ Eventual Consistency - keep consistency between different devices
 
 
 
-![文 件 存 储 服 务 核 心 子 系 统 元 数 据 服 务 通 知 服 务 ](../../media/File-System-Drop-box-Summary--ACE-image4.png){width="5.0in" height="3.03125in"}
+![文 件 存 储 服 务 核 心 子 系 统 元 数 据 服 务 通 知 服 务 ](../../media/File-System-Drop-box-Summary--ACE-image4.png){width="5.0in" height="3.0277777777777777in"}
 
 1.  File storage , blob storage, chuck service
 2.  Metadata
@@ -64,13 +64,13 @@ Blob storage : hash - > block
 
 
 
-![文 件 存 储 服 务 抽 象 (hash, block) SHA-256 Max 4 、 1B Chunk ](../../media/File-System-Drop-box-Summary--ACE-image5.png){width="5.0in" height="3.6770833333333335in"}
+![文 件 存 储 服 务 抽 象 (hash, block) SHA-256 Max 4 、 1B Chunk ](../../media/File-System-Drop-box-Summary--ACE-image5.png){width="5.0in" height="3.6805555555555554in"}
 
 
 
-![田 考 题 文 件 更 新 时 应 该 如 何 存 储 ？ 改 动 较 大 ． > 存 储 完 整 文 件 改 动 较 小 · > 存 储 Diff ](../../media/File-System-Drop-box-Summary--ACE-image6.png){width="5.0in" height="5.364583333333333in"}
+![田 考 题 文 件 更 新 时 应 该 如 何 存 储 ？ 改 动 较 大 ． > 存 储 完 整 文 件 改 动 较 小 · > 存 储 Diff ](../../media/File-System-Drop-box-Summary--ACE-image6.png){width="5.0in" height="5.361111111111111in"}
 
-![Content-addressable Storage (hash, block) SHA-256 Max4MBChunk ](../../media/File-System-Drop-box-Summary--ACE-image7.png){width="5.0in" height="2.78125in"}
+![Content-addressable Storage (hash, block) SHA-256 Max4MBChunk ](../../media/File-System-Drop-box-Summary--ACE-image7.png){width="5.0in" height="2.7777777777777777in"}
 
 
 
@@ -94,7 +94,7 @@ Metadata service
 
 
 
-![文 件 分 段 上 传 ， 分 段 存 储 有 什 么 好 处 ？ 上 传 成 功 率 最 大 程 度 避 免 反 复 存 储 改 动 文 件 时 只 需 要 更 新 少 数 分 段 ](../../media/File-System-Drop-box-Summary--ACE-image9.png){width="5.0in" height="3.4895833333333335in"}
+![文 件 分 段 上 传 ， 分 段 存 储 有 什 么 好 处 ？ 上 传 成 功 率 最 大 程 度 避 免 反 复 存 储 改 动 文 件 时 只 需 要 更 新 少 数 分 段 ](../../media/File-System-Drop-box-Summary--ACE-image9.png){width="5.0in" height="3.486111111111111in"}
 
 
 
@@ -102,7 +102,7 @@ File history --- file journal -- like change log, each change has different jour
 
 
 
-![File Journal Table Key -> (Namespace ID, Journal ID) Namespace ID Relative Path Journal ID Blocklist ](../../media/File-System-Drop-box-Summary--ACE-image10.png){width="5.0in" height="2.34375in"}
+![File Journal Table Key -> (Namespace ID, Journal ID) Namespace ID Relative Path Journal ID Blocklist ](../../media/File-System-Drop-box-Summary--ACE-image10.png){width="5.0in" height="2.3402777777777777in"}
 
 Journal id will auto increase, like a version number
 
@@ -121,7 +121,7 @@ Block list store the list of hash
 
 
 
-![Namespace Table Namespace ID Namespace Type Owner ID ](../../media/File-System-Drop-box-Summary--ACE-image11.png){width="5.0in" height="2.3229166666666665in"}
+![Namespace Table Namespace ID Namespace Type Owner ID ](../../media/File-System-Drop-box-Summary--ACE-image11.png){width="5.0in" height="2.3194444444444446in"}
 
 If namespace is a shared type --- list of owner
 
@@ -139,14 +139,14 @@ upload file:
 
 
 
-![Metaservel Client commit(nsid=l, "Ivideo.avi", ](../../media/File-System-Drop-box-Summary--ACE-image13.png){width="5.0in" height="3.53125in"}
+![Metaservel Client commit(nsid=l, "Ivideo.avi", ](../../media/File-System-Drop-box-Summary--ACE-image13.png){width="5.0in" height="3.5277777777777777in"}
 
 
 
 1.  client talk to meta data service said: I want to upload video.avi and the hash list is "h1, h2,h3,h4 " and name space id = 1 (file id = 1)
 2.  Meta service will check if service already have h1.... H4, if no send a new block -- nb
 
-![Client h2), [bl, b21) vow' store([h3, h4], [b3, b4]) ](../../media/File-System-Drop-box-Summary--ACE-image14.png){width="5.0in" height="5.052083333333333in"}
+![Client h2), [bl, b21) vow' store([h3, h4], [b3, b4]) ](../../media/File-System-Drop-box-Summary--ACE-image14.png){width="5.0in" height="5.048611111111111in"}
 
 
 
@@ -180,7 +180,7 @@ Meta data find namespace 1 has new update h1,h2,h3,h4
 
 Then client talk to block server to fetch the new update h1,,, h4
 
-![通 知 服 务 通 过 Websocket 通 知 需 要 进 行 同 步 的 客 户 端 ](../../media/File-System-Drop-box-Summary--ACE-image18.png){width="5.0in" height="3.96875in"}
+![通 知 服 务 通 过 Websocket 通 知 需 要 进 行 同 步 的 客 户 端 ](../../media/File-System-Drop-box-Summary--ACE-image18.png){width="5.0in" height="3.9722222222222223in"}
 
 
 
@@ -190,7 +190,7 @@ When metadata service found new update. It will ping client via WebSocket
 
 
 
-![](../../media/File-System-Drop-box-Summary--ACE-image19.png){width="5.0in" height="3.15625in"}
+![](../../media/File-System-Drop-box-Summary--ACE-image19.png){width="5.0in" height="3.1527777777777777in"}
 
 
 
@@ -204,7 +204,7 @@ High level
 
 
 
-![](../../media/File-System-Drop-box-Summary--ACE-image21.png){width="5.0in" height="4.489583333333333in"}![](../../media/File-System-Drop-box-Summary--ACE-image22.png){width="5.0in" height="3.5104166666666665in"}
+![](../../media/File-System-Drop-box-Summary--ACE-image21.png){width="5.0in" height="4.493055555555555in"}![](../../media/File-System-Drop-box-Summary--ACE-image22.png){width="5.0in" height="3.5069444444444446in"}
 
 
 

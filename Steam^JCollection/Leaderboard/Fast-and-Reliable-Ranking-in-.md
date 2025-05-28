@@ -32,7 +32,7 @@ However, up-to-date player ranking is not an easy problem to solve, not for Tomo
 
 **How do you calculate a rank?**
 
-![kaz (score = 123) baz (score - - 1000) foo (score = 5) alex (score = 500) bar (score = 20) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image3.png){width="2.7708333333333335in" height="1.1354166666666667in"}
+![kaz (score = 123) baz (score - - 1000) foo (score = 5) alex (score = 500) bar (score = 20) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image3.png){width="2.7708333333333335in" height="1.1319444444444444in"}
 
 Figure 3: Each player has a score. How do you calculate their rank?
 
@@ -77,7 +77,7 @@ This Python-based library exposes two methods:
 
 [As player-score pairs are created and updated with the SetScore method, the Code Jam ranking library builds an N-ary tree^1^.]{.mark} For example, let's consider a tertiary tree that [can count the number of players with scores in the range from 0 to 80]{.mark} (Figure 5). The library stores the root node, which holds three numbers, as one entity. Each number corresponds to the number of players with scores in the sub-ranges 0 - 26, 27 - 53 and 54 - 80, respectively. [The root node has a child node for each range, holding in turn three values for players in the sub-ranges of the sub-range.]{.mark} The hierarchy needs four levels to store the number of players for 81 different score values.
 
-![(0-26] (27-53) (54. 1] [27] [28] [291 • 17] [18-261 5] Rank(30) [27-35] [3 (36-38) (39-41] [0-26] [27-53] [54-811 [45-471 [48-501 [51-53) 1301 [33] [34] [351 - 22 ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image5.png){width="2.7708333333333335in" height="1.6145833333333333in"}
+![(0-26] (27-53) (54. 1] [27] [28] [291 • 17] [18-261 5] Rank(30) [27-35] [3 (36-38) (39-41] [0-26] [27-53] [54-811 [45-471 [48-501 [51-53) 1301 [33] [34] [351 - 22 ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image5.png){width="2.7708333333333335in" height="1.6111111111111112in"}
 
 Figure 5: Getting the rank of a score in a tertiary tree.
 
@@ -125,7 +125,7 @@ Kaz load-tested the PoC by using JMeter. He confirmed that the PoC was able to p
 
 But Kaz soon found another issue. As he continued running the test over several minutes, he saw the throughput of the pull queue fluctuate from time to time (Figure 6). Specifically when he kept adding requests to the queue with 200 tasks per second for several minutes, the queue suddenly stopped passing tasks to the backend, and the latency for each task increased dramatically.
 
-![600 400 200 300 • tasks/sec • max latency (sec) transient errors • other errors 1200 900 Elapsed Time (sec) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image6.png){width="5.635416666666667in" height="2.9791666666666665in"}
+![600 400 200 300 • tasks/sec • max latency (sec) transient errors • other errors 1200 900 Elapsed Time (sec) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image6.png){width="5.631944444444445in" height="2.9791666666666665in"}
 
 Figure 6: Performance fluctuation of pull queue.
 
@@ -147,7 +147,7 @@ If there is an error or unexpected shutdown of the loop or the backend instance,
 
 Figure 7 shows the load testing result of the final PoC implementation with Queue Sharding. It effectively minimizes the performance fluctuations in the queues and can sustain 300 updates per second over several hours. Under usual load, each update is applied to Datastore within a few seconds of receiving the request.
 
-![updates's• task• latency (s) txlatency (s) transienterr• other• err ,s---m - 100 100 ل لاسي ١" ابسـ٢ ٢ elapsed time (min) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image7.png){width="5.635416666666667in" height="3.2395833333333335in"}
+![updates's• task• latency (s) txlatency (s) transienterr• other• err ,s---m - 100 100 ل لاسي ١" ابسـ٢ ٢ elapsed time (min) ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image7.png){width="5.631944444444445in" height="3.2430555555555554in"}
 
 Figure 7: Performance Graph of the solution.
 
@@ -216,7 +216,7 @@ The retrieval of rank by users from the frontend is decoupled from rank computat
 
 **Computing the rank for a given score**
 
-![Distribution of Scores into Buckets 0-24 25-49 50-74 75-99 Score ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image8.png){width="5.635416666666667in" height="3.9895833333333335in"}
+![Distribution of Scores into Buckets 0-24 25-49 50-74 75-99 Score ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image8.png){width="5.631944444444445in" height="3.9930555555555554in"}
 
 Figure 8: Distribution of Scores in Buckets.
 
@@ -274,7 +274,7 @@ In all cases, the time for FindRank also depends on rapid retrieval of data (buc
 
 The accuracy of the bucket method depends on how many buckets there are, the rank of the player, and the distribution of the scores. Figure 9 shows results from our study of the accuracy of the rank estimates with different numbers of buckets.
 
-![Variation of Accuracy with Number of Buckets • Rank Top • Rank Top 25% • Rank Top 200 1 cc Number of Buckets ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image9.png){width="5.635416666666667in" height="3.2708333333333335in"}
+![Variation of Accuracy with Number of Buckets • Rank Top • Rank Top 25% • Rank Top 200 1 cc Number of Buckets ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image9.png){width="5.631944444444445in" height="3.2708333333333335in"}
 
 Figure 9: Variation of Accuracy with number of buckets.
 
@@ -284,7 +284,7 @@ The accuracy drops off for highly ranked players, mostly because the law of larg
 
 In the test above, the use of uniformly distributed random numbers, where the cumulative distribution function is linear, favors the use of linear interpolation within the bucket, but the interpolation within buckets works well for any dense distribution of scores. Figure 10 shows the estimated and actual rank for an approximately normal distribution of scores.
 
-![Estimated Rank with Normal Distribution 75 50 25 10 Actual Rank Estimated Rank 90 20 30 40 50 60 70 ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image10.png){width="5.635416666666667in" height="3.5208333333333335in"}
+![Estimated Rank with Normal Distribution 75 50 25 10 Actual Rank Estimated Rank 90 20 30 40 50 60 70 ](../../media/Steam^JCollection-Leaderboard-Fast-and-Reliable-Ranking-in-Google-Datastore-image10.png){width="5.631944444444445in" height="3.5208333333333335in"}
 
 Figure 10: Estimated rank with normal distribution
 

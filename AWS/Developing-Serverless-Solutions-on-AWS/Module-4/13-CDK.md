@@ -35,11 +35,11 @@ Facts
 
 
 
-![Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image2.png){width="3.8854166666666665in" height="2.1354166666666665in"}
+![Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image2.png){width="3.8819444444444446in" height="2.138888888888889in"}
 
 
 
-![Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image3.png){width="3.84375in" height="1.5208333333333333in"}
+![Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image3.png){width="3.8402777777777777in" height="1.5208333333333333in"}
 
 
 
@@ -51,7 +51,7 @@ Facts
 
 
 
-![Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image6.png){width="3.8854166666666665in" height="2.3229166666666665in"}
+![Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image6.png){width="3.8819444444444446in" height="2.3194444444444446in"}
 
 
 
@@ -65,7 +65,7 @@ Facts
 
 
 
-![AWS Cloud Development Kit (AWS CDK), is an open-source software development framework for defining cloud infrastructure as code (laC) with modern programming languages and deploying it through AWS CloudFormation. Use the AWS CDK framework to author AWS CDK projects, which are run to generate CloudFormation templates. The AWS CDK is generally available in JavaScript, TypeScript, Python, Java, C#, and Go (in Developer Preview). ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image9.png){width="5.0in" height="2.1979166666666665in"}
+![AWS Cloud Development Kit (AWS CDK), is an open-source software development framework for defining cloud infrastructure as code (laC) with modern programming languages and deploying it through AWS CloudFormation. Use the AWS CDK framework to author AWS CDK projects, which are run to generate CloudFormation templates. The AWS CDK is generally available in JavaScript, TypeScript, Python, Java, C#, and Go (in Developer Preview). ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image9.png){width="5.0in" height="2.201388888888889in"}
 
 
 
@@ -73,15 +73,15 @@ Facts
 
 
 
-![App Sta c O Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image11.png){width="5.0in" height="3.3020833333333335in"}
+![App Sta c O Application An AWS CDK application is an application written in TypeScript, JavaScript, Python, Java, or C# that uses the AWS CDK to define AWS infrastructure. An application defines one or more stacks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image11.png){width="5.0in" height="3.3055555555555554in"}
 
 
 
-![App Stac Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image12.png){width="5.0in" height="2.4479166666666665in"}
+![App Stac Stacks Stacks (which are equivalent to CloudFormation stacks) contain constructs ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image12.png){width="5.0in" height="2.451388888888889in"}
 
 
 
-![Stac Constructs and resources Each construct defines one or more concrete AWS resources, such as S3 buckets and Lambda functions. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image13.png){width="5.0in" height="2.7604166666666665in"}
+![Stac Constructs and resources Each construct defines one or more concrete AWS resources, such as S3 buckets and Lambda functions. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image13.png){width="5.0in" height="2.7569444444444446in"}
 
 
 
@@ -89,11 +89,11 @@ Facts
 
 
 
-![SYN Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. orm ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image15.png){width="5.0in" height="3.4479166666666665in"}
+![SYN Synthesize The toolkit provides the ability to convert one or more AWS CDK stacks to CloudFormation templates and related assets (a process called synthesis) and to deploy your stacks to an AWS account. orm ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image15.png){width="5.0in" height="3.4444444444444446in"}
 
 
 
-![Deploy The constructs are deployed using CloudFormation. CLI DEP ssets ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image16.png){width="5.0in" height="2.8229166666666665in"}
+![Deploy The constructs are deployed using CloudFormation. CLI DEP ssets ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-13-CDK-image16.png){width="5.0in" height="2.826388888888889in"}
 
 
 

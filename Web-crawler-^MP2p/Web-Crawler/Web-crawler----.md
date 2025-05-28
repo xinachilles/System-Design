@@ -6,7 +6,7 @@ Modified: 2021-01-07 13:08:52 -0600
 
 ---
 
-![DNS Resolver FTP Protocol Seen? RIS Extactor Tag GIF Stats Moddes Mercator Doc FPS URL Fitter Log URL Seen? URL set URL Figure 1: Mercator's main components. ](../../media/Web-crawler-^MP2p-Web-Crawler-Web-crawler-----image1.png){width="5.0in" height="2.34375in"}
+![DNS Resolver FTP Protocol Seen? RIS Extactor Tag GIF Stats Moddes Mercator Doc FPS URL Fitter Log URL Seen? URL set URL Figure 1: Mercator's main components. ](../../media/Web-crawler-^MP2p-Web-Crawler-Web-crawler-----image1.png){width="5.0in" height="2.3402777777777777in"}
 
 
 

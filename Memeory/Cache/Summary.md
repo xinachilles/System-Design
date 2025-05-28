@@ -22,7 +22,7 @@ This is really useful for applications which read the information quickly and si
 
 
 
-![Q) Disadvantage(s): write through • When a new node is created due to failure or scaling, the new node will not cache entries until the entry is updated in the database. Cache-aside in conjunction with write through can mitigate this issue. • Most data written might never be read, which can be minimized with a TTL. ](../../media/Memeory-Cache-Summary-image2.jpg){width="5.0in" height="4.447916666666667in"}
+![Q) Disadvantage(s): write through • When a new node is created due to failure or scaling, the new node will not cache entries until the entry is updated in the database. Cache-aside in conjunction with write through can mitigate this issue. • Most data written might never be read, which can be minimized with a TTL. ](../../media/Memeory-Cache-Summary-image2.jpg){width="5.0in" height="4.451388888888889in"}
 
 
 
@@ -48,7 +48,7 @@ but it will lead to a higher read latency if the a cache miss happen and we need
 
 
 
-![Disadvantage(s): cache-aside • Each cache miss results in three trips, which can cause a noticeable delay. • Data can become stale if it is updated in the database. This issue is mitigated by setting a time-to-live (TTL) which forces an update of the cache entry, or by using write-through. • When a node fails, it is replaced by a new, empty node, increasing latency. ](../../media/Memeory-Cache-Summary-image4.jpg){width="5.0in" height="5.302083333333333in"}
+![Disadvantage(s): cache-aside • Each cache miss results in three trips, which can cause a noticeable delay. • Data can become stale if it is updated in the database. This issue is mitigated by setting a time-to-live (TTL) which forces an update of the cache entry, or by using write-through. • When a node fails, it is replaced by a new, empty node, increasing latency. ](../../media/Memeory-Cache-Summary-image4.jpg){width="5.0in" height="5.298611111111111in"}
 
 
 
@@ -125,7 +125,7 @@ the solution is we send the asyc message or write to log of database and another
 
 
 
-![application san,qca application san,qca binlog asy-axplra ](../../media/Memeory-Cache-Summary-image6.png){width="3.9375in" height="3.1354166666666665in"}
+![application san,qca application san,qca binlog asy-axplra ](../../media/Memeory-Cache-Summary-image6.png){width="3.9375in" height="3.1319444444444446in"}
 
 
 

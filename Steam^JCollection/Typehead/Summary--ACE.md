@@ -44,7 +44,7 @@ The popularity should be update every hour
 
 
 
-![假 设 瓶 颈 服 务 资 源 1 ． 3 资 源 估 算 IBDAU 每 人 每 天 平 均 进 行 10 次 搜 索 每 次 搜 索 发 出 5 次 补 全 请 求 读 写 QPS 读 QPS 一 1B 5 / （ 24 36 闐 ） 、 一 Ok 写 QPS 一 0 / （ 24 36 闐 ） 、 = 120k ](../../media/Steam^JCollection-Typehead-Summary--ACE-image2.png){width="5.0in" height="2.8854166666666665in"}
+![假 设 瓶 颈 服 务 资 源 1 ． 3 资 源 估 算 IBDAU 每 人 每 天 平 均 进 行 10 次 搜 索 每 次 搜 索 发 出 5 次 补 全 请 求 读 写 QPS 读 QPS 一 1B 5 / （ 24 36 闐 ） 、 一 Ok 写 QPS 一 0 / （ 24 36 闐 ） 、 = 120k ](../../media/Steam^JCollection-Typehead-Summary--ACE-image2.png){width="5.0in" height="2.888888888888889in"}
 
 ![0 关 键 词 采 集 计 数 数 据 流 补 全 预 处 理 处 理 补 全 请 求 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image3.png){width="5.0in" height="3.1666666666666665in"}
 
@@ -107,7 +107,7 @@ Keyword/prefix word -> top10 ... A list of top 10 { word/prefix word , score }
 
 
 
-![流 行 指 数 计 算 对 于 每 一 个 关 键 词 新 流 行 指 数 ： 旧 流 行 指 数 * 0 · 99 + 一 分 钟 内 的 访 问 次 数 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image7.png){width="5.0in" height="2.21875in"}
+![流 行 指 数 计 算 对 于 每 一 个 关 键 词 新 流 行 指 数 ： 旧 流 行 指 数 * 0 · 99 + 一 分 钟 内 的 访 问 次 数 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image7.png){width="5.0in" height="2.2222222222222223in"}
 
 
 
@@ -137,7 +137,7 @@ Each node has top 10 node for this prefix
 
 [Hash table solution]{.mark}
 
-![](../../media/Steam^JCollection-Typehead-Summary--ACE-image9.png){width="5.0in" height="5.802083333333333in"}
+![](../../media/Steam^JCollection-Typehead-Summary--ACE-image9.png){width="5.0in" height="5.798611111111111in"}
 
 
 
@@ -181,7 +181,7 @@ For hot word--- we can user master slaver structure
 
 
 
-![思 考 题 用 户 每 打 一 个 字 母 都 发 一 个 Request 吗 ？ 出 现 短 暂 停 顿 时 预 加 载 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image11.png){width="5.0in" height="4.510416666666667in"}
+![思 考 题 用 户 每 打 一 个 字 母 都 发 一 个 Request 吗 ？ 出 现 短 暂 停 顿 时 预 加 载 ](../../media/Steam^JCollection-Typehead-Summary--ACE-image11.png){width="5.0in" height="4.506944444444445in"}
 
 
 
@@ -189,11 +189,11 @@ For hot word--- we can user master slaver structure
 
 
 
-![Autocomplete (Redis) Prefix Top Ten Popular Autocomplete ](../../media/Steam^JCollection-Typehead-Summary--ACE-image12.png){width="5.0in" height="2.6354166666666665in"}
+![Autocomplete (Redis) Prefix Top Ten Popular Autocomplete ](../../media/Steam^JCollection-Typehead-Summary--ACE-image12.png){width="5.0in" height="2.6319444444444446in"}
 
 
 
-![Autocomplete // Request GET /vl/autocomplete?prefix=th // Response keywords: [ "thank" , "thing" , prefetch: { "thea" : "theatre" , ](../../media/Steam^JCollection-Typehead-Summary--ACE-image13.png){width="5.0in" height="5.697916666666667in"}
+![Autocomplete // Request GET /vl/autocomplete?prefix=th // Response keywords: [ "thank" , "thing" , prefetch: { "thea" : "theatre" , ](../../media/Steam^JCollection-Typehead-Summary--ACE-image13.png){width="5.0in" height="5.694444444444445in"}
 
 
 

@@ -26,7 +26,7 @@ Overview of Datadog's architecture: metric sources feed into an intake system, d
 
 
 
-![Pipeline Architecture M.tncs sources PagerOuty etc C •stom.r Custom,er ard fronterd & APIs intake Data Stores Query ](../../media/Metric-Watchdog-datadog-image1.png){width="5.0in" height="2.9895833333333335in"}
+![Pipeline Architecture M.tncs sources PagerOuty etc C •stom.r Custom,er ard fronterd & APIs intake Data Stores Query ](../../media/Metric-Watchdog-datadog-image1.png){width="5.0in" height="2.9930555555555554in"}
 
 
 
@@ -78,7 +78,7 @@ Overview of Datadog's architecture: metric sources feed into an intake system, d
 
 
 
-![Queries We Need to Support DESCRIBE TAGS TAG INDEX TAG INVERTED INDEX POINT STORE What tags are queryable for this metric? Given a time series id, what tags were used? Given some tags and a time range, what were the time series ingested? What are the valUeS Of a time series between two times? ](../../media/Metric-Watchdog-datadog-image5.png){width="5.0in" height="2.7604166666666665in"}
+![Queries We Need to Support DESCRIBE TAGS TAG INDEX TAG INVERTED INDEX POINT STORE What tags are queryable for this metric? Given a time series id, what tags were used? Given some tags and a time range, what were the time series ingested? What are the valUeS Of a time series between two times? ](../../media/Metric-Watchdog-datadog-image5.png){width="5.0in" height="2.7569444444444446in"}
 
 
 
@@ -169,7 +169,7 @@ Put the data in the sorted set can easily find
 
 
 
-![Approximating a distribution ](../../media/Metric-Watchdog-datadog-image7.png){width="5.0in" height="2.8854166666666665in"}
+![Approximating a distribution ](../../media/Metric-Watchdog-datadog-image7.png){width="5.0in" height="2.888888888888889in"}
 
 you can think of the distribution as this curve and
 

@@ -88,7 +88,7 @@ PSP: payment service provider.
 
 10 mins: High Level Architecture
 
-![Payment Grants Accounting Service Integration Online API for PSP A Payment Integration Router File-based Integration API for Bank B PSP A Bank B Area of Focu ](../../media/Payment^JTrade-Payment-Payment-image1.png){width="6.270833333333333in" height="2.46875in"}
+![Payment Grants Accounting Service Integration Online API for PSP A Payment Integration Router File-based Integration API for Bank B PSP A Bank B Area of Focu ](../../media/Payment^JTrade-Payment-Payment-image1.png){width="6.270833333333333in" height="2.4722222222222223in"}
 
 Client (mobile/web) end trip -> frontend webservice ---emit--> trip end event --async--> payment service -> downstream service (PSP(Payment Service Provider), bank, credit cards, etc.)
 

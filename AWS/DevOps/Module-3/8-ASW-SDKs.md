@@ -14,9 +14,9 @@ Modified: 2023-10-22 17:41:12 -0600
 
 
 
-![](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image3.png){width="5.0in" height="4.53125in"}
+![](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image3.png){width="5.0in" height="4.527777777777778in"}
 
-![AWS SDK for Python 3) Create t = bot03. c i e n t ( • Create a Namespace-'AES/EC2 , period-60, Stati , Threshold-70.0. when sen•er• cpu exceeds 70*' . Dimensions-t 'Name': Seconds training and certification Create, configure, and manage AWS services, such as Amazon EC2 and Amazon S3 Client ("low-level") APIs Resource APIs ](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image4.png){width="5.0in" height="3.1145833333333335in"}
+![AWS SDK for Python 3) Create t = bot03. c i e n t ( • Create a Namespace-'AES/EC2 , period-60, Stati , Threshold-70.0. when sen•er• cpu exceeds 70*' . Dimensions-t 'Name': Seconds training and certification Create, configure, and manage AWS services, such as Amazon EC2 and Amazon S3 Client ("low-level") APIs Resource APIs ](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image4.png){width="5.0in" height="3.111111111111111in"}
 
 
 
@@ -24,11 +24,11 @@ Modified: 2023-10-22 17:41:12 -0600
 
 
 
-![AWS SDK for Go package main import ( " gi thub.com/aws/aws-sdk-go/aws" g i thub.com/A"/ayys- go/A"/sessi on g i thub.com/aws/aws-sdk-go/servi ce/codebui 1 d" training and certification Utilities • Amazon S 3 Transfer Manager • Response • Up-to-date AWS API coverage Extensibility // Lists a projects in the region configured in the shared fung main() { // Initialize a session in us-west-2 that the SDK will use to load // credentials from the shared credentials file ---/.aws/credentials. session. .Config{ err Region: aysStr.ingC'us-west-2")) , ](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image6.png){width="5.0in" height="3.0729166666666665in"}
+![AWS SDK for Go package main import ( " gi thub.com/aws/aws-sdk-go/aws" g i thub.com/A"/ayys- go/A"/sessi on g i thub.com/aws/aws-sdk-go/servi ce/codebui 1 d" training and certification Utilities • Amazon S 3 Transfer Manager • Response • Up-to-date AWS API coverage Extensibility // Lists a projects in the region configured in the shared fung main() { // Initialize a session in us-west-2 that the SDK will use to load // credentials from the shared credentials file ---/.aws/credentials. session. .Config{ err Region: aysStr.ingC'us-west-2")) , ](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image6.png){width="5.0in" height="3.0694444444444446in"}
 
 
 
-![AWS SDK FOR PYTHON (BOTO AWS SDK FOR GO 3) AWS SDK FOR JAVASCRIPT The AWS SDK for JavaScript enables you to directly access AWS services from JavaScript code running in the browser. Authenticate users through Facebook, Google, or Login with Amazon using web identity federation. Store application data in Amazon DynamoDB, and save user files to Amazon SS. A single script tag is all you need to use the SDK. No Server Required Direct calls to AWS services mean no server-side code and no need to configure application servers. Simple to Deploy There's no application logic to be processed on the server side, so deploying your web application can be as easy as uploading it to an Amazon S} bucket. Easy to Learn Using nothing but common web standards---HTML, CSS, and JavaScript---you can build full- featured dynamic browser applications. In this example, a series of Node.js modules are used to create and manage IAM account aliases. The Node.js modules use the SDK for JavaScript to manage aliases using these methods of the AWS.IAM client class. ](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image7.png){width="5.0in" height="3.8020833333333335in"}
+![AWS SDK FOR PYTHON (BOTO AWS SDK FOR GO 3) AWS SDK FOR JAVASCRIPT The AWS SDK for JavaScript enables you to directly access AWS services from JavaScript code running in the browser. Authenticate users through Facebook, Google, or Login with Amazon using web identity federation. Store application data in Amazon DynamoDB, and save user files to Amazon SS. A single script tag is all you need to use the SDK. No Server Required Direct calls to AWS services mean no server-side code and no need to configure application servers. Simple to Deploy There's no application logic to be processed on the server side, so deploying your web application can be as easy as uploading it to an Amazon S} bucket. Easy to Learn Using nothing but common web standards---HTML, CSS, and JavaScript---you can build full- featured dynamic browser applications. In this example, a series of Node.js modules are used to create and manage IAM account aliases. The Node.js modules use the SDK for JavaScript to manage aliases using these methods of the AWS.IAM client class. ](../../../media/AWS-DevOps-Module-3-8-ASW-SDKs-image7.png){width="5.0in" height="3.798611111111111in"}
 
 
 

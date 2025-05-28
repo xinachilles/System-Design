@@ -12,7 +12,7 @@ Clipped from : <https://hackernoon.com/building-conclave-a-decentralized-real-ti
 
 
 
-![Author profile picture](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image2.png){width="0.5104166666666666in" height="0.5104166666666666in"}
+![Author profile picture](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image2.png){width="0.5069444444444444in" height="0.5069444444444444in"}
 
 **[@SunnyB](https://hackernoon.com/u/SunnyB)Sun-Li Beatteay**
 
@@ -48,7 +48,7 @@ Keep reading.
 
 Before we get started, I want to give a big shout out to the ragtag team of developers who created Conclave.
 
-![Nitin Savant Elise Olivares Sun-Li Beatteay ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image3.png){width="5.0in" height="2.84375in"}
+![Nitin Savant Elise Olivares Sun-Li Beatteay ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image3.png){width="5.0in" height="2.8472222222222223in"}
 
 What a handsome bunch.
 
@@ -88,7 +88,7 @@ For our project, we defined a text editor as a space where you can **insert** or
 
 For example, with the text "HAT", the first character has a value "H" and a position of 0, "A" has position 1, and "T" has position 2.
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image4.png){width="2.9375in" height="2.09375in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image4.png){width="2.9375in" height="2.0972222222222223in"}
 
 A character can be inserted or deleted based on its positional index. To insert a "C" at the beginning of the text, the operation is insert("C", 0). This insertion causes all the other letters to shift their position to the right by 1.
 
@@ -163,7 +163,7 @@ CRDTs operate by converting each character in the document into a unique object 
 - **value**: which letter the object represents.
 - **position**: [a list of integers that represent the position of the character in the document. This position is relative to the characters around it.]{.mark}
 
-![Character Object siteld value position "skj7-329d" ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image9.png){width="5.0in" height="1.8020833333333333in"}
+![Character Object siteld value position "skj7-329d" ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image9.png){width="5.0in" height="1.8055555555555556in"}
 
 Conversion of letter into character object
 
@@ -195,7 +195,7 @@ Inserting characters between adjacent positions.
 
 This creates a fractional index. "C" has a position of 1, "A" has a position of 2 and "H" has a position of 1.5. In code, we represent this fraction as an array of integers.
 
-![冖 一 一 冖 2 一 冖 3 一 C A T C H A T 冖 一 · 5 一 冖 2 一 一 3 一 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image12.png){width="5.0in" height="2.6145833333333335in"}
+![冖 一 一 冖 2 一 冖 3 一 C A T C H A T 冖 一 · 5 一 冖 2 一 一 3 一 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image12.png){width="5.0in" height="2.6180555555555554in"}
 
 Fractional positions as arrays of integers.
 
@@ -203,13 +203,13 @@ Fractional positions as arrays of integers.
 
 If we go back to our previous example, we can see how CRDTs maintain commutativity and idempotency. The fractional indexes of the characters are included for reference.
 
-![Userl 1 1.5 1.5 Commutativity User2 2 2 2 3 3 3 1.5 2 3 1.5) 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image13.png){width="5.0in" height="2.4895833333333335in"}
+![Userl 1 1.5 1.5 Commutativity User2 2 2 2 3 3 3 1.5 2 3 1.5) 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image13.png){width="5.0in" height="2.4930555555555554in"}
 
 CRDT Commutativity
 
 Using relative positions allows us to be more specific about which letter we are deleting and where it is located. Due to this specificity, commutativity is not an issue.
 
-![Userl 2 2 2 Idempotency User2 3 delete(SH", 1) 3 3 123 2 2 3 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image14.png){width="5.0in" height="2.5104166666666665in"}
+![Userl 2 2 2 Idempotency User2 3 delete(SH", 1) 3 3 123 2 2 3 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image14.png){width="5.0in" height="2.513888888888889in"}
 
 CRDT Idempotency
 
@@ -323,7 +323,7 @@ In this example, the character that is supposed to be deleted has a Site ID of 1
 
 Since we have received a new operation, we again process the deletion buffer. This time, when the deletion operation's character is compared to the version vector, we see that the complement insert has been made. The delete operation can be removed from the buffer and applied.
 
-![Version Vector Peer 1 Peer 2 Delete op - Siteld: 2 - Counter: 6 Peer 2 Insert Char - Siteld: - Counter: 24 Op # 6 Deletion Buffer Process Buffer peer 3 Char - Siteld: 7 - Counter: 24 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image22.png){width="10.083333333333334in" height="5.90625in"}
+![Version Vector Peer 1 Peer 2 Delete op - Siteld: 2 - Counter: 6 Peer 2 Insert Char - Siteld: - Counter: 24 Op # 6 Deletion Buffer Process Buffer peer 3 Char - Siteld: 7 - Counter: 24 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image22.png){width="10.083333333333334in" height="5.909722222222222in"}
 
 **This time the delete operation can be applied by Peer3.**
 

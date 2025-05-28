@@ -28,7 +28,7 @@ Facts
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Characteristics of microservice architectures Decentralized Independent Black box Polyglot Do one thing well You build it, you run it ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image2.png){width="5.0in" height="3.4270833333333335in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Characteristics of microservice architectures Decentralized Independent Black box Polyglot Do one thing well You build it, you run it ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image2.png){width="5.0in" height="3.423611111111111in"}
 
 
 
@@ -40,7 +40,7 @@ Facts
 
 
 
-![Each service can independently scale to meet application demand. Enables rapid build/test/release cycles as it does not impact entire architecture. Microservices enable CI/CD. The low cost of failure enables experimentation and rollback in case of failure. Fosters an organization of small, independent teams that take the ownership of their services. Teams can act within a small well understood context and are empowered to work quickly and move independently Service independence increases an application's resistance to failure ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image5.png){width="5.0in" height="3.3229166666666665in"}
+![Each service can independently scale to meet application demand. Enables rapid build/test/release cycles as it does not impact entire architecture. Microservices enable CI/CD. The low cost of failure enables experimentation and rollback in case of failure. Fosters an organization of small, independent teams that take the ownership of their services. Teams can act within a small well understood context and are empowered to work quickly and move independently Service independence increases an application's resistance to failure ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image5.png){width="5.0in" height="3.326388888888889in"}
 
 
 
@@ -52,7 +52,7 @@ Facts
 
 
 
-![Amazon EC2 - Infrastructure as a Service AWS Lambda - Serverless functions AWS Elastic Beanstalk - Orchestration service ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image8.png){width="5.0in" height="4.90625in"}
+![Amazon EC2 - Infrastructure as a Service AWS Lambda - Serverless functions AWS Elastic Beanstalk - Orchestration service ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image8.png){width="5.0in" height="4.902777777777778in"}
 
 
 
@@ -68,11 +68,11 @@ Facts
 
 
 
-![AWS Step Functions - Coordination for distributed applications ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image12.png){width="5.0in" height="4.96875in"}
+![AWS Step Functions - Coordination for distributed applications ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image12.png){width="5.0in" height="4.965277777777778in"}
 
 
 
-![Messaging/Queues ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image13.png){width="5.0in" height="4.96875in"}
+![Messaging/Queues ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image13.png){width="5.0in" height="4.965277777777778in"}
 
 
 
@@ -88,11 +88,11 @@ Facts
 
 
 
-![Networking ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image17.png){width="5.0in" height="4.96875in"}
+![Networking ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image17.png){width="5.0in" height="4.965277777777778in"}
 
 
 
-![• Amazon API Gateway - API Proxy • Application Load Balancer / Network Load Balancer - Elastic load balancing • AWS Cloud Map - Service Discovery • AWS App Mesh - Service Mesh ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image18.png){width="5.0in" height="5.010416666666667in"}
+![• Amazon API Gateway - API Proxy • Application Load Balancer / Network Load Balancer - Elastic load balancing • AWS Cloud Map - Service Discovery • AWS App Mesh - Service Mesh ](../../../media/AWS-DevOps-Module-5-20-Introduction-to-Microservices-image18.png){width="5.0in" height="5.006944444444445in"}
 
 
 

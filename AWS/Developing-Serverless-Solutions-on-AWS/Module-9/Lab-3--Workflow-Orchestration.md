@@ -840,7 +840,7 @@ Follow these steps to close the console and end your lab.
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image5.png){width="0.46875in" height="6.5in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image5.png){width="0.4652777777777778in" height="6.5in"}
 
 
 

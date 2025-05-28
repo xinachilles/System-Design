@@ -6,11 +6,11 @@ Modified: 2017-06-25 22:08:41 -0600
 
 ---
 
-![Design a web crawler Scenario: How many web pages? how long? how large? 2. crawl 1.6m web pages per second 1 trillion web pages crawl all of them every week 10p (petabyte) web page storage average size of a web page: 10k ](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image1.png){width="5.0in" height="2.59375in"}
+![Design a web crawler Scenario: How many web pages? how long? how large? 2. crawl 1.6m web pages per second 1 trillion web pages crawl all of them every week 10p (petabyte) web page storage average size of a web page: 10k ](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image1.png){width="5.0in" height="2.5972222222222223in"}
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image2.png){width="5.0in" height="2.78125in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image2.png){width="5.0in" height="2.7777777777777777in"}
 
 
 
@@ -18,7 +18,7 @@ Modified: 2017-06-25 22:08:41 -0600
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image4.png){width="5.0in" height="2.4270833333333335in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image4.png){width="5.0in" height="2.423611111111111in"}
 
 
 
@@ -38,7 +38,7 @@ Modified: 2017-06-25 22:08:41 -0600
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image9.png){width="5.0in" height="2.78125in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-web-crawler,-order-system-image9.png){width="5.0in" height="2.7777777777777777in"}
 
 
 

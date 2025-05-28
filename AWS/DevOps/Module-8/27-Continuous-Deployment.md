@@ -34,11 +34,11 @@ Facts
 
 
 
-![vi.l vi.l Rolling Gradually roll out updates to your application to some portion of the production fleet.](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image3.png){width="5.0in" height="2.1354166666666665in"}
+![vi.l vi.l Rolling Gradually roll out updates to your application to some portion of the production fleet.](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image3.png){width="5.0in" height="2.138888888888889in"}
 
 
 
-![Immutable Stand up a new infrastructure with the new application version.](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image4.png){width="5.0in" height="2.6354166666666665in"}
+![Immutable Stand up a new infrastructure with the new application version.](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image4.png){width="5.0in" height="2.6319444444444446in"}
 
 
 
@@ -58,7 +58,7 @@ Facts
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Code Build Test Provision Deploy Monitor Continuous integration Continuous delivery Continuous deployment ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image6.png){width="5.0in" height="3.2604166666666665in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Code Build Test Provision Deploy Monitor Continuous integration Continuous delivery Continuous deployment ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image6.png){width="5.0in" height="3.263888888888889in"}
 
 
 
@@ -68,7 +68,7 @@ Facts
 
 
 
-![2. Provide CodeDeploy with information about your deployment, such as which Amazon S3 bucket or GitHub repository to pull the revision from and to which set of Amazon EC2 instances to deploy its contents. CodeDeploy calls a set of Amazon EC2 instances a deployment group. A deployment group contains individually tagged Amazon EC2 instances, Amazon EC2 instances in EC2 Auto Scaling groups, or both. Each time you successfully upload a new application revision that you want to deploy to the deployment group, that bundle is set as the target revision for the deployment group. The application revision that is currently targeted for deployment is the target revision. This is also the revision that is pulled for automatic deployments. 3. The CodeDeploy agent on each instance polls CodeDeploy to determine what and when to pull from the specified Amazon S3 bucket or GitHub repository. 4. The CodeDeploy agent on each instance pulls the target revision from the Amazon S3 bucket or GitHub repository and, using the instructions in the AppSpec file, deploys the contents to the instance. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image8.png){width="5.0in" height="2.5104166666666665in"}
+![2. Provide CodeDeploy with information about your deployment, such as which Amazon S3 bucket or GitHub repository to pull the revision from and to which set of Amazon EC2 instances to deploy its contents. CodeDeploy calls a set of Amazon EC2 instances a deployment group. A deployment group contains individually tagged Amazon EC2 instances, Amazon EC2 instances in EC2 Auto Scaling groups, or both. Each time you successfully upload a new application revision that you want to deploy to the deployment group, that bundle is set as the target revision for the deployment group. The application revision that is currently targeted for deployment is the target revision. This is also the revision that is pulled for automatic deployments. 3. The CodeDeploy agent on each instance polls CodeDeploy to determine what and when to pull from the specified Amazon S3 bucket or GitHub repository. 4. The CodeDeploy agent on each instance pulls the target revision from the Amazon S3 bucket or GitHub repository and, using the instructions in the AppSpec file, deploys the contents to the instance. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image8.png){width="5.0in" height="2.513888888888889in"}
 
 
 
@@ -76,13 +76,13 @@ Facts
 
 
 
-![Deployment types IN-PLACE DEPLOYMENTS ROLLLING IMMUTABLE DEPLOYMENT BLUE/GREEN With a rolling deployment, the fleet is divided into portions so that the fleet isn't upgraded at once. During the deployment process, two software versions, new and earlier versions, are running on the same fleet. This method enables a zero-downtime update. If the deployment fails, only the upgraded portion of the fleet will be affected. In the second image, half of the fleet is upgraded to new application version, whereas the other half is under deployment as displayed by the glowing instances. AWS services enabling rolling upgrades: • AWS Elastic Beanstalk: Choose deployment options: Rolling and Rolling with an additional batch. These options enable the application to first scale out before taking servers out of service, preserving full capability during the deployment. • AWS CodeDeploy: Variation of in-place upgrades. Choose deployment configuration: OneAtATime and HalfAtATime. You will learn about these services in subsequent modules. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image10.png){width="5.0in" height="4.03125in"}
+![Deployment types IN-PLACE DEPLOYMENTS ROLLLING IMMUTABLE DEPLOYMENT BLUE/GREEN With a rolling deployment, the fleet is divided into portions so that the fleet isn't upgraded at once. During the deployment process, two software versions, new and earlier versions, are running on the same fleet. This method enables a zero-downtime update. If the deployment fails, only the upgraded portion of the fleet will be affected. In the second image, half of the fleet is upgraded to new application version, whereas the other half is under deployment as displayed by the glowing instances. AWS services enabling rolling upgrades: • AWS Elastic Beanstalk: Choose deployment options: Rolling and Rolling with an additional batch. These options enable the application to first scale out before taking servers out of service, preserving full capability during the deployment. • AWS CodeDeploy: Variation of in-place upgrades. Choose deployment configuration: OneAtATime and HalfAtATime. You will learn about these services in subsequent modules. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image10.png){width="5.0in" height="4.034722222222222in"}
 
 
 
 ![AWS Cloud Elastic Load Balancing AWS Cloud Elastic Load Balancing ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image11.png){width="5.0in" height="2.6875in"}
 
-![Comparing benefits to in-place updates AWS Cloud aws training and certification Zero downtime Easier risk mitigation Multiple tools/options Elastic Load Balancing AWS CodeDeploy OneAtATime HalfAtATime Custom AWS Elastic Beanstalk • Rolling • Rolling with additional batch ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image12.png){width="5.0in" height="2.8229166666666665in"}
+![Comparing benefits to in-place updates AWS Cloud aws training and certification Zero downtime Easier risk mitigation Multiple tools/options Elastic Load Balancing AWS CodeDeploy OneAtATime HalfAtATime Custom AWS Elastic Beanstalk • Rolling • Rolling with additional batch ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image12.png){width="5.0in" height="2.826388888888889in"}
 
 
 
@@ -110,7 +110,7 @@ Facts
 
 
 
-![Other container considerations To learn more, expand each of the following categories. Fully managed updates with Amazon ECS Amazon ECS performs rolling updates when you update an existing Amazon ECS service. As a review, a rolling update involves replacing the current running version of the container with the latest version. The number of containers Amazon ECS adds or removes from the service during a rolling update is controlled by adjusting the minimum and maximum number of healthy tasks allowed during service deployments. When you update your service's task definition with the latest version of your container image, Amazon ECS automatically replaces the earlier version of your container with the latest version. During a deployment, Amazon ECS drains connections from the current running version and registers your new containers with the Application Load Balancer as they come online. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image17.png){width="5.0in" height="3.78125in"}
+![Other container considerations To learn more, expand each of the following categories. Fully managed updates with Amazon ECS Amazon ECS performs rolling updates when you update an existing Amazon ECS service. As a review, a rolling update involves replacing the current running version of the container with the latest version. The number of containers Amazon ECS adds or removes from the service during a rolling update is controlled by adjusting the minimum and maximum number of healthy tasks allowed during service deployments. When you update your service's task definition with the latest version of your container image, Amazon ECS automatically replaces the earlier version of your container with the latest version. During a deployment, Amazon ECS drains connections from the current running version and registers your new containers with the Application Load Balancer as they come online. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image17.png){width="5.0in" height="3.7777777777777777in"}
 
 
 
@@ -130,7 +130,7 @@ Facts
 
 
 
-![Deployment configurations • Amazon EC2/On-premises compute platform • AllAtOnce • HalfAtATime • OneAtATirne • Amazon FCS • ECSA11AtOnce • AWS Lambda • Canary • Linear • All-at-once aws ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image20.png){width="5.0in" height="4.03125in"}
+![Deployment configurations • Amazon EC2/On-premises compute platform • AllAtOnce • HalfAtATime • OneAtATirne • Amazon FCS • ECSA11AtOnce • AWS Lambda • Canary • Linear • All-at-once aws ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image20.png){width="5.0in" height="4.034722222222222in"}
 
 
 
@@ -144,7 +144,7 @@ Facts
 
 
 
-![Elastic Load Balancing 53 Amazon Route 53 Amazon EC2 Auto Scaling Balance traffic between instances. Direct traffic to different Elastic Load Balancing endpoints based on various criteria. Scale in and scale out in response to usage. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image22.png){width="5.0in" height="2.7395833333333335in"}
+![Elastic Load Balancing 53 Amazon Route 53 Amazon EC2 Auto Scaling Balance traffic between instances. Direct traffic to different Elastic Load Balancing endpoints based on various criteria. Scale in and scale out in response to usage. ](../../../media/AWS-DevOps-Module-8-27-Continuous-Deployment-image22.png){width="5.0in" height="2.736111111111111in"}
 
 
 

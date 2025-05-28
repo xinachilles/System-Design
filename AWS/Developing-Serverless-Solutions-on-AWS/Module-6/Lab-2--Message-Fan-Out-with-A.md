@@ -24,7 +24,7 @@ In this lab, you add a new feature to the bookmark application to address the co
 
 The following diagram shows the architecture components that have been or will be deployed in this lab.
 
-![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image1.png){width="6.5in" height="6.78125in"}
+![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image1.png){width="6.5in" height="6.777777777777778in"}
 
 **Objectives**
 
@@ -571,7 +571,7 @@ Follow these steps to close the console and end your lab.
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image3.png){width="0.7395833333333334in" height="6.5in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-6-Lab-2--Message-Fan-Out-with-Amazon-EventBridge---Self-Paced-Labs-image3.png){width="0.7430555555555556in" height="6.5in"}
 
 
 

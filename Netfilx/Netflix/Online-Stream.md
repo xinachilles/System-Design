@@ -99,7 +99,7 @@ Simple Design
 
 Use CDN's provided functionality to stream the video. No need to store any copy. Take [cloudflare API](https://api.cloudflare.com/#stream-videos-list-videos) as an example, it supports stream video, list streams, upload stream captions.
 
-![List videos Up to 1000 videos can be listed with one request, use optional parameters below to get a specific range of videos. Please note that Cloudflare Stream does not use pagination, instead it uses a cursor pattern to list more than 1000 videos. In order to list all videos, make multiple requests to the API using the created date-time of the last item in the previous request as the before or after parameter. GET accounts/:account_identifier/stream Optional parameters Name /type after string (date-time) before string (date-time) include counts boolean search string limit integer asc Description /example Show videos created after this date-time " 2014-01-02TØ2 : 20 : Show videos created before this time Include stats in the response about the number of videos in response range and total number of videos available A string provided in this field will be used to search over the 'name' key in meta field, which can be set with the upload request of after. " puppy. mp4" Number of videos to include in the response List videos in ascending order of creation Constraints default value: false valid values: (true,false) min value:O max value:1 000 default value: false ](../../media/Netfilx-Netflix-Online-Stream-image3.png){width="6.270833333333333in" height="4.28125in"}
+![List videos Up to 1000 videos can be listed with one request, use optional parameters below to get a specific range of videos. Please note that Cloudflare Stream does not use pagination, instead it uses a cursor pattern to list more than 1000 videos. In order to list all videos, make multiple requests to the API using the created date-time of the last item in the previous request as the before or after parameter. GET accounts/:account_identifier/stream Optional parameters Name /type after string (date-time) before string (date-time) include counts boolean search string limit integer asc Description /example Show videos created after this date-time " 2014-01-02TØ2 : 20 : Show videos created before this time Include stats in the response about the number of videos in response range and total number of videos available A string provided in this field will be used to search over the 'name' key in meta field, which can be set with the upload request of after. " puppy. mp4" Number of videos to include in the response List videos in ascending order of creation Constraints default value: false valid values: (true,false) min value:O max value:1 000 default value: false ](../../media/Netfilx-Netflix-Online-Stream-image3.png){width="6.270833333333333in" height="4.277777777777778in"}
 
 Sample returned result:
 
@@ -156,7 +156,7 @@ Sample returned result:
 
 
 
-![](../../media/Netfilx-Netflix-Online-Stream-image4.png){width="6.270833333333333in" height="2.1354166666666665in"}
+![](../../media/Netfilx-Netflix-Online-Stream-image4.png){width="6.270833333333333in" height="2.138888888888889in"}
 
 TUS: Open protocol for reusable file uploads.
 

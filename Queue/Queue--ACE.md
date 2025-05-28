@@ -22,7 +22,7 @@ Shared one queue
 
 
 
-![RabbitMQ O Message Broker Apache Kafka o o O Streaming Platform ](../media/Queue-Queue--ACE-image3.png){width="5.0in" height="2.7395833333333335in"}
+![RabbitMQ O Message Broker Apache Kafka o o O Streaming Platform ](../media/Queue-Queue--ACE-image3.png){width="5.0in" height="2.736111111111111in"}
 
 
 
@@ -46,7 +46,7 @@ Same kafka consumer will share the same topic point
 
 
 
-![Anatomy of a Topic 11 0123456789 01 Partition O Partition 1 Partition 2 Old Writes New ](../media/Queue-Queue--ACE-image6.png){width="5.0in" height="3.3645833333333335in"}
+![Anatomy of a Topic 11 0123456789 01 Partition O Partition 1 Partition 2 Old Writes New ](../media/Queue-Queue--ACE-image6.png){width="5.0in" height="3.3680555555555554in"}
 
 Topic has too many message need to be shared to different partition
 
@@ -54,7 +54,7 @@ Topic has too many message need to be shared to different partition
 
 
 
-![思 考 题 一 Kafka 支 持 什 么 量 级 的 pi ？ Partition 数 量 更 关 键 不 超 过 百 万 级 如 果 你 有 这 个 疑 问 ， 你 可 能 已 经 错 误 地 使 用 了 Kafka ](../media/Queue-Queue--ACE-image7.png){width="5.0in" height="4.927083333333333in"}![0 思 考 题 二 假 设 服 务 有 亿 级 用 户 ， 用 户 每 数 秒 发 布 位 置 信 息 ， 我 们 要 通 过 Kafka 收 集 处 理 这 些 位 置 信 息 。 如 何 配 置 Kafka Topic & Partition? Topic: user 」 ocation Partition by: User ID ](../media/Queue-Queue--ACE-image8.png){width="5.0in" height="4.375in"}
+![思 考 题 一 Kafka 支 持 什 么 量 级 的 pi ？ Partition 数 量 更 关 键 不 超 过 百 万 级 如 果 你 有 这 个 疑 问 ， 你 可 能 已 经 错 误 地 使 用 了 Kafka ](../media/Queue-Queue--ACE-image7.png){width="5.0in" height="4.923611111111111in"}![0 思 考 题 二 假 设 服 务 有 亿 级 用 户 ， 用 户 每 数 秒 发 布 位 置 信 息 ， 我 们 要 通 过 Kafka 收 集 处 理 这 些 位 置 信 息 。 如 何 配 置 Kafka Topic & Partition? Topic: user 」 ocation Partition by: User ID ](../media/Queue-Queue--ACE-image8.png){width="5.0in" height="4.375in"}
 
 
 

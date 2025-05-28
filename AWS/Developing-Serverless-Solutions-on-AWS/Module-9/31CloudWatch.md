@@ -58,7 +58,7 @@ Facts
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image4.png){width="5.0in" height="3.8645833333333335in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image4.png){width="5.0in" height="3.861111111111111in"}
 
 
 
@@ -76,11 +76,11 @@ Facts
 
 
 
-![Lambda logging Lambda logs all requests and results in a CloudWatch log group called /aws/lambda/<function name>. A one-to-one relationship exists between function and log group. The first time the function runs, the group is created. If you set up provisioned concurrency, the log group is created when you create the provisioned concurrency. The log group is the entity you would typically use for searching events within your Lambda logs. To learn more, choose each hotspot. cloudwatch > Log Groups > /aws/1ambda/FAQ > 2020/08/27/CSLATEST]05419d29f9014fc3b1634b1e9968ef28 19:35. Time 19: 35 19:35 : 32 19:35 : 32 32 19:35 19:35 Messag START 41c8dcfo-ff10-4d96-af2a-1ab5e346c937 version: SLATEST 41c8dcfO-ff10-4d96-af2a-1ab5e346c937 INFO 41csdcfo-ff10-4d96-af2a-1ab5e346c937 INFO END Requestld: 41c8dcfO-ffIO-4d96-af2a-Lab5e346c937 REPORT Requestld: 41c8dcfo-ff10-4d96-af2a-1abSe346c937 Duration: 64.40 ms Duration: 100 ms Memory size: 128 MB Max Memory Used: 68 MB Init Duration: START Requestld: a23cbea6-3053-4b51-8721-ff11aba24e33 version: SLATEST events Billed 162.85 The log group is made up of log streams identified by the date, function version, and a unique identifier. Lambda automatically creates new log streams within a group based on internal factors related to how invocations are allocated to environments and the timing of invocations. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image7.png){width="5.0in" height="5.197916666666667in"}
+![Lambda logging Lambda logs all requests and results in a CloudWatch log group called /aws/lambda/<function name>. A one-to-one relationship exists between function and log group. The first time the function runs, the group is created. If you set up provisioned concurrency, the log group is created when you create the provisioned concurrency. The log group is the entity you would typically use for searching events within your Lambda logs. To learn more, choose each hotspot. cloudwatch > Log Groups > /aws/1ambda/FAQ > 2020/08/27/CSLATEST]05419d29f9014fc3b1634b1e9968ef28 19:35. Time 19: 35 19:35 : 32 19:35 : 32 32 19:35 19:35 Messag START 41c8dcfo-ff10-4d96-af2a-1ab5e346c937 version: SLATEST 41c8dcfO-ff10-4d96-af2a-1ab5e346c937 INFO 41csdcfo-ff10-4d96-af2a-1ab5e346c937 INFO END Requestld: 41c8dcfO-ffIO-4d96-af2a-Lab5e346c937 REPORT Requestld: 41c8dcfo-ff10-4d96-af2a-1abSe346c937 Duration: 64.40 ms Duration: 100 ms Memory size: 128 MB Max Memory Used: 68 MB Init Duration: START Requestld: a23cbea6-3053-4b51-8721-ff11aba24e33 version: SLATEST events Billed 162.85 The log group is made up of log streams identified by the date, function version, and a unique identifier. Lambda automatically creates new log streams within a group based on internal factors related to how invocations are allocated to environments and the timing of invocations. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image7.png){width="5.0in" height="5.201388888888889in"}
 
 
 
-![Lambda log group Lambda logs all requests and results in a CloudWatch log group called /aws/lambda/<function name>. A one-to-one relationship exists between function and log group. The first time the function runs, the group is created. If you set up provisioned concurrency, the log group is created when you create the provisioned concurrency. The log group is the entity you would typically use for searching events within your Lambda logs. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image8.png){width="3.9791666666666665in" height="3.5729166666666665in"}
+![Lambda log group Lambda logs all requests and results in a CloudWatch log group called /aws/lambda/<function name>. A one-to-one relationship exists between function and log group. The first time the function runs, the group is created. If you set up provisioned concurrency, the log group is created when you create the provisioned concurrency. The log group is the entity you would typically use for searching events within your Lambda logs. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image8.png){width="3.9791666666666665in" height="3.576388888888889in"}
 
 
 
@@ -90,11 +90,11 @@ Facts
 
 
 
-![RequestlD The RequestlD is the primary identifier that you will use to find events related to a particular invocation. The REPORT event is a quick way to see how long the function ran, the billing duration, as well as the memory configured for the function and the memory it used. The "Init" duration in this example tells you that this invocation was a cold start. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image10.png){width="3.90625in" height="3.0625in"}
+![RequestlD The RequestlD is the primary identifier that you will use to find events related to a particular invocation. The REPORT event is a quick way to see how long the function ran, the billing duration, as well as the memory configured for the function and the memory it used. The "Init" duration in this example tells you that this invocation was a cold start. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image10.png){width="3.9027777777777777in" height="3.0625in"}
 
 
 
-![Log events Each log stream contains a sequence of events describing Lambda request details. Each request includes a unique RequestlD and includes a START event, END event, and REPORT event, which quickly tell you summary information about the Lambda request. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image11.png){width="3.9479166666666665in" height="2.6666666666666665in"}
+![Log events Each log stream contains a sequence of events describing Lambda request details. Each request includes a unique RequestlD and includes a START event, END event, and REPORT event, which quickly tell you summary information about the Lambda request. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-31CloudWatch-image11.png){width="3.951388888888889in" height="2.6666666666666665in"}
 
 
 

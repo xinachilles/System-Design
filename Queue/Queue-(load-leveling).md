@@ -104,5 +104,5 @@ anything below 50 would be safe.
 
 
 
-![](../media/Queue-Queue-(load-leveling)-image1.png){width="0.23958333333333334in" height="0.5in"}
+![](../media/Queue-Queue-(load-leveling)-image1.png){width="0.24305555555555555in" height="0.5in"}
 

@@ -49,7 +49,7 @@ Protocol - websocket
 
 
 
-![Server Websocket HTT? handshôke webSockeES FVS iSEer,E close webSockeES clieb•lb ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image3.png){width="5.0in" height="4.447916666666667in"}
+![Server Websocket HTT? handshôke webSockeES FVS iSEer,E close webSockeES clieb•lb ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image3.png){width="5.0in" height="4.451388888888889in"}
 
 
 
@@ -69,7 +69,7 @@ Protocol - websocket
 
 
 
-![CACIIt 假 设 瓶 颈 服 务 资 源 存 储 资 源 1 · 3 资 源 估 算 1B DAU ， 50%maintainsconnection 100Message Sent/Receivedperday #0fOngoingSessions #0fOngoingSessions-1B*50%= 5 （ M MessageDelivery Rate-IOO*IB ／ （ 24 36 闐 ） 、 =1.2M In-flightChatStoæ (assumeldayofmessage) 1 严 1B 100Byte (msgsize) ： 100TB 0 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image5.png){width="5.0in" height="3.15625in"}
+![CACIIt 假 设 瓶 颈 服 务 资 源 存 储 资 源 1 · 3 资 源 估 算 1B DAU ， 50%maintainsconnection 100Message Sent/Receivedperday #0fOngoingSessions #0fOngoingSessions-1B*50%= 5 （ M MessageDelivery Rate-IOO*IB ／ （ 24 36 闐 ） 、 =1.2M In-flightChatStoæ (assumeldayofmessage) 1 严 1B 100Byte (msgsize) ： 100TB 0 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image5.png){width="5.0in" height="3.1527777777777777in"}
 
 
 
@@ -87,7 +87,7 @@ Sender online/ offline -- receiver online/ offline
 
 
 
-![ه Messaøinq ئ (تلمصانرا) حححا لسماع t-tm&ne«sutder&Reup12 %.*&.cs(oc.ecodet;t±eniu.o ل ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image6.png){width="5.0in" height="2.8645833333333335in"}
+![ه Messaøinq ئ (تلمصانرا) حححا لسماع t-tm&ne«sutder&Reup12 %.*&.cs(oc.ecodet;t±eniu.o ل ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image6.png){width="5.0in" height="2.8680555555555554in"}
 
 
 
@@ -95,7 +95,7 @@ Sender online/ offline -- receiver online/ offline
 
 B Pull message
 
-![二 ← ロ , ー 圍 2 亘 ← = て 區 ロ ー 、 ~ 乙 ( 1 つ つ つ Ⅵ 95 ! コ 0 ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image7.png){width="5.0in" height="2.7395833333333335in"}
+![二 ← ロ , ー 圍 2 亘 ← = て 區 ロ ー 、 ~ 乙 ( 1 つ つ つ Ⅵ 95 ! コ 0 ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image7.png){width="5.0in" height="2.736111111111111in"}
 
 
 
@@ -105,13 +105,13 @@ B Pull message
 
 Update status: A and B both online
 
-![-nnxčS 7Vrpo 8 Snpą.S ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image8.png){width="5.0in" height="3.125in"}![Q9ACE Write-Back Write to cache Application Write to Cache Database acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image9.png){width="5.0in" height="3.28125in"}
+![-nnxčS 7Vrpo 8 Snpą.S ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image8.png){width="5.0in" height="3.125in"}![Q9ACE Write-Back Write to cache Application Write to Cache Database acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image9.png){width="5.0in" height="3.2847222222222223in"}
 
 
 
 
 
-![^ 0 を 十 材 ぞ 55 久 当 。 、 し f の レ 。 B seas 、 セ 山 い ト 'Q 仙 ン ゞ れ 5 セ 社 ー 0 愛 思 版 扠 所 有 未 経 允 i 午 、 勿 泉 制 或 福 " odei 徹 0 Ⅳ iew て om ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image10.png){width="5.0in" height="2.8020833333333335in"}
+![^ 0 を 十 材 ぞ 55 久 当 。 、 し f の レ 。 B seas 、 セ 山 い ト 'Q 仙 ン ゞ れ 5 セ 社 ー 0 愛 思 版 扠 所 有 未 経 允 i 午 、 勿 泉 制 或 福 " odei 徹 0 Ⅳ iew て om ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image10.png){width="5.0in" height="2.798611111111111in"}
 
 
 
@@ -143,11 +143,11 @@ Client side can re-try
 
 ![](../../media/Message-What's-up-What's-up---no-history-message--ACE-image14.png){width="5.0in" height="3.125in"}
 
-![思 考 题 Sent 状 态 何 时 更 新 ？ webs 。 cket 发 送 信 息 到 服 务 器 的 时 候 ， 服 务 器 接 收 既 可 给 客 户 端 ACK. 0 爰 思 版 权 所 耒 经 允 许 请 勿 录 制 或 传 播 acecodeintervievv.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image15.png){width="5.0in" height="3.0729166666666665in"}![思 考 题 liver, / S n 状 态 何 时 更 新 ？ Deliver/Seen 消 息 需 要 由 收 件 人 发 出 诓 回 到 发 件 人 @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image16.png){width="5.0in" height="3.0833333333333335in"}![思 考 题 如 何 保 证 消 息 顺 序 ？ Queue 客 户 端 排 序 0 爰 思 版 权 所 有 耒 经 允 许 勿 录 刮 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image17.png){width="5.0in" height="3.0208333333333335in"}![思 考 题 队 列 怎 么 存 消 息 ？ 以 收 件 人 还 是 发 件 人 Sha ？ 收 件 人 0 爱 思 版 所 有 禾 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ 0甬 囗 囗 囗 匚 囗 囗 囗 匚 囗 囗 囗 匚 ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image18.png){width="5.0in" height="3.0729166666666665in"}![0 00《@0《00 思 考 题 客 户 端 怎 么 把 消 息 状 态 跟 对 应 的 消 息 匹 配 ？ Hash or Message ID 0 爱 思 版 权 所 有 耒 经 允 许 请 勿 录 制 或 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image14.png){width="5.0in" height="3.125in"}
+![思 考 题 Sent 状 态 何 时 更 新 ？ webs 。 cket 发 送 信 息 到 服 务 器 的 时 候 ， 服 务 器 接 收 既 可 给 客 户 端 ACK. 0 爰 思 版 权 所 耒 经 允 许 请 勿 录 制 或 传 播 acecodeintervievv.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image15.png){width="5.0in" height="3.0694444444444446in"}![思 考 题 liver, / S n 状 态 何 时 更 新 ？ Deliver/Seen 消 息 需 要 由 收 件 人 发 出 诓 回 到 发 件 人 @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image16.png){width="5.0in" height="3.0833333333333335in"}![思 考 题 如 何 保 证 消 息 顺 序 ？ Queue 客 户 端 排 序 0 爰 思 版 权 所 有 耒 经 允 许 勿 录 刮 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image17.png){width="5.0in" height="3.0208333333333335in"}![思 考 题 队 列 怎 么 存 消 息 ？ 以 收 件 人 还 是 发 件 人 Sha ？ 收 件 人 0 爱 思 版 所 有 禾 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ 0甬 囗 囗 囗 匚 囗 囗 囗 匚 囗 囗 囗 匚 ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image18.png){width="5.0in" height="3.0694444444444446in"}![0 00《@0《00 思 考 题 客 户 端 怎 么 把 消 息 状 态 跟 对 应 的 消 息 匹 配 ？ Hash or Message ID 0 爱 思 版 权 所 有 耒 经 允 许 请 勿 录 制 或 传 播 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image14.png){width="5.0in" height="3.125in"}
 
 Notification service if user is offline
 
-![APNS Apple Google MQtrr IOT pub/sub Open Standard @ acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image19.png){width="5.0in" height="3.0520833333333335in"}
+![APNS Apple Google MQtrr IOT pub/sub Open Standard @ acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image19.png){width="5.0in" height="3.048611111111111in"}
 
 
 
@@ -155,15 +155,15 @@ Notification service if user is offline
 
 API -- WebSocket -RPC
 
-![SEND destination : /messages " receipient_id" : 123, "message "62kd890" , 1610435816 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image21.png){width="5.0in" height="3.0729166666666665in"}
+![SEND destination : /messages " receipient_id" : 123, "message "62kd890" , 1610435816 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image21.png){width="5.0in" height="3.0694444444444446in"}
 
 
 
 Unread message
 
-![ej ACE Message ID Staging Message Table Primary Key -> (Recipient ID, Ilmestamp, Sender ID) Encrypted Recipient ID Timestamp Sender ID Partition/Shard Key Clustering Key @ acecodeinterviewcom' ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image22.png){width="5.0in" height="3.1770833333333335in"}
+![ej ACE Message ID Staging Message Table Primary Key -> (Recipient ID, Ilmestamp, Sender ID) Encrypted Recipient ID Timestamp Sender ID Partition/Shard Key Clustering Key @ acecodeinterviewcom' ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image22.png){width="5.0in" height="3.173611111111111in"}
 
-![BOB send Me S Bob uses Alice's public key to encrypt Servers Encrypted e-mail to 6ekd8900ptak1 ALICE 6ekd8900ptak1 Alice uses her private key to decrypt the Alice' public key Bob •s PLHic key ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image23.png){width="5.0in" height="3.15625in"}
+![BOB send Me S Bob uses Alice's public key to encrypt Servers Encrypted e-mail to 6ekd8900ptak1 ALICE 6ekd8900ptak1 Alice uses her private key to decrypt the Alice' public key Bob •s PLHic key ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image23.png){width="5.0in" height="3.1527777777777777in"}
 
 Bob has alice's public key and use alice public key to send message to alice
 
@@ -179,7 +179,7 @@ Clustering key = order key
 
 
 
-![服 务 器 存 储 1 · 9 容 灾 设 计 ur ofTru 山 在 客 户 端 Replication ()B ， 山 e ） 0 爱 思 版 椒 所 有 耒 经 允 许 请 勿 录 制 或 传 思 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image25.png){width="5.0in" height="3.03125in"}
+![服 务 器 存 储 1 · 9 容 灾 设 计 ur ofTru 山 在 客 户 端 Replication ()B ， 山 e ） 0 爱 思 版 椒 所 有 耒 经 允 许 请 勿 录 制 或 传 思 acecodeinterview.com ](../../media/Message-What's-up-What's-up---no-history-message--ACE-image25.png){width="5.0in" height="3.0277777777777777in"}
 
 
 

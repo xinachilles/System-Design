@@ -55,7 +55,7 @@ For separate of concerns principle, the following designs are broke into 4 parts
 
 Architecture
 
-![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--2-image1.png){width="6.1875in" height="4.802083333333333in"}
+![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--2-image1.png){width="6.1875in" height="4.805555555555555in"}
 
 
 
@@ -190,7 +190,7 @@ When the user deletes the video, the state will be changed to DELETED_PENDING, t
 
 Architecture
 
-![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--2-image2.png){width="6.15625in" height="4.5in"}
+![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--2-image2.png){width="6.152777777777778in" height="4.5in"}
 
 - [Popularity service in charge of the views, likes, dislikes of the video,]{.mark} likes and dislikes of the comments. The popularity service will periodically read all user activity logs and update the likes/views etc.
   - Popularity has massive read / write but ok with small chance of data loss, therefore use redis to store the data and async write back to DB.

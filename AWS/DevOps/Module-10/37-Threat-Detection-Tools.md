@@ -22,7 +22,7 @@ Facts
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Threat detection tools • Amazon Guard Duty • AWS Security Hub • Amazon Inspector ](../../../media/AWS-DevOps-Module-10-37-Threat-Detection-Tools-image1.png){width="5.0in" height="2.3854166666666665in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Threat detection tools • Amazon Guard Duty • AWS Security Hub • Amazon Inspector ](../../../media/AWS-DevOps-Module-10-37-Threat-Detection-Tools-image1.png){width="5.0in" height="2.3819444444444446in"}
 
 
 
@@ -38,11 +38,11 @@ Facts
 
 
 
-![CIS AWS Foundations controls Seagity Hub automated checks using the CIS AWS Foundations Benchmuk controtL Q Filter controls 2.3 Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible @Compliant 2.6 Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket @Non-compliant I faild 2.4 Ensure CtoudTrail traits are integrated with CloudWatch Logs 1 failed 2.7 Ensure CloudTrail logs are encrypted at rest using KMS CMKs @Non-compliant I failed < 12 5 > 2.5 Ensure AWS Config is enabled in all regions @Complimt 1 Xcount passed 2.8 Ensure rotation for customer created CMKs is enabled NO data AWS Security Hub showing compliance The results of these compliance checks are called findings. Each finding tells you severity of the issue, which system reported it, which resources it affects, and a lot of other useful metadata. For example, you might see a finding that lets you know that multi- factor authentication should be enabled for a root account, or that there are credentials that haven't been used for 90 days that should be revoked. ](../../../media/AWS-DevOps-Module-10-37-Threat-Detection-Tools-image5.png){width="5.0in" height="1.8854166666666667in"}
+![CIS AWS Foundations controls Seagity Hub automated checks using the CIS AWS Foundations Benchmuk controtL Q Filter controls 2.3 Ensure the S3 bucket used to store CloudTrail logs is not publicly accessible @Compliant 2.6 Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket @Non-compliant I faild 2.4 Ensure CtoudTrail traits are integrated with CloudWatch Logs 1 failed 2.7 Ensure CloudTrail logs are encrypted at rest using KMS CMKs @Non-compliant I failed < 12 5 > 2.5 Ensure AWS Config is enabled in all regions @Complimt 1 Xcount passed 2.8 Ensure rotation for customer created CMKs is enabled NO data AWS Security Hub showing compliance The results of these compliance checks are called findings. Each finding tells you severity of the issue, which system reported it, which resources it affects, and a lot of other useful metadata. For example, you might see a finding that lets you know that multi- factor authentication should be enabled for a root account, or that there are credentials that haven't been used for 90 days that should be revoked. ](../../../media/AWS-DevOps-Module-10-37-Threat-Detection-Tools-image5.png){width="5.0in" height="1.8819444444444444in"}
 
 
 
-![Missing critical patches Final Stage• ¯ Launch Lambda AWS CodePip_ellne InspectorScanQutpvt EC2 or artifacts Sample AWS Inspector architecture Amazon EC2 Amazon Inspector scans the produced EC2 instance Amazon Simple Notification Service Remediate Terminate or Stop ](../../../media/AWS-DevOps-Module-10-37-Threat-Detection-Tools-image6.png){width="5.0in" height="2.1145833333333335in"}
+![Missing critical patches Final Stage• ¯ Launch Lambda AWS CodePip_ellne InspectorScanQutpvt EC2 or artifacts Sample AWS Inspector architecture Amazon EC2 Amazon Inspector scans the produced EC2 instance Amazon Simple Notification Service Remediate Terminate or Stop ](../../../media/AWS-DevOps-Module-10-37-Threat-Detection-Tools-image6.png){width="5.0in" height="2.1180555555555554in"}
 
 
 

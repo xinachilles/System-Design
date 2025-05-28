@@ -82,7 +82,7 @@ In some cases, certain pop-up or script blocker web browser extensions might pre
 
 ### Lab environment
 
-![Lab Architecture diagram](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image2.png){width="6.5in" height="3.3020833333333335in"}
+![Lab Architecture diagram](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image2.png){width="6.5in" height="3.3055555555555554in"}
 
 *The image shows users accessing AWS CodePipeline. The Pipeline pulls the HeartBeat application code and deploys it using AWS CodeDeploy to two EC2 instances in AZ1 and AZ2.*
 

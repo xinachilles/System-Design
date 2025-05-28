@@ -402,7 +402,7 @@ if we just follow the figure 2 rules the log just keeps on growing may end up yo
 
 the log looks like
 
-![`= 1 넣=7 ](../media/Systems-Design-Fundamentals-Raft---leader-election-image1.png){width="5.0in" height="2.0520833333333335in"}
+![`= 1 넣=7 ](../media/Systems-Design-Fundamentals-Raft---leader-election-image1.png){width="5.0in" height="2.048611111111111in"}
 
 
 

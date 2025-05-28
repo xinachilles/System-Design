@@ -18,7 +18,7 @@ Facts
 
 
 
-![How AWS CodeBuild works AWS CodeCommit Build project AWS CodeBuiId Nev. contain based environment aws training and certification Amazon S3 Amazon SNS topic Amazon CloudWatch ](../../../media/AWS-DevOps-Module-4-16-Developer-Tools-image1.png){width="5.0in" height="2.8020833333333335in"}
+![How AWS CodeBuild works AWS CodeCommit Build project AWS CodeBuiId Nev. contain based environment aws training and certification Amazon S3 Amazon SNS topic Amazon CloudWatch ](../../../media/AWS-DevOps-Module-4-16-Developer-Tools-image1.png){width="5.0in" height="2.798611111111111in"}
 
 - Other build services include Jenkins, Bamboo, and Team City.
 - The buildspec file in CodeBuild defines the build process, including source code location, commands, and dependencies.
@@ -34,7 +34,7 @@ Facts
 
 
 
-![What is AWS CodeBui1d? AWS CodeBuild is a fully managed build service in the cloud. CodeBuild compiles your source code, runs unit tests, and produces artifacts that are ready to deploy. CodeBuild eliminates the need to provision, manage, and scale your own build servers. It provides prepackaged build environments for popular programming languages and build tools such as Apache Maven, Gradle, and more. You can also customize build environments in CodeBuild to use your own build tools. CodeBuild scales automatically to meet peak build requests. CodeBuild provides these benefits: • Fully managed --- CodeBuild eliminates the need to set up, patch, update, and manage your own build servers. • On demand --- CodeBuild scales on demand to meet your build needs. You pay only for the number of build minutes you consume. • Out of the box---CodeBuildprovidespreconfiguredbuildenvironmentsforthemostpopular programming languages. All you need to do is point to your build script to start your first build. ](../../../media/AWS-DevOps-Module-4-16-Developer-Tools-image2.png){width="5.0in" height="3.6979166666666665in"}
+![What is AWS CodeBui1d? AWS CodeBuild is a fully managed build service in the cloud. CodeBuild compiles your source code, runs unit tests, and produces artifacts that are ready to deploy. CodeBuild eliminates the need to provision, manage, and scale your own build servers. It provides prepackaged build environments for popular programming languages and build tools such as Apache Maven, Gradle, and more. You can also customize build environments in CodeBuild to use your own build tools. CodeBuild scales automatically to meet peak build requests. CodeBuild provides these benefits: • Fully managed --- CodeBuild eliminates the need to set up, patch, update, and manage your own build servers. • On demand --- CodeBuild scales on demand to meet your build needs. You pay only for the number of build minutes you consume. • Out of the box---CodeBuildprovidespreconfiguredbuildenvironmentsforthemostpopular programming languages. All you need to do is point to your build script to start your first build. ](../../../media/AWS-DevOps-Module-4-16-Developer-Tools-image2.png){width="5.0in" height="3.701388888888889in"}
 
 
 

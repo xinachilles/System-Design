@@ -48,7 +48,7 @@ do the tokenization, normalization(vehicle= car), stemming and lemmatization
 
 
 
-![和 分 e 仑 docs-google.com 加 resentatio 可 引 litC3B NZ 」 YBW8G82eP•wDs 、 0 ^ 《 Z V6DLbCu18 ℃ 口 hE 在 巧 巧 # ide = ． p 英 语 词 的 提 取 请 会 请 多 0 Alle 标 识 化 标 准 化 词 干 提 取 & 词 形 还 原 Tokenization Normalization Stemming & Lemmatization 词 组 词 性 姓 名 同 义 词 单 复 数 邮 箱 网 站 时 态 带 标 点 的 词 @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ on ](../../media/Stream^JSearch-Search-Summary---ACE-image3.png){width="5.0in" height="2.9895833333333335in"}
+![和 分 e 仑 docs-google.com 加 resentatio 可 引 litC3B NZ 」 YBW8G82eP•wDs 、 0 ^ 《 Z V6DLbCu18 ℃ 口 hE 在 巧 巧 # ide = ． p 英 语 词 的 提 取 请 会 请 多 0 Alle 标 识 化 标 准 化 词 干 提 取 & 词 形 还 原 Tokenization Normalization Stemming & Lemmatization 词 组 词 性 姓 名 同 义 词 单 复 数 邮 箱 网 站 时 态 带 标 点 的 词 @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ on ](../../media/Stream^JSearch-Search-Summary---ACE-image3.png){width="5.0in" height="2.9930555555555554in"}
 
 
 
@@ -210,11 +210,11 @@ In each posting list, we sort the doc base on the doc id; or we also can conside
 
 [Incremental update -- when user just search a key words, update this key words at the same time]{.mark}
 
-![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1.2 理 解 需 求 通 过 关 键 词 快 速 及 时 地 找 到 相 关 信 息 高 扩 展 性 ， 支 持 全 网 索 引 对 于 核 心 网 站 ， 低 延 迟 索 引 对 于 用 户 ， 低 延 迟 返 回 搜 索 结 果 高 可 靠 性 ， 返 回 内 容 与 关 键 词 相 关 非 英 语 支 持 ， 爬 虫 ， 搜 索 结 果 排 序 ](../../media/Stream^JSearch-Search-Summary---ACE-image8.png){width="5.0in" height="2.78125in"}
+![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1.2 理 解 需 求 通 过 关 键 词 快 速 及 时 地 找 到 相 关 信 息 高 扩 展 性 ， 支 持 全 网 索 引 对 于 核 心 网 站 ， 低 延 迟 索 引 对 于 用 户 ， 低 延 迟 返 回 搜 索 结 果 高 可 靠 性 ， 返 回 内 容 与 关 键 词 相 关 非 英 语 支 持 ， 爬 虫 ， 搜 索 结 果 排 序 ](../../media/Stream^JSearch-Search-Summary---ACE-image8.png){width="5.0in" height="2.7777777777777777in"}
 
 
 
-![单 一 关 键 词 搜 索 查 询 结 果 LAU 缓 存 内 存 索 引 2 ． a. 智 能 排 序 Posting List b. Doc ID 扫 《 序 Posting List 硬 盘 索 引 3 ， a. 内 存 中 尚 未 合 并 的 索 引 b. 智 能 排 序 Posting List c. Doc ID 扌 非 序 Posting List ](../../media/Stream^JSearch-Search-Summary---ACE-image9.png){width="5.0in" height="5.197916666666667in"}
+![单 一 关 键 词 搜 索 查 询 结 果 LAU 缓 存 内 存 索 引 2 ． a. 智 能 排 序 Posting List b. Doc ID 扫 《 序 Posting List 硬 盘 索 引 3 ， a. 内 存 中 尚 未 合 并 的 索 引 b. 智 能 排 序 Posting List c. Doc ID 扌 非 序 Posting List ](../../media/Stream^JSearch-Search-Summary---ACE-image9.png){width="5.0in" height="5.201388888888889in"}
 
 [We can temporarily store the result of each search in memory]{.mark}
 
@@ -309,7 +309,7 @@ SStable is for disk index
 
 
 
-![D sk ](../../media/Stream^JSearch-Search-Summary---ACE-image13.png){width="5.0in" height="1.0520833333333333in"}
+![D sk ](../../media/Stream^JSearch-Search-Summary---ACE-image13.png){width="5.0in" height="1.0555555555555556in"}
 
 
 
@@ -355,7 +355,7 @@ We can use doc gap and variable bytes encoding at same time
 
 
 
-![思 考 题 七 关 键 词 组 搜 索 怎 么 实 现 ？ 利 用 位 置 信 息 关 键 词 组 索 引 ](../../media/Stream^JSearch-Search-Summary---ACE-image18.png){width="5.0in" height="4.239583333333333in"}![田 考 题 三 如 何 进 行 索 引 来 实 现 连 续 的 词 组 搜 索 ？ Posting List 存 入 位 置 信 息 特 定 词 作 为 整 体 索 引 (e.g. New York, Doctor Who) ](../../media/Stream^JSearch-Search-Summary---ACE-image19.png){width="4.989583333333333in" height="4.177083333333333in"}
+![思 考 题 七 关 键 词 组 搜 索 怎 么 实 现 ？ 利 用 位 置 信 息 关 键 词 组 索 引 ](../../media/Stream^JSearch-Search-Summary---ACE-image18.png){width="5.0in" height="4.236111111111111in"}![田 考 题 三 如 何 进 行 索 引 来 实 现 连 续 的 词 组 搜 索 ？ Posting List 存 入 位 置 信 息 特 定 词 作 为 整 体 索 引 (e.g. New York, Doctor Who) ](../../media/Stream^JSearch-Search-Summary---ACE-image19.png){width="4.986111111111111in" height="4.173611111111111in"}
 
 
 
@@ -373,7 +373,7 @@ API:
 
 Start = 30 : start 3th page (each page has 10 item) ( index update is not very frequency)
 
-![Instagram GET /vl/feed? image_count={image count}& last_timestamp={ts} ](../../media/Stream^JSearch-Search-Summary---ACE-image21.png){width="5.0in" height="3.1875in"}![1.10 MapReduce Bigtable, Document-based Partition, Cache ](../../media/Stream^JSearch-Search-Summary---ACE-image22.png){width="5.0in" height="2.6770833333333335in"}![服 务 器 存 储 L11 容 灾 设 计 MapReduce Persistency Master-slave Replication (GFS ， DB ， Cache) ](../../media/Stream^JSearch-Search-Summary---ACE-image23.png){width="5.0in" height="2.4166666666666665in"}
+![Instagram GET /vl/feed? image_count={image count}& last_timestamp={ts} ](../../media/Stream^JSearch-Search-Summary---ACE-image21.png){width="5.0in" height="3.1875in"}![1.10 MapReduce Bigtable, Document-based Partition, Cache ](../../media/Stream^JSearch-Search-Summary---ACE-image22.png){width="5.0in" height="2.673611111111111in"}![服 务 器 存 储 L11 容 灾 设 计 MapReduce Persistency Master-slave Replication (GFS ， DB ， Cache) ](../../media/Stream^JSearch-Search-Summary---ACE-image23.png){width="5.0in" height="2.4166666666666665in"}
 
 Mapreduce will store the result in GFS
 
@@ -389,7 +389,7 @@ We need to check if we update the index for those website
 
 
 
-![1 · 13 Twitter Hashtag Search vs Google Search 逆 向 索 引 存 储 排 序 因 素 Hashtag Search 仅 Hashtag 内 存 作 者 +retweet Google Search 提 取 全 文 单 词 内 存 + 硬 盘 ](../../media/Stream^JSearch-Search-Summary---ACE-image25.png){width="5.0in" height="2.6354166666666665in"}
+![1 · 13 Twitter Hashtag Search vs Google Search 逆 向 索 引 存 储 排 序 因 素 Hashtag Search 仅 Hashtag 内 存 作 者 +retweet Google Search 提 取 全 文 单 词 内 存 + 硬 盘 ](../../media/Stream^JSearch-Search-Summary---ACE-image25.png){width="5.0in" height="2.6319444444444446in"}
 
 
 

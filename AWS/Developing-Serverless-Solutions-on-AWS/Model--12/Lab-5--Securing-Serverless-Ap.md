@@ -20,7 +20,7 @@ Before you'll be able to make this application available outside of your develop
 
 The following architecture diagram shows the components that have been and will be deployed:
 
-![Architecture diagram showing the components of the serverless architecture that have been and will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image1.png){width="6.5in" height="7.760416666666667in"}
+![Architecture diagram showing the components of the serverless architecture that have been and will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image1.png){width="6.5in" height="7.763888888888889in"}
 
 This lab uses the following services:
 

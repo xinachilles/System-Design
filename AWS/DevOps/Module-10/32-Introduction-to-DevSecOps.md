@@ -44,7 +44,7 @@ Facts
 
 
 
-![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image1.png){width="5.0in" height="1.03125in"}
+![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image1.png){width="5.0in" height="1.0347222222222223in"}
 
 
 
@@ -60,15 +60,15 @@ Facts
 
 
 
-![Why does DevSecOps matter? Delivery pipeline Build Test Security Release Developers Plan Monitor Feedback loop Customers DevOps = Efficiencies that speed up the lifecycle DevSecOps = Validate building blocks without slowing lifecycle An image of the DevSecOps pipeline. DevOps equals efficiencies that speed up the lifecycle. DevSecOps equals validating building blocks without slowing lifecycle. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image5.png){width="5.0in" height="2.9270833333333335in"}
+![Why does DevSecOps matter? Delivery pipeline Build Test Security Release Developers Plan Monitor Feedback loop Customers DevOps = Efficiencies that speed up the lifecycle DevSecOps = Validate building blocks without slowing lifecycle An image of the DevSecOps pipeline. DevOps equals efficiencies that speed up the lifecycle. DevSecOps equals validating building blocks without slowing lifecycle. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image5.png){width="5.0in" height="2.9305555555555554in"}
 
 
 
-![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Principle 1 Principle 4 Principle 2 Principle 5 Principle 3 Principle 6 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image6.png){width="5.0in" height="3.84375in"}
+![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Principle 1 Principle 4 Principle 2 Principle 5 Principle 3 Principle 6 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image6.png){width="5.0in" height="3.8402777777777777in"}
 
 
 
-![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Collaborate with all stakeholders Automate everything Codify everything Measure and monitor everything Test everything Deliver business value with continual feedback ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image7.png){width="5.0in" height="3.8645833333333335in"}
+![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Collaborate with all stakeholders Automate everything Codify everything Measure and monitor everything Test everything Deliver business value with continual feedback ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image7.png){width="5.0in" height="3.861111111111111in"}
 
 
 

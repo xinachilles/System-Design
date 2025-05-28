@@ -43,7 +43,7 @@ if no seat are available, do we think we need a waiting list?
 
 
 
-![1 · 3 资 源 估 算 每 天 访 问 1M 次 ， 售 出 1 佣 k 张 票 假 设 有 抢 票 情 况 （ 1 闐 x 平 均 流 量 ） 瓶 颈 Read QPS 一 1M * 1 佣 / （ 36 佣 * 24 ） 、 ： 12 佣 服 务 资 源 Write QPS 一 1 闐 K 1 闐 / （ 3 24 ） ： 120 TicketDB · 1 闐 k 1 闐 B 5 365 = 18GB 存 储 资 源 TransactionDB- 1 闐 k 1 闐 B * 5 ％ 5 = 18GB ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image1.png){width="5.0in" height="2.5729166666666665in"}
+![1 · 3 资 源 估 算 每 天 访 问 1M 次 ， 售 出 1 佣 k 张 票 假 设 有 抢 票 情 况 （ 1 闐 x 平 均 流 量 ） 瓶 颈 Read QPS 一 1M * 1 佣 / （ 36 佣 * 24 ） 、 ： 12 佣 服 务 资 源 Write QPS 一 1 闐 K 1 闐 / （ 3 24 ） ： 120 TicketDB · 1 闐 k 1 闐 B 5 365 = 18GB 存 储 资 源 TransactionDB- 1 闐 k 1 闐 B * 5 ％ 5 = 18GB ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image1.png){width="5.0in" height="2.576388888888889in"}
 
 
 
@@ -111,7 +111,7 @@ After payment, booking is marked complete. If the user is not able to pay within
 
 
 
-![思 考 题 怎 样 保 证 同 一 场 次 的 同 一 个 座 位 不 会 重 复 销 售 ？ 亻 吏 用 锁 (Lock) 《 亻 专 扌 acecodeinterview.com ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image4.png){width="5.0in" height="5.385416666666667in"}
+![思 考 题 怎 样 保 证 同 一 场 次 的 同 一 个 座 位 不 会 重 复 销 售 ？ 亻 吏 用 锁 (Lock) 《 亻 专 扌 acecodeinterview.com ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image4.png){width="5.0in" height="5.381944444444445in"}
 
 
 
@@ -161,7 +161,7 @@ Modified time -- lazy update, when other people visited this record, it will che
 
 
 
-![ACIE Transaction Table Payment/Refund Success/FaiIed/Pending ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image7.png){width="5.0in" height="2.90625in"}
+![ACIE Transaction Table Payment/Refund Success/FaiIed/Pending ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image7.png){width="5.0in" height="2.9097222222222223in"}
 
 We will add record in transaction table when the payment is success or failed
 
@@ -171,11 +171,11 @@ If type is refund -- associated transaction id is payment id
 
 
 
-![思 考 题 购 票 时 ， 如 果 服 务 器 在 收 款 完 成 后 更 新 票 状 态 前 宕 机 ， 怎 么 处 理 ？ Distributed Transaction 有 一 、 Transaction Manager 来 保 证 收 款 和 更 新 票 状 态 能 够 同 时 发 生 ， 如 果 只 有 其 一 发 生 ， 需 要 重 试 失 败 操 作 或 回 滚 到 初 始 状 态 勿 录 制 或 传 播 acecodei nterview.com ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image8.png){width="5.0in" height="4.71875in"}
+![思 考 题 购 票 时 ， 如 果 服 务 器 在 收 款 完 成 后 更 新 票 状 态 前 宕 机 ， 怎 么 处 理 ？ Distributed Transaction 有 一 、 Transaction Manager 来 保 证 收 款 和 更 新 票 状 态 能 够 同 时 发 生 ， 如 果 只 有 其 一 发 生 ， 需 要 重 试 失 败 操 作 或 回 滚 到 初 始 状 态 勿 录 制 或 传 播 acecodei nterview.com ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image8.png){width="5.0in" height="4.722222222222222in"}
 
 
 
-![2-phase Commit Coordinator B in Participant Prepare (vote request) Vote Decision Ack ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image9.png){width="5.0in" height="4.197916666666667in"}
+![2-phase Commit Coordinator B in Participant Prepare (vote request) Vote Decision Ack ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image9.png){width="5.0in" height="4.194444444444445in"}
 
 
 
@@ -274,7 +274,7 @@ API
 
 
 
-![// Request GET // Response "result" : "venue" : "venue "venue "movie" "movie id": 123 name": "arc sf" "Wonder Woman 1988" , name : "events": [ "event id": 123, "start time": 1609e37øøe, "event_id": 456, "start time": 1609047eøe, e acecodeinterview.com ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image13.png){width="5.0in" height="4.614583333333333in"}
+![// Request GET // Response "result" : "venue" : "venue "venue "movie" "movie id": 123 name": "arc sf" "Wonder Woman 1988" , name : "events": [ "event id": 123, "start time": 1609e37øøe, "event_id": 456, "start time": 1609047eøe, e acecodeinterview.com ](../../media/Payment^JTrade-Tick-System-Summary--ACE-image13.png){width="5.0in" height="4.611111111111111in"}
 
 
 

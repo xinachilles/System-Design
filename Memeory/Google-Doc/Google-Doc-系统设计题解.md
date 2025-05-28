@@ -6,7 +6,7 @@ Modified: 2021-01-18 18:54:04 -0600
 
 ---
 
-![爱思系统设计](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image1.png){width="0.59375in" height="0.21875in"}
+![爱思系统设计](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image1.png){width="0.5972222222222222in" height="0.2222222222222222in"}
 
 Google Doc 系统设计题解
 
@@ -61,7 +61,7 @@ Google Doc 系统设计题解
 
 3. High-level Diagram
 
-![G0061e Doc Hiqh-leue,t @ acecodein±ecvieu. corru acceSS seMvtc.e oc meü SuvtQ IL$t ed.tt l'ncovMAr1 cade ---a acces5 ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image3.png){width="5.0in" height="2.28125in"}
+![G0061e Doc Hiqh-leue,t @ acecodein±ecvieu. corru acceSS seMvtc.e oc meü SuvtQ IL$t ed.tt l'ncovMAr1 cade ---a acces5 ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image3.png){width="5.0in" height="2.2777777777777777in"}
 
 
 
@@ -306,7 +306,7 @@ GET /api/v1/documents/{doc_id}
 
 [看全部的15篇文章 →](https://acecodeinterview.com/tag/answer/)
 
-![Google Autocomplete 系统设计题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image8.jpg){width="3.2916666666666665in" height="2.0729166666666665in"}
+![Google Autocomplete 系统设计题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image8.jpg){width="3.2916666666666665in" height="2.076388888888889in"}
 
 [高频题题解](https://acecodeinterview.com/autocomplete/)
 
@@ -320,7 +320,7 @@ GET /api/v1/documents/{doc_id}
 
 [罗辑](https://acecodeinterview.com/author/logic/)2 DEC 2020
 
-![实时监控系统题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image10.jpg){width="3.2916666666666665in" height="2.0729166666666665in"}
+![实时监控系统题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image10.jpg){width="3.2916666666666665in" height="2.076388888888889in"}
 
 [高频题题解](https://acecodeinterview.com/realtime_monitoring_service/)
 

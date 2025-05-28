@@ -14,11 +14,11 @@ Modified: 2023-10-22 17:44:18 -0600
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Deployment Deployments with AWS CloudFormation Deployments to Amazon EC2 Benefits • Provision and manage stacks of AWS resources based on templates • Control versioning • Easily replicate infrastructure • Deploy one instance to thousands in minutes • Integrate with third- party applications Recommended When you want a tool for granular control If you or your organization wants to manage infrastructure ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image3.png){width="5.0in" height="4.46875in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. Deployment Deployments with AWS CloudFormation Deployments to Amazon EC2 Benefits • Provision and manage stacks of AWS resources based on templates • Control versioning • Easily replicate infrastructure • Deploy one instance to thousands in minutes • Integrate with third- party applications Recommended When you want a tool for granular control If you or your organization wants to manage infrastructure ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image3.png){width="5.0in" height="4.472222222222222in"}
 
 
 
-![Deployments with Amazon • Highly scalable, high ECS performance container management • Simple API calls • Using Docker for consistent build/deployment Familiar with other • features, such as security groups, Amazon EBS volumes, and IAM roles ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image4.png){width="5.0in" height="1.9895833333333333in"}
+![Deployments with Amazon • Highly scalable, high ECS performance container management • Simple API calls • Using Docker for consistent build/deployment Familiar with other • features, such as security groups, Amazon EBS volumes, and IAM roles ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image4.png){width="5.0in" height="1.9861111111111112in"}
 
 
 
@@ -30,15 +30,15 @@ Modified: 2023-10-22 17:44:18 -0600
 
 
 
-![Example: Deployment workflow on Amazon EC2 Create application Specify deployment group Specify deployment configuration Upload revision Deploy Check results Redeploy as needed 0 Ama.•on ','.'eh Inc O' Its Al rese•ved training and -7 certification ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image6.png){width="5.0in" height="2.90625in"}
+![Example: Deployment workflow on Amazon EC2 Create application Specify deployment group Specify deployment configuration Upload revision Deploy Check results Redeploy as needed 0 Ama.•on ','.'eh Inc O' Its Al rese•ved training and -7 certification ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image6.png){width="5.0in" height="2.9097222222222223in"}
 
 
 
-![Example: Deployment workflow with Amazon ECS Create an Amazon ECS service and set its deployment controller to CodeDeploy Create a CodeDeploy application Create a deployment group Specify an AppSpec file Deploy Check results Redeploy as needed 0 Ama.•on Web Inc or Al. rese-ved training and -7 certification ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image7.png){width="5.0in" height="2.84375in"}
+![Example: Deployment workflow with Amazon ECS Create an Amazon ECS service and set its deployment controller to CodeDeploy Create a CodeDeploy application Create a deployment group Specify an AppSpec file Deploy Check results Redeploy as needed 0 Ama.•on Web Inc or Al. rese-ved training and -7 certification ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image7.png){width="5.0in" height="2.8472222222222223in"}
 
 
 
-![Example: Deployment workflow with AWS Lambda Create application Specify deployment group Specify deployment configuration Specify an AppSpec file Deploy Check results Redeploy as needed 0 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved. training certificatior 49 ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image8.png){width="5.0in" height="2.8645833333333335in"}
+![Example: Deployment workflow with AWS Lambda Create application Specify deployment group Specify deployment configuration Specify an AppSpec file Deploy Check results Redeploy as needed 0 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved. training certificatior 49 ](../../../media/AWS-DevOps-Module-8-28-Deployments-with-AWS-Services-image8.png){width="5.0in" height="2.8680555555555554in"}
 
 
 
