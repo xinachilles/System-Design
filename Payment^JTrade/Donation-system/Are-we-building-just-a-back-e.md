@@ -1,8 +1,6 @@
 # Are we building just a back end system? And list of charities? Is it like hard coded in our system or dynamic?
 
-Created: 2021-04-19 12:34:52 -0600
 
-Modified: 2021-04-19 12:56:13 -0600
 
 ---
 
@@ -106,61 +104,61 @@ And let's say we would have a server here. It would be our application server wh
 
 More replays:
 
-![public static int(l dailyTemperatures(int[l temp int() result = new int[temp . length] ; If (temp. length result ; return Stack<lnteger> stack - for(int i=e; i<temp.length; i++) { If (stack.isEmpty()) { stack. push(i) ; ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image1.png){width="5.0in" height="1.8680555555555556in"}
+![public static int(l dailyTemperatures(int[l temp int() result = new int[temp . length] ; If (temp. length result ; return Stack<lnteger> stack - for(int i=e; i<temp.length; i++) { If (stack.isEmpty()) { stack. push(i) ; ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image1.png)
 
 [The Wild Husky interviewed by Stateless Snake, an Amazon engineer](https://interviewing.io/recordings/Java-Amazon-14)
 
 [Median of sorted lists](https://interviewing.io/recordings/Java-Amazon-14)
 
-![runtime: memory: O(N) * 4 return dict result[el] if len(result) > e else None . 91 listl = [ (Node(7), id7), (Node(4), liSt2 i Node idlBB Node id4) , ida 9 ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image2.png){width="5.0in" height="1.8680555555555556in"}
+![runtime: memory: O(N) * 4 return dict result[el] if len(result) > e else None . 91 listl = [ (Node(7), id7), (Node(4), liSt2 i Node idlBB Node id4) , ida 9 ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image2.png)
 
 [Ghost Armadillo interviewed by The Masked Hedgehog, a VMWare engineer](https://interviewing.io/recordings/Python-VMWare-1)
 
 [Linked list intersection](https://interviewing.io/recordings/Python-VMWare-1)
 
-![void TPS( char currChar, , graph, unordered_set<char>& visitedChars, stackecha reversedOrder) visitedChars. insert(currChar) ; // for every child of currChar•s for (auto it = graph[currCharl .begin(); it graph[currCharl . end(); it++) // if we haven't visited (visitedChars "child" , recurse on child visitedChars _end()) ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image3.png){width="5.0in" height="1.8680555555555556in"}
+![void TPS( char currChar, , graph, unordered_set<char>& visitedChars, stackecha reversedOrder) visitedChars. insert(currChar) ; // for every child of currChar•s for (auto it = graph[currCharl .begin(); it graph[currCharl . end(); it++) // if we haven't visited (visitedChars "child" , recurse on child visitedChars _end()) ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image3.png)
 
 [Teflon Artichoke interviewed by Contrarian Burrito, a Google engineer](https://interviewing.io/recordings/C++-Google-24)
 
 [Alien Dictionary](https://interviewing.io/recordings/C++-Google-24)
 
-![video processing system, uses an internal service (APIs) to p dependency (SLA) -Y ML processing (internal) Features : -upload videos -any video uploaded to VPS will be stored 5 years -send them for internal processing how does it take to process each video? 15sec video *hat kind of errors can occur --- I min ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image4.png){width="5.0in" height="1.8680555555555556in"}
+![video processing system, uses an internal service (APIs) to p dependency (SLA) -Y ML processing (internal) Features : -upload videos -any video uploaded to VPS will be stored 5 years -send them for internal processing how does it take to process each video? 15sec video *hat kind of errors can occur --- I min ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image4.png)
 
 [Wicked Gyroscope interviewed by Hot Gyro, an Amazon engineer](https://interviewing.io/recordings/System-Design-Amazon-12)
 
 [Video upload API](https://interviewing.io/recordings/System-Design-Amazon-12)
 
-![Next 1) 2) 3) Solution : timeStamP+ userID timestamp* user ID + userIpAddress Return a time value, and another value unique to the node Per Node there is also a vector clock, Which is incremented f Requestl: [timestamp I (timestamp | 3 [ timestamp I timestam Requestl : Requestl : Re uestl: 2 4 ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image5.png){width="5.0in" height="1.8680555555555556in"}
+![Next 1) 2) 3) Solution : timeStamP+ userID timestamp* user ID + userIpAddress Return a time value, and another value unique to the node Per Node there is also a vector clock, Which is incremented f Requestl: [timestamp I (timestamp | 3 [ timestamp I timestam Requestl : Requestl : Re uestl: 2 4 ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image5.png)
 
 [Golden Possum interviewed by Invincible Cloud, a Microsoft engineer](https://interviewing.io/recordings/System-Design-Microsoft-15)
 
 [Unique ID generation](https://interviewing.io/recordings/System-Design-Microsoft-15)
 
-![def shortest_path(root) root. value nil result MyQueue . new queue queue. enqueue( root) while queue.value. length > B do level_size queue .value. length current_level ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image6.png){width="5.0in" height="1.8680555555555556in"}
+![def shortest_path(root) root. value nil result MyQueue . new queue queue. enqueue( root) while queue.value. length > B do level_size queue .value. length current_level ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image6.png)
 
 [Wily Sandwich interviewed by Hot Gyro, an Amazon engineer](https://interviewing.io/recordings/Ruby-Amazon-11)
 
 [Minimum tree depth](https://interviewing.io/recordings/Ruby-Amazon-11)
 
-![public static Point vertex, int k) { (k, int numberOfPointsInWindow = 2aee double terminationThreshoId kLowestSoFar PriorityQueue new (PI, p2) - // pl > p2 -1, p2 > pl -1 (pl .Distance(vertex) - p2.Distance(vertex) ; return ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image7.png){width="5.0in" height="1.8680555555555556in"}
+![public static Point vertex, int k) { (k, int numberOfPointsInWindow = 2aee double terminationThreshoId kLowestSoFar PriorityQueue new (PI, p2) - // pl > p2 -1, p2 > pl -1 (pl .Distance(vertex) - p2.Distance(vertex) ; return ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image7.png)
 
 [Inventive Wind interviewed by Indelible Raven, a Microsoft engineer](https://interviewing.io/recordings/Java-Microsoft-14)
 
 [K closest points](https://interviewing.io/recordings/Java-Microsoft-14)
 
-![class Node: def __init__(self, val=None, self. val self. children children else def findRoot(tree) : child _ nodes I node tree: children=None) if children far child node. children : ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image8.png){width="5.0in" height="1.8680555555555556in"}
+![class Node: def __init__(self, val=None, self. val self. children children else def findRoot(tree) : child _ nodes I node tree: children=None) if children far child node. children : ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image8.png)
 
 [The Masked Hedgehog interviewed by Hot Gyro, an Amazon engineer](https://interviewing.io/recordings/Python-Amazon-10)
 
 [Sort colors](https://interviewing.io/recordings/Python-Amazon-10)
 
-![public String getCanonica1Path(String path) int strLength ( strLength if Deque r ing> StringBui1der current rolling int i path. length() ; stack new new StringBui1der(); sb = // maintains path until next forwward-slash i strLen th• i++ ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image9.png){width="5.0in" height="1.8680555555555556in"}
+![public String getCanonica1Path(String path) int strLength ( strLength if Deque r ing> StringBui1der current rolling int i path. length() ; stack new new StringBui1der(); sb = // maintains path until next forwward-slash i strLen th• i++ ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image9.png)
 
 [Spasmodic Pheasant interviewed by Intrepid Hawk, a Wurl, Inc engineer](https://interviewing.io/recordings/Java-Wurl-1)
 
 [Evaluate Unix path](https://interviewing.io/recordings/Java-Wurl-1)
 
-![def permute(s): stack = [Sl while stack : value = stack .pop(e) for idx in ) : remaining = value( :idx + value[idx+l : I perm = value[idx] + remaining if not in perm list_of_words. append( perm) stack . append(perm) ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image10.png){width="5.0in" height="1.875in"}
+![def permute(s): stack = [Sl while stack : value = stack .pop(e) for idx in ) : remaining = value( :idx + value[idx+l : I perm = value[idx] + remaining if not in perm list_of_words. append( perm) stack . append(perm) ](../../media/Payment^JTrade-Donation-system-Are-we-building-just-a-back-end-system--And-list-of-charities--Is-it-like-hard-coded-in-our-system-or-dynamic--image10.png)
 
 [Phantom Storm interviewed by Mythic Unicorn, a Walmart engineer](https://interviewing.io/recordings/Python-Walmart-1)
 

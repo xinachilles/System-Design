@@ -1,8 +1,6 @@
 # 2 Introduction to Infrastructure Automation
 
-Created: 2023-10-02 15:37:03 -0600
 
-Modified: 2023-10-22 17:40:46 -0600
 
 ---
 
@@ -20,63 +18,63 @@ Facts
 
 
 
-![O Benefits of infrastructure as code Infrastructure can be: • Versioned and managed just like application source code. • Repeatedly and reliably created, turned off, and re-created. • Created as needed to test the latest version of your application. Infrastructure as code allows: • Creation of multiple environments. • Creation of identical environment for multiple customers. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image1.png){width="5.0in" height="2.7083333333333335in"}
+![O Benefits of infrastructure as code Infrastructure can be: • Versioned and managed just like application source code. • Repeatedly and reliably created, turned off, and re-created. • Created as needed to test the latest version of your application. Infrastructure as code allows: • Creation of multiple environments. • Creation of identical environment for multiple customers. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image1.png)
 
 
 
-![Code infrastructure Code your infrastructure from scratch with the Clou&ormation template language, in either YAML or JSON format, or start from many available sample templates Amazon S3 Check out your template code locally, or upload it into an S3 bucket AWS CloudFormation Use AWS CloudFormation via the browser console, command line tools or APIs to create a stack based on your template code Output AWS CloudFormation provisions and configures the stacks and resources you specified on your template ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image2.png){width="5.0in" height="1.7916666666666667in"}
+![Code infrastructure Code your infrastructure from scratch with the Clou&ormation template language, in either YAML or JSON format, or start from many available sample templates Amazon S3 Check out your template code locally, or upload it into an S3 bucket AWS CloudFormation Use AWS CloudFormation via the browser console, command line tools or APIs to create a stack based on your template code Output AWS CloudFormation provisions and configures the stacks and resources you specified on your template ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image2.png)
 
 
 
-![YAML AWSTemp1 ate Fo rmatVe rsi on : Descri pti on : stri ng Parameters : set of parameters Mappi ngs : set of mappings Condi ti ons : set of conditions Transform: set of transforms Resources : set of resources Outputs : set of outputs "2020-01-09" ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image3.png){width="5.0in" height="4.104166666666667in"}
+![YAML AWSTemp1 ate Fo rmatVe rsi on : Descri pti on : stri ng Parameters : set of parameters Mappi ngs : set of mappings Condi ti ons : set of conditions Transform: set of transforms Resources : set of resources Outputs : set of outputs "2020-01-09" ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image3.png)
 
 
 
-![Format Version Format Version (optional): Corresponding AWS CloudFormation template version ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image4.png){width="5.0in" height="1.8125in"}
+![Format Version Format Version (optional): Corresponding AWS CloudFormation template version ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image4.png)
 
 
 
-![Description Description (optional): A text string ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image5.png){width="5.0in" height="1.5416666666666667in"}
+![Description Description (optional): A text string ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image5.png)
 
 
 
-![Parameters Parameters (optional): Inputs into template ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image6.png){width="5.0in" height="1.6527777777777777in"}
+![Parameters Parameters (optional): Inputs into template ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image6.png)
 
 
 
-![Mappings Mappings (optional): Static variables; key-value pairs ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image7.png){width="5.0in" height="2.0972222222222223in"}
+![Mappings Mappings (optional): Static variables; key-value pairs ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image7.png)
 
 
 
-![Conditions Conditions (optional): Controls for if and when certain resources are created or updated ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image8.png){width="5.0in" height="1.8958333333333333in"}
+![Conditions Conditions (optional): Controls for if and when certain resources are created or updated ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image8.png)
 
 
 
-![Transform Transform (optional): Specifies the version of AWS SAM to use ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image9.png){width="5.0in" height="2.1041666666666665in"}
+![Transform Transform (optional): Specifies the version of AWS SAM to use ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image9.png)
 
 
 
-![Resources Resources (required): AWS assets to create ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image10.png){width="5.0in" height="1.6666666666666667in"}
+![Resources Resources (required): AWS assets to create ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image10.png)
 
 
 
-![Outputs Outputs (optional): Values of custom resources created by template (URLs, username, etc.) ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image11.png){width="5.0in" height="1.8333333333333333in"}
+![Outputs Outputs (optional): Values of custom resources created by template (URLs, username, etc.) ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image11.png)
 
 
 
-![Templates A CloudFormation template is a JSON or YAML formatted text file. You can save these files with any extension, such as .json, .yaml, .template, or .txt. CloudFormation uses these templates as blueprints for building your AWS resources. For example, in a template, you can describe an Amazon EC2 instance, such as the instance type, the AMI ID, block device mappings, and its Amazon EC2 key pair name. Whenever you create a stack, you also specify a template that CloudFormation uses to create whatever you described in the template. For example, if you created a stack with the following template, CloudFormation provisions an instance with an ami-Off8a91507f77f867 AMI ID, t2.micro instance type, testkey key pair name, and an Amazon EBS volume. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image12.png){width="5.0in" height="2.6875in"}
+![Templates A CloudFormation template is a JSON or YAML formatted text file. You can save these files with any extension, such as .json, .yaml, .template, or .txt. CloudFormation uses these templates as blueprints for building your AWS resources. For example, in a template, you can describe an Amazon EC2 instance, such as the instance type, the AMI ID, block device mappings, and its Amazon EC2 key pair name. Whenever you create a stack, you also specify a template that CloudFormation uses to create whatever you described in the template. For example, if you created a stack with the following template, CloudFormation provisions an instance with an ami-Off8a91507f77f867 AMI ID, t2.micro instance type, testkey key pair name, and an Amazon EBS volume. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image12.png)
 
 
 
-![JSON " AWSTemp1ateFormatVersion : " " 2010-09-09 "Description " • "A sample template" , " Resources ' " MyEC2 Instance " : " Type • ". "AWS: :EC2: " Properties ' ' Imageld • : Instance' ". "ami-Off8a91507f77f867" , ' InstanceType ' " t 2 . micro " " KeyName ": " testkey " ' BlockDeviceMappings ' 'DeviceName ": " / dev/sdm" , "Ebs " : " Vo lumeType ' ' lops ' 200, 'iol " , " DeleteOnTermination " : " Vo lumeSize' 20 false, ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image13.png){width="5.0in" height="4.395833333333333in"}
+![JSON " AWSTemp1ateFormatVersion : " " 2010-09-09 "Description " • "A sample template" , " Resources ' " MyEC2 Instance " : " Type • ". "AWS: :EC2: " Properties ' ' Imageld • : Instance' ". "ami-Off8a91507f77f867" , ' InstanceType ' " t 2 . micro " " KeyName ": " testkey " ' BlockDeviceMappings ' 'DeviceName ": " / dev/sdm" , "Ebs " : " Vo lumeType ' ' lops ' 200, 'iol " , " DeleteOnTermination " : " Vo lumeSize' 20 false, ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image13.png)
 
 
 
-![YAML AWSTemp1ateFormatVersion: 2010---09---09 Description: A sample template Resources : MyEC2 Instance : Type: ' AWS: : EC2 : : Instance ' Properties : Imageld: ami---0ff8a91507f77f867 InstanceType: t 2 . micro KeyName: testkey BlockDeviceMappings : --- DeviceName: / dev/sdm Ebs : VolumeType: iol lops: 200 DeleteOnTermination : VolumeSize: 20 false ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image14.png){width="5.0in" height="3.2916666666666665in"}
+![YAML AWSTemp1ateFormatVersion: 2010---09---09 Description: A sample template Resources : MyEC2 Instance : Type: ' AWS: : EC2 : : Instance ' Properties : Imageld: ami---0ff8a91507f77f867 InstanceType: t 2 . micro KeyName: testkey BlockDeviceMappings : --- DeviceName: / dev/sdm Ebs : VolumeType: iol lops: 200 DeleteOnTermination : VolumeSize: 20 false ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image14.png)
 
 
 
-![The previous templates are centered around a single Amazon EC2 instance; however, CloudFormation templates have additional capabilities that you can use to build complex sets of resources and reuse those templates in multiple contexts. For example, you can add input parameters whose values are specified when you create a CloudFormation stacl<. In other words, you can specify a value like the instance type when you create a stack instead of when you create the template, making the template easier to reuse in different situations. For more information about template creation and capabilities, see Template anatomy. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image15.png){width="5.0in" height="1.9027777777777777in"}
+![The previous templates are centered around a single Amazon EC2 instance; however, CloudFormation templates have additional capabilities that you can use to build complex sets of resources and reuse those templates in multiple contexts. For example, you can add input parameters whose values are specified when you create a CloudFormation stacl<. In other words, you can specify a value like the instance type when you create a stack instead of when you create the template, making the template easier to reuse in different situations. For more information about template creation and capabilities, see Template anatomy. ](../../../media/AWS-DevOps-Module-2-2-Introduction-to-Infrastructure-Automation-image15.png)
 
 
 

@@ -1,8 +1,6 @@
 # Strangler pattern
 
-Created: 2018-12-13 01:00:00 -0600
 
-Modified: 2019-01-23 00:03:38 -0600
 
 ---
 

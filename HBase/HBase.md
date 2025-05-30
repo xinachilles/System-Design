@@ -1,8 +1,6 @@
 # HBase
 
-Created: 2017-10-07 15:53:54 -0600
 
-Modified: 2018-01-28 01:18:40 -0600
 
 ---
 
@@ -10,7 +8,7 @@ HBase supports Get or Put by key, just like key-value stores. You also allows yo
 
 
 
-![This will work for ASCII row keys. Note that ENDROW is exclusive. The fol owing should be a good start: {STARTROW scan •mytabte' ' rowleø' ENDROW ' row2ø1 ](../media/HBase-HBase-image1.png){width="5.0in" height="0.9027777777777778in"}
+![This will work for ASCII row keys. Note that ENDROW is exclusive. The fol owing should be a good start: {STARTROW scan •mytabte' ' rowleø' ENDROW ' row2ø1 ](../media/HBase-HBase-image1.png)
 
 
 
@@ -18,7 +16,7 @@ Unlike Cassandra, which preferred availability over consistency, under partition
 
 
 
-![Client HRegionServer Hregion Store MemStore HMaster Zookeeper HLog Store MemStore Small group Of servers running Zab, a consensus protocol (Paxos-like) HRegionServer StoreFiIe HFile StoreFiIe HFile StoreFile HFile HDFS StoreFiIe HFile ](../media/HBase-HBase-image2.png){width="5.0in" height="2.9305555555555554in"}
+![Client HRegionServer Hregion Store MemStore HMaster Zookeeper HLog Store MemStore Small group Of servers running Zab, a consensus protocol (Paxos-like) HRegionServer StoreFiIe HFile StoreFiIe HFile StoreFile HFile HDFS StoreFiIe HFile ](../media/HBase-HBase-image2.png)
 
 
 
@@ -161,13 +159,13 @@ The HBase treats this entire segmentof entries as the HBase Key.What is the row?
 
 
 
-![Data Magic Key length Data kKey, value) (Key, value) . Metadata. file info. indices. and trailer ... (Key, value) Value Row length length Row Col Family length col Family Col Timestamp Qualifier Key Value SSN:OOO-01-2345 Demographic Ethnicity Information HBase Key ](../media/HBase-HBase-image3.png){width="5.0in" height="2.7777777777777777in"}
+![Data Magic Key length Data kKey, value) (Key, value) . Metadata. file info. indices. and trailer ... (Key, value) Value Row length length Row Col Family length col Family Col Timestamp Qualifier Key Value SSN:OOO-01-2345 Demographic Ethnicity Information HBase Key ](../media/HBase-HBase-image3.png)
 
 
 
 
 
-![row key PersonIO PERSON TABLE personal_data Address pet.Hunt@s Stonehent•, demographic BirthOate Gender lin ](../media/HBase-HBase-image4.png){width="5.0in" height="2.1180555555555554in"}
+![row key PersonIO PERSON TABLE personal_data Address pet.Hunt@s Stonehent•, demographic BirthOate Gender lin ](../media/HBase-HBase-image4.png)
 
 
 

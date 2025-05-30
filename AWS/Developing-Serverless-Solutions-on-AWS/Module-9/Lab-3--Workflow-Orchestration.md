@@ -1,8 +1,6 @@
 # Lab 3: Workflow Orchestration Using AWS Step Functions | Self-Paced Labs
 
-Created: 2023-10-04 03:14:41 -0600
 
-Modified: 2023-10-08 11:13:06 -0600
 
 ---
 
@@ -24,7 +22,7 @@ In this lab, you use AWS Step Functions to incorporate a workflow to automatical
 
 The following architecture diagram shows the components that have been or will be deployed in this lab.
 
-![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image1.png){width="6.5in" height="8.916666666666666in"}
+![Architecture diagram showing the components of the serverless architecture that have been or will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image1.png)
 
 This lab uses the following software stack:
 
@@ -81,7 +79,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image2.png){width="6.5in" height="1.375in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image2.png)
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -640,14 +638,14 @@ PublishStateMachine
 1.  At the top of the screen, choose **Code**.
 2.  In the **Code** section on left, copy the Step Functions definition from the statemachine.json file and replace the sample code. You should see the code and the workflow diagram populated like the following image:
 
-![StepFunctionsWorkflowDiagram](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image3.png){width="6.5in" height="2.3958333333333335in"}
+![StepFunctionsWorkflowDiagram](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image3.png)
 
 You can also view the state machine in the Workflow studio.
 
 1.  Choose Edit at the top most corner of the console.
 2.  In the **Design** pane of the console, choose **Center** on the top to see the workflow in the middle pane of the console. It should look similar to the following image.
 
-![WorkflowStudio](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image4.png){width="6.5in" height="5.166666666666667in"}
+![WorkflowStudio](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image4.png)
 
 1.  Choose **Exit** to return to the **PublishStateMachine** page.
 
@@ -840,7 +838,7 @@ Follow these steps to close the console and end your lab.
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image5.png){width="0.4652777777777778in" height="6.5in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-9-Lab-3--Workflow-Orchestration-Using-AWS-Step-Functions---Self-Paced-Labs-image5.png)
 
 
 

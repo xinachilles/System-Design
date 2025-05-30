@@ -1,12 +1,10 @@
 # COPS, Causal Consistency
 
-Created: 2020-07-03 11:59:31 -0600
 
-Modified: 2020-10-02 17:14:39 -0600
 
 ---
 
-![](../media/MIT-COPS,-Causal-Consistency-image1.png){width="0.7291666666666666in" height="0.5277777777777778in"}![](../media/MIT-COPS,-Causal-Consistency-image2.png){width="0.6666666666666666in" height="0.4652777777777778in"}![](../media/MIT-COPS,-Causal-Consistency-image3.png){width="0.25in" height="0.2847222222222222in"}![](../media/MIT-COPS,-Causal-Consistency-image4.png){width="0.4583333333333333in" height="0.4861111111111111in"}![](../media/MIT-COPS,-Causal-Consistency-image5.png){width="0.4444444444444444in" height="0.4444444444444444in"}![](../media/MIT-COPS,-Causal-Consistency-image6.png){width="1.2708333333333333in" height="1.8055555555555556in"}
+![](../media/MIT-COPS,-Causal-Consistency-image1.png)![](../media/MIT-COPS,-Causal-Consistency-image2.png)![](../media/MIT-COPS,-Causal-Consistency-image3.png)![](../media/MIT-COPS,-Causal-Consistency-image4.png)![](../media/MIT-COPS,-Causal-Consistency-image5.png)![](../media/MIT-COPS,-Causal-Consistency-image6.png)
 
 we're talking again about big websites that have data in multiple data centers and they want to replicate the data in each ~~of their all their data in each their~~ data centers have to keep a copy close to users and for perhaps for fault tolerance, so as usual we have maybe I'll have three data centers and you know because we're building big systems we're going to shard the data and every data center is going to have multiple servers with you know ,
 
@@ -336,7 +334,7 @@ just keep in mind this sync() calls likely to be pretty slow because the natural
 
 ~~now we're actually in much better situation if client 2 in a different data center saw the photo in this list then that means that client 1 had already called put on this list because it's this put that adds the photo of the list, if client 1 already called put on this list that means the client 1 now given the way this code works had already called sync () and sync() doesn't return until the photo is present at all data centers ,so that means the programmer for client two can rely on well the photograph in the list that means this whoever added the photo to the list their sync() completed means the photo is present everywhere and therefore we can rely on client 2 get function to get the photo actually returning the photograph~~
 
-![](../media/MIT-COPS,-Causal-Consistency-image7.png){width="5.0in" height="3.7777777777777777in"}
+![](../media/MIT-COPS,-Causal-Consistency-image7.png)
 
 
 
@@ -403,7 +401,7 @@ the drawback that the paper points to about this style of solution is that the l
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image8.png){width="5.0in" height="3.7916666666666665in"}
+![](../media/MIT-COPS,-Causal-Consistency-image8.png)
 
 ~~and so COPS (paper) does not follow this approach to conv~~
 
@@ -447,7 +445,7 @@ we'll see that for various reasons cops can optimize away this information and i
 
 
 
-![0 を 3 を 0 ) → 破 て y:vf 尸 評 を 广 ) → ](../media/MIT-COPS,-Causal-Consistency-image9.png){width="5.0in" height="3.5277777777777777in"}
+![0 を 3 を 0 ) → 破 て y:vf 尸 評 を 广 ) → ](../media/MIT-COPS,-Causal-Consistency-image9.png)
 
 
 
@@ -481,7 +479,7 @@ however you know maybe these two shard servers haven't received the updates, tha
 
 Y because he didn't reveal the shards or didn't reveal Z until it was sure the dependencies would be visible
 
-![](../media/MIT-COPS,-Causal-Consistency-image10.png){width="5.0in" height="3.7569444444444446in"}
+![](../media/MIT-COPS,-Causal-Consistency-image10.png)
 
 
 
@@ -1265,63 +1263,63 @@ I'll see you on Thursday
 
 you
 
-![](../media/MIT-COPS,-Causal-Consistency-image11.png){width="0.2708333333333333in" height="0.6180555555555556in"}
+![](../media/MIT-COPS,-Causal-Consistency-image11.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image12.png){width="2.3958333333333335in" height="0.3680555555555556in"}
+![](../media/MIT-COPS,-Causal-Consistency-image12.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image13.png){width="0.2222222222222222in" height="0.25in"}![](../media/MIT-COPS,-Causal-Consistency-image14.png){width="0.24305555555555555in" height="0.25in"}
+![](../media/MIT-COPS,-Causal-Consistency-image13.png)![](../media/MIT-COPS,-Causal-Consistency-image14.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image15.png){width="0.8611111111111112in" height="0.8541666666666666in"}![](../media/MIT-COPS,-Causal-Consistency-image16.png){width="0.6597222222222222in" height="0.7013888888888888in"}![](../media/MIT-COPS,-Causal-Consistency-image17.png){width="0.5277777777777778in" height="0.4166666666666667in"}![](../media/MIT-COPS,-Causal-Consistency-image18.png){width="0.6388888888888888in" height="3.4791666666666665in"}![](../media/MIT-COPS,-Causal-Consistency-image19.png){width="0.3472222222222222in" height="0.8402777777777778in"}![](../media/MIT-COPS,-Causal-Consistency-image20.png){width="0.375in" height="0.8611111111111112in"}![](../media/MIT-COPS,-Causal-Consistency-image21.png){width="1.0555555555555556in" height="0.7569444444444444in"}![](../media/MIT-COPS,-Causal-Consistency-image22.png){width="1.25in" height="0.2847222222222222in"}
+![](../media/MIT-COPS,-Causal-Consistency-image15.png)![](../media/MIT-COPS,-Causal-Consistency-image16.png)![](../media/MIT-COPS,-Causal-Consistency-image17.png)![](../media/MIT-COPS,-Causal-Consistency-image18.png)![](../media/MIT-COPS,-Causal-Consistency-image19.png)![](../media/MIT-COPS,-Causal-Consistency-image20.png)![](../media/MIT-COPS,-Causal-Consistency-image21.png)![](../media/MIT-COPS,-Causal-Consistency-image22.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image23.png){width="0.3680555555555556in" height="0.5in"}![](../media/MIT-COPS,-Causal-Consistency-image24.png){width="0.3263888888888889in" height="0.5208333333333334in"}
+![](../media/MIT-COPS,-Causal-Consistency-image23.png)![](../media/MIT-COPS,-Causal-Consistency-image24.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image25.png){width="0.25in" height="0.24305555555555555in"}
+![](../media/MIT-COPS,-Causal-Consistency-image25.png)
 
 
 
-![ス つ 村 げ ](../media/MIT-COPS,-Causal-Consistency-image26.png){width="5.0in" height="3.7430555555555554in"}
+![ス つ 村 げ ](../media/MIT-COPS,-Causal-Consistency-image26.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image27.png){width="0.75in" height="0.25in"}![](../media/MIT-COPS,-Causal-Consistency-image28.png){width="0.4652777777777778in" height="0.5416666666666666in"}![](../media/MIT-COPS,-Causal-Consistency-image29.png){width="0.4444444444444444in" height="0.4375in"}![](../media/MIT-COPS,-Causal-Consistency-image30.png){width="0.6805555555555556in" height="0.4861111111111111in"}
+![](../media/MIT-COPS,-Causal-Consistency-image27.png)![](../media/MIT-COPS,-Causal-Consistency-image28.png)![](../media/MIT-COPS,-Causal-Consistency-image29.png)![](../media/MIT-COPS,-Causal-Consistency-image30.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image31.png){width="0.7986111111111112in" height="0.2708333333333333in"}![](../media/MIT-COPS,-Causal-Consistency-image32.png){width="0.3958333333333333in" height="0.5277777777777778in"}
+![](../media/MIT-COPS,-Causal-Consistency-image31.png)![](../media/MIT-COPS,-Causal-Consistency-image32.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image33.png){width="0.3541666666666667in" height="0.4166666666666667in"}![](../media/MIT-COPS,-Causal-Consistency-image34.png){width="0.3472222222222222in" height="0.5in"}
+![](../media/MIT-COPS,-Causal-Consistency-image33.png)![](../media/MIT-COPS,-Causal-Consistency-image34.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image35.png){width="0.2222222222222222in" height="0.2916666666666667in"}![](../media/MIT-COPS,-Causal-Consistency-image36.png){width="2.048611111111111in" height="0.9513888888888888in"}![](../media/MIT-COPS,-Causal-Consistency-image37.png){width="0.22916666666666666in" height="0.3333333333333333in"}![](../media/MIT-COPS,-Causal-Consistency-image38.png){width="0.6041666666666666in" height="0.5486111111111112in"}![](../media/MIT-COPS,-Causal-Consistency-image39.png){width="0.4652777777777778in" height="0.5972222222222222in"}![](../media/MIT-COPS,-Causal-Consistency-image40.png){width="0.375in" height="0.5069444444444444in"}![](../media/MIT-COPS,-Causal-Consistency-image41.png){width="0.3541666666666667in" height="0.4027777777777778in"}
+![](../media/MIT-COPS,-Causal-Consistency-image35.png)![](../media/MIT-COPS,-Causal-Consistency-image36.png)![](../media/MIT-COPS,-Causal-Consistency-image37.png)![](../media/MIT-COPS,-Causal-Consistency-image38.png)![](../media/MIT-COPS,-Causal-Consistency-image39.png)![](../media/MIT-COPS,-Causal-Consistency-image40.png)![](../media/MIT-COPS,-Causal-Consistency-image41.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image42.png){width="1.1458333333333333in" height="0.3333333333333333in"}
+![](../media/MIT-COPS,-Causal-Consistency-image42.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image43.png){width="1.7708333333333333in" height="1.2083333333333333in"}![](../media/MIT-COPS,-Causal-Consistency-image44.png){width="0.4444444444444444in" height="0.5in"}![](../media/MIT-COPS,-Causal-Consistency-image45.png){width="0.4791666666666667in" height="0.4861111111111111in"}![](../media/MIT-COPS,-Causal-Consistency-image46.png){width="0.7986111111111112in" height="0.2847222222222222in"}
+![](../media/MIT-COPS,-Causal-Consistency-image43.png)![](../media/MIT-COPS,-Causal-Consistency-image44.png)![](../media/MIT-COPS,-Causal-Consistency-image45.png)![](../media/MIT-COPS,-Causal-Consistency-image46.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image47.png){width="0.3055555555555556in" height="0.3958333333333333in"}![](../media/MIT-COPS,-Causal-Consistency-image48.png){width="0.375in" height="0.4166666666666667in"}
+![](../media/MIT-COPS,-Causal-Consistency-image47.png)![](../media/MIT-COPS,-Causal-Consistency-image48.png)
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image49.png){width="0.22916666666666666in" height="0.22916666666666666in"}![](../media/MIT-COPS,-Causal-Consistency-image50.png){width="0.4027777777777778in" height="0.4861111111111111in"}
+![](../media/MIT-COPS,-Causal-Consistency-image49.png)![](../media/MIT-COPS,-Causal-Consistency-image50.png)
 
 
 
@@ -1333,7 +1331,7 @@ B is log service
 
 
 
-![](../media/MIT-COPS,-Causal-Consistency-image51.png){width="0.8194444444444444in" height="0.3055555555555556in"}![](../media/MIT-COPS,-Causal-Consistency-image52.png){width="0.4027777777777778in" height="1.3888888888888888in"}![](../media/MIT-COPS,-Causal-Consistency-image53.png){width="0.6180555555555556in" height="0.4444444444444444in"}![](../media/MIT-COPS,-Causal-Consistency-image54.png){width="0.6875in" height="0.5069444444444444in"}
+![](../media/MIT-COPS,-Causal-Consistency-image51.png)![](../media/MIT-COPS,-Causal-Consistency-image52.png)![](../media/MIT-COPS,-Causal-Consistency-image53.png)![](../media/MIT-COPS,-Causal-Consistency-image54.png)
 
 
 

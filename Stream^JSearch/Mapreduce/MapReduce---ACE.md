@@ -1,8 +1,6 @@
 # MapReduce - ACE
 
-Created: 2021-05-24 16:42:49 -0600
 
-Modified: 2021-05-24 17:05:37 -0600
 
 ---
 
@@ -26,12 +24,12 @@ Shuffling -- combine the same key together and Mapreduce framework will deploy t
 
 
 
-![MapReduce Input Ri•a Dee Bar Splitting KI,VI Mapping Shuffling car, Reducing Car, 3 Final Result Riv«, 2 ](../../media/Stream^JSearch-Mapreduce-MapReduce---ACE-image1.png){width="5.0in" height="2.9791666666666665in"}
+![MapReduce Input Ri•a Dee Bar Splitting KI,VI Mapping Shuffling car, Reducing Car, 3 Final Result Riv«, 2 ](../../media/Stream^JSearch-Mapreduce-MapReduce---ACE-image1.png)
 
 
 
 
 
-![MapReduce (1) fork (2) assign . .map (4) write user Program (1) fork (1) fork execution log on GFS Master (O assign reduce split O split 1 split 2 split 3 split 4 Input (6) write 3 read worker Map Intermediate files (on GFS) Reduce output Output fie s @ acecodeintervu ](../../media/Stream^JSearch-Mapreduce-MapReduce---ACE-image2.png){width="5.0in" height="3.0625in"}
+![MapReduce (1) fork (2) assign . .map (4) write user Program (1) fork (1) fork execution log on GFS Master (O assign reduce split O split 1 split 2 split 3 split 4 Input (6) write 3 read worker Map Intermediate files (on GFS) Reduce output Output fie s @ acecodeintervu ](../../media/Stream^JSearch-Mapreduce-MapReduce---ACE-image2.png)
 
 

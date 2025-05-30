@@ -1,18 +1,16 @@
 # Service 
 
-Created: 2017-10-12 07:30:46 -0600
 
-Modified: 2017-10-15 16:03:36 -0600
 
 ---
 
-![Design a Typeahead Where does raw data come from? (i.e. What does DataCollectionService do?) user keyword •amazon" "apple" "adidas• log data 1 time group by 1463379797 1463379797 1463379798 keyword "amazon" "apple" "adidas" "airbnb" Audience Question Q: Bupdate.catz-z hit Webinar • This session 7b 3b ](../../media/Steam^JCollection-Typehead-Service-image1.png){width="5.0in" height="2.6527777777777777in"}
+![Design a Typeahead Where does raw data come from? (i.e. What does DataCollectionService do?) user keyword •amazon" "apple" "adidas• log data 1 time group by 1463379797 1463379797 1463379798 keyword "amazon" "apple" "adidas" "airbnb" Audience Question Q: Bupdate.catz-z hit Webinar • This session 7b 3b ](../../media/Steam^JCollection-Typehead-Service-image1.png)
 
 how the data collection service to update the trie
 
 
 
-![Design a Typeahead Google Suggestion request Trie (in memory) QueryService Serialized Trie (on disk) response Log data DataCollectionService ](../../media/Steam^JCollection-Typehead-Service-image2.png){width="5.0in" height="2.7569444444444446in"}
+![Design a Typeahead Google Suggestion request Trie (in memory) QueryService Serialized Trie (on disk) response Log data DataCollectionService ](../../media/Steam^JCollection-Typehead-Service-image2.png)
 
 
 
@@ -26,7 +24,7 @@ For example, if we need to store 'cap, cat, caption, captain, capital' in the tr
 
 
 
-![](../../media/Steam^JCollection-Typehead-Service-image3.png){width="5.0in" height="5.375in"}
+![](../../media/Steam^JCollection-Typehead-Service-image3.png)
 
 
 
@@ -76,11 +74,11 @@ We can have aMap reduce setup to process all the logging data periodically, say 
 
 
 
-![](../../media/Steam^JCollection-Typehead-Service-image4.png){width="5.0in" height="2.5in"}
+![](../../media/Steam^JCollection-Typehead-Service-image4.png)
 
 
 
-![](../../media/Steam^JCollection-Typehead-Service-image5.png){width="5.0in" height="3.423611111111111in"}
+![](../../media/Steam^JCollection-Typehead-Service-image5.png)
 
 
 

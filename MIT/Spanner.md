@@ -1,8 +1,6 @@
 # Spanner
 
-Created: 2020-06-24 11:40:55 -0600
 
-Modified: 2021-01-17 02:08:53 -0600
 
 ---
 
@@ -574,7 +572,7 @@ and then there's all the hundreds of servers in the data center, that are runnin
 
 saying what time is it to the local one or more usually more than one piece
 
-![5 1 フ メ の ツ ェ へ 、 亠 上 ヨ w 亠 第 オ 亠 ・ フ み プ メ フ の つ ](../media/MIT-Spanner-image1.png){width="5.0in" height="3.7083333333333335in"}
+![5 1 フ メ の ツ ェ へ 、 亠 上 ヨ w 亠 第 オ 亠 ・ フ み プ メ フ の つ ](../media/MIT-Spanner-image1.png)
 
 
 
@@ -658,7 +656,7 @@ earliest possible correct time is greater than the transactions timestamp, that 
 
 
 
-![ア ) メ m, 戸 ー 上 ) 匈 ユ ー ツ 0 ) ・ 内 0 フ ー 角 / 」 ト ノ 、 , - 0 チ 5 な 当 ・ Q) 師 の 上 亠 ょ 5 上 ](../media/MIT-Spanner-image2.png){width="5.0in" height="3.8333333333333335in"}
+![ア ) メ m, 戸 ー 上 ) 匈 ユ ー ツ 0 ) ・ 内 0 フ ー 角 / 」 ト ノ 、 , - 0 チ 5 な 当 ・ Q) 師 の 上 亠 ょ 5 上 ](../media/MIT-Spanner-image2.png)
 
 
 
@@ -1506,19 +1504,19 @@ performance transactions so I'll see you
 
 on Thursday
 
-![](../media/MIT-Spanner-image3.png){width="5.0in" height="3.6597222222222223in"}
+![](../media/MIT-Spanner-image3.png)
 
 
 
-![](../media/MIT-Spanner-image4.png){width="5.0in" height="3.7083333333333335in"}
+![](../media/MIT-Spanner-image4.png)
 
 
 
-![X@lDcq ](../media/MIT-Spanner-image5.png){width="5.0in" height="3.486111111111111in"}
+![X@lDcq ](../media/MIT-Spanner-image5.png)
 
 
 
-![Ι ρν67¯ιΜ6 ](../media/MIT-Spanner-image6.png){width="3.9166666666666665in" height="1.8333333333333333in"}
+![Ι ρν67¯ιΜ6 ](../media/MIT-Spanner-image6.png)
 
 
 

@@ -1,8 +1,6 @@
 # anti corruption layer
 
-Created: 2019-11-03 23:10:33 -0600
 
-Modified: 2019-12-13 17:28:50 -0600
 
 ---
 

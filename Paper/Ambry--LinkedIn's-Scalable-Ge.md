@@ -1,8 +1,6 @@
 # Ambry: LinkedIn's Scalable Geo-Distributed Object Store
 
-Created: 2024-01-30 17:04:11 -0600
 
-Modified: 2024-01-30 17:14:25 -0600
 
 ---
 

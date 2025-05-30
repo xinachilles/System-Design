@@ -1,8 +1,6 @@
 # Ajax polling, Http long polling and web socket (tcp connection) 
 
-Created: 2018-01-28 17:38:21 -0600
 
-Modified: 2021-01-12 00:04:57 -0600
 
 ---
 

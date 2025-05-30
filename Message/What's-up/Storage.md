@@ -1,12 +1,10 @@
 # Storage
 
-Created: 2017-10-08 17:06:06 -0600
 
-Modified: 2020-11-27 16:34:41 -0600
 
 ---
 
-![Storage --- Schema Message Table user_id+timestamp message_id int64 thread id int64 user id int64 content created at user id thread id participant_lds participant_hash created at updated_at timestamp Thread Table int64 int64 tekt string timestamp timestamp create _ user id+timestamp j son avoid duplicate threads index---true ](../../media/Message-What's-up-Storage-image1.png){width="5.0in" height="2.6875in"}![Answered Mar 2, 2012 I would imagine it would be something like: 'tableName, 'messages' , 'data' (This is generic as I am sure FB's schema is much more advanced) messages:author timestamp=1229953071910, value=The Author messages:body timestamp=1229953072029, value=This is the message messages:subject timestamp=1229953071791, value=He110 World data:time timestamp-1229953071791, value=20120301 data:generic timestamp=1229953071791, value=generic value Here is an example of creating schema for a blog: ](../../media/Message-What's-up-Storage-image2.png){width="5.0in" height="2.4375in"}
+![Storage --- Schema Message Table user_id+timestamp message_id int64 thread id int64 user id int64 content created at user id thread id participant_lds participant_hash created at updated_at timestamp Thread Table int64 int64 tekt string timestamp timestamp create _ user id+timestamp j son avoid duplicate threads index---true ](../../media/Message-What's-up-Storage-image1.png)![Answered Mar 2, 2012 I would imagine it would be something like: 'tableName, 'messages' , 'data' (This is generic as I am sure FB's schema is much more advanced) messages:author timestamp=1229953071910, value=The Author messages:body timestamp=1229953072029, value=This is the message messages:subject timestamp=1229953071791, value=He110 World data:time timestamp-1229953071791, value=20120301 data:generic timestamp=1229953071791, value=generic value Here is an example of creating schema for a blog: ](../../media/Message-What's-up-Storage-image2.png)
 
 | row Key            |     |           | Message   |          |      |
 |--------------------|-----|-----------|-----------|-----------|-------|

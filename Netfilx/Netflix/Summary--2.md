@@ -1,8 +1,6 @@
 # Summary -2
 
-Created: 2021-01-13 18:47:14 -0600
 
-Modified: 2021-04-25 12:28:03 -0600
 
 ---
 
@@ -55,7 +53,7 @@ For separate of concerns principle, the following designs are broke into 4 parts
 
 Architecture
 
-![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--2-image1.png){width="6.1875in" height="4.805555555555555in"}
+![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--2-image1.png)
 
 
 
@@ -190,7 +188,7 @@ When the user deletes the video, the state will be changed to DELETED_PENDING, t
 
 Architecture
 
-![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--2-image2.png){width="6.152777777777778in" height="4.5in"}
+![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--2-image2.png)
 
 - [Popularity service in charge of the views, likes, dislikes of the video,]{.mark} likes and dislikes of the comments. The popularity service will periodically read all user activity logs and update the likes/views etc.
   - Popularity has massive read / write but ok with small chance of data loss, therefore use redis to store the data and async write back to DB.
@@ -269,7 +267,7 @@ Recommendation System
 
 Architecture
 
-![personalized recommendations 3 User Preference Profile Collabrative Filtering Video Labeling system Popularity ranking ](../../media/Netfilx-Netflix-Summary--2-image3.png){width="6.1875in" height="3.6041666666666665in"}
+![personalized recommendations 3 User Preference Profile Collabrative Filtering Video Labeling system Popularity ranking ](../../media/Netfilx-Netflix-Summary--2-image3.png)
 
 - Every video is labeled with several tags, it could be done automatically or manually
   - System design, news, stock, yu qian, classical music, civ 6, food etc.
@@ -289,7 +287,7 @@ recommend the videos base the similar people )
 
 
 
-![This image shows an example of predicting of the user's rating using collaborative filtering. At first, people rate different items (like videos, images, games). After that, the system is making predictions about user's rating for an item, which the user hasn't rated yet. These predictions are built upon the existing ratings of other users, who have similar ratings with the active user. For instance, in our case the system has made a prediction, that the active user won't like the video. ](../../media/Netfilx-Netflix-Summary--2-image4.png){width="6.270833333333333in" height="9.229166666666666in"}
+![This image shows an example of predicting of the user's rating using collaborative filtering. At first, people rate different items (like videos, images, games). After that, the system is making predictions about user's rating for an item, which the user hasn't rated yet. These predictions are built upon the existing ratings of other users, who have similar ratings with the active user. For instance, in our case the system has made a prediction, that the active user won't like the video. ](../../media/Netfilx-Netflix-Summary--2-image4.png)
 
 
 

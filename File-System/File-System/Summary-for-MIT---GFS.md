@@ -1,8 +1,6 @@
 # Summary for MIT - GFS
 
-Created: 2020-11-28 23:52:39 -0600
 
-Modified: 2021-01-21 17:35:10 -0600
 
 ---
 

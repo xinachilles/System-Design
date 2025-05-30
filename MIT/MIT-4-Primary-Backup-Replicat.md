@@ -1,8 +1,6 @@
 # MIT-4-Primary-Backup Replication
 
-Created: 2020-06-05 10:07:14 -0600
 
-Modified: 2020-11-28 17:07:24 -0600
 
 ---
 

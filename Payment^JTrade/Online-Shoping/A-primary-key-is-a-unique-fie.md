@@ -1,8 +1,6 @@
 # A primary key is a unique field on a table but it is special in the sense that the table considers that row as its key. This means that other tables can use this field to create foreign key relationships to themselves.
 
-Created: 2018-01-31 00:38:37 -0600
 
-Modified: 2018-01-31 00:38:50 -0600
 
 ---
 

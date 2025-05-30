@@ -1,8 +1,6 @@
 # Command and Query Responsibility Segregation (CQRS) pattern
 
-Created: 2018-11-04 23:49:33 -0600
 
-Modified: 2018-11-04 23:49:54 -0600
 
 ---
 

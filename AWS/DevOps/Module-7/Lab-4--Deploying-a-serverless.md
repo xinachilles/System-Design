@@ -1,8 +1,6 @@
 # Lab 4: Deploying a serverless application using AWS Serverless Application Model (AWS SAM) and a CI/CD pipeline | Self-Paced Labs
 
-Created: 2023-10-08 05:19:55 -0600
 
-Modified: 2023-10-08 11:22:00 -0600
 
 ---
 
@@ -70,7 +68,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image1.png){width="6.5in" height="1.375in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image1.png)
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -89,7 +87,7 @@ In some cases, certain pop-up or script blocker web browser extensions might pre
 
 Below you find a diagram of the architecture used for this lab:
 
-![Lab Architecture](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image2.png){width="6.5in" height="3.2708333333333335in"}
+![Lab Architecture](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image2.png)
 
 *The image depicts the pipeline by pulling data from CodeCommit into CodePipeline. Then invokes AWS CodeBuild which calls AWS CloudFormation to create the Amazon APIGateway endpoint and Lambda function created using Node.js. Lastly, it deploys the application using AWS CodeDeploy.*
 
@@ -297,13 +295,13 @@ This splits the lower pane. Your terminal is now to the left and a browser windo
 
 **Note:** If you're running this lab in the Safari web browser, you may receive a Notice about **Third-party cookies disabled**. To complete steps 17-19 without enabling third-party cookies, you need to run them in Firefox or Chrome. If you choose not to change browsers or your settings, you can proceed to step 20.
 
-![SAM Preview](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image3.png){width="6.5in" height="1.7708333333333333in"}
+![SAM Preview](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image3.png)
 
 *Images show example of the SAM notice about third-party cookies being disabled.*
 
 1.  Select the address bar within the browser and move your cursor to the far right of the displayed address.
 
-![Cloud9 Browser Screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image4.png){width="6.5in" height="1.3263888888888888in"}
+![Cloud9 Browser Screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image4.png)
 
 *Image shows the browser with an example message about a missing authentication token.*
 
@@ -317,7 +315,7 @@ after the last forward slash (/) and press **Enter** on your keyboard.
 
 In the terminal, you see the lab4 application process your request and return a **GET**. The browser window updates when the application outputs the **GET** and displays the message *hello world*.
 
-![SAM Preview Output](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image5.png){width="3.8541666666666665in" height="1.6111111111111112in"}
+![SAM Preview Output](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image5.png)
 
 *Image depicts browser example of the hello world message being displayed.*
 
@@ -709,7 +707,7 @@ Your Deploy stage still needs some work but you have to fix that after the pipel
 3.  For **Choose a stop mode for the execution**, choose **Stop and abandon**.
 4.  Choose Stop .
 
-![stop execution screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image6.png){width="6.402777777777778in" height="6.402777777777778in"}
+![stop execution screenshot](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image6.png)
 
 *Image show the stop execution window screen as an example of what options should be chosen.*
 
@@ -758,7 +756,7 @@ lab4-sam-changeset
 
 Observe the progress of your pipeline through each stage. In less than 5 minutes, you should see **Succeeded** on each stage.
 
-![Lab4 Pipeline Success](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image7.png){width="6.5in" height="9.291666666666666in"}
+![Lab4 Pipeline Success](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image7.png)
 
 *Image shows the CodePipeline deployment steps where all steps have succeeded.*
 
@@ -880,13 +878,13 @@ If you repeatedly refresh the browser window before the **Deploy** stage has com
 
 In the deployment console, the status looks like the following when it is in progress and half of the traffic has shifted to the new deployment.
 
-![deployment halfway](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image8.png){width="6.5in" height="3.7291666666666665in"}
+![deployment halfway](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image8.png)
 
 *The images show the progress of the blue-green deployment at the 70% blue to 30% green status.*
 
 In the deployment console, the status changes to the following when it has finished and all the traffic has shifted to the new deployment.
 
-![deployment finished](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image9.png){width="6.5in" height="3.7291666666666665in"}
+![deployment finished](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image9.png)
 
 *Image shows the blue-green deployment being completed successfully.*
 
@@ -927,7 +925,7 @@ You need more than what you have available because you download docker images. Y
 
 df -h
 
-![Disk space issue](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image10.png){width="4.125in" height="0.7916666666666666in"}
+![Disk space issue](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image10.png)
 
 1.  If you have close to 100% in use on **/dev/xvda1**, run the following command to remove any extra Docker images from the Cloud9 environment:
 
@@ -942,7 +940,7 @@ For more information about AWS Training and Certification, see *<https://aws.ama
 
 
 
-![](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image11.png){width="0.3541666666666667in" height="6.5in"}
+![](../../../media/AWS-DevOps-Module-7-Lab-4--Deploying-a-serverless-application-using-AWS-Serverless-Application-Model-(AWS-SAM)-and-a-CI-CD-pipeline---Self-Paced-Labs-image11.png)
 
 
 

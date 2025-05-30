@@ -1,8 +1,6 @@
 # Summary 
 
-Created: 2020-12-02 11:34:30 -0600
 
-Modified: 2021-01-21 18:24:29 -0600
 
 ---
 
@@ -78,7 +76,7 @@ Constraints:
 
 Architecture
 
-![User Service API gateway User work queue Online Compile AWS lambda SQL Compute Service ](../../media/Example-Leetcode-Summary-image1.png){width="6.173611111111111in" height="3.375in"}
+![User Service API gateway User work queue Online Compile AWS lambda SQL Compute Service ](../../media/Example-Leetcode-Summary-image1.png)
 
 For API gateway
 

@@ -1,8 +1,6 @@
 # Designing Pastebin
 
-Created: 2021-01-31 23:43:19 -0600
 
-Modified: 2021-02-01 17:56:49 -0600
 
 ---
 
@@ -76,7 +74,7 @@ Last_update_time
 
 
 
-![ID generation Meta data Paste service Clean up URL service service client Web services URL ](../../media/Example-Pastebin-Designing-Pastebin-image1.png){width="5.0in" height="2.4375in"}
+![ID generation Meta data Paste service Clean up URL service service client Web services URL ](../../media/Example-Pastebin-Designing-Pastebin-image1.png)
 
 
 

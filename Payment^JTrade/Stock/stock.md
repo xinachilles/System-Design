@@ -1,8 +1,6 @@
 # stock 
 
-Created: 2020-11-20 10:43:22 -0600
 
-Modified: 2020-12-03 01:51:46 -0600
 
 ---
 
@@ -534,15 +532,15 @@ overall design that I'm thinking of for the system very complex, but I think tha
 
 that stuff what do you think checks all of the the chance that we want to ask for the system so yeah that's what I was looking for thanks with that I hope that you found this video informative and we'll see you in the next one
 
-![](../../media/Payment^JTrade-Stock-stock-image1.png){width="0.20833333333333334in" height="0.20833333333333334in"}![](../../media/Payment^JTrade-Stock-stock-image2.png){width="0.20833333333333334in" height="0.20833333333333334in"}
+![](../../media/Payment^JTrade-Stock-stock-image1.png)![](../../media/Payment^JTrade-Stock-stock-image2.png)
 
 
 
-![](../../media/Payment^JTrade-Stock-stock-image3.png){width="0.20833333333333334in" height="0.20833333333333334in"}
+![](../../media/Payment^JTrade-Stock-stock-image3.png)
 
 
 
-![](../../media/Payment^JTrade-Stock-stock-image4.png){width="0.20833333333333334in" height="0.20833333333333334in"}
+![](../../media/Payment^JTrade-Stock-stock-image4.png)
 
 
 

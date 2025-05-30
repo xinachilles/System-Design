@@ -1,8 +1,6 @@
 # External configuration store
 
-Created: 2019-10-27 23:34:24 -0600
 
-Modified: 2020-01-25 14:09:57 -0600
 
 ---
 

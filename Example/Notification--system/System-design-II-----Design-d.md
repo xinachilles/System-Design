@@ -1,8 +1,6 @@
 # System design II --  Design distributed message queue
 
-Created: 2022-11-13 17:35:43 -0600
 
-Modified: 2022-11-13 18:12:07 -0600
 
 ---
 

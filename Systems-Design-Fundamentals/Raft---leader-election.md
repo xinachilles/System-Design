@@ -1,8 +1,6 @@
 # Raft - leader election 
 
-Created: 2020-11-23 12:40:29 -0600
 
-Modified: 2020-11-23 13:17:24 -0600
 
 ---
 
@@ -402,7 +400,7 @@ if we just follow the figure 2 rules the log just keeps on growing may end up yo
 
 the log looks like
 
-![`= 1 넣=7 ](../media/Systems-Design-Fundamentals-Raft---leader-election-image1.png){width="5.0in" height="2.048611111111111in"}
+![`= 1 넣=7 ](../media/Systems-Design-Fundamentals-Raft---leader-election-image1.png)
 
 
 
@@ -434,7 +432,7 @@ index 3 ,with the snapshot in hand, if we persist it to disk rats persistent to 
 
 snapshot as of a certain log index plus the log after that index as long as that's persisted to disk,we never going to need to log before that and so this is what raft does the raft ask the application for snapshot gets the snapshot saves it to disk with the log after that it just throws away this log here
 
-![](../media/Systems-Design-Fundamentals-Raft---leader-election-image2.png){width="5.0in" height="2.8958333333333335in"}
+![](../media/Systems-Design-Fundamentals-Raft---leader-election-image2.png)
 
 
 

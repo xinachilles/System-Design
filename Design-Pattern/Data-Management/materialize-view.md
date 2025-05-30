@@ -1,8 +1,6 @@
 # materialize view
 
-Created: 2019-11-10 23:57:31 -0600
 
-Modified: 2019-12-06 15:53:38 -0600
 
 ---
 

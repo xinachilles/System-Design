@@ -1,8 +1,6 @@
 # there are should one balance table and one trade table
 
-Created: 2020-11-27 16:59:05 -0600
 
-Modified: 2020-12-03 01:51:54 -0600
 
 ---
 

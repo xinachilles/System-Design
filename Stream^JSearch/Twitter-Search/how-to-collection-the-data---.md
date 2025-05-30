@@ -1,8 +1,6 @@
 # how to collection the data - Wormhole ( like kafka)
 
-Created: 2017-10-14 16:01:35 -0600
 
-Modified: 2021-01-23 01:29:22 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # Summary 
 
-Created: 2018-01-28 10:45:00 -0600
 
-Modified: 2020-01-08 11:49:00 -0600
 
 ---
 
@@ -16,13 +14,13 @@ Modified: 2020-01-08 11:49:00 -0600
 
 This is really useful for applications which read the information quickly and since the same data gets written in the DB, we will have complete data consistency between cache and storage. However, write latency will be higher in this case as there are writes to 2 separate systems.
 
-![O O 10:44 github.com/donnemart by a new, empty node, increasing latency. Q) Write-through User 3. Return to user 1. Write to cache Cache 2. Store in DB DB Source: Scalability, availability, stability, patterns The application uses the cache as the main data store, reading and writing data to it, while the cache is responsible for reading and writing O ](../../media/Memeory-Cache-Summary-image1.jpeg){width="3.0in" height="6.5in"}
+![O O 10:44 github.com/donnemart by a new, empty node, increasing latency. Q) Write-through User 3. Return to user 1. Write to cache Cache 2. Store in DB DB Source: Scalability, availability, stability, patterns The application uses the cache as the main data store, reading and writing data to it, while the cache is responsible for reading and writing O ](../../media/Memeory-Cache-Summary-image1.jpeg)
 
 
 
 
 
-![Q) Disadvantage(s): write through • When a new node is created due to failure or scaling, the new node will not cache entries until the entry is updated in the database. Cache-aside in conjunction with write through can mitigate this issue. • Most data written might never be read, which can be minimized with a TTL. ](../../media/Memeory-Cache-Summary-image2.jpg){width="5.0in" height="4.451388888888889in"}
+![Q) Disadvantage(s): write through • When a new node is created due to failure or scaling, the new node will not cache entries until the entry is updated in the database. Cache-aside in conjunction with write through can mitigate this issue. • Most data written might never be read, which can be minimized with a TTL. ](../../media/Memeory-Cache-Summary-image2.jpg)
 
 
 
@@ -42,13 +40,13 @@ While this ensures lower write load to the cache and faster writes,
 
 but it will lead to a higher read latency if the a cache miss happen and we need read the data from database
 
-![Q) Cache-aside Cache Client Storage Source: From cache to in-memory data grid The application is responsible for reading and writing from storage. The cache does not interact with storage directly. The application does the following: • Look for entry in cache, resulting in a cache miss • Load entry from the database • Add entry to cache • Return entry ](../../media/Memeory-Cache-Summary-image3.jpg){width="4.395833333333333in" height="6.5in"}
+![Q) Cache-aside Cache Client Storage Source: From cache to in-memory data grid The application is responsible for reading and writing from storage. The cache does not interact with storage directly. The application does the following: • Look for entry in cache, resulting in a cache miss • Load entry from the database • Add entry to cache • Return entry ](../../media/Memeory-Cache-Summary-image3.jpg)
 
 9
 
 
 
-![Disadvantage(s): cache-aside • Each cache miss results in three trips, which can cause a noticeable delay. • Data can become stale if it is updated in the database. This issue is mitigated by setting a time-to-live (TTL) which forces an update of the cache entry, or by using write-through. • When a node fails, it is replaced by a new, empty node, increasing latency. ](../../media/Memeory-Cache-Summary-image4.jpg){width="5.0in" height="5.298611111111111in"}
+![Disadvantage(s): cache-aside • Each cache miss results in three trips, which can cause a noticeable delay. • Data can become stale if it is updated in the database. This issue is mitigated by setting a time-to-live (TTL) which forces an update of the cache entry, or by using write-through. • When a node fails, it is replaced by a new, empty node, increasing latency. ](../../media/Memeory-Cache-Summary-image4.jpg)
 
 
 
@@ -70,7 +68,7 @@ We can improve by introducing having more than one replica so that we don't lose
 
 
 
-![Q) Write-behind (write-back) 3. Return to user 1. Write to cache 2. Add event to queue Evert ncesW 4. Asynchronously: select and execute event Source: Scalability, availability, stability, patterns ](../../media/Memeory-Cache-Summary-image5.jpg){width="5.0in" height="5.895833333333333in"}
+![Q) Write-behind (write-back) 3. Return to user 1. Write to cache 2. Add event to queue Evert ncesW 4. Asynchronously: select and execute event Source: Scalability, availability, stability, patterns ](../../media/Memeory-Cache-Summary-image5.jpg)
 
 
 
@@ -125,13 +123,13 @@ the solution is we send the asyc message or write to log of database and another
 
 
 
-![application san,qca application san,qca binlog asy-axplra ](../../media/Memeory-Cache-Summary-image6.png){width="3.9375in" height="3.1319444444444446in"}
+![application san,qca application san,qca binlog asy-axplra ](../../media/Memeory-Cache-Summary-image6.png)
 
 
 
 
 
-![application sar,'lca asb asy-axplra application sar,'lca cache ](../../media/Memeory-Cache-Summary-image7.png){width="4.9375in" height="2.2916666666666665in"}
+![application sar,'lca asb asy-axplra application sar,'lca cache ](../../media/Memeory-Cache-Summary-image7.png)
 
 
 

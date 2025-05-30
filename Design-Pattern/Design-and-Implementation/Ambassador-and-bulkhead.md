@@ -1,8 +1,6 @@
 # Ambassador and bulkhead
 
-Created: 2018-10-26 09:02:14 -0600
 
-Modified: 2019-11-01 14:41:06 -0600
 
 ---
 

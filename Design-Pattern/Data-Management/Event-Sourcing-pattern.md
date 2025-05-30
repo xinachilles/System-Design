@@ -1,8 +1,6 @@
 # Event Sourcing pattern
 
-Created: 2018-12-05 00:53:17 -0600
 
-Modified: 2019-12-09 12:21:32 -0600
 
 ---
 

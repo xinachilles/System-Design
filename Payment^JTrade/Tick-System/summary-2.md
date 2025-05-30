@@ -1,8 +1,6 @@
 # summary 2 
 
-Created: 2017-10-20 21:05:43 -0600
 
-Modified: 2020-12-02 12:55:32 -0600
 
 ---
 
@@ -85,7 +83,7 @@ have a payment table and it is one to one relation ship between booking
 
 
 
-![4. A user can have multiple bookings. PK FK PK Movie MovielO;Jnt Title: varchar(256) Description: varchar(512) Duration: datetime Language: varchar(16) ReleaseDate: datetime Country: varchar(64) Genre: varchar(20) Cinema CinemaID: int Name: varchar(64) TotalCinemaHaIIs: int CityID: int City CitylD: int Name: varchar(64) State: varchar(64) ZipCode: varchar(16) FK FK PK FK PK FK Show ShowlO;Jnt Date: datetime StartTlme: datetime End Time: datetime CinemaHaIIID: int MovieID: int CinerTWHaII CinemaHaIIID: int Name: varchar(64) TotalSeats: int CinemaID: int Cinema. Seat CinemaSeatID: int SeatNumber: int Type: int (enum) CinemaHaIIID: int FK FK PK FK FK FK Booking BookinglP;Jnt NumberOfSeats: int Timestamp: datetime Status: int (enum) UserID: int Shown: int Show_Seat ShowSeatID : int Status: int (enum) Price: number CinemaSeatID: int ShowID: int BookingID: int FK user userlOØnt Name: v archar(64) Password: varchar(20) Email: varchar(64) Phone: varchar(16) P ayment Amount: number Timestamp: datetime DiscountCouponID: int RemoteTransactionID: int PaymentMethod: int (enum) BookingID: int ](../../media/Payment^JTrade-Tick-System-summary-2-image1.png){width="2.3958333333333335in" height="1.5694444444444444in"}
+![4. A user can have multiple bookings. PK FK PK Movie MovielO;Jnt Title: varchar(256) Description: varchar(512) Duration: datetime Language: varchar(16) ReleaseDate: datetime Country: varchar(64) Genre: varchar(20) Cinema CinemaID: int Name: varchar(64) TotalCinemaHaIIs: int CityID: int City CitylD: int Name: varchar(64) State: varchar(64) ZipCode: varchar(16) FK FK PK FK PK FK Show ShowlO;Jnt Date: datetime StartTlme: datetime End Time: datetime CinemaHaIIID: int MovieID: int CinerTWHaII CinemaHaIIID: int Name: varchar(64) TotalSeats: int CinemaID: int Cinema. Seat CinemaSeatID: int SeatNumber: int Type: int (enum) CinemaHaIIID: int FK FK PK FK FK FK Booking BookinglP;Jnt NumberOfSeats: int Timestamp: datetime Status: int (enum) UserID: int Shown: int Show_Seat ShowSeatID : int Status: int (enum) Price: number CinemaSeatID: int ShowID: int BookingID: int FK user userlOØnt Name: v archar(64) Password: varchar(20) Email: varchar(64) Phone: varchar(16) P ayment Amount: number Timestamp: datetime DiscountCouponID: int RemoteTransactionID: int PaymentMethod: int (enum) BookingID: int ](../../media/Payment^JTrade-Tick-System-summary-2-image1.png)
 
 
 
@@ -127,7 +125,7 @@ if user found no seat are available but some seat just reserve but not completed
 
 
 
-![0 nt Web Server Load Ba 一 er Load Balancer Database server ](../../media/Payment^JTrade-Tick-System-summary-2-image2.png){width="2.7708333333333335in" height="0.75in"}
+![0 nt Web Server Load Ba 一 er Load Balancer Database server ](../../media/Payment^JTrade-Tick-System-summary-2-image2.png)
 
 
 
@@ -224,7 +222,7 @@ each reverse service can have 1k tick in advance
 
 
 
-![](../../media/Payment^JTrade-Tick-System-summary-2-image3.png){width="0.6597222222222222in" height="0.22916666666666666in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image4.png){width="0.3055555555555556in" height="0.4652777777777778in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image5.png){width="0.5972222222222222in" height="0.3055555555555556in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image6.png){width="0.2916666666666667in" height="0.625in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image7.png){width="0.24305555555555555in" height="0.4861111111111111in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image8.png){width="0.3819444444444444in" height="0.4444444444444444in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image9.png){width="0.20833333333333334in" height="0.20833333333333334in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image10.png){width="0.3472222222222222in" height="0.3958333333333333in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image11.png){width="0.3541666666666667in" height="0.3819444444444444in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image12.png){width="0.4027777777777778in" height="0.24305555555555555in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image13.png){width="0.2708333333333333in" height="0.4027777777777778in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image14.png){width="0.3680555555555556in" height="0.2222222222222222in"}![](../../media/Payment^JTrade-Tick-System-summary-2-image15.png){width="0.2222222222222222in" height="0.3055555555555556in"}
+![](../../media/Payment^JTrade-Tick-System-summary-2-image3.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image4.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image5.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image6.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image7.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image8.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image9.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image10.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image11.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image12.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image13.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image14.png)![](../../media/Payment^JTrade-Tick-System-summary-2-image15.png)
 
 
 

@@ -1,8 +1,6 @@
 # News feed Summary 2
 
-Created: 2018-01-04 17:39:01 -0600
 
-Modified: 2020-11-29 19:12:10 -0600
 
 ---
 
@@ -140,5 +138,5 @@ when people fanout to newsfeed table, the user will get notification and will re
 
 
 
-![](../../media/Twitter-^M-Insgram-Twitter---News-Feed-News-feed-Summary-2-image1.png){width="0.20833333333333334in" height="0.20833333333333334in"}
+![](../../media/Twitter-^M-Insgram-Twitter---News-Feed-News-feed-Summary-2-image1.png)
 

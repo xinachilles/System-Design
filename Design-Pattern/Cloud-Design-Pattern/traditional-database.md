@@ -1,8 +1,6 @@
 # traditional database 
 
-Created: 2018-10-13 22:31:21 -0600
 
-Modified: 2018-10-13 22:31:48 -0600
 
 ---
 

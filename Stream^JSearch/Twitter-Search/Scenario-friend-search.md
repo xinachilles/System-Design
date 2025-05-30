@@ -1,8 +1,6 @@
 # Scenario friend search 
 
-Created: 2017-10-14 09:47:52 -0600
 
-Modified: 2017-10-14 15:16:10 -0600
 
 ---
 

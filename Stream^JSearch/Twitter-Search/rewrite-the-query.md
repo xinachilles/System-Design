@@ -1,8 +1,6 @@
 # rewrite the query
 
-Created: 2017-10-14 16:47:41 -0600
 
-Modified: 2021-01-23 01:29:48 -0600
 
 ---
 

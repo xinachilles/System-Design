@@ -1,8 +1,6 @@
 # Cassandra
 
-Created: 2017-09-16 16:40:10 -0600
 
-Modified: 2017-09-17 23:22:46 -0600
 
 ---
 
@@ -28,7 +26,7 @@ The client sends its queries to the coordinator. when the client sends a query t
 
 
 
-![Say m=7 N112 (Remember this?) N96 Read/write K 13 Client O N80 Coordinator One nng per DC N16 Primary replica for key K13 N32 N45 Backup replicas for key K13 Cassandra uses a Ring-based DHT but without finger tables or routing Key *server mapping is the "Partitioner" ](../media/Cassandra-Cassandra-image1.png){width="5.0in" height="2.8541666666666665in"}
+![Say m=7 N112 (Remember this?) N96 Read/write K 13 Client O N80 Coordinator One nng per DC N16 Primary replica for key K13 N32 N45 Backup replicas for key K13 Cassandra uses a Ring-based DHT but without finger tables or routing Key *server mapping is the "Partitioner" ](../media/Cassandra-Cassandra-image1.png)
 
 
 

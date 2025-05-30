@@ -1,8 +1,6 @@
 # zookeeper 2
 
-Created: 2020-06-12 15:08:03 -0600
 
-Modified: 2020-11-28 17:35:51 -0600
 
 ---
 
@@ -372,5 +370,5 @@ write from leader and read from replica
 
 
 
-![](../media/MIT-zookeeper-2-image1.png){width="0.22916666666666666in" height="0.5833333333333334in"}
+![](../media/MIT-zookeeper-2-image1.png)
 

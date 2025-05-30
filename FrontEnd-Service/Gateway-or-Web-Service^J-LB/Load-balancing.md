@@ -1,8 +1,6 @@
 # Load balancing
 
-Created: 2018-01-09 14:49:54 -0600
 
-Modified: 2020-01-07 16:22:25 -0600
 
 ---
 
@@ -24,7 +22,7 @@ A problem with Round Robin LB is, it won't take server load into consideration. 
 
 <https://github.com/donnemartin/system-design-primer/blob/master/README.md#load-balancer>
 
-![1) 2) 3) Pick a worker to forward request Random Round robin Least busy • Sticky session / cookies By request parameters Wait for its response Forward the response to client Client Dispatcher Worker Worker Worker ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-Load-balancing-image1.jpg){width="5.0in" height="3.3333333333333335in"}
+![1) 2) 3) Pick a worker to forward request Random Round robin Least busy • Sticky session / cookies By request parameters Wait for its response Forward the response to client Client Dispatcher Worker Worker Worker ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-Load-balancing-image1.jpg)
 
 Additional benefits include:
 

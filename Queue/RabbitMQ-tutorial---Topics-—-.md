@@ -1,8 +1,6 @@
 # RabbitMQ tutorial - Topics — RabbitMQ
 
-Created: 2020-12-24 18:18:39 -0600
 
-Modified: 2020-12-24 18:22:24 -0600
 
 ---
 

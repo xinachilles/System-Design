@@ -1,8 +1,6 @@
 # Map reduce for the typehead:
 
-Created: 2018-01-09 14:49:16 -0600
 
-Modified: 2021-01-16 19:03:40 -0600
 
 ---
 

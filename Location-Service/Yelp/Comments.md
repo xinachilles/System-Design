@@ -1,8 +1,6 @@
 # Comments
 
-Created: 2021-04-25 14:51:39 -0600
 
-Modified: 2021-04-27 15:12:08 -0600
 
 ---
 
@@ -10,7 +8,7 @@ Modified: 2021-04-27 15:12:08 -0600
 
 
 
-![](../../media/Location-Service-Yelp-Comments-image1.png){width="5.0in" height="2.6180555555555554in"}
+![](../../media/Location-Service-Yelp-Comments-image1.png)
 
 
 

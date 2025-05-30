@@ -1,8 +1,6 @@
 # Storage
 
-Created: 2017-10-09 16:08:16 -0600
 
-Modified: 2017-10-09 17:05:37 -0600
 
 ---
 
@@ -19,7 +17,7 @@ SQL or NO SQL
 
 
 
-![Web Wver 1k QPS SQL oa 1k ops NOSC_X Cassandra. 'v6ngoOB Nosu oe (Reds) 1 DOk aps NOSQL 0B • IMQPS • me-ncE 10k aps ](../../media/TinyURL^MID-gen-TinyURL-Storage-image1.png){width="3.9791666666666665in" height="1.75in"}
+![Web Wver 1k QPS SQL oa 1k ops NOSC_X Cassandra. 'v6ngoOB Nosu oe (Reds) 1 DOk aps NOSQL 0B • IMQPS • me-ncE 10k aps ](../../media/TinyURL^MID-gen-TinyURL-Storage-image1.png)
 
 
 
@@ -47,7 +45,7 @@ we just random generate a 6 digitals for given long URL, if this short URL is no
 
 
 
-![public String longToShortCString url) { while (true) { String shortURL = randomShortURL(); if C! database. exists() { database. longURL=url); return shortURL; ](../../media/TinyURL^MID-gen-TinyURL-Storage-image2.png){width="5.0in" height="1.6111111111111112in"}
+![public String longToShortCString url) { while (true) { String shortURL = randomShortURL(); if C! database. exists() { database. longURL=url); return shortURL; ](../../media/TinyURL^MID-gen-TinyURL-Storage-image2.png)
 
 
 
@@ -63,15 +61,15 @@ it should be very quick at the begin and will very slow when the url grow
 
 
 
-![](../../media/TinyURL^MID-gen-TinyURL-Storage-image3.png){width="5.0in" height="2.201388888888889in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Storage-image3.png)
 
 
 
-![NoSQL Cassandra row row Long Short _key=longURL, column_key=ShortURL, value=null or timestamp Short Long _key=shortURL, column_key=LongURL, value-null or timestamp ](../../media/TinyURL^MID-gen-TinyURL-Storage-image4.png){width="5.0in" height="2.0972222222222223in"}
+![NoSQL Cassandra row row Long Short _key=longURL, column_key=ShortURL, value=null or timestamp Short Long _key=shortURL, column_key=LongURL, value-null or timestamp ](../../media/TinyURL^MID-gen-TinyURL-Storage-image4.png)
 
 
 
-![](../../media/TinyURL^MID-gen-TinyURL-Storage-image5.png){width="5.0in" height="2.513888888888889in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Storage-image5.png)
 
 
 

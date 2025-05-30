@@ -1,8 +1,6 @@
 # Real Time Big Data Analytics with Kafka, Storm & HBase
 
-Created: 2018-01-31 11:48:08 -0600
 
-Modified: 2018-02-02 11:32:26 -0600
 
 ---
 

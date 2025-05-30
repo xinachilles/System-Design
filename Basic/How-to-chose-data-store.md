@@ -1,8 +1,6 @@
 # How to chose data store
 
-Created: 2018-09-27 23:15:50 -0600
 
-Modified: 2020-01-06 15:07:53 -0600
 
 ---
 
@@ -170,11 +168,11 @@ Many implementations allow you to create indexes over specific columns in a colu
 
 
 
-![CustomerID 001 002 003 Column Family: Identity First name: Mu Bae Last name: Min First name: Francisco Last name: Vila Nova Suffix Jr. First name: Lena Last name: Adamcyz Title: Dr. CustomerID 001 002 003 Column Family: Contact Info Phone number. 555-0100 Email: someone@example.com Email: vilanova@contoso.com Phone number: 555-0120 ](../media/Basic-How-to-chose-data-store-image1.jpeg){width="2.7708333333333335in" height="1.1666666666666667in"}
+![CustomerID 001 002 003 Column Family: Identity First name: Mu Bae Last name: Min First name: Francisco Last name: Vila Nova Suffix Jr. First name: Lena Last name: Adamcyz Title: Dr. CustomerID 001 002 003 Column Family: Contact Info Phone number. 555-0100 Email: someone@example.com Email: vilanova@contoso.com Phone number: 555-0120 ](../media/Basic-How-to-chose-data-store-image1.jpeg)
 
 
 
-![](../media/Basic-How-to-chose-data-store-image2.jpeg){width="2.7708333333333335in" height="1.2361111111111112in"}
+![](../media/Basic-How-to-chose-data-store-image2.jpeg)
 
 
 
@@ -254,7 +252,7 @@ Sometimes, using simple flat files can be the most effective means of storing an
 
 Relevant Azure service: File Storage
 
-![](../media/Basic-How-to-chose-data-store-image3.png){width="0.22916666666666666in" height="0.22916666666666666in"}
+![](../media/Basic-How-to-chose-data-store-image3.png)
 
 
 

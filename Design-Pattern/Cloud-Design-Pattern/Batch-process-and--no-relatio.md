@@ -1,8 +1,6 @@
 # Batch process and  no relational data stores
 
-Created: 2018-10-25 00:32:53 -0600
 
-Modified: 2018-10-25 00:33:36 -0600
 
 ---
 

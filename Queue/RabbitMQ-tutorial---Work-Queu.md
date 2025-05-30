@@ -1,8 +1,6 @@
 # RabbitMQ tutorial - Work Queues — RabbitMQ
 
-Created: 2020-12-24 17:54:43 -0600
 
-Modified: 2020-12-24 18:02:24 -0600
 
 ---
 

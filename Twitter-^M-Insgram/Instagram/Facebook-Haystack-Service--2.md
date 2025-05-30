@@ -1,8 +1,6 @@
 # Facebook Haystack Service -2 
 
-Created: 2021-02-02 17:19:40 -0600
 
-Modified: 2021-02-02 17:48:28 -0600
 
 ---
 

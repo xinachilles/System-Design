@@ -1,8 +1,6 @@
 # 41 AWS Services and Tooling for Configuration Management-2 
 
-Created: 2023-10-17 21:35:06 -0600
 
-Modified: 2023-10-22 17:45:06 -0600
 
 ---
 

@@ -1,28 +1,26 @@
 # Cache
 
-Created: 2017-05-06 00:18:11 -0600
 
-Modified: 2021-02-09 18:40:28 -0600
 
 ---
 
-![Memcached DB 1 class UserService: 2 3 4 5 6 7 8 9 lø 11 12 13 14 15 def def getUser(self, user_id): key --- "user: :xs" user_id user = cache.get(key) if user: return user user = database. cache. set(key, user) return user setUser(se1f, user): key "user: user. id cache. delete(key) database. set(user) ](../../media/Memeory-Cache-Cache-image1.png){width="5.0in" height="3.2847222222222223in"}
+![Memcached DB 1 class UserService: 2 3 4 5 6 7 8 9 lø 11 12 13 14 15 def def getUser(self, user_id): key --- "user: :xs" user_id user = cache.get(key) if user: return user user = database. cache. set(key, user) return user setUser(se1f, user): key "user: user. id cache. delete(key) database. set(user) ](../../media/Memeory-Cache-Cache-image1.png)
 
 
 
-![Memcached 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 cache. is a key" , cache. is a key") "this is a value" cache. set( "foo", 1, tt1-6Ø) cache. get(" foo") # wait for 60 seconds cache. get(" foo" ) null cache. set( "bar", "2") cache. get( " bar") # for some "this is a value") reason like out of memory # "bar" may be evicted by cache cache. get(" bar") null ](../../media/Memeory-Cache-Cache-image2.png){width="5.0in" height="4.215277777777778in"}
+![Memcached 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 cache. is a key" , cache. is a key") "this is a value" cache. set( "foo", 1, tt1-6Ø) cache. get(" foo") # wait for 60 seconds cache. get(" foo" ) null cache. set( "bar", "2") cache. get( " bar") # for some "this is a value") reason like out of memory # "bar" may be evicted by cache cache. get(" bar") null ](../../media/Memeory-Cache-Cache-image2.png)
 
 
 
-![Memcached 如 何 优 亻 匕 DB 的 查 询 cache. set( key, user) / / 此 时 database 挂 了 database.set(user) 乛 失 败 此 时 会 造 成 cache 和 database 的 数 据 不 一 致 。 导 致 下 一 次 get 的 时 候 得 到 的 是 cache 里 的 脏 数 据 。 cache.delete(key) / / 此 时 database 挂 了 database.set(user) 乛 失 败 这 种 情 况 下 ， 不 会 出 现 数 据 不 一 致 ， 只 是 cache 里 被 删 除 了 key, 下 次 需 要 重 新 ad 。 用 户 会 收 到 修 改 信 息 失 败 的 提 示 ， 用 户 自 己 可 以 选 择 再 点 一 次 " 保 存 " 进 行 重 试 。 ](../../media/Memeory-Cache-Cache-image3.png){width="5.0in" height="2.4027777777777777in"}
+![Memcached 如 何 优 亻 匕 DB 的 查 询 cache. set( key, user) / / 此 时 database 挂 了 database.set(user) 乛 失 败 此 时 会 造 成 cache 和 database 的 数 据 不 一 致 。 导 致 下 一 次 get 的 时 候 得 到 的 是 cache 里 的 脏 数 据 。 cache.delete(key) / / 此 时 database 挂 了 database.set(user) 乛 失 败 这 种 情 况 下 ， 不 会 出 现 数 据 不 一 致 ， 只 是 cache 里 被 删 除 了 key, 下 次 需 要 重 新 ad 。 用 户 会 收 到 修 改 信 息 失 败 的 提 示 ， 用 户 自 己 可 以 选 择 再 点 一 次 " 保 存 " 进 行 重 试 。 ](../../media/Memeory-Cache-Cache-image3.png)
 
 
 
-![Cache Aside DB Cache DB : Memcached + MySQL Web Server DB Cache ](../../media/Memeory-Cache-Cache-image4.png){width="5.0in" height="2.826388888888889in"}
+![Cache Aside DB Cache DB : Memcached + MySQL Web Server DB Cache ](../../media/Memeory-Cache-Cache-image4.png)
 
 
 
-![Cache Through 服 务 器 只 和 Cache 沟 通 Cache 负 责 DB 去 沟 通 ， 把 数 据 持 久 化 业 界 典 型 代 表 ． Redis （ 可 以 理 解 为 Redis 里 包 含 了 一 个 Cache 和 一 个 DB) Web Server Cache DB ](../../media/Memeory-Cache-Cache-image5.png){width="5.0in" height="2.6041666666666665in"}
+![Cache Through 服 务 器 只 和 Cache 沟 通 Cache 负 责 DB 去 沟 通 ， 把 数 据 持 久 化 业 界 典 型 代 表 ． Redis （ 可 以 理 解 为 Redis 里 包 含 了 一 个 Cache 和 一 个 DB) Web Server Cache DB ](../../media/Memeory-Cache-Cache-image5.png)
 
 
 

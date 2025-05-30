@@ -1,12 +1,10 @@
 # Summary 3
 
-Created: 2021-01-10 17:00:31 -0600
 
-Modified: 2021-04-24 17:42:42 -0600
 
 ---
 
-![Write Load User Service Follower/Friendship service 3 Post service • Web service • Balancer Timeline Read service User DB Follower/Followee DB Tweet DB Worker service Fanout Timeline DB Timeline cache ](../../media/Twitter-^M-Insgram-Twitter---News-Feed-Summary-3-image1.png){width="5.0in" height="3.2291666666666665in"}
+![Write Load User Service Follower/Friendship service 3 Post service • Web service • Balancer Timeline Read service User DB Follower/Followee DB Tweet DB Worker service Fanout Timeline DB Timeline cache ](../../media/Twitter-^M-Insgram-Twitter---News-Feed-Summary-3-image1.png)
 
 
 

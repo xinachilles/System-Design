@@ -1,8 +1,6 @@
 # Shading Trade off
 
-Created: 2017-10-19 14:22:22 -0600
 
-Modified: 2017-10-20 23:47:51 -0600
 
 ---
 

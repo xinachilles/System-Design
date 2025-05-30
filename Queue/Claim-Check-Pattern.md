@@ -1,8 +1,6 @@
 # Claim-Check Pattern
 
-Created: 2019-12-18 15:43:14 -0600
 
-Modified: 2019-12-18 15:50:42 -0600
 
 ---
 

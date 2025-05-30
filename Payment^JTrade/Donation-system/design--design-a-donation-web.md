@@ -1,8 +1,6 @@
 # design: design a donation website for a 3 day charity event. Must support millions of users and 100 millions in donations.
 
-Created: 2021-04-19 11:44:51 -0600
 
-Modified: 2021-04-19 13:00:18 -0600
 
 ---
 

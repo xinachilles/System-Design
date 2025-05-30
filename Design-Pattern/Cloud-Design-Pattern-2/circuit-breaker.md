@@ -1,8 +1,6 @@
 # circuit breaker
 
-Created: 2019-10-24 22:01:50 -0600
 
-Modified: 2019-12-12 16:21:14 -0600
 
 ---
 

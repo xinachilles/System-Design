@@ -1,20 +1,18 @@
 # Summary 
 
-Created: 2021-01-15 01:08:35 -0600
 
-Modified: 2021-02-04 17:55:18 -0600
 
 ---
 
-![High-level architecture Stor. SQL. Builds the final axjnt-min sketch and st«es a list Of top k elements for a period Of tinw Data is Distrbuted API Gateway fast path slow path ](../../media/Steam^JCollection-TopK-Summary-image1.png){width="5.0in" height="2.7152777777777777in"}
+![High-level architecture Stor. SQL. Builds the final axjnt-min sketch and st«es a list Of top k elements for a period Of tinw Data is Distrbuted API Gateway fast path slow path ](../../media/Steam^JCollection-TopK-Summary-image1.png)
 
 
 
-![High-level architecture Processor Distrbuted API Gatew" fast path slow path Stor. Distributed Messaøt% Partition Distributed Søtem Count Top K MapReduce Job ](../../media/Steam^JCollection-TopK-Summary-image2.png){width="5.0in" height="2.6944444444444446in"}
+![High-level architecture Processor Distrbuted API Gatew" fast path slow path Stor. Distributed Messaøt% Partition Distributed Søtem Count Top K MapReduce Job ](../../media/Steam^JCollection-TopK-Summary-image2.png)
 
 
 
-![mal•l οι s;s« »noq-T ΟΦΙ d01 ιηαι-Τ 601 κιομ-Τ )dOl eeaaa εστ ιο:τ το:τ οο:τ ](../../media/Steam^JCollection-TopK-Summary-image3.png){width="5.0in" height="2.7083333333333335in"}
+![mal•l οι s;s« »noq-T ΟΦΙ d01 ιηαι-Τ 601 κιομ-Τ )dOl eeaaa εστ ιο:τ το:τ οο:τ ](../../media/Steam^JCollection-TopK-Summary-image3.png)
 
 
 

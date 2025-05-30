@@ -1,8 +1,6 @@
 # Module Resources
 
-Created: 2023-10-28 12:54:33 -0600
 
-Modified: 2023-10-28 12:54:38 -0600
 
 ---
 

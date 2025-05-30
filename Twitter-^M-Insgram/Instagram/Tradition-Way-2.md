@@ -1,8 +1,6 @@
 # Tradition Way 2
 
-Created: 2018-02-04 11:23:34 -0600
 
-Modified: 2021-02-02 17:17:01 -0600
 
 ---
 
@@ -70,5 +68,5 @@ The second is the latency. So the latency because of the fact that if you miss i
 
 
 
-![NFS based Desi n • data bottletteck • t-•tss CDN exeenscve ](../../media/Twitter-^M-Insgram-Instagram-Tradition-Way-2-image1.png){width="5.0in" height="2.5555555555555554in"}
+![NFS based Desi n • data bottletteck • t-•tss CDN exeenscve ](../../media/Twitter-^M-Insgram-Instagram-Tradition-Way-2-image1.png)
 

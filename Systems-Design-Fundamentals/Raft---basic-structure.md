@@ -1,8 +1,6 @@
 # Raft - basic structure
 
-Created: 2020-11-23 12:50:59 -0600
 
-Modified: 2020-11-23 13:06:58 -0600
 
 ---
 

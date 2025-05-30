@@ -1,8 +1,6 @@
 # datadog
 
-Created: 2024-08-27 15:43:36 -0600
 
-Modified: 2024-08-28 16:26:39 -0600
 
 ---
 
@@ -26,7 +24,7 @@ Overview of Datadog's architecture: metric sources feed into an intake system, d
 
 
 
-![Pipeline Architecture M.tncs sources PagerOuty etc C •stom.r Custom,er ard fronterd & APIs intake Data Stores Query ](../../media/Metric-Watchdog-datadog-image1.png){width="5.0in" height="2.9930555555555554in"}
+![Pipeline Architecture M.tncs sources PagerOuty etc C •stom.r Custom,er ard fronterd & APIs intake Data Stores Query ](../../media/Metric-Watchdog-datadog-image1.png)
 
 
 
@@ -34,7 +32,7 @@ Overview of Datadog's architecture: metric sources feed into an intake system, d
 
 
 
-![Caching timeseries data M.tncs sources PagecOuty etc C •.ßtom.r Customer intake ard Data Stotes Query 'eyeb fronterd & APIs O very Cache ](../../media/Metric-Watchdog-datadog-image2.png){width="5.0in" height="2.8333333333333335in"}
+![Caching timeseries data M.tncs sources PagecOuty etc C •.ßtom.r Customer intake ard Data Stotes Query 'eyeb fronterd & APIs O very Cache ](../../media/Metric-Watchdog-datadog-image2.png)
 
 
 
@@ -46,11 +44,11 @@ Overview of Datadog's architecture: metric sources feed into an intake system, d
 
 
 
-![Kafka for Independent Storage Systems Incorrvtg Kana Intake Kafka Tag Sees Store 1 S3 VA*1ter Tag Index Tag Oescnbet Query System O.Jt904r•.a Data ](../../media/Metric-Watchdog-datadog-image3.png){width="5.0in" height="2.8125in"}
+![Kafka for Independent Storage Systems Incorrvtg Kana Intake Kafka Tag Sees Store 1 S3 VA*1ter Tag Index Tag Oescnbet Query System O.Jt904r•.a Data ](../../media/Metric-Watchdog-datadog-image3.png)
 
 
 
-![Scaling through Kafka Partition by custom% metric, tag set • Isolate by customer • Scale concurrently by metric Building something more dynamic Store SEN Incorning Intake Data Kafka partition .0 Kafka partition: 1 Kafka partition 2 Kafka partition-3 store Store Store ](../../media/Metric-Watchdog-datadog-image4.png){width="5.0in" height="2.8333333333333335in"}
+![Scaling through Kafka Partition by custom% metric, tag set • Isolate by customer • Scale concurrently by metric Building something more dynamic Store SEN Incorning Intake Data Kafka partition .0 Kafka partition: 1 Kafka partition 2 Kafka partition-3 store Store Store ](../../media/Metric-Watchdog-datadog-image4.png)
 
 
 
@@ -78,7 +76,7 @@ Overview of Datadog's architecture: metric sources feed into an intake system, d
 
 
 
-![Queries We Need to Support DESCRIBE TAGS TAG INDEX TAG INVERTED INDEX POINT STORE What tags are queryable for this metric? Given a time series id, what tags were used? Given some tags and a time range, what were the time series ingested? What are the valUeS Of a time series between two times? ](../../media/Metric-Watchdog-datadog-image5.png){width="5.0in" height="2.7569444444444446in"}
+![Queries We Need to Support DESCRIBE TAGS TAG INDEX TAG INVERTED INDEX POINT STORE What tags are queryable for this metric? Given a time series id, what tags were used? Given some tags and a time range, what were the time series ingested? What are the valUeS Of a time series between two times? ](../../media/Metric-Watchdog-datadog-image5.png)
 
 
 
@@ -116,7 +114,7 @@ and that's you know an incredibly high volume of data
 
 
 
-- ![Pipeline Architectu And test it gets to M.tncs sources PagecOuty etc C '"torn.r here ard fronterd & APIS Inject heartbeat here intake Data Stote Query O uery Cache ](../../media/Metric-Watchdog-datadog-image6.png){width="5.0in" height="2.75in"}
+- ![Pipeline Architectu And test it gets to M.tncs sources PagecOuty etc C '"torn.r here ard fronterd & APIS Inject heartbeat here intake Data Stote Query O uery Cache ](../../media/Metric-Watchdog-datadog-image6.png)
 
 
 
@@ -169,13 +167,13 @@ Put the data in the sorted set can easily find
 
 
 
-![Approximating a distribution ](../../media/Metric-Watchdog-datadog-image7.png){width="5.0in" height="2.888888888888889in"}
+![Approximating a distribution ](../../media/Metric-Watchdog-datadog-image7.png)
 
 you can think of the distribution as this curve and
 
 we're splitting the curve into discrete parts and we're measuring the height at each point and then we're storing the height in the count as a bucket
 
-![Bucketed histograms Basic example from OpenMetrics / Prometheus Time spent 0.05 (50ms) 0.1 0.2 eooms) 0.5 (500rns) > Is Count 24054 33444 100392 129389 133988 144320 median = -158ms (using linear interpolation) p99 = ?! 72160 05 0.7 ](../../media/Metric-Watchdog-datadog-image8.png){width="5.0in" height="2.8125in"}
+![Bucketed histograms Basic example from OpenMetrics / Prometheus Time spent 0.05 (50ms) 0.1 0.2 eooms) 0.5 (500rns) > Is Count 24054 33444 100392 129389 133988 144320 median = -158ms (using linear interpolation) p99 = ?! 72160 05 0.7 ](../../media/Metric-Watchdog-datadog-image8.png)
 
 
 
@@ -212,7 +210,7 @@ we're splitting the curve into discrete parts and we're measuring the height at 
 
 
 
-![Pipeline Architecture Metrics sources Slack/EmaiI/ PagerDuty etc Customer Browser Customer Aggregation Points Monitors and Alerts Web frontend R APIs DATA OOG Irüoke Qaery Sys,tem Query Cache Streaming Aggregator Data Stores ](../../media/Metric-Watchdog-datadog-image9.png){width="5.0in" height="2.9166666666666665in"}
+![Pipeline Architecture Metrics sources Slack/EmaiI/ PagerDuty etc Customer Browser Customer Aggregation Points Monitors and Alerts Web frontend R APIs DATA OOG Irüoke Qaery Sys,tem Query Cache Streaming Aggregator Data Stores ](../../media/Metric-Watchdog-datadog-image9.png)
 
 
 

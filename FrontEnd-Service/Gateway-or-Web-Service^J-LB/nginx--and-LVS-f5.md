@@ -1,8 +1,6 @@
 # nginx  and LVS f5
 
-Created: 2018-01-27 18:37:10 -0600
 
-Modified: 2020-07-22 22:25:48 -0600
 
 ---
 
@@ -46,7 +44,7 @@ Nginx bittiger
 
 
 
-![](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image1.png){width="5.0in" height="1.9166666666666667in"}
+![](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image1.png)
 
 reverse proxy
 
@@ -54,7 +52,7 @@ reverse proxy
 
 Hide original server
 
-![Reverse Proxy ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image2.png){width="5.0in" height="2.8333333333333335in"}
+![Reverse Proxy ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image2.png)
 
 
 
@@ -64,7 +62,7 @@ SSL termination https, the reverse proxy will Encrypt and decrypt the message
 
 
 
-![• Reverse Proxy Hide Original Server Application Firewall SSL Termination Load Balance Cache Compression ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image3.png){width="5.0in" height="2.8333333333333335in"}
+![• Reverse Proxy Hide Original Server Application Firewall SSL Termination Load Balance Cache Compression ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image3.png)
 
 
 
@@ -74,7 +72,7 @@ SSL termination https, the reverse proxy will Encrypt and decrypt the message
 
 
 
-![Load Balancing Load Balancing Methods • Round Robin, optionally weighted • Least Connected, optionally weighted • IP Hash • Generic Hash • Least Time (NGINX Plus), optionally weighted ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image4.png){width="5.0in" height="2.8125in"}
+![Load Balancing Load Balancing Methods • Round Robin, optionally weighted • Least Connected, optionally weighted • IP Hash • Generic Hash • Least Time (NGINX Plus), optionally weighted ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-nginx--and-LVS-f5-image4.png)
 
 
 

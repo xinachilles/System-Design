@@ -1,8 +1,6 @@
 # Bulkhead patterns
 
-Created: 2019-10-28 23:01:24 -0600
 
-Modified: 2019-12-30 16:37:24 -0600
 
 ---
 

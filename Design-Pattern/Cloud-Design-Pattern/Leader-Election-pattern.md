@@ -1,8 +1,6 @@
 # Leader Election pattern
 
-Created: 2018-10-03 23:24:14 -0600
 
-Modified: 2018-10-04 23:32:10 -0600
 
 ---
 

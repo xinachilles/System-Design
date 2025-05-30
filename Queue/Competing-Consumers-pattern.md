@@ -1,8 +1,6 @@
 # Competing Consumers pattern 
 
-Created: 2018-11-14 01:01:45 -0600
 
-Modified: 2020-09-09 11:38:28 -0600
 
 ---
 

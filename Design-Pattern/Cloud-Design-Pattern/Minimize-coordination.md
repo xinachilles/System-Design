@@ -1,8 +1,6 @@
 # Minimize coordination
 
-Created: 2018-10-01 23:28:46 -0600
 
-Modified: 2018-10-03 23:25:11 -0600
 
 ---
 

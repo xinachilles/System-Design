@@ -1,12 +1,10 @@
 # Google Drive Blog
 
-Created: 2020-12-25 17:47:00 -0600
 
-Modified: 2021-01-18 18:23:58 -0600
 
 ---
 
-![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image1.png){width="0.6388888888888888in" height="0.5763888888888888in"}
+![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image1.png)
 
 
 
@@ -55,7 +53,7 @@ Let's say Luiz starts by typing the word Hello at the beginning of the document.
 
 
 
-![Client: Luiz Last synced revision: O Sent changes Pending changes Revision bg Pencfig chmges Sent ent docum InsertText: •Hello' @1 Client. Luiz Last synced revisim: O Sent changes Pending changes InsertText: 'Hello' @1 Current docunænt (InsertText: @I Revision: O Client: Current docurrent Client: John synced O Pen dng changes rrent docume «ernpty> Idle Hello Client: Luiz Last synced revisim: O Send Change {InsertText: Hello'@1 Revision: O} Revision Sent changes InsertText: 'Heuo• Pending changes Current &xument Hello ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image2.png){width="5.0in" height="3.0694444444444446in"}
+![Client: Luiz Last synced revision: O Sent changes Pending changes Revision bg Pencfig chmges Sent ent docum InsertText: •Hello' @1 Client. Luiz Last synced revisim: O Sent changes Pending changes InsertText: 'Hello' @1 Current docunænt (InsertText: @I Revision: O Client: Current docurrent Client: John synced O Pen dng changes rrent docume «ernpty> Idle Hello Client: Luiz Last synced revisim: O Send Change {InsertText: Hello'@1 Revision: O} Revision Sent changes InsertText: 'Heuo• Pending changes Current &xument Hello ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image2.png)
 
 Luiz's client added the edit to his list of pending changes. He then sent the change to the server and [moved the change into his list of sent changes.]{.mark}
 
@@ -63,11 +61,11 @@ Luiz's client added the edit to his list of pending changes. He then sent the ch
 
 Luiz continues to type, adding the word world to his document. At the same time, John types an ! in his empty version of the document (remember he has not yet received Luiz's first change).
 
-![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image3.png){width="5.208333333333333in" height="2.1805555555555554in"}
+![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image3.png)
 
 Luiz's {InsertText ' world' @6} [change was placed in the pending list and wasn't sent to the server because we never send more than one pending change at a time.]{.mark} Until Luiz recieves an [acknowledgement]{.mark} of his first change, his client will keep all new changes in the pending list. Also notice that the server stored Luiz's first change in its revision log. [Next, the server will send John a message containing Luiz's first change and it will send Luiz a message acknowledging that it has processed that first change.]{.mark}
 
-![Client: Luiz Last synced revision: O Server Pending changes Client: John Last synced revision: O Sent changes Pendng changes Revision log 1. InsertText: 'Hello' Sent chmges Pending changes InsertText: @1 InsertText: 'Hello' InsertText: ' world Current documemt Hello world Idle Client: Luiz Last synced revision: 1 urrent document Hello Send Ack {Revision: 1} Idle Send Change {InsertText: 'Hello' Revision: 1} Current document Idle 1) Transforming pendng changes against incoming changes to get (InsertText: 2) Appv {InsertText 3) LJpdde synced revision Client: John Last synced rm.•ision: 1 Sent changes Pendng changes InsertText: ' world Sent chmges Pending changes InsertText: @6 Current document Hello world Current document Hello! ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image4.png){width="5.0in" height="2.6875in"}
+![Client: Luiz Last synced revision: O Server Pending changes Client: John Last synced revision: O Sent changes Pendng changes Revision log 1. InsertText: 'Hello' Sent chmges Pending changes InsertText: @1 InsertText: 'Hello' InsertText: ' world Current documemt Hello world Idle Client: Luiz Last synced revision: 1 urrent document Hello Send Ack {Revision: 1} Idle Send Change {InsertText: 'Hello' Revision: 1} Current document Idle 1) Transforming pendng changes against incoming changes to get (InsertText: 2) Appv {InsertText 3) LJpdde synced revision Client: John Last synced rm.•ision: 1 Sent changes Pendng changes InsertText: ' world Sent chmges Pending changes InsertText: @6 Current document Hello world Current document Hello! ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image4.png)
 
 [John received]{.mark} Luiz's edit from the server and used [operational transformation](http://googledocs.blogspot.com/2010/09/whats-different-about-new-google-docs_22.html) (OT) to transform it against his pending {InsertText '!' @1} change. [The result of the transformation was to shift the location of John's pending change by 5 to make room at the beginning of the document for Luiz's Hello. Notice that both Luiz and John updated their last synced revision numbers to 1 when they received the messages from the server]{.mark}. Lastly, when Luiz received the acknowledgement of his first change, [he removed that first change from the list of sent changes.]{.mark}
 
@@ -83,7 +81,7 @@ Next, both Luiz and John are going to send their unsent changes to the server.
 
 What comes next is important. The server received John's pending change, a change that John believes should be Revision 2. But the server has already committed a Revision 2 to the revision log. [The server will use OT to transform John's change so that it can be stored as Revision 3.]{.mark}
 
-![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image5.png){width="5.0in" height="4.395833333333333in"}
+![](../../media/Memeory-Google-Doc-Google-Drive-Blog-image5.png)
 
 [The first thing the server did, was to transform John's sent change against all the changes that have been committed since the last time John synced with the server. In this case, it transformed John's change against]{.mark} Luiz's {InsertText ' world' @6}. The result shifted the index of John's change over by 6. [This shift is identical to the transformation John's client made when it first received Luiz's]{.mark} {InsertText 'Hello' @1}.
 
@@ -109,21 +107,21 @@ Well that's all folks: we hope by reading this series you learned a bit more abo
 
 Posted by: John Day-Richter, Software Engineer
 
-![Share on Google+](../../media/Memeory-Google-Doc-Google-Drive-Blog-image6.png){width="0.25in" height="0.25in"}
+![Share on Google+](../../media/Memeory-Google-Doc-Google-Drive-Blog-image6.png)
 
 
 
-![Share on Twitter](../../media/Memeory-Google-Doc-Google-Drive-Blog-image7.png){width="0.25in" height="0.25in"}
+![Share on Twitter](../../media/Memeory-Google-Doc-Google-Drive-Blog-image7.png)
 
 
 
-![Share on Facebook](../../media/Memeory-Google-Doc-Google-Drive-Blog-image8.png){width="0.25in" height="0.25in"}
+![Share on Facebook](../../media/Memeory-Google-Doc-Google-Drive-Blog-image8.png)
 
 Labels: [documents](https://drive.googleblog.com/search/label/documents) , [Google Apps Blog](https://drive.googleblog.com/search/label/Google%20Apps%20Blog) , [Google Drive Blog](https://drive.googleblog.com/search/label/Google%20Drive%20Blog)
 
 [](https://drive.googleblog.com/) [](https://drive.googleblog.com/2010/09/import-your-files-many-different-ways.html) [](https://drive.googleblog.com/2010/09/whats-different-about-new-google-docs_22.html)
 
-![316009 ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image9.png){width="0.9513888888888888in" height="0.375in"}
+![316009 ](../../media/Memeory-Google-Doc-Google-Drive-Blog-image9.png)
 
 - [Google](https://www.google.com/)
 

@@ -1,8 +1,6 @@
 # 3 Diving into the AWS CloudFormation Template
 
-Created: 2023-10-02 16:10:11 -0600
 
-Modified: 2023-10-22 17:40:48 -0600
 
 ---
 

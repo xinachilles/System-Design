@@ -1,8 +1,6 @@
 # Rate Limiter 3 -ACE
 
-Created: 2021-04-18 11:18:32 -0600
 
-Modified: 2021-05-23 16:28:11 -0600
 
 ---
 
@@ -28,7 +26,7 @@ Once a new request arrives, Web Server first asks the Rate Limiter to decide if 
 
 **Algorithm**
 
-![Fixed Window Token Bucket Leaky Bucket ty A Cll Sliding Window ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image1.png){width="5.0in" height="2.0208333333333335in"}
+![Fixed Window Token Bucket Leaky Bucket ty A Cll Sliding Window ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image1.png)
 
 
 
@@ -40,7 +38,7 @@ Fixed window counter algorithm divides the timeline into fixed-size windows and 
 
 
 
-![import import import public java . util. concurrent . ConcurrentHashMap; java . util. concurrent . ConcurrentMap; java . util. concurrent . atomic . Atomiclnteger; extends RateLimiter { FixedWindowCounter class key is sec, value is count threadsa e private final ConcurrentMap<Long, Atomiclnteger> windows = FixedWindowCounter(int maxRequestPerSec){ public super(maxRequestPerSec) ; Override boolean // remove the tast 3 digit convert to second new ConcurrentHashMap<>(); // epoch time start time as 1970 -1-1, how many mittsecond have passed since 1970-1-1 System . currentTimeMittis ( ) ; long windowsKey = // thread safe windows. put If Absent (windowsKey, new Atomiclnteger( 0)); initialValue: // atomic operation return windows. get (windowsKey) . // other windows. get (windowsKey) ; Atomiclnteger counter = windows. get (windowsKey) . incrementAndGet() <=maxRequestPerSec; boolean result = if( ! result) { counter. decrementAndGet(); return result; ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image2.png){width="5.0in" height="4.631944444444445in"}
+![import import import public java . util. concurrent . ConcurrentHashMap; java . util. concurrent . ConcurrentMap; java . util. concurrent . atomic . Atomiclnteger; extends RateLimiter { FixedWindowCounter class key is sec, value is count threadsa e private final ConcurrentMap<Long, Atomiclnteger> windows = FixedWindowCounter(int maxRequestPerSec){ public super(maxRequestPerSec) ; Override boolean // remove the tast 3 digit convert to second new ConcurrentHashMap<>(); // epoch time start time as 1970 -1-1, how many mittsecond have passed since 1970-1-1 System . currentTimeMittis ( ) ; long windowsKey = // thread safe windows. put If Absent (windowsKey, new Atomiclnteger( 0)); initialValue: // atomic operation return windows. get (windowsKey) . // other windows. get (windowsKey) ; Atomiclnteger counter = windows. get (windowsKey) . incrementAndGet() <=maxRequestPerSec; boolean result = if( ! result) { counter. decrementAndGet(); return result; ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image2.png)
 
 
 
@@ -50,7 +48,7 @@ Problem:
 
 This is a Fixed Window algorithm, as we're resetting the 'StartTime' at the end of every minute, which means it can potentially allow t[wice the number of requests per minute]{.mark}. Imagine if Kristie sends three requests at the last second of a minute, then she can immediately send three more requests at the very first second of the next minute, resulting in 6 requests in the span of two seconds.
 
-![C lit Fixed Window Fixed Window - 2 messages Fixed Window - 3 messages o.os ml I.os m2 Rollina Window - 4 messaaes 2.os ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image3.png){width="5.0in" height="2.5416666666666665in"}
+![C lit Fixed Window Fixed Window - 2 messages Fixed Window - 3 messages o.os ml I.os m2 Rollina Window - 4 messaaes 2.os ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image3.png)
 
 
 
@@ -58,7 +56,7 @@ This is a Fixed Window algorithm, as we're resetting the 'StartTime' at the end 
 
 **Sliding windows (sliding log)** involves tracking a time stamped log for each consumer's request. These logs are usually stored in ~~a hash set or table~~ / queue that is sorted by time. Logs with timestamps beyond a threshold or boundary are discarded. When a new request comes in, we calculate the sum of logs to determine the request rate. If the request would exceed the threshold rate, then it is held.
 
-![extends RateLimiter { public class SlidingWindowLog new LinkedList<>(); private final Queue<Long> log = SlidingWindowLog(int maxRequestPreSec){ protected super(maxRequestPreSec) ; Override boolean System . currentTimeMittis() ; long cur Time = // one second ago curTime -1000; long boundary = synchronized (log) { while && log. log. poll(); log. add(curTime) ; return log. ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image4.png){width="5.0in" height="3.8194444444444446in"}
+![extends RateLimiter { public class SlidingWindowLog new LinkedList<>(); private final Queue<Long> log = SlidingWindowLog(int maxRequestPreSec){ protected super(maxRequestPreSec) ; Override boolean System . currentTimeMittis() ; long cur Time = // one second ago curTime -1000; long boundary = synchronized (log) { while && log. log. poll(); log. add(curTime) ; return log. ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image4.png)
 
 
 
@@ -72,11 +70,11 @@ but it smooths out bursts of traffic by [adding a weighted count in previous win
 
 For example, suppose the limit is 10 per minute. There are 9 requests in window [00:00, 00:01) and 5 reqeuests in window [00:01, 00:02). For a requst arrives at 00:01:15, which is at 25% position of window [00:01, 00:02), we calculate the request count by the formula: 9 x (1 - 25%) + 5 = 11.75 > 10. Thus we reject this request. Even though both windows don't exceed the limit, the request is rejected because the weighted sum of previous and current window does exceed the limit.
 
-![00:01 pounter g Counter 5 ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image5.png){width="5.0in" height="2.4375in"}
+![00:01 pounter g Counter 5 ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image5.png)
 
 
 
-![extends RateLimiter { public class SlidingWindow private final ConcurrentMap<Long, Atomiclnteger> windows = SlidingWindow(int maxRequestPerSec) { protected super(maxRequestPerSec) ; Override boolean allow() { System . currentTimeMittis() ; long cur Time = long windowLenInMs = 1000; new ConcurrentHashMap<>(); cur Time / windowLenInMs * windowLenInMs; long curWindowKey = windows. putlfAbsent(curWindowKey, new Atomiclnteger( initialValue: 0)); long preWindowKey = curWindowKey - windowLenInMs; Atomiclnteger preCount = windows. get(preWindowKey); if (preCount null) { return windows. get(curWindowKey) . incrementAndGet() <= maxRequestPerSec; //current time = : //current window kye = 00: 01:00 // pregeggtpt = 75% (cur Time - curWindowKey) / windowLenInMs; double preWeight (long) (preCount.get() * preWeight long count = + windows. get(curWindowKey) . incrementAndGet()) ; return count <= maxRequestPerSec; ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image6.png){width="5.0in" height="4.451388888888889in"}
+![extends RateLimiter { public class SlidingWindow private final ConcurrentMap<Long, Atomiclnteger> windows = SlidingWindow(int maxRequestPerSec) { protected super(maxRequestPerSec) ; Override boolean allow() { System . currentTimeMittis() ; long cur Time = long windowLenInMs = 1000; new ConcurrentHashMap<>(); cur Time / windowLenInMs * windowLenInMs; long curWindowKey = windows. putlfAbsent(curWindowKey, new Atomiclnteger( initialValue: 0)); long preWindowKey = curWindowKey - windowLenInMs; Atomiclnteger preCount = windows. get(preWindowKey); if (preCount null) { return windows. get(curWindowKey) . incrementAndGet() <= maxRequestPerSec; //current time = : //current window kye = 00: 01:00 // pregeggtpt = 75% (cur Time - curWindowKey) / windowLenInMs; double preWeight (long) (preCount.get() * preWeight long count = + windows. get(curWindowKey) . incrementAndGet()) ; return count <= maxRequestPerSec; ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image6.png)
 
 <https://preparingforcodinginterview.wordpress.com/2020/06/20/designing-an-api-rate-limiter/>
 
@@ -118,7 +116,7 @@ However, a bursty of traffic can fill up the queue with old requests and starve 
 
 
 
-![Leaky Bucket Algorithm Algorithm Step- 1 : Initialize the counterto 'n' at every tick of clock. Step - 2 : If n is greater than the size Opacket in the front of queue send the packet into the network and decrement the counter by size ofpacket. Repeat the step until n is less than the size of packet. Step - 3 : Reset the counter and go to Step - I. ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image7.png){width="5.0in" height="2.6875in"}
+![Leaky Bucket Algorithm Algorithm Step- 1 : Initialize the counterto 'n' at every tick of clock. Step - 2 : If n is greater than the size Opacket in the front of queue send the packet into the network and decrement the counter by size ofpacket. Repeat the step until n is less than the size of packet. Step - 3 : Reset the counter and go to Step - I. ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image7.png)
 
 
 
@@ -128,7 +126,7 @@ However, a bursty of traffic can fill up the queue with old requests and starve 
 
 
 
-![Example Let n = 1000 Packet =. 200 700 500 450 400 400 200 Since n > front of Queue i.e. n>200 Therefore, 1000-200 - 800 Packet size of 200 is sent to the network 200 700 500 450 Now Again n > front of queue i.e. n > 400 Therefore, n= 800-400 = 400 Packet size of 400 is sent to the network 200 700 500 450 Since n < front of queue . There fore, the procedure is stop. And we initialize n on another tick of clock. ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image8.png){width="5.0in" height="4.645833333333333in"}
+![Example Let n = 1000 Packet =. 200 700 500 450 400 400 200 Since n > front of Queue i.e. n>200 Therefore, 1000-200 - 800 Packet size of 200 is sent to the network 200 700 500 450 Now Again n > front of queue i.e. n > 400 Therefore, n= 800-400 = 400 Packet size of 400 is sent to the network 200 700 500 450 Since n < front of queue . There fore, the procedure is stop. And we initialize n on another tick of clock. ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image8.png)
 
 
 
@@ -136,7 +134,7 @@ However, a bursty of traffic can fill up the queue with old requests and starve 
 
 
 
-![Leaky Bucket Leaky B ucket a Input: Variable rate Leaky bucket Output: Fixed rate ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image9.png){width="5.0in" height="3.548611111111111in"}
+![Leaky Bucket Leaky B ucket a Input: Variable rate Leaky bucket Output: Fixed rate ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image9.png)
 
 
 
@@ -144,7 +142,7 @@ the requests are processed at an approximately constant rate, which smooths out 
 
 
 
-![extends RateLimiter { public class LeakyBucket private long nextA110wedTime; private final long REQUEST _ INTERVAL_MILLIS; LeakyBucket(int maxRequestPerSec) { protected super(maxRequestPerSec) ; = 1000 / maxRequestPerSec; System . currentTimeMittis() ; nextA110wedTime = @Override boolean allow() { System . currentTimeMittis() ; long cur Time = synchronized (this) { if (cur Time >= nextA110wedTime) { nextA110wedTime = curTime + REQUEST _ INTERVAL_MILLIS; return true; return false; ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image10.png){width="5.0in" height="5.229166666666667in"}
+![extends RateLimiter { public class LeakyBucket private long nextA110wedTime; private final long REQUEST _ INTERVAL_MILLIS; LeakyBucket(int maxRequestPerSec) { protected super(maxRequestPerSec) ; = 1000 / maxRequestPerSec; System . currentTimeMittis() ; nextA110wedTime = @Override boolean allow() { System . currentTimeMittis() ; long cur Time = synchronized (this) { if (cur Time >= nextA110wedTime) { nextA110wedTime = curTime + REQUEST _ INTERVAL_MILLIS; return true; return false; ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image10.png)
 
 
 
@@ -156,13 +154,13 @@ the requests are processed at an approximately constant rate, which smooths out 
 
 [Token bucket]{.mark}
 
-![Token Bucket cØc)ec) ro•éc-e---, I BOCkET on I re OC I-OV:-QFS ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image11.png){width="5.0in" height="4.034722222222222in"}
+![Token Bucket cØc)ec) ro•éc-e---, I BOCkET on I re OC I-OV:-QFS ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image11.png)
 
-![public class TokenBucket { private final long mxBucketSize; private final long refillRate; private double currentBucketSize; private long LastRefilITinest•p•, public TokenBucket(long maxBucketSize, long refillRate) { this. maxBucketSize nax8ucketSize; refillRate; currentBucketSize maxBucketSize; System. nanoTime(); public synchronized boolean allowqequest(int refit 10; if (currenteucketSize > tokens) { currentBucketSize tokens; return true; return false; private void refill() { long no. System. nanorine(); tokens) double tokensTOAdd • (now --- current8ucketSize Math.min(currentBucketSize • lostRefi11Tinestæp no'; • refiURate leg; tokensToAdd. Number Of tokens initially is equal to the maximum capacity Current time in nanoseconds Synchronized, as several threads may be calling the method concurrently First, refill bucket with tokens accumulated since the last call If bucket has enough tokens, call is allowed Request is throttled as bucket does not have enough tokens These many tokens accumulated since the last refill Number of tokens should never exceed maximum capacity ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image12.png){width="5.0in" height="2.5416666666666665in"}
+![public class TokenBucket { private final long mxBucketSize; private final long refillRate; private double currentBucketSize; private long LastRefilITinest•p•, public TokenBucket(long maxBucketSize, long refillRate) { this. maxBucketSize nax8ucketSize; refillRate; currentBucketSize maxBucketSize; System. nanoTime(); public synchronized boolean allowqequest(int refit 10; if (currenteucketSize > tokens) { currentBucketSize tokens; return true; return false; private void refill() { long no. System. nanorine(); tokens) double tokensTOAdd • (now --- current8ucketSize Math.min(currentBucketSize • lostRefi11Tinestæp no'; • refiURate leg; tokensToAdd. Number Of tokens initially is equal to the maximum capacity Current time in nanoseconds Synchronized, as several threads may be calling the method concurrently First, refill bucket with tokens accumulated since the last call If bucket has enough tokens, call is allowed Request is throttled as bucket does not have enough tokens These many tokens accumulated since the last refill Number of tokens should never exceed maximum capacity ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image12.png)
 
 
 
-![public class extends RateLimiter TokenBucket3 private int token; // private final tong refittRate; // private doubte currentBucketSize; private long lastRefi11Timestamp; (int maxRequestPerSec){ public TokenBucket3 super(maxRequestPerSec) ; this . token = maxRequestPerSec; // this. refittRate = refittRate; // currentBucketSize = maxBucketSize; System . currentTimeMittis() ; lastRefi11Timestamp = Override public boolean synchronized (this) { refill() ; if (token 0) { return false; token--; return false; private void refill() System . currentTimeMittis() ; long now = (now-lastRefi11Timestamp) / 1000 ; double secSinceLastRefi11 = (int) secSinceLastRefi11*maxRequestPerSec; int count = if(count>@){ Math . min (token+count , maxRequestPerSec) ; token = lastRefi11Timestamp = now ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image13.png){width="5.0in" height="5.145833333333333in"}
+![public class extends RateLimiter TokenBucket3 private int token; // private final tong refittRate; // private doubte currentBucketSize; private long lastRefi11Timestamp; (int maxRequestPerSec){ public TokenBucket3 super(maxRequestPerSec) ; this . token = maxRequestPerSec; // this. refittRate = refittRate; // currentBucketSize = maxBucketSize; System . currentTimeMittis() ; lastRefi11Timestamp = Override public boolean synchronized (this) { refill() ; if (token 0) { return false; token--; return false; private void refill() System . currentTimeMittis() ; long now = (now-lastRefi11Timestamp) / 1000 ; double secSinceLastRefi11 = (int) secSinceLastRefi11*maxRequestPerSec; int count = if(count>@){ Math . min (token+count , maxRequestPerSec) ; token = lastRefi11Timestamp = now ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image13.png)
 
 **The different between token bucket and Leakey bucket**
 
@@ -182,13 +180,13 @@ We recommend the **sliding window** approach because it gives the flexibility to
 
 It also avoids the starvation problem of the leaky bucket and the bursting problems of fixed window implementations.
 
-![DIFFERENCE BETWEEN LEAKY BUCKET AND TOKEN BUCKET ALGORITHM TOKEN BUCKET Token dependent. If bucket is full token are discarded, but not the packet. Packets can only transmitted when there are enough token It allows large bursts to be sent faster rate after that constant rate 16:57 / LEAKY BUCKET Token independent. If bucket is full packet or data is discarded. Packets are transmitted continuously. It sends the packet at constant rate ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image14.png){width="5.0in" height="3.1527777777777777in"}
+![DIFFERENCE BETWEEN LEAKY BUCKET AND TOKEN BUCKET ALGORITHM TOKEN BUCKET Token dependent. If bucket is full token are discarded, but not the packet. Packets can only transmitted when there are enough token It allows large bursts to be sent faster rate after that constant rate 16:57 / LEAKY BUCKET Token independent. If bucket is full packet or data is discarded. Packets are transmitted continuously. It sends the packet at constant rate ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image14.png)
 
 
 
 
 
-![田 考 题 如 何 实 现 分 布 式 的 TokenBucket? 0 Sticky session Redis ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image15.png){width="5.0in" height="4.520833333333333in"}
+![田 考 题 如 何 实 现 分 布 式 的 TokenBucket? 0 Sticky session Redis ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image15.png)
 
 <https://konghq.com/blog/how-to-design-a-scalable-rate-limiting-algorithm/>
 
@@ -254,11 +252,11 @@ For example, each node can create a data sync cycle that will synchronize with t
 
 
 
-![思 考 题 需 要 保 留 所 有 caller 的 TokenBucket 吗 ？ 不 需 要 只 保 存 近 期 的 （ 几 秒 内 ） I-RU ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image16.png){width="5.0in" height="4.395833333333333in"}
+![思 考 题 需 要 保 留 所 有 caller 的 TokenBucket 吗 ？ 不 需 要 只 保 存 近 期 的 （ 几 秒 内 ） I-RU ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image16.png)
 
 
 
-![](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image17.png){width="5.0in" height="2.8472222222222223in"}
+![](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image17.png)
 
 
 
@@ -275,13 +273,13 @@ For example, each node can create a data sync cycle that will synchronize with t
 
 
 
-![田 考 题 如 果 发 现 需 要 限 流 ， 怎 么 实 现 限 流 ？ 回 429 （ T00 many Request) 回 503 (Service not Available) Drop Request （ 不 返 回 ） 存 入 队 列 （ 一 段 时 间 之 后 再 处 理 ） ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image18.png){width="5.0in" height="4.868055555555555in"}
+![田 考 题 如 果 发 现 需 要 限 流 ， 怎 么 实 现 限 流 ？ 回 429 （ T00 many Request) 回 503 (Service not Available) Drop Request （ 不 返 回 ） 存 入 队 列 （ 一 段 时 间 之 后 再 处 理 ） ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image18.png)
 
 
 
-![2 · 6 容 灾 设 计 一 旦 Ratelimiter 整 体 宕 机 ， 允 许 所 有 请 求 通 过 。 服 务 器 一 旦 某 一 台 Ratelimiter ， 其 他 台 继 续 工 作 。 ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image19.png){width="5.0in" height="2.361111111111111in"}
+![2 · 6 容 灾 设 计 一 旦 Ratelimiter 整 体 宕 机 ， 允 许 所 有 请 求 通 过 。 服 务 器 一 旦 某 一 台 Ratelimiter ， 其 他 台 继 续 工 作 。 ](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image19.png)
 
-![](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image20.png){width="3.048611111111111in" height="0.5486111111111112in"}
+![](../../media/Rate-Limiter-Rate-Limiter-Rate-Limiter-3--ACE-image20.png)
 
 Send the packet 200 to network
 

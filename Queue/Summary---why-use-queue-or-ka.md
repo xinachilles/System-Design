@@ -1,8 +1,6 @@
 # Summary - why use queue or kafka 
 
-Created: 2021-05-26 23:08:45 -0600
 
-Modified: 2021-05-26 23:53:44 -0600
 
 ---
 

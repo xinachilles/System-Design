@@ -1,12 +1,10 @@
 # Summary - FrontEnd Service 
 
-Created: 2021-01-12 17:31:36 -0600
 
-Modified: 2021-04-26 12:59:13 -0600
 
 ---
 
-![FrontEnd Service A lightweight web service Stateless service deployed across several data centers Request validation Authentication/Authorization TLS (SSL) termination Server-side encryption Caching Actions Rate limiting (throttling) Request dispatching Request deduplication Usage data collection ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-Summary---FrontEnd-Service-image1.png){width="5.0in" height="2.5833333333333335in"}
+![FrontEnd Service A lightweight web service Stateless service deployed across several data centers Request validation Authentication/Authorization TLS (SSL) termination Server-side encryption Caching Actions Rate limiting (throttling) Request dispatching Request deduplication Usage data collection ](../../media/FrontEnd-Service-Gateway-or-Web-Service^J-LB-Summary---FrontEnd-Service-image1.png)
 
 
 

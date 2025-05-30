@@ -1,8 +1,6 @@
 # quad tree
 
-Created: 2020-11-21 23:54:37 -0600
 
-Modified: 2021-04-27 14:43:01 -0600
 
 ---
 
@@ -92,11 +90,11 @@ take all the point in the map and insert into the quadtree
 
 
 
-![class Solution { public Node constructCintOC] grid) { return helperCgrid, O, O, grid. length); // x, y is Coordlinates in the upper left corner private Node grid, int x, int y, int ten) { if Clen - return new NodeCgridCxJ[y] O, true, null, null, null, null); Node Node Node Node Node to the value result new Node(); topLeft helper(grid, x, y, len / Z); topRight = helper(grid, x, y + len / Z, len / Z); bottomLeft = helper(grid, x + len / Z , Y, len / Z); bottomRight helper(grid, x + len Y + len / Z, len the current grid has the same value (i -e all I's or all Ø's) set tsLeaf True and set val of the grid and set the four children to Nun and stop. if CtopLeft. isLeaf && topRight.isLeaf && bottomLeft.isLeaf && bottomRight. isLeaf && topLeft. val --- topRight.va1 && topRight.va1 - bottomLeft . val bottomLeft.va1 --- bottomRight. vat) { result.isLeaf true; result.val topLeft.va1; } else { result. topLeft = topLeft; result. topRight topRight; result. bottomLeft = bottomLeft; result. bottomRight bottomRight; return result; ](../../media/Location-Service-Basic-quad-tree-image1.png){width="5.0in" height="3.4375in"}
+![class Solution { public Node constructCintOC] grid) { return helperCgrid, O, O, grid. length); // x, y is Coordlinates in the upper left corner private Node grid, int x, int y, int ten) { if Clen - return new NodeCgridCxJ[y] O, true, null, null, null, null); Node Node Node Node Node to the value result new Node(); topLeft helper(grid, x, y, len / Z); topRight = helper(grid, x, y + len / Z, len / Z); bottomLeft = helper(grid, x + len / Z , Y, len / Z); bottomRight helper(grid, x + len Y + len / Z, len the current grid has the same value (i -e all I's or all Ø's) set tsLeaf True and set val of the grid and set the four children to Nun and stop. if CtopLeft. isLeaf && topRight.isLeaf && bottomLeft.isLeaf && bottomRight. isLeaf && topLeft. val --- topRight.va1 && topRight.va1 - bottomLeft . val bottomLeft.va1 --- bottomRight. vat) { result.isLeaf true; result.val topLeft.va1; } else { result. topLeft = topLeft; result. topRight topRight; result. bottomLeft = bottomLeft; result. bottomRight bottomRight; return result; ](../../media/Location-Service-Basic-quad-tree-image1.png)
 
 
 
-![Example 1: 0 0 Input: grid output: [[0,1], [1,0], Explanation: The explanation of this example is shown below: Notice that 0 represnts False and 1 represents True in the photo representing the Quad---Tree. Example 2: ](../../media/Location-Service-Basic-quad-tree-image2.png){width="5.0in" height="3.6805555555555554in"}
+![Example 1: 0 0 Input: grid output: [[0,1], [1,0], Explanation: The explanation of this example is shown below: Notice that 0 represnts False and 1 represents True in the photo representing the Quad---Tree. Example 2: ](../../media/Location-Service-Basic-quad-tree-image2.png)
 
 
 

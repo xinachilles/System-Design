@@ -1,8 +1,6 @@
 # Big data architectures
 
-Created: 2018-10-25 00:32:04 -0600
 
-Modified: 2018-10-25 00:32:47 -0600
 
 ---
 

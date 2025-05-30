@@ -1,8 +1,6 @@
 # Cache Consistency: Frangipani
 
-Created: 2020-06-19 11:29:15 -0600
 
-Modified: 2020-06-19 16:47:37 -0600
 
 ---
 

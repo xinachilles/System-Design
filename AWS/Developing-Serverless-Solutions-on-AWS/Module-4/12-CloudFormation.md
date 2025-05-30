@@ -1,8 +1,6 @@
 # 12 CloudFormation
 
-Created: 2023-09-23 15:32:39 -0600
 
-Modified: 2023-10-29 09:53:50 -0600
 
 ---
 
@@ -26,31 +24,31 @@ Facts
 
 
 
-![AWS CloudFormation is a service that helps you model and set up your AWS resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS. You create a template that describes all the AWS resources that you want (such as Amazon EC2 instances or Amazon RDS DB instances), and CloudFormation takes care of provisioning and configuring those resources for you. You don't need to individually create and configure AWS resources and figure out what's dependent on what. CloudFormation handles those tasks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image1.png){width="5.0in" height="2.1875in"}
+![AWS CloudFormation is a service that helps you model and set up your AWS resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS. You create a template that describes all the AWS resources that you want (such as Amazon EC2 instances or Amazon RDS DB instances), and CloudFormation takes care of provisioning and configuring those resources for you. You don't need to individually create and configure AWS resources and figure out what's dependent on what. CloudFormation handles those tasks. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image1.png)
 
 
 
-![CloudFormation uses templates to create your stacks CODE • Write templates in YAML or JSON COMMIT Save the template in an Amazon S3 bucket o. CREATE • Create stacks from templates using the console, AWS CLI, or AWS SDK • Create stack sets across multiple accounts and Regions DEPLOY Create and manage stacks, stack sets, and resources in a uniform way ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image2.png){width="5.0in" height="2.736111111111111in"}
+![CloudFormation uses templates to create your stacks CODE • Write templates in YAML or JSON COMMIT Save the template in an Amazon S3 bucket o. CREATE • Create stacks from templates using the console, AWS CLI, or AWS SDK • Create stack sets across multiple accounts and Regions DEPLOY Create and manage stacks, stack sets, and resources in a uniform way ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image2.png)
 
 
 
-![When you use CloudFormation, you manage related resources as a single unit called a stack. You create, update, and delete a collection of resources by creating, updating, and deleting stacks. All the resources in a stack are defined by the stack's CloudFormation template. Suppose you created a template that includes an Auto Scaling group, Elastic Load Balancing load balancer, and an RDS database instance. To create those resources, you create a stack by submitting the template that you created, and CloudFormation provisions all those resources for you. CloudFormation StackSets extends the capability of stacks by enabling you to create, update, or delete stacks across multiple accounts and AWS Regions with a single operation. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image3.png){width="5.0in" height="2.1666666666666665in"}
+![When you use CloudFormation, you manage related resources as a single unit called a stack. You create, update, and delete a collection of resources by creating, updating, and deleting stacks. All the resources in a stack are defined by the stack's CloudFormation template. Suppose you created a template that includes an Auto Scaling group, Elastic Load Balancing load balancer, and an RDS database instance. To create those resources, you create a stack by submitting the template that you created, and CloudFormation provisions all those resources for you. CloudFormation StackSets extends the capability of stacks by enabling you to create, update, or delete stacks across multiple accounts and AWS Regions with a single operation. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image3.png)
 
 
 
-![CloudFormation Template A CloudFormation template is a JSON or YAML formatted text file. You can save these files with any extension, such as .json, .yaml, .template, or .txt. CloudFormation uses these templates as blueprints for building your AWS resources. Following is an example of a CloudFormation template that's used to create a database instance. To learn more about each element of the CloudFormation template, choose the hotspot. AWSTemp1 ate FormatVe r s i on : parameters: DatabaseName: Stri ng TYPe : Resources: MYDatabase : 2010-09-09 AWS: :RDS: :DB1nstance Type : properti es : ! Ref DatabaseName DBName : Al 1 ocatedstorage : DBInstanceC1 ass: db .m5 . large Engi ne: MYSQL Deletionpolicy: snapshot Parameters are input variables that you can specify during provisioning. Resources are a list of the resources that compose your infrastructure stack with their corresponding configuration. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image4.png){width="5.0in" height="3.7222222222222223in"}
+![CloudFormation Template A CloudFormation template is a JSON or YAML formatted text file. You can save these files with any extension, such as .json, .yaml, .template, or .txt. CloudFormation uses these templates as blueprints for building your AWS resources. Following is an example of a CloudFormation template that's used to create a database instance. To learn more about each element of the CloudFormation template, choose the hotspot. AWSTemp1 ate FormatVe r s i on : parameters: DatabaseName: Stri ng TYPe : Resources: MYDatabase : 2010-09-09 AWS: :RDS: :DB1nstance Type : properti es : ! Ref DatabaseName DBName : Al 1 ocatedstorage : DBInstanceC1 ass: db .m5 . large Engi ne: MYSQL Deletionpolicy: snapshot Parameters are input variables that you can specify during provisioning. Resources are a list of the resources that compose your infrastructure stack with their corresponding configuration. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image4.png)
 
 
 
-![Template version The AWSTemplateFormatVersion section (optional) identifies the capabilities of the template. The latest template format version is 2010-09-09 and is currently the only valid value. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image5.png){width="4.5in" height="3.0694444444444446in"}
+![Template version The AWSTemplateFormatVersion section (optional) identifies the capabilities of the template. The latest template format version is 2010-09-09 and is currently the only valid value. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image5.png)
 
 
 
-![Parameters use the optional Parameters section to customize your templates. You can use parameters to input custom values to your template each time you create or update a stack. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image6.png){width="4.5625in" height="3.0694444444444446in"}
+![Parameters use the optional Parameters section to customize your templates. You can use parameters to input custom values to your template each time you create or update a stack. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image6.png)
 
 
 
-![P R Resources The required Resources section declares the AWS resources that you want to include in the stack, such as an EC2 instance or an S3 bucket. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image7.png){width="4.625in" height="2.6875in"}
+![P R Resources The required Resources section declares the AWS resources that you want to include in the stack, such as an EC2 instance or an S3 bucket. ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Module-4-12-CloudFormation-image7.png)
 
 
 

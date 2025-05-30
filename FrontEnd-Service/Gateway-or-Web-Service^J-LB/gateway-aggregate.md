@@ -1,8 +1,6 @@
 # gateway aggregate
 
-Created: 2019-11-11 10:48:05 -0600
 
-Modified: 2019-12-16 10:30:27 -0600
 
 ---
 

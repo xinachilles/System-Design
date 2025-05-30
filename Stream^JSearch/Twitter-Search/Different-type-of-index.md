@@ -1,8 +1,6 @@
 # Different type of index 
 
-Created: 2017-10-13 23:33:50 -0600
 
-Modified: 2021-01-23 01:25:19 -0600
 
 ---
 

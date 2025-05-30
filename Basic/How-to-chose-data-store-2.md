@@ -1,8 +1,6 @@
 # How to chose data store 2
 
-Created: 2018-10-01 23:29:13 -0600
 
-Modified: 2020-01-06 18:23:15 -0600
 
 ---
 

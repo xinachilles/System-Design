@@ -1,8 +1,6 @@
 # Asynchronous Request-Reply pattern
 
-Created: 2019-11-06 00:22:54 -0600
 
-Modified: 2020-01-09 12:58:20 -0600
 
 ---
 

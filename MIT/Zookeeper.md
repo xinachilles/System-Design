@@ -1,8 +1,6 @@
 # Zookeeper
 
-Created: 2020-06-10 11:40:20 -0600
 
-Modified: 2020-11-28 17:27:30 -0600
 
 ---
 
@@ -464,7 +462,7 @@ so that's one out but it's an expensive one because you now we converted a cheap
 
 
 
-![k) r Åe org."/ 51 'ev 'Is 'ret* ,-eaé ](../media/MIT-Zookeeper-image1.png){width="5.0in" height="2.1875in"}
+![k) r Åe org."/ 51 'ev 'Is 'ret* ,-eaé ](../media/MIT-Zookeeper-image1.png)
 
 
 
@@ -540,7 +538,7 @@ file that elite ready is going to generate a notification and that notification 
 
 
 
-![](../media/MIT-Zookeeper-image2.png){width="5.0in" height="1.9236111111111112in"}
+![](../media/MIT-Zookeeper-image2.png)
 
 
 

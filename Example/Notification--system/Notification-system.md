@@ -1,8 +1,6 @@
 # Notification system 
 
-Created: 2020-12-12 23:39:22 -0600
 
-Modified: 2021-02-01 17:43:19 -0600
 
 ---
 

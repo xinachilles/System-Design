@@ -1,8 +1,6 @@
 # Summary 3 
 
-Created: 2021-01-21 12:28:34 -0600
 
-Modified: 2021-04-26 14:48:00 -0600
 
 ---
 
@@ -84,7 +82,7 @@ we can store the photo in the sql database
 
 
 
-![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image1.png){width="2.625in" height="3.1319444444444446in"}
+![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image1.png)
 
 [Change the photo path to photo ID or the photo is just storage path, web service may need update the URL base on the CDN or cache]{.mark}
 
@@ -118,7 +116,7 @@ the url is the location of object database
 
 
 
-![](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image2.png){width="5.0in" height="2.0277777777777777in"}
+![](../../media/Twitter-^M-Insgram-Instagram-Summary-3-image2.png)
 
 so we need the cdn, cache, machine id and logical volume
 

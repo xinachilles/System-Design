@@ -1,8 +1,6 @@
 # We can start with a really straightforward
 
-Created: 2021-01-25 16:45:07 -0600
 
-Modified: 2021-01-25 17:45:18 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # Peer to peer network
 
-Created: 2020-11-23 11:45:44 -0600
 
-Modified: 2020-11-23 15:48:39 -0600
 
 ---
 

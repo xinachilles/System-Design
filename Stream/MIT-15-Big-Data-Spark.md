@@ -1,8 +1,6 @@
 # MIT 15 Big Data Spark
 
-Created: 2021-01-15 16:50:35 -0600
 
-Modified: 2021-01-15 18:09:20 -0600
 
 ---
 
@@ -72,7 +70,7 @@ communication here to get from HDFS to the to the responsible worker but after t
 
 
 
-![](../media/Stream-MIT-15-Big-Data-Spark-image1.png){width="5.0in" height="1.6111111111111112in"}
+![](../media/Stream-MIT-15-Big-Data-Spark-image1.png)
 
 
 
@@ -148,7 +146,7 @@ and then we can run the distinct because all the given keys are on the same work
 
 
 
-![](../media/Stream-MIT-15-Big-Data-Spark-image2.png){width="5.0in" height="2.6319444444444446in"}
+![](../media/Stream-MIT-15-Big-Data-Spark-image2.png)
 
 
 

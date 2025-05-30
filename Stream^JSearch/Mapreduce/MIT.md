@@ -1,8 +1,6 @@
 # MIT 
 
-Created: 2021-01-02 17:51:48 -0600
 
-Modified: 2021-03-14 11:35:39 -0600
 
 ---
 
@@ -246,7 +244,7 @@ The key is the word the values are all ones, we don't like here about them we on
 
 
 
-![](../../media/Stream^JSearch-Mapreduce-MIT-image1.png){width="3.5277777777777777in" height="2.0069444444444446in"}
+![](../../media/Stream^JSearch-Mapreduce-MIT-image1.png)
 
 
 
@@ -1264,7 +1262,7 @@ need it and now it's like the expensive part of the MapReduce yeah
 
 
 
-![](../../media/Stream^JSearch-Mapreduce-MIT-image2.png){width="5.0in" height="2.375in"}
+![](../../media/Stream^JSearch-Mapreduce-MIT-image2.png)
 
 
 

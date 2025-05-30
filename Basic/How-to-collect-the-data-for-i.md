@@ -1,8 +1,6 @@
 # How to collect the data for index service or type head 
 
-Created: 2017-10-20 09:34:56 -0600
 
-Modified: 2018-01-30 01:30:39 -0600
 
 ---
 

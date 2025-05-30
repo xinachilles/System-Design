@@ -1,8 +1,6 @@
 # RabbitMQ tutorial - "Hello World!" — RabbitMQ
 
-Created: 2020-12-24 17:47:53 -0600
 
-Modified: 2020-12-24 17:54:09 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # Online Stream 
 
-Created: 2021-01-14 00:29:24 -0600
 
-Modified: 2021-01-14 00:39:33 -0600
 
 ---
 
@@ -59,7 +57,7 @@ Benefits of CDN:
 4.  Improving website security
 5.  TTL feature for certain use cases.
 
-![Origin Server CDN Server User ](../../media/Netfilx-Netflix-Online-Stream-image1.png){width="6.270833333333333in" height="4.0625in"}
+![Origin Server CDN Server User ](../../media/Netfilx-Netflix-Online-Stream-image1.png)
 
 Simple use case for CDN:
 
@@ -87,7 +85,7 @@ Youtube:
 
 <https://r1---sn-n4v7knlk.googlevideo.com/videoplayback?expire=1591856683&ei=y3nhXuCLFdXBkwbniKYw&ip=24.5.83.146&id=o-AHUeCZdeWM1OEkDzj1HyKxh5BEHkHITyr4H0fvBXrRuA&itag=247&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C278&source=youtube&requiressl=yes&vprv=1&mime=video%2Fwebm&gir=yes&clen=74633294&dur=601.901&lmt=1591830739420755&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=6316222&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgWqMCObQh4QU_Yi9fcUYe1MxqppBRZVeOkvD8KN1rNiECIQDxEKh3shZHw4Vi3g3vsiXgeng_YUJvLpvUMBP9odfe_A%3D%3D&alr=yes&cpn=V0OOFmt3RLVOJOt8&cver=2.20200609.04.01&redirect_counter=1&rm=sn-n4vl67e&fexp=9466588&cms_redirect=yes&ipbypass=yes&mh=pv&mip=2601:645:8101:1ea4:58e4:772f:34ad:760c&mm=31&mn=sn-n4v7knlk&ms=au&mt=1591835011&mv=m&mvi=0&pl=34&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhAIRB6XQ43hKSsrFl4FsXLn1WP94PtrS04HW1-0dmjWayAiBohaIotTy2bSOZYkFiGQeVqwylAU6th7Hbk__ZzFhT1Q%3D%3D&range=4664737-6134370&rn=19&rbuf=24672>
 
-![Viewport / Frames Current / Optimal Res Volume / Normalized Codecs Color Connection Speed Network Activity Buffer Health Mystery Text Video ID / sCPN fPxMa11w1UY / XVRY NAXG ZXKI / 3 dropped of 1 674 100% / 64% (content loudness 3.9dB) av01.O.08M.08 (399) / opus (251) bt709 / bt709 t:137.33 b:O.OOO-216.360 P 170667 Kbps O KB • 03 S ](../../media/Netfilx-Netflix-Online-Stream-image2.png){width="6.270833333333333in" height="1.8333333333333333in"}
+![Viewport / Frames Current / Optimal Res Volume / Normalized Codecs Color Connection Speed Network Activity Buffer Health Mystery Text Video ID / sCPN fPxMa11w1UY / XVRY NAXG ZXKI / 3 dropped of 1 674 100% / 64% (content loudness 3.9dB) av01.O.08M.08 (399) / opus (251) bt709 / bt709 t:137.33 b:O.OOO-216.360 P 170667 Kbps O KB • 03 S ](../../media/Netfilx-Netflix-Online-Stream-image2.png)
 
 
 
@@ -99,7 +97,7 @@ Simple Design
 
 Use CDN's provided functionality to stream the video. No need to store any copy. Take [cloudflare API](https://api.cloudflare.com/#stream-videos-list-videos) as an example, it supports stream video, list streams, upload stream captions.
 
-![List videos Up to 1000 videos can be listed with one request, use optional parameters below to get a specific range of videos. Please note that Cloudflare Stream does not use pagination, instead it uses a cursor pattern to list more than 1000 videos. In order to list all videos, make multiple requests to the API using the created date-time of the last item in the previous request as the before or after parameter. GET accounts/:account_identifier/stream Optional parameters Name /type after string (date-time) before string (date-time) include counts boolean search string limit integer asc Description /example Show videos created after this date-time " 2014-01-02TØ2 : 20 : Show videos created before this time Include stats in the response about the number of videos in response range and total number of videos available A string provided in this field will be used to search over the 'name' key in meta field, which can be set with the upload request of after. " puppy. mp4" Number of videos to include in the response List videos in ascending order of creation Constraints default value: false valid values: (true,false) min value:O max value:1 000 default value: false ](../../media/Netfilx-Netflix-Online-Stream-image3.png){width="6.270833333333333in" height="4.277777777777778in"}
+![List videos Up to 1000 videos can be listed with one request, use optional parameters below to get a specific range of videos. Please note that Cloudflare Stream does not use pagination, instead it uses a cursor pattern to list more than 1000 videos. In order to list all videos, make multiple requests to the API using the created date-time of the last item in the previous request as the before or after parameter. GET accounts/:account_identifier/stream Optional parameters Name /type after string (date-time) before string (date-time) include counts boolean search string limit integer asc Description /example Show videos created after this date-time " 2014-01-02TØ2 : 20 : Show videos created before this time Include stats in the response about the number of videos in response range and total number of videos available A string provided in this field will be used to search over the 'name' key in meta field, which can be set with the upload request of after. " puppy. mp4" Number of videos to include in the response List videos in ascending order of creation Constraints default value: false valid values: (true,false) min value:O max value:1 000 default value: false ](../../media/Netfilx-Netflix-Online-Stream-image3.png)
 
 Sample returned result:
 
@@ -156,11 +154,11 @@ Sample returned result:
 
 
 
-![](../../media/Netfilx-Netflix-Online-Stream-image4.png){width="6.270833333333333in" height="2.138888888888889in"}
+![](../../media/Netfilx-Netflix-Online-Stream-image4.png)
 
 TUS: Open protocol for reusable file uploads.
 
-![](../../media/Netfilx-Netflix-Online-Stream-image5.png){width="6.270833333333333in" height="2.8541666666666665in"}
+![](../../media/Netfilx-Netflix-Online-Stream-image5.png)
 
 
 

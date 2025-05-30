@@ -1,8 +1,6 @@
 # Summary of Cache Consistency: Memcached at Facebook
 
-Created: 2020-11-25 17:52:36 -0600
 
-Modified: 2021-02-09 18:38:58 -0600
 
 ---
 

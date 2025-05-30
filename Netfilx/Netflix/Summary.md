@@ -1,8 +1,6 @@
 # Summary 
 
-Created: 2020-12-03 01:53:05 -0600
 
-Modified: 2020-12-16 01:17:16 -0600
 
 ---
 
@@ -32,7 +30,7 @@ and send it to search service to create a index for searching
 
 
 
-![Data Model Video storage SQL + S3 table: Next (few) uuid to reduce one additional call to metadata service S3 PrimaryKey = { video id + clip id + resolution} video Id uuid owner scott Timestamp clip id 12344 uuid offset 124 Next clips Next uuid ](../../media/Netfilx-Netflix-Summary-image1.png){width="5.0in" height="1.7916666666666667in"}
+![Data Model Video storage SQL + S3 table: Next (few) uuid to reduce one additional call to metadata service S3 PrimaryKey = { video id + clip id + resolution} video Id uuid owner scott Timestamp clip id 12344 uuid offset 124 Next clips Next uuid ](../../media/Netfilx-Netflix-Summary-image1.png)
 
 
 
@@ -40,7 +38,7 @@ and send it to search service to create a index for searching
 
 
 
-![Video metadata SQL table: Next (few) uuid to reduce one additional call to metadata service Id uuid user scott ts 12 title my desc system Total length 155 seconds Clips Thumb nail mapping uuid uuid0 S3 uri, State Share rule Private/ Public/ Group ](../../media/Netfilx-Netflix-Summary-image2.png){width="5.0in" height="1.6041666666666667in"}
+![Video metadata SQL table: Next (few) uuid to reduce one additional call to metadata service Id uuid user scott ts 12 title my desc system Total length 155 seconds Clips Thumb nail mapping uuid uuid0 S3 uri, State Share rule Private/ Public/ Group ](../../media/Netfilx-Netflix-Summary-image2.png)
 
 
 
@@ -80,7 +78,7 @@ we will use those two table to feed the machine learning service and generate th
 
 
 
-![Popularity Table(Redis): key Video id: uuid Comment id history dynamodb table view / like / dislike history user uuid ts 123 Videold Action type uuid like/dislike/view value View: 12455 Like: 1241 Dislike: 123441 Popular comments: [uuidl, uuid2, uuid3] Like: 1234 Dislike: 1234 Clip uuid uuid ](../../media/Netfilx-Netflix-Summary-image3.png){width="5.0in" height="4.666666666666667in"}
+![Popularity Table(Redis): key Video id: uuid Comment id history dynamodb table view / like / dislike history user uuid ts 123 Videold Action type uuid like/dislike/view value View: 12455 Like: 1241 Dislike: 123441 Popular comments: [uuidl, uuid2, uuid3] Like: 1234 Dislike: 1234 Clip uuid uuid ](../../media/Netfilx-Netflix-Summary-image3.png)
 
 
 
@@ -92,7 +90,7 @@ we will use those two table to feed the machine learning service and generate th
 
 
 
-![](../../media/Netfilx-Netflix-Summary-image4.png){width="5.0in" height="1.4791666666666667in"}
+![](../../media/Netfilx-Netflix-Summary-image4.png)
 
 
 

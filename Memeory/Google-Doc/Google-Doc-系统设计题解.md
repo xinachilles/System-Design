@@ -1,16 +1,14 @@
 # Google Doc 系统设计题解
 
-Created: 2020-12-24 16:26:05 -0600
 
-Modified: 2021-01-18 18:54:04 -0600
 
 ---
 
-![爱思系统设计](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image1.png){width="0.5972222222222222in" height="0.2222222222222222in"}
+![爱思系统设计](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image1.png)
 
 Google Doc 系统设计题解
 
-![](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image2.png){width="2.6041666666666665in" height="2.6041666666666665in"}
+![](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image2.png)
 
 
 
@@ -61,7 +59,7 @@ Google Doc 系统设计题解
 
 3. High-level Diagram
 
-![G0061e Doc Hiqh-leue,t @ acecodein±ecvieu. corru acceSS seMvtc.e oc meü SuvtQ IL$t ed.tt l'ncovMAr1 cade ---a acces5 ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image3.png){width="5.0in" height="2.2777777777777777in"}
+![G0061e Doc Hiqh-leue,t @ acecodein±ecvieu. corru acceSS seMvtc.e oc meü SuvtQ IL$t ed.tt l'ncovMAr1 cade ---a acces5 ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image3.png)
 
 
 
@@ -100,7 +98,7 @@ OT 是一种在此场景下可行的同步策略，是 Event passing 类同步�
 - 服务器向用户A发送更新操作 - insert("!", pos=5) 并对用户B发送 - insert("l", pos=3)
 - 用户A，B接受更新操作，完成与服务器端同步本地状态
 
-![006 Me-IL o tnseré Il L" pos 3 DOCS (Mi..'TsAe Se..Ne-.r ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image4.png){width="5.0in" height="3.7083333333333335in"}
+![006 Me-IL o tnseré Il L" pos 3 DOCS (Mi..'TsAe Se..Ne-.r ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image4.png)
 
 Martin-Kleppmann. (2015). Conflict Resolution for Eventual Consistency‌‌
 
@@ -116,7 +114,7 @@ Martin-Kleppmann. (2015). Conflict Resolution for Eventual Consistency‌‌
 
 [An interactive visualization of the Operational Transformation integration algorithm with a central server](https://operational-transformation.github.io/index.html)
 
-![](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image5.png){width="0.22916666666666666in" height="0.22916666666666666in"}
+![](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image5.png)
 
 现在我们知道了 OT 解决的问题，也知道了为什么需要做变换 (Transform)。基于以上这个简单的例子，我们可以扩展到更相对复杂的情况。
 
@@ -151,7 +149,7 @@ OT 的具体算法细节因为过于复杂，不在系统设计的考察范围�
 
 因为我们有一个单一服务器维护了唯一的文档编辑历史，多客户端的同步问题就可以简化为每个客户端与服务器的同步问题。
 
-![رصاص -4 n.Ya5ø لطه ىمجمها ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image6.png){width="5.0in" height="5.833333333333333in"}
+![رصاص -4 n.Ya5ø لطه ىمجمها ](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image6.png)
 
 服务器端接收来自所有客户端的信息，所以客户端的文本状态会与服务端的状态产生短时间的不一致。
 
@@ -162,7 +160,7 @@ OT 的具体算法细节因为过于复杂，不在系统设计的考察范围�
 
 4.2.2 版本控制
 
-![](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image7.png){width="5.0in" height="5.729166666666667in"}
+![](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image7.png)
 
 现在我们考虑上图的情况。客户端向服务器发送了两个操作，一是基于原始状态的操作a，二是基于原始状态和操作a的操作b，服务器端需要根据以上信息以及本地的操作c计算出 a',b',c'。这看起来并不困难，但由于a,b操作是先后到达服务器端的，操作b实际上是要求服务器端去基于一个不存在的版本号做计算，服务器端因此需要去保存所有客户端发送来的操作请求，用来计算某版本号叠加上某个操作产生的状态。在这个例子里，我们需要直到操作a以及操作a基于的版本号，才能计算出操作b所基于的文件状态。
 
@@ -306,7 +304,7 @@ GET /api/v1/documents/{doc_id}
 
 [看全部的15篇文章 →](https://acecodeinterview.com/tag/answer/)
 
-![Google Autocomplete 系统设计题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image8.jpg){width="3.2916666666666665in" height="2.076388888888889in"}
+![Google Autocomplete 系统设计题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image8.jpg)
 
 [高频题题解](https://acecodeinterview.com/autocomplete/)
 
@@ -316,11 +314,11 @@ GET /api/v1/documents/{doc_id}
 
 - 罗辑
 
-![罗辑](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image9.jpg){width="0.3125in" height="0.3125in"}
+![罗辑](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image9.jpg)
 
 [罗辑](https://acecodeinterview.com/author/logic/)2 DEC 2020
 
-![实时监控系统题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image10.jpg){width="3.2916666666666665in" height="2.076388888888889in"}
+![实时监控系统题解](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image10.jpg)
 
 [高频题题解](https://acecodeinterview.com/realtime_monitoring_service/)
 
@@ -330,7 +328,7 @@ GET /api/v1/documents/{doc_id}
 
 - 罗辑
 
-![罗辑](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image9.jpg){width="0.3125in" height="0.3125in"}
+![罗辑](../../media/Memeory-Google-Doc-Google-Doc-系统设计题解-image9.jpg)
 
 [罗辑](https://acecodeinterview.com/author/logic/)12 NOV 2020
 

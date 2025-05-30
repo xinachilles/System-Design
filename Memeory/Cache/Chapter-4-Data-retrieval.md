@@ -1,8 +1,6 @@
 # Chapter 4 Data retrieval 
 
-Created: 2020-12-31 16:36:46 -0600
 
-Modified: 2021-02-11 01:21:07 -0600
 
 ---
 
@@ -10,7 +8,7 @@ Modified: 2021-02-11 01:21:07 -0600
 
 
 
-![A simple database / bin/ bash db_set ( ) echo db_get ( ) grep "*$1," database database sed ---e "s/A$1,//" I tail ---n I S db set 123456 ' {"name" : "London" , "attractions" : ( " Big Ben" , " London Eye" $ db_set 42 {"name" ; "San Francisco", "attractions": "Golden Gate Bridge" l} • $ db_get 42 {"name": "San Francisco" , "attractions" : ( "Golden Gate Bridge" 5'56 / 1'16:22 ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image1.png){width="5.0in" height="3.125in"}
+![A simple database / bin/ bash db_set ( ) echo db_get ( ) grep "*$1," database database sed ---e "s/A$1,//" I tail ---n I S db set 123456 ' {"name" : "London" , "attractions" : ( " Big Ben" , " London Eye" $ db_set 42 {"name" ; "San Francisco", "attractions": "Golden Gate Bridge" l} • $ db_get 42 {"name": "San Francisco" , "attractions" : ( "Golden Gate Bridge" 5'56 / 1'16:22 ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image1.png)
 
 
 
@@ -50,7 +48,7 @@ Append the data to disk , all the write is sequential
 
 
 
-![Data file segment I mew: 1078 purr: 2103 purr. 2105 purr: 2106 Data file segment 2 purr: 2109 purr: 2110 purr. 2111 mew: 1086 purr: 2104 purr: 2107 purr: 2112 mew: 1079 yawn: 511 scratch: 252 purr: 2113 purr: 2114 mew: 1080 purr: 2108 mew: 1087 mew: 1081 mew: 1082 mew: 1085 purr: 2114 + Compaction and merging process Merged segments 1 and 2 scratch: 252 mew: 1087 yawn: 511 Figure 3-3. Performing compaction and segment merging simultaneously. •o ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image2.png){width="5.0in" height="3.1527777777777777in"}
+![Data file segment I mew: 1078 purr: 2103 purr. 2105 purr: 2106 Data file segment 2 purr: 2109 purr: 2110 purr. 2111 mew: 1086 purr: 2104 purr: 2107 purr: 2112 mew: 1079 yawn: 511 scratch: 252 purr: 2113 purr: 2114 mew: 1080 purr: 2108 mew: 1087 mew: 1081 mew: 1082 mew: 1085 purr: 2114 + Compaction and merging process Merged segments 1 and 2 scratch: 252 mew: 1087 yawn: 511 Figure 3-3. Performing compaction and segment merging simultaneously. •o ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image2.png)
 
 
 
@@ -62,7 +60,7 @@ Problem :
 
 
 
-![Further improvements: • File format CSV is not the best format for a log. It's faster and simpler to use a binary format that first encodes the length of a string in bytes, followed by the raw string (without need for escaping) Deleting records o If you want to delete a key and its åssociated value, you have to append a special deletion record to the data file (sometimes called a tombstone). Crash recovery o If the database is restarted, the in-memory hash maps are lost. Partially written records The database may crash at appending a record to the log. Bitcask files include checksums, allowing such corrupted parts of the log to be detected and ignored. Concurrency control As writes are appended to the log in a strictly sequential order, a common implementation choice is to have only one writer thread. Data file segments are append-only and otherwise immutable, so they can be read concurrently by multiple threads. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image3.png){width="5.0in" height="3.111111111111111in"}
+![Further improvements: • File format CSV is not the best format for a log. It's faster and simpler to use a binary format that first encodes the length of a string in bytes, followed by the raw string (without need for escaping) Deleting records o If you want to delete a key and its åssociated value, you have to append a special deletion record to the data file (sometimes called a tombstone). Crash recovery o If the database is restarted, the in-memory hash maps are lost. Partially written records The database may crash at appending a record to the log. Bitcask files include checksums, allowing such corrupted parts of the log to be detected and ignored. Concurrency control As writes are appended to the log in a strictly sequential order, a common implementation choice is to have only one writer thread. Data file segments are append-only and otherwise immutable, so they can be read concurrently by multiple threads. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image3.png)
 
 
 
@@ -84,7 +82,7 @@ Write is immutable, append only
 
 
 
-![Sparse index in memory key hammock handbag handsome hangout byte offset 100491 102134 104667 106812 : Sorted segment file (SSTable) on disk hand: 91541 handbag: 8786 handcuffs: 2729 handful: 44662 handicap: 70836 handiwork: 45521 handkerchief: 20952 handlebars: 3869 handsome: 86478 handoff: 5741 handprinted: 33632 handwaving: 44005 handwriting: 22846 Figure 3-5. An SSTable with an in-memory index. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image4.png){width="5.0in" height="3.0902777777777777in"}
+![Sparse index in memory key hammock handbag handsome hangout byte offset 100491 102134 104667 106812 : Sorted segment file (SSTable) on disk hand: 91541 handbag: 8786 handcuffs: 2729 handful: 44662 handicap: 70836 handiwork: 45521 handkerchief: 20952 handlebars: 3869 handsome: 86478 handoff: 5741 handprinted: 33632 handwaving: 44005 handwriting: 22846 Figure 3-5. An SSTable with an in-memory index. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image4.png)
 
 
 1.  SSTable
@@ -155,7 +153,7 @@ LSM tree is good for writing
 
 
 
-![LSM tree When a "lite collie.' ln. add it 10 an in-Inclnor balailced tree data a red-I'lack [his in-memo tree is sometirnes called a memta/'lc When the memtable 'ets bi 'Zer than some threshold---t icall a lew 'ab it out to disk as SSI-able file. This can be done emcientl • because the tree alread Inaintains the ke -value airs sorted b I he new SSTable file the recent se of the While the SSTable I bein•-r to disk. writes can continue to a new memtable In order to sene a read re uest. first to find the kev in the ill the recent 'Inent. then in the next-older se 'Inent. etc I-rom time to time. run a mer in ' and In the to file's !iscard or deleted Bloom filter for not existing keys Size tier or level compaction ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image5.png){width="5.0in" height="2.6527777777777777in"}
+![LSM tree When a "lite collie.' ln. add it 10 an in-Inclnor balailced tree data a red-I'lack [his in-memo tree is sometirnes called a memta/'lc When the memtable 'ets bi 'Zer than some threshold---t icall a lew 'ab it out to disk as SSI-able file. This can be done emcientl • because the tree alread Inaintains the ke -value airs sorted b I he new SSTable file the recent se of the While the SSTable I bein•-r to disk. writes can continue to a new memtable In order to sene a read re uest. first to find the kev in the ill the recent 'Inent. then in the next-older se 'Inent. etc I-rom time to time. run a mer in ' and In the to file's !iscard or deleted Bloom filter for not existing keys Size tier or level compaction ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image5.png)
 
 
 
@@ -173,7 +171,7 @@ each level can use binary search to find the target data
 
 B tree
 
-![ref 333 After adding key 334: ref 310 ref 333 ref 345 333 s key < 345 ref (spare space) val 310 335 val 337 val 340 345 val ref 342 val 333 val ref val 333 ref 337 ref 333 s key < 337 334 val 335 337 s key < 345 (spate space) 337 val 340 342 (spare) val (scmre scxme) ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image6.png){width="5.0in" height="2.6319444444444446in"}
+![ref 333 After adding key 334: ref 310 ref 333 ref 345 333 s key < 345 ref (spare space) val 310 335 val 337 val 340 345 val ref 342 val 333 val ref val 333 ref 337 ref 333 s key < 337 334 val 335 337 s key < 345 (spate space) 337 val 340 342 (spare) val (scmre scxme) ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image6.png)
 
 
 
@@ -190,11 +188,11 @@ Half written record:
 1.  Write ahead log
 2.  Copy on write:
 
-![Instead of overwritin a es and maintainin a WAL for crash recove , some databases (like LMDB) use a co -on-write scheme. A modified a e is written to a different location, and a new version of the parent pa es in the tree is created, ointin at the new location. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image7.png){width="5.0in" height="0.5763888888888888in"}
+![Instead of overwritin a es and maintainin a WAL for crash recove , some databases (like LMDB) use a co -on-write scheme. A modified a e is written to a different location, and a new version of the parent pa es in the tree is created, ointin at the new location. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image7.png)
 
 
 
-![Additional the iinters been added to the tree, For exan1 . leaf a have retorences to its ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image8.png){width="5.0in" height="0.4375in"}
+![Additional the iinters been added to the tree, For exan1 . leaf a have retorences to its ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image8.png)
 
 
 
@@ -204,13 +202,13 @@ B+ Tree, all value will store in the leaf node
 
 
 
-![Advantage of LSM tree • Sequential write, faster, higher write throughput Tiered storage, frequent update look up faster Compressed better, less fragmentation Lower write amplification conn ss liles rather to cral ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image9.png){width="5.0in" height="1.9444444444444444in"}
+![Advantage of LSM tree • Sequential write, faster, higher write throughput Tiered storage, frequent update look up faster Compressed better, less fragmentation Lower write amplification conn ss liles rather to cral ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image9.png)
 
 If user always read the new value, LSM tree is better than B tree
 
 
 
-![Downside of LSM tree • Compact proces? affecting ongoing read and write • Less predictable than B tree • Key existed in several places, add complexity to transaction isolation ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image10.png){width="5.0in" height="1.3958333333333333in"}
+![Downside of LSM tree • Compact proces? affecting ongoing read and write • Less predictable than B tree • Key existed in several places, add complexity to transaction isolation ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image10.png)
 
 
 
@@ -278,11 +276,11 @@ Fuzzy search (seach : FOO) F*O -->search the tire
 
 
 
-![Main read pattern Main write pattern Primarily used by What data represents Dataset size Transaction processing systems (OLTP) Small number of records per query. fetched by key Random-access. low-latency writes from user input End user/customer, via web application Latest state of data (current point in time) Gigabytes to terabytes Analytic systems (OLAP) Aggregate over large number of records Bulk import (ETL) or event stream Internal analyst, for decision support History of events that happened over time Terabytes to petabytes ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image11.png){width="5.0in" height="3.7777777777777777in"}
+![Main read pattern Main write pattern Primarily used by What data represents Dataset size Transaction processing systems (OLTP) Small number of records per query. fetched by key Random-access. low-latency writes from user input End user/customer, via web application Latest state of data (current point in time) Gigabytes to terabytes Analytic systems (OLAP) Aggregate over large number of records Bulk import (ETL) or event stream Internal analyst, for decision support History of events that happened over time Terabytes to petabytes ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image11.png)
 
 
 
-![customer Ecommerce site o Sales DB extract Business analyst Slide 19 transform Warehouse Stock-keeping app Inventory DB extract transform Truck Vehicle route planner DB extract transform load query load load Data warehouse o ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image12.png){width="5.0in" height="3.7222222222222223in"}
+![customer Ecommerce site o Sales DB extract Business analyst Slide 19 transform Warehouse Stock-keeping app Inventory DB extract transform Truck Vehicle route planner DB extract transform load query load load Data warehouse o ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image12.png)
 
 
 
@@ -290,11 +288,11 @@ Fuzzy search (seach : FOO) F*O -->search the tire
 
 analytic database or start schema, snowflake schema, data cube
 
-![dim_product table product_sk sku description dim_store table brand Aquatec h Dealicious promotion_sk NULL NULL category Fresh fruit Pet supplies Bakery customer_sk NULL NULL store_sk state 0K4012 KA9511 A81234 fact sales table date_key product_sk 140102 140102 140102 140102 dim date table Bananas Fish food Croissant store_sk q uantity WA CA net_price 14.99 city Seattle San Francisco Palo Alto discount_price dim customer table custome_sk name date_key 140101 140102 140103 year month day wee kday thu is_holiday 2014 2014 2014 jan jan 1979-03-29 1961-09-02 1991-12-13 dim_promotion table promoti on_sk name New Year sale Aquarium deal ad_type Direct mail Coffee & cake bundle In-store Sign Alice Bob Cecil coupon_type NULL Leaflet NULL Figure 3-9. Example of a star schema for use in a data warehouse. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image13.png){width="5.0in" height="6.25in"}
+![dim_product table product_sk sku description dim_store table brand Aquatec h Dealicious promotion_sk NULL NULL category Fresh fruit Pet supplies Bakery customer_sk NULL NULL store_sk state 0K4012 KA9511 A81234 fact sales table date_key product_sk 140102 140102 140102 140102 dim date table Bananas Fish food Croissant store_sk q uantity WA CA net_price 14.99 city Seattle San Francisco Palo Alto discount_price dim customer table custome_sk name date_key 140101 140102 140103 year month day wee kday thu is_holiday 2014 2014 2014 jan jan 1979-03-29 1961-09-02 1991-12-13 dim_promotion table promoti on_sk name New Year sale Aquarium deal ad_type Direct mail Coffee & cake bundle In-store Sign Alice Bob Cecil coupon_type NULL Leaflet NULL Figure 3-9. Example of a star schema for use in a data warehouse. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image13.png)
 
 
 
-![fact_sales table date_key product_sk 140102 140102 140102 140102 140103 140103 140103 140103 69 69 69 74 31 31 31 31 store_sk 4 5 5 3 2 3 3 8 J*omoticmsk NULL 19 NULL 23 NULL NULL 21 NULL customer_sk NULL NULL 191 202 NULL NULL 123 233 quantity 3 5 3 net_price 13.99 14.99 14.99 099 2.49 14.99 49.99 099 discount_price 13.99 9.99 14.99 089 2.49 9.99 39.99 0.99 Columnar storage layout: date_key file contents: 140102, 140102. 140102.140102, 140103, 140103. 140103, 140103 product_sk file contents: 69.69.69.74.31.31.31,31 store_sk file contents: promotion _ sk file contents: NULL 19, NULL. 23, NULL. NULL 21, NULL customer _ sk file contents: NULL. 191.202. NULL NULL. 123.233 quantity file contents: file contents: 13.99.14.99. 14.99, 0.99.2.49, 14.99.49.99.0.99 discount_price file contents: 13.99, 9.99, 14.99.089, 2.49, 9.99.39.99, 0.99 Figure 3-10, Storing relational data by column , rather than by row. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image14.png){width="5.0in" height="3.7777777777777777in"}
+![fact_sales table date_key product_sk 140102 140102 140102 140102 140103 140103 140103 140103 69 69 69 74 31 31 31 31 store_sk 4 5 5 3 2 3 3 8 J*omoticmsk NULL 19 NULL 23 NULL NULL 21 NULL customer_sk NULL NULL 191 202 NULL NULL 123 233 quantity 3 5 3 net_price 13.99 14.99 14.99 099 2.49 14.99 49.99 099 discount_price 13.99 9.99 14.99 089 2.49 9.99 39.99 0.99 Columnar storage layout: date_key file contents: 140102, 140102. 140102.140102, 140103, 140103. 140103, 140103 product_sk file contents: 69.69.69.74.31.31.31,31 store_sk file contents: promotion _ sk file contents: NULL 19, NULL. 23, NULL. NULL 21, NULL customer _ sk file contents: NULL. 191.202. NULL NULL. 123.233 quantity file contents: file contents: 13.99.14.99. 14.99, 0.99.2.49, 14.99.49.99.0.99 discount_price file contents: 13.99, 9.99, 14.99.089, 2.49, 9.99.39.99, 0.99 Figure 3-10, Storing relational data by column , rather than by row. ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image14.png)
 
 
 
@@ -302,7 +300,7 @@ Each column is a file
 
 
 
-![Examples: WHERE product_sk IN (30, 68, 69) WHERE product_sk = 31 AND store sk = 3 Column values: product_sk: Bitmap for each possible value: product_sk = 30: product_sk 31: product_sk = 68: product_sk = 74: o o o o o o o o o o o olo o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o Run-length encoding: product_sk = 29. product_sk = 30. product_sk = 31: product_sk = 68: product_sk = 69: product_sk = 74: 9.1 10,2 5.4.3.3 15,1 0.4.12,2 4.1 (9 zeros, 1 one, rest zeros) (10 zeros. 2 ones. rest zeros) (5 zeros, 4 ones, 3 zeros, 3 ones, rest zeros) (15 zeros. 1 one. rest zeros) (O zeros, 4 ones, 1 2 zeros, 2 ones) (4 zeros, 1 one, rest zeros) ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image15.png){width="5.0in" height="3.0277777777777777in"}
+![Examples: WHERE product_sk IN (30, 68, 69) WHERE product_sk = 31 AND store sk = 3 Column values: product_sk: Bitmap for each possible value: product_sk = 30: product_sk 31: product_sk = 68: product_sk = 74: o o o o o o o o o o o olo o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o Run-length encoding: product_sk = 29. product_sk = 30. product_sk = 31: product_sk = 68: product_sk = 69: product_sk = 74: 9.1 10,2 5.4.3.3 15,1 0.4.12,2 4.1 (9 zeros, 1 one, rest zeros) (10 zeros. 2 ones. rest zeros) (5 zeros, 4 ones, 3 zeros, 3 ones, rest zeros) (15 zeros. 1 one. rest zeros) (O zeros, 4 ones, 1 2 zeros, 2 ones) (4 zeros, 1 one, rest zeros) ](../../media/Memeory-Cache-Chapter-4-Data-retrieval-image15.png)
 
 
 

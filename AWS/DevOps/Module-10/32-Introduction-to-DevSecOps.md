@@ -1,8 +1,6 @@
 # 32 Introduction to DevSecOps
 
-Created: 2023-10-11 20:21:06 -0600
 
-Modified: 2023-10-22 17:44:36 -0600
 
 ---
 
@@ -44,43 +42,43 @@ Facts
 
 
 
-![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image1.png){width="5.0in" height="1.0347222222222223in"}
+![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image1.png)
 
 
 
-![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image2.png){width="5.0in" height="1.0in"}
+![Key concepts and topics Review the content below to reinforce some of the key concepts and topics presented to you in the video above. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image2.png)
 
 
 
-![Development Build It Faster What is DevSecOps? Business Security Keep It Secure Operations Keep It Stable ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image3.png){width="5.0in" height="3.375in"}
+![Development Build It Faster What is DevSecOps? Business Security Keep It Secure Operations Keep It Stable ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image3.png)
 
 
 
-![Think of DevSecOps as putting security in the middle of Dev/_/Ops. Cloud security and compliance is a shared responsibility between AWS and the customer. As the cloud provider, AWS is responsible for security OF the cloud, including the hypervisor and hardware. Customers are responsible for security IN the cloud, by securing your applications and network with services from third-party vendors. DevSecOps in the cloud takes that approach to security and builds it into your development and operational processes. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image4.png){width="5.0in" height="1.6875in"}
+![Think of DevSecOps as putting security in the middle of Dev/_/Ops. Cloud security and compliance is a shared responsibility between AWS and the customer. As the cloud provider, AWS is responsible for security OF the cloud, including the hypervisor and hardware. Customers are responsible for security IN the cloud, by securing your applications and network with services from third-party vendors. DevSecOps in the cloud takes that approach to security and builds it into your development and operational processes. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image4.png)
 
 
 
-![Why does DevSecOps matter? Delivery pipeline Build Test Security Release Developers Plan Monitor Feedback loop Customers DevOps = Efficiencies that speed up the lifecycle DevSecOps = Validate building blocks without slowing lifecycle An image of the DevSecOps pipeline. DevOps equals efficiencies that speed up the lifecycle. DevSecOps equals validating building blocks without slowing lifecycle. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image5.png){width="5.0in" height="2.9305555555555554in"}
+![Why does DevSecOps matter? Delivery pipeline Build Test Security Release Developers Plan Monitor Feedback loop Customers DevOps = Efficiencies that speed up the lifecycle DevSecOps = Validate building blocks without slowing lifecycle An image of the DevSecOps pipeline. DevOps equals efficiencies that speed up the lifecycle. DevSecOps equals validating building blocks without slowing lifecycle. ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image5.png)
 
 
 
-![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Principle 1 Principle 4 Principle 2 Principle 5 Principle 3 Principle 6 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image6.png){width="5.0in" height="3.8402777777777777in"}
+![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Principle 1 Principle 4 Principle 2 Principle 5 Principle 3 Principle 6 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image6.png)
 
 
 
-![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Collaborate with all stakeholders Automate everything Codify everything Measure and monitor everything Test everything Deliver business value with continual feedback ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image7.png){width="5.0in" height="3.861111111111111in"}
-
-
-
-
-
-![](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image8.png){width="5.0in" height="4.458333333333333in"}
+![DevSecOps principles To learn more on DevSecOps principles, flip each of the flashcard. Collaborate with all stakeholders Automate everything Codify everything Measure and monitor everything Test everything Deliver business value with continual feedback ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image7.png)
 
 
 
 
 
-![DevSecOps is automated, continuous, & visible Code Aws CodeCommit Scan for secrets Build Test Deploy Provision AWS CodeBui1d AWS CodePipelin Tag security artifacts Test security meets standards AWS CodeDeploy AWS CloudFormation Deploy/register security components 0 Ama•on Web Inc O' Its AIL rese-ued training and -y certification Monitor Amazon CloudWatch AWS Config Monitor security standards 8 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image9.png){width="5.0in" height="2.875in"}
+![](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image8.png)
+
+
+
+
+
+![DevSecOps is automated, continuous, & visible Code Aws CodeCommit Scan for secrets Build Test Deploy Provision AWS CodeBui1d AWS CodePipelin Tag security artifacts Test security meets standards AWS CodeDeploy AWS CloudFormation Deploy/register security components 0 Ama•on Web Inc O' Its AIL rese-ued training and -y certification Monitor Amazon CloudWatch AWS Config Monitor security standards 8 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image9.png)
 
 
 
@@ -88,7 +86,7 @@ Facts
 
 
 
-![Pipeline example with hig security checks h ---level training and -y certification DevOps 4. Static code analysis Lambda Commit Stage Amazon S3 5. Create stack CloudFormation AWS CodePipeline Stack validation Lambda Approve test stack Delete stack CloudFormation Test Stage 0 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 6. Create ChangeSet Execute ChangeSet CloudFormation CloudFormation Production Stage 9 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image10.png){width="5.0in" height="2.75in"}
+![Pipeline example with hig security checks h ---level training and -y certification DevOps 4. Static code analysis Lambda Commit Stage Amazon S3 5. Create stack CloudFormation AWS CodePipeline Stack validation Lambda Approve test stack Delete stack CloudFormation Test Stage 0 2020 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 6. Create ChangeSet Execute ChangeSet CloudFormation CloudFormation Production Stage 9 ](../../../media/AWS-DevOps-Module-10-32-Introduction-to-DevSecOps-image10.png)
 
 
 

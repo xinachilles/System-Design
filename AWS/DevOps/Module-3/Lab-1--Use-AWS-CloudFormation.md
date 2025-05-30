@@ -1,8 +1,6 @@
 # Lab 1: Use AWS CloudFormation to provision and manage a basic infrastructure | Self-Paced Labs
 
-Created: 2023-10-07 02:52:44 -0600
 
-Modified: 2023-10-07 08:52:47 -0600
 
 ---
 
@@ -50,7 +48,7 @@ First, using AWS Cloud9, you will modify an AWS CloudFormation template to build
 
 *Diagram: The diagram below is a visual of the previous steps.*
 
-![Lab Architecture](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image1.png){width="6.0in" height="2.9097222222222223in"}
+![Lab Architecture](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image1.png)
 
 ## Start lab
 
@@ -68,7 +66,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image2.png){width="6.0in" height="1.2708333333333333in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image2.png)
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -476,7 +474,7 @@ console explore the stack events.
 1.  When the status of the *Create Stack* job shows **CREATE_COMPLETE**, on the **Outputs** tab, launch the URL shown on another browser tab.
 2.  A webpage displaying a time-out error is expected to appear with the following message: **"This site can't be reached"**.
 
-![Website load failure](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image3.png){width="6.0in" height="2.5555555555555554in"}
+![Website load failure](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image3.png)
 
 *Image: Shows an example of **this site can't be reached** error message.*
 
@@ -538,7 +536,7 @@ and then choose the service from the list of results.
 3.  On the **Outputs** tab, launch the URL shown in a new browser tab.
 4.  When loaded, a webpage is displayed with the following message: **"Congratulations, you have successfully deployed a simple infrastructure using AWS CloudFormation".**
 
-![Website load success](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image4.png){width="6.0in" height="0.5625in"}
+![Website load success](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image4.png)
 
 *Image: Shows what the webpage looks like with the congratulations message mentioned above.*
 
@@ -707,7 +705,7 @@ In this task, you will access the AppURL link to ensure the security group chang
 2.  On the **Outputs** tab, launch the URL shown in a new browser tab.
 3.  When loaded, a webpage is displayed with the following message: **"Congratulations, you have successfully deployed a simple infrastructure using AWS CloudFormation".**
 
-![Website load success](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image4.png){width="6.0in" height="0.5625in"}
+![Website load success](../../../media/AWS-DevOps-Module-3-Lab-1--Use-AWS-CloudFormation-to-provision-and-manage-a-basic-infrastructure---Self-Paced-Labs-image4.png)
 
 *Image: shows a visual representation of what the congratulations message looks like in the browser.*
 

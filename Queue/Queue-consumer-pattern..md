@@ -1,8 +1,6 @@
 # Queue consumer pattern.
 
-Created: 2019-10-24 23:17:14 -0600
 
-Modified: 2019-12-09 10:33:47 -0600
 
 ---
 

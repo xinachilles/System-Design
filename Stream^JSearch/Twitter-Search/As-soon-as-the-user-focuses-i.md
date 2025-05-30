@@ -1,8 +1,6 @@
 # As soon as the user focuses in the text box, we send off a request to retrieve all of the user's friends, pages, groups, applications, and upcoming events. We load these results into the browser's cache, so that the user can find these results immediately
 
-Created: 2017-10-15 14:51:00 -0600
 
-Modified: 2017-10-15 15:21:56 -0600
 
 ---
 

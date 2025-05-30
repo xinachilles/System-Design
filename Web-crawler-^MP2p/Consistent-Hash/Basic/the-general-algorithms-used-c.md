@@ -1,8 +1,6 @@
 # the general algorithms used called distributed hash
 
-Created: 2021-01-17 17:37:59 -0600
 
-Modified: 2021-01-25 18:27:31 -0600
 
 ---
 

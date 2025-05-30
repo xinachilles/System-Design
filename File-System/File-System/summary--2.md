@@ -1,8 +1,6 @@
 # summary  2
 
-Created: 2017-10-16 22:54:57 -0600
 
-Modified: 2020-11-29 00:20:58 -0600
 
 ---
 
@@ -162,15 +160,11 @@ chunk service will sent heartbeat to master periodically
 
 
 
-![How to write a file? 1, write Chunk index---I 2, Assign CSI client 4. Write Finish 3. Transfer Data= lgfs/home/dengchao. mp4-01-Of-09 ChunkServer1 4. Write Finish info N gchao. master Chunk O I •>ChunkServerI Chunk 02 •>ChunkServerI Chunk 03->ChunkServer2 Key • Master clientfiötchunk ChunkServer2 ](../../media/File-System-File-System-summary--2-image1.png){width="5.0in" height="2.5347222222222223in"}
+![How to write a file? 1, write Chunk index---I 2, Assign CSI client 4. Write Finish 3. Transfer Data= lgfs/home/dengchao. mp4-01-Of-09 ChunkServer1 4. Write Finish info N gchao. master Chunk O I •>ChunkServerI Chunk 02 •>ChunkServerI Chunk 03->ChunkServer2 Key • Master clientfiötchunk ChunkServer2 ](../../media/File-System-File-System-summary--2-image1.png)
 
 
 
-![One time to write, Many time to read. hfflN/gfs/home/dengchao.mp4 ](../../media/File-System-File-System-summary--2-image2.png){width="5.0in" height="2.0069444444444446in"}
-
-
-
-
+![One time to write, Many time to read. hfflN/gfs/home/dengchao.mp4 ](../../media/File-System-File-System-summary--2-image2.png)
 
 
 
@@ -184,7 +178,11 @@ chunk service will sent heartbeat to master periodically
 
 
 
-![Metadata Fileinfo Name=dengchao.mp4 CreatedTimF201505031232 Size-2044323232 Chunk I I ->diskOffsetl Chunk 12->diskOffset2 Chunk 13->diskOffset3 Disk chunks 12 15 13 Key point 1 chunk= 64M = 64*1024K Advantage • Reduce size of metadata Disadvantage Waste space for small files ](../../media/File-System-File-System-summary--2-image3.png){width="5.0in" height="2.4375in"}
+
+
+
+
+![Metadata Fileinfo Name=dengchao.mp4 CreatedTimF201505031232 Size-2044323232 Chunk I I ->diskOffsetl Chunk 12->diskOffset2 Chunk 13->diskOffset3 Disk chunks 12 15 13 Key point 1 chunk= 64M = 64*1024K Advantage • Reduce size of metadata Disadvantage Waste space for small files ](../../media/File-System-File-System-summary--2-image3.png)
 
 
 
@@ -194,7 +192,7 @@ on the service side:
 
 
 
-![Scale about the Storage ChunkServer5 mpQ1 Lmk-O I mpQ1 Lmk-(j2 mpQ1 mpQ1 i _ mp-4<imk-O I i _ mp-4<imk-02 Copyright O wwvv.jiuzhang.com Master Meta Data Name=dengchao mp4 CreatedTime=201505031232 Size---10042044323 Index Chunk 01->cs5 Chunk 02->cs5 Chunk 03->cs5 Chunk 04->cs3 Chunk 05->cs3 Chunk 06->cs3 Key point • The master don't record the diskOffset of a chunk Advantage Reduce the size of metadata in master Reduce the traffic between master and ChunkServer(chunk offsetüö ](../../media/File-System-File-System-summary--2-image4.png){width="5.0in" height="2.7291666666666665in"}
+![Scale about the Storage ChunkServer5 mpQ1 Lmk-O I mpQ1 Lmk-(j2 mpQ1 mpQ1 i _ mp-4<imk-O I i _ mp-4<imk-02 Copyright O wwvv.jiuzhang.com Master Meta Data Name=dengchao mp4 CreatedTime=201505031232 Size---10042044323 Index Chunk 01->cs5 Chunk 02->cs5 Chunk 03->cs5 Chunk 04->cs3 Chunk 05->cs3 Chunk 06->cs3 Key point • The master don't record the diskOffset of a chunk Advantage Reduce the size of metadata in master Reduce the traffic between master and ChunkServer(chunk offsetüö ](../../media/File-System-File-System-summary--2-image4.png)
 
 every chuck will ask master about the check service
 

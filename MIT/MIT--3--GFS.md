@@ -1,8 +1,6 @@
 # MIT- 3- GFS 
 
-Created: 2020-06-02 17:22:00 -0600
 
-Modified: 2021-01-21 16:21:14 -0600
 
 ---
 
@@ -524,7 +522,7 @@ this scheme we have good properties for appends that the primary sent back a suc
 
 
 
-![](../media/MIT-MIT--3--GFS-image1.png){width="3.7777777777777777in" height="2.201388888888889in"}
+![](../media/MIT-MIT--3--GFS-image1.png)
 
 
 

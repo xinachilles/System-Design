@@ -1,8 +1,6 @@
 # Algorithms for Big Data (COMPSCI 229r), Lecture 25
 
-Created: 2021-02-06 17:23:40 -0600
 
-Modified: 2021-02-06 17:24:01 -0600
 
 ---
 
@@ -41,7 +39,7 @@ Want to use p machine
 
 Round 1
 
-![de-c Md? '1 Ah) > ' NemoteAccess • Ittps //cratrdstatemrnuq!à: Play (k) ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image1.png){width="5.0in" height="2.6666666666666665in"}
+![de-c Md? '1 Ah) > ' NemoteAccess • Ittps //cratrdstatemrnuq!à: Play (k) ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image1.png)
 
 
 
@@ -59,7 +57,7 @@ reducer
 
 
 
-![、 5 s 。 丶 十 冖 ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image2.png){width="5.0in" height="2.0416666666666665in"}
+![、 5 s 。 丶 十 冖 ](../../media/Stream^JSearch-Mapreduce-Algorithms-for-Big-Data-(COMPSCI-229r),-Lecture-25-image2.png)
 
 
 

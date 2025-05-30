@@ -1,8 +1,6 @@
 # Summary
 
-Created: 2021-01-17 17:28:53 -0600
 
-Modified: 2021-01-25 18:50:48 -0600
 
 ---
 
@@ -92,7 +90,7 @@ Least connection policy, least busy server get the request
 
 
 
-![• Compute the average # of requests per server • Add some overhead, say 25% • Round up to get the max # of requests per server • If the chosen server is below the max, send the request there • Otherwise, go around the hash ring (forwarding) until one is below the max ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Summary-image1.png){width="5.0in" height="1.0972222222222223in"}
+![• Compute the average # of requests per server • Add some overhead, say 25% • Round up to get the max # of requests per server • If the chosen server is below the max, send the request there • Otherwise, go around the hash ring (forwarding) until one is below the max ](../../../media/Web-crawler-^MP2p-Consistent-Hash-Basic-Summary-image1.png)
 
 
 

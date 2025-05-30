@@ -1,8 +1,6 @@
 # Lab 3: Automating code deployments using AWS CodePipeline | Self-Paced Labs
 
-Created: 2023-10-07 05:53:18 -0600
 
-Modified: 2023-10-08 10:43:13 -0600
 
 ---
 
@@ -65,7 +63,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image1.png){width="6.5in" height="1.375in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image1.png)
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -82,7 +80,7 @@ In some cases, certain pop-up or script blocker web browser extensions might pre
 
 ### Lab environment
 
-![Lab Architecture diagram](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image2.png){width="6.5in" height="3.3055555555555554in"}
+![Lab Architecture diagram](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image2.png)
 
 *The image shows users accessing AWS CodePipeline. The Pipeline pulls the HeartBeat application code and deploys it using AWS CodeDeploy to two EC2 instances in AZ1 and AZ2.*
 
@@ -562,7 +560,7 @@ For more information about AWS Training and Certification, see *<https://aws.ama
 
 
 
-![](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image3.png){width="1.5208333333333333in" height="6.5in"}
+![](../../../media/AWS-DevOps-Module-4-Lab-3--Automating-code-deployments-using-AWS-CodePipeline---Self-Paced-Labs-image3.png)
 
 
 

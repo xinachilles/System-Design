@@ -1,8 +1,6 @@
 # RabbitMQ tutorial - Routing — RabbitMQ
 
-Created: 2020-12-24 18:13:26 -0600
 
-Modified: 2020-12-24 18:17:31 -0600
 
 ---
 

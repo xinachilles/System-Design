@@ -1,8 +1,6 @@
 # MIT- 6- Raft 
 
-Created: 2020-06-05 11:17:05 -0600
 
-Modified: 2020-11-23 12:22:21 -0600
 
 ---
 
@@ -66,7 +64,7 @@ so that's a complete failure so with this set up and two servers it seemed like 
 
 
 
-![](../media/MIT-MIT--6--Raft-image1.png){width="2.7708333333333335in" height="1.8958333333333333in"}
+![](../media/MIT-MIT--6--Raft-image1.png)
 
 
 
@@ -164,7 +162,7 @@ then raft notifies the leader now the leader actually execute the operation whic
 
 
 
-![bWIJ ](../media/MIT-MIT--6--Raft-image2.png){width="2.7708333333333335in" height="1.0416666666666667in"}
+![bWIJ ](../media/MIT-MIT--6--Raft-image2.png)
 
 
 
@@ -212,7 +210,7 @@ when the leader execute it and reply yes to the client
 
 
 
-![5 Z ](../media/MIT-MIT--6--Raft-image3.png){width="2.7708333333333335in" height="1.1736111111111112in"}
+![5 Z ](../media/MIT-MIT--6--Raft-image3.png)
 
 
 
@@ -778,7 +776,7 @@ if we just follow the figure 2 rules the log just keeps on growing may end up yo
 
 the log looks like
 
-![`= 1 넣=7 ](../media/MIT-MIT--6--Raft-image4.png){width="2.7708333333333335in" height="1.1319444444444444in"}
+![`= 1 넣=7 ](../media/MIT-MIT--6--Raft-image4.png)
 
 
 
@@ -810,7 +808,7 @@ index 3 ,with the snapshot in hand, if we persist it to disk rats persistent to 
 
 snapshot as of a certain log index plus the log after that index as long as that's persisted to disk,we never going to need to log before that and so this is what raft does the raft ask the application for snapshot gets the snapshot saves it to disk with the log after that it just throws away this log here
 
-![](../media/MIT-MIT--6--Raft-image5.png){width="2.7708333333333335in" height="1.6041666666666667in"}
+![](../media/MIT-MIT--6--Raft-image5.png)
 
 
 

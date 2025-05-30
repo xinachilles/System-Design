@@ -1,8 +1,6 @@
 # Denormalization
 
-Created: 2020-01-06 11:08:51 -0600
 
-Modified: 2020-01-06 11:16:38 -0600
 
 ---
 

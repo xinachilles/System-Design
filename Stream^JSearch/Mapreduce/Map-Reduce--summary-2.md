@@ -1,8 +1,6 @@
 # Map Reduce -summary 2
 
-Created: 2017-10-12 17:22:14 -0600
 
-Modified: 2021-05-24 16:42:43 -0600
 
 ---
 

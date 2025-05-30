@@ -1,8 +1,6 @@
 # https://www.1point3acres.com/bbs/interview/facebook-software-engineer-653763.html
 
-Created: 2020-10-21 23:46:06 -0600
 
-Modified: 2020-10-21 23:46:29 -0600
 
 ---
 

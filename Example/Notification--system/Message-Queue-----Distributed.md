@@ -1,8 +1,6 @@
 # Message Queue --- Distributed Message Queue
 
-Created: 2020-12-13 17:42:14 -0600
 
-Modified: 2022-11-13 17:35:20 -0600
 
 ---
 

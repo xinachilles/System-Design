@@ -1,8 +1,6 @@
 # Raft- leader election
 
-Created: 2020-11-23 13:17:42 -0600
 
-Modified: 2020-11-23 13:23:22 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # design principles :
 
-Created: 2018-10-09 23:31:11 -0600
 
-Modified: 2018-10-10 08:23:29 -0600
 
 ---
 

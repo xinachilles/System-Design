@@ -1,8 +1,6 @@
 # Lab 5: Securing Serverless Applications | Self-Paced Labs
 
-Created: 2023-10-01 04:41:37 -0600
 
-Modified: 2023-10-08 11:01:17 -0600
 
 ---
 
@@ -20,7 +18,7 @@ Before you'll be able to make this application available outside of your develop
 
 The following architecture diagram shows the components that have been and will be deployed:
 
-![Architecture diagram showing the components of the serverless architecture that have been and will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image1.png){width="6.5in" height="7.763888888888889in"}
+![Architecture diagram showing the components of the serverless architecture that have been and will be deployed](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image1.png)
 
 This lab uses the following services:
 
@@ -79,7 +77,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image2.png){width="6.5in" height="1.375in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image2.png)
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -1191,7 +1189,7 @@ For more information about AWS Training and Certification, see *<https://aws.ama
 
 
 
-![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image3.png){width="0.3541666666666667in" height="6.5in"}
+![](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-5--Securing-Serverless-Applications---Self-Paced-Labs-image3.png)
 
 
 

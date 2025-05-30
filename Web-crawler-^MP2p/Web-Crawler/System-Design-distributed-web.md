@@ -1,8 +1,6 @@
 # System Design distributed web crawler to crawl Billions of web pages | web crawler system design
 
-Created: 2021-01-07 16:01:06 -0600
 
-Modified: 2021-03-12 22:06:18 -0600
 
 ---
 
@@ -828,10 +826,10 @@ How to store
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-System-Design-distributed-web-crawler-to-crawl-Billions-of-web-pages---web-crawler-system-design-image1.png){width="5.0in" height="1.875in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-System-Design-distributed-web-crawler-to-crawl-Billions-of-web-pages---web-crawler-system-design-image1.png)
 
 
 
-![](../../media/Web-crawler-^MP2p-Web-Crawler-System-Design-distributed-web-crawler-to-crawl-Billions-of-web-pages---web-crawler-system-design-image2.png){width="5.0in" height="1.3333333333333333in"}
+![](../../media/Web-crawler-^MP2p-Web-Crawler-System-Design-distributed-web-crawler-to-crawl-Billions-of-web-pages---web-crawler-system-design-image2.png)
 
 

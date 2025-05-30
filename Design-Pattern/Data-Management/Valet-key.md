@@ -1,8 +1,6 @@
 # Valet key
 
-Created: 2019-10-24 22:21:00 -0600
 
-Modified: 2019-12-30 11:36:50 -0600
 
 ---
 
@@ -42,7 +40,7 @@ Data need transformation.
 
 If the application must perform some task on the data before it's stored or before it's sent to the client
 
-![](../../media/Design-Pattern-Data-Management-Valet-key-image1.png){width="3.7222222222222223in" height="0.5763888888888888in"}![](../../media/Design-Pattern-Data-Management-Valet-key-image2.png){width="5.138888888888889in" height="0.6875in"}![](../../media/Design-Pattern-Data-Management-Valet-key-image3.png){width="3.798611111111111in" height="0.7916666666666666in"}
+![](../../media/Design-Pattern-Data-Management-Valet-key-image1.png)![](../../media/Design-Pattern-Data-Management-Valet-key-image2.png)![](../../media/Design-Pattern-Data-Management-Valet-key-image3.png)
 
 
 

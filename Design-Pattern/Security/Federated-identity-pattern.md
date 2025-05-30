@@ -1,8 +1,6 @@
 # Federated identity pattern
 
-Created: 2019-10-24 22:11:49 -0600
 
-Modified: 2019-12-20 13:02:32 -0600
 
 ---
 

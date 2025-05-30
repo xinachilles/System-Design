@@ -1,8 +1,6 @@
 # Generate TimeLine
 
-Created: 2017-10-19 14:03:59 -0600
 
-Modified: 2017-10-19 14:04:41 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # Gatekeeper pattern
 
-Created: 2018-11-08 14:30:42 -0600
 
-Modified: 2019-12-16 12:32:46 -0600
 
 ---
 

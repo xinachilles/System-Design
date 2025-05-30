@@ -1,8 +1,6 @@
 # Summary -3
 
-Created: 2021-01-13 18:47:14 -0600
 
-Modified: 2021-05-28 23:21:51 -0600
 
 ---
 
@@ -46,11 +44,11 @@ Assuming an upload:view ratio of 1:200, we would need 1TB/s outgoing bandwidth. 
 
 
 
-![假 设 瓶 颈 1.3 资 源 估 算 k 小 时 的 内 容 2 佣 M 订 阅 用 户 每 个 订 阅 用 户 平 均 每 天 观 看 1 小 时 ， 使 用 IGB 流 里 峰 值 流 量 10x Throughput 存 储 ](../../media/Netfilx-Netflix-Summary--3-image1.png){width="5.0in" height="2.5416666666666665in"}
+![假 设 瓶 颈 1.3 资 源 估 算 k 小 时 的 内 容 2 佣 M 订 阅 用 户 每 个 订 阅 用 户 平 均 每 天 观 看 1 小 时 ， 使 用 IGB 流 里 峰 值 流 量 10x Throughput 存 储 ](../../media/Netfilx-Netflix-Summary--3-image1.png)
 
 
 
-![服 务 资 源 存 储 资 源 1 ． 3 资 源 估 算 (cont.) 峰 值 Throughput 2 M * IGB 10 / （ 36 佣 24 ） 、 ： 23 TB/s 视 频 文 件 存 储 （ 不 包 含 CDN) 假 设 1 小 时 视 频 文 件 编 码 后 大 小 1- B 3 倍 的 Replication Factor 50k IOOGB * 3 = 巧 PB ](../../media/Netfilx-Netflix-Summary--3-image2.png){width="5.0in" height="2.3819444444444446in"}
+![服 务 资 源 存 储 资 源 1 ． 3 资 源 估 算 (cont.) 峰 值 Throughput 2 M * IGB 10 / （ 36 佣 24 ） 、 ： 23 TB/s 视 频 文 件 存 储 （ 不 包 含 CDN) 假 设 1 小 时 视 频 文 件 编 码 后 大 小 1- B 3 倍 的 Replication Factor 50k IOOGB * 3 = 巧 PB ](../../media/Netfilx-Netflix-Summary--3-image2.png)
 
 Each video store 3 copies
 
@@ -79,7 +77,7 @@ For separate of concerns principle, the following designs are broke into 4 parts
 
 Architecture
 
-![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--3-image3.png){width="6.1875in" height="4.805555555555555in"}
+![uploader Video upload Service Video Metadata Service SQL comp SSIng Video Storage Service Video Processing Service thumbnail Video Search Service Elastic Search ](../../media/Netfilx-Netflix-Summary--3-image3.png)
 
 
 
@@ -193,7 +191,7 @@ When the user deletes the video, the state will be changed to [DELETED_PENDING,]
 
 Architecture
 
-![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--3-image4.png){width="6.152777777777778in" height="4.5in"}
+![DynamoDB Comment Service user activity logs SQL user Service history Popularity SQL Channel Service DynamoDB redis DynamoDB I SQL Follow Service DynamoDB ](../../media/Netfilx-Netflix-Summary--3-image4.png)
 
 - [Popularity service in charge of the views, likes, dislikes of the video,]{.mark} likes and dislikes of the comments. The popularity service will [periodically]{.mark} read all user activity logs and update the likes/views etc.
   - Popularity has massive read / write but ok with small chance of data loss, therefore use redis to store the data and async write back to DB.
@@ -323,7 +321,7 @@ Recommendation System
 
 Architecture
 
-![personalized recommendations 3 User Preference Profile Collabrative Filtering Video Labeling system Popularity ranking ](../../media/Netfilx-Netflix-Summary--3-image5.png){width="6.1875in" height="3.6041666666666665in"}
+![personalized recommendations 3 User Preference Profile Collabrative Filtering Video Labeling system Popularity ranking ](../../media/Netfilx-Netflix-Summary--3-image5.png)
 
 - Every video is labeled with several tags, it could be done automatically or manually
   - System design, news, stock, yu qian, classical music, civ 6, food etc.
@@ -343,7 +341,7 @@ recommend the videos base the similar people )
 
 
 
-![This image shows an example of predicting of the user's rating using collaborative filtering. At first, people rate different items (like videos, images, games). After that, the system is making predictions about user's rating for an item, which the user hasn't rated yet. These predictions are built upon the existing ratings of other users, who have similar ratings with the active user. For instance, in our case the system has made a prediction, that the active user won't like the video. ](../../media/Netfilx-Netflix-Summary--3-image6.png){width="6.270833333333333in" height="9.229166666666666in"}
+![This image shows an example of predicting of the user's rating using collaborative filtering. At first, people rate different items (like videos, images, games). After that, the system is making predictions about user's rating for an item, which the user hasn't rated yet. These predictions are built upon the existing ratings of other users, who have similar ratings with the active user. For instance, in our case the system has made a prediction, that the active user won't like the video. ](../../media/Netfilx-Netflix-Summary--3-image6.png)
 
 
 
@@ -381,7 +379,7 @@ Streaming requires prefill the metadata, thumbnail (if wanted), to make the stre
 
 6.  Viewers will watch the stream with a few seconds latency, therefore the live chat will be precisely displayed when the other user sends it.
 
-![-9 C docs.googIe.com/presentation/dÎIPV6haXKzIV181RcfUjeBZcet3hc2kaMWDxH19qT4b4E/editttslide=id.p @ QCącoAQirŔ-Qî1/lQ,.0 Corn --pco,.J Incognito (2) prouîdz.ł Gros OSU Ae-uice5 v'Ąą-o cŔ,hą se-" Vce C CDŔJ --- @ žBhŃł2Ffrfi acecodeinterview.com ](../../media/Netfilx-Netflix-Summary--3-image7.png){width="5.0in" height="3.048611111111111in"}
+![-9 C docs.googIe.com/presentation/dÎIPV6haXKzIV181RcfUjeBZcet3hc2kaMWDxH19qT4b4E/editttslide=id.p @ QCącoAQirŔ-Qî1/lQ,.0 Corn --pco,.J Incognito (2) prouîdz.ł Gros OSU Ae-uice5 v'Ąą-o cŔ,hą se-" Vce C CDŔJ --- @ žBhŃł2Ffrfi acecodeinterview.com ](../../media/Netfilx-Netflix-Summary--3-image7.png)
 
 
 

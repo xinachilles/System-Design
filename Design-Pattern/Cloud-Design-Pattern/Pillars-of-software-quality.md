@@ -1,8 +1,6 @@
 # Pillars of software quality
 
-Created: 2018-10-11 00:05:27 -0600
 
-Modified: 2018-10-11 00:06:47 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # Queue (load leveling) 
 
-Created: 2019-10-29 22:18:07 -0600
 
-Modified: 2021-02-11 18:00:18 -0600
 
 ---
 
@@ -104,5 +102,5 @@ anything below 50 would be safe.
 
 
 
-![](../media/Queue-Queue-(load-leveling)-image1.png){width="0.24305555555555555in" height="0.5in"}
+![](../media/Queue-Queue-(load-leveling)-image1.png)
 

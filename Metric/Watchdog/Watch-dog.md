@@ -1,12 +1,10 @@
 # Watch dog
 
-Created: 2021-04-05 23:02:12 -0600
 
-Modified: 2021-06-03 11:02:30 -0600
 
 ---
 
-![Event: user_api_response Region: dc_l Response code: 200 Count: 1 ](../../media/Metric-Watchdog-Watch-dog-image1.png){width="5.0in" height="2.5in"}
+![Event: user_api_response Region: dc_l Response code: 200 Count: 1 ](../../media/Metric-Watchdog-Watch-dog-image1.png)
 
 
 
@@ -24,7 +22,7 @@ Modified: 2021-06-03 11:02:30 -0600
 
 
 
-![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1 · 2 理 解 需 求 记 录 事 件 发 生 的 数 量 查 询 事 件 数 量 的 TimeSeries 查 询 经 筛 选 后 事 件 数 量 的 TimeSeries 根 据 以 上 Time 设 置 警 报 阈 值 高 扩 展 性 ， 支 持 监 控 海 量 事 件 较 低 延 迟 ， 监 控 数 据 允 许 分 钟 级 延 迟 高 可 用 性 ， 监 控 系 统 随 时 访 问 可 靠 性 ， 生 成 相 对 正 确 的 监 控 数 据 可 靠 性 ， 老 数 据 精 度 可 以 酌 情 降 低 服 务 器 日 志 CallStackTracing ](../../media/Metric-Watchdog-Watch-dog-image2.png){width="5.0in" height="2.951388888888889in"}
+![功 能 性 需 求 非 功 能 性 需 求 非 需 求 1 · 2 理 解 需 求 记 录 事 件 发 生 的 数 量 查 询 事 件 数 量 的 TimeSeries 查 询 经 筛 选 后 事 件 数 量 的 TimeSeries 根 据 以 上 Time 设 置 警 报 阈 值 高 扩 展 性 ， 支 持 监 控 海 量 事 件 较 低 延 迟 ， 监 控 数 据 允 许 分 钟 级 延 迟 高 可 用 性 ， 监 控 系 统 随 时 访 问 可 靠 性 ， 生 成 相 对 正 确 的 监 控 数 据 可 靠 性 ， 老 数 据 精 度 可 以 酌 情 降 低 服 务 器 日 志 CallStackTracing ](../../media/Metric-Watchdog-Watch-dog-image2.png)
 
 
 
@@ -52,7 +50,7 @@ Non function requirement:
 
 
 
-![假 设 瓶 颈 服 务 资 源 存 储 资 源 1 · 3 资 源 估 算 监 控 10 ， 0 种 事 件 每 个 事 件 每 秒 触 发 1 次 QPS ， 存 储 QPSIO ， * 1 ： 10M 一 周 原 始 数 据 10M 1 佣 B * 24 * 36 * 7 、 =600TB 五 年 小 时 级 数 据 10M 闐 B 24 * ％ 5 * 5 、 一 40TB ](../../media/Metric-Watchdog-Watch-dog-image3.png){width="5.0in" height="2.9375in"}
+![假 设 瓶 颈 服 务 资 源 存 储 资 源 1 · 3 资 源 估 算 监 控 10 ， 0 种 事 件 每 个 事 件 每 秒 触 发 1 次 QPS ， 存 储 QPSIO ， * 1 ： 10M 一 周 原 始 数 据 10M 1 佣 B * 24 * 36 * 7 、 =600TB 五 年 小 时 级 数 据 10M 闐 B 24 * ％ 5 * 5 、 一 40TB ](../../media/Metric-Watchdog-Watch-dog-image3.png)
 
 5 year data - save event per each hour
 
@@ -62,7 +60,7 @@ Raw data - save event per second
 
 
 
-![数 据 流 事 件 采 集 事 件 整 合 传 递 事 件 存 储 事 件 读 取 ](../../media/Metric-Watchdog-Watch-dog-image4.png){width="5.0in" height="2.125in"}
+![数 据 流 事 件 采 集 事 件 整 合 传 递 事 件 存 储 事 件 读 取 ](../../media/Metric-Watchdog-Watch-dog-image4.png)
 
 
 
@@ -72,7 +70,7 @@ Raw data - save event per second
 
 
 
-![事 件 整 合 传 递 客 户 端 整 合 服 务 器 整 合 ](../../media/Metric-Watchdog-Watch-dog-image5.png){width="5.0in" height="4.347222222222222in"}
+![事 件 整 合 传 递 客 户 端 整 合 服 务 器 整 合 ](../../media/Metric-Watchdog-Watch-dog-image5.png)
 
 
 
@@ -90,7 +88,7 @@ Save in kafa then combine together
 
 
 
-![思 考 题 如 何 决 定 事 件 整 合 应 该 在 哪 个 阶 段 进 行 精 度 要 求 源 服 务 器 资 源 读 取 灵 活 性 ](../../media/Metric-Watchdog-Watch-dog-image6.png){width="5.0in" height="5.076388888888889in"}
+![思 考 题 如 何 决 定 事 件 整 合 应 该 在 哪 个 阶 段 进 行 精 度 要 求 源 服 务 器 资 源 读 取 灵 活 性 ](../../media/Metric-Watchdog-Watch-dog-image6.png)
 
 
 
@@ -118,7 +116,7 @@ Event name and other meta data
 
 
 
-![%tqofåvø-ri -معاي لدها-اMi٩ صمجه7م @ لمدهاه4eiمععه . جم ب مادلمهين -p;pøtiae€JL% كهمم؟ ممع؟ ط، ÅÄTYI- محط مم «لصو سمهD Collect-int ٨معم مممكه" علهى.ى 4).وء) حن ٣ صن ٣ فح ٣ --u.JÄ±-e ههنلمP عر:ءمP هيا معر عس ه rd?kimq لإمصاايحه ا eط S5te.A eمطوة امره ](../../media/Metric-Watchdog-Watch-dog-image7.png){width="5.0in" height="2.3402777777777777in"}
+![%tqofåvø-ri -معاي لدها-اMi٩ صمجه7م @ لمدهاه4eiمععه . جم ب مادلمهين -p;pøtiae€JL% كهمم؟ ممع؟ ط، ÅÄTYI- محط مم «لصو سمهD Collect-int ٨معم مممكه" علهى.ى 4).وء) حن ٣ صن ٣ فح ٣ --u.JÄ±-e ههنلمP عر:ءمP هيا معر عس ه rd?kimq لإمصاايحه ا eط S5te.A eمطوة امره ](../../media/Metric-Watchdog-Watch-dog-image7.png)
 
 
 
@@ -128,17 +126,17 @@ Elasticsearch
 
 Or event DB (网站的solution
 
-![5.1 Event Cache & DB Event ID Event Type I Value Time Window Timestamp ](../../media/Metric-Watchdog-Watch-dog-image8.png){width="5.0in" height="1.3125in"}
+![5.1 Event Cache & DB Event ID Event Type I Value Time Window Timestamp ](../../media/Metric-Watchdog-Watch-dog-image8.png)
 
 
 
-![local Ran ー ク no 汐 に 5 ム ・ 1. e け ー pe 。 ル な ( 応 も い 尾 e 伽 ( ド 「 ん も ル よ ル 1 名 6 立 . 31 " ( 辺 お t レ ー 0V2- よ れ / ん の 「 / re-oust 収 の そ 谷 , " れ / ィ / ム ツ ](../../media/Metric-Watchdog-Watch-dog-image9.png){width="5.0in" height="1.9444444444444444in"}![思 考 题 如 何 随 着 时 间 ， 降 低 存 储 数 据 的 精 度 ？ Database 存 储 定 期 合 并 Data Warehouse 长 期 存 储 原 始 数 据 ](../../media/Metric-Watchdog-Watch-dog-image10.png){width="5.0in" height="3.9166666666666665in"}
+![local Ran ー ク no 汐 に 5 ム ・ 1. e け ー pe 。 ル な ( 応 も い 尾 e 伽 ( ド 「 ん も ル よ ル 1 名 6 立 . 31 " ( 辺 お t レ ー 0V2- よ れ / ん の 「 / re-oust 収 の そ 谷 , " れ / ィ / ム ツ ](../../media/Metric-Watchdog-Watch-dog-image9.png)![思 考 题 如 何 随 着 时 间 ， 降 低 存 储 数 据 的 精 度 ？ Database 存 储 定 期 合 并 Data Warehouse 长 期 存 储 原 始 数 据 ](../../media/Metric-Watchdog-Watch-dog-image10.png)
 
-![思 考 题 能 不 能 不 使 用 Stream Processing 而 换 做 使 用 MapReduce? 因 为 要 求 低 延 迟 所 以 不 适 合 MapReduce ](../../media/Metric-Watchdog-Watch-dog-image11.png){width="5.0in" height="5.006944444444445in"}
+![思 考 题 能 不 能 不 使 用 Stream Processing 而 换 做 使 用 MapReduce? 因 为 要 求 低 延 迟 所 以 不 适 合 MapReduce ](../../media/Metric-Watchdog-Watch-dog-image11.png)
 
 
 
-![思 考 题 如 何 实 现 长 度 类 的 事 件 监 控 和 归 并 ？ ](../../media/Metric-Watchdog-Watch-dog-image12.png){width="5.0in" height="2.2916666666666665in"}
+![思 考 题 如 何 实 现 长 度 类 的 事 件 监 控 和 归 并 ？ ](../../media/Metric-Watchdog-Watch-dog-image12.png)
 
 (watch dog -2)
 
@@ -146,7 +144,7 @@ Or event DB (网站的solution
 
 
 
-![Event: api-response-time Region: dc-I Response code: 200 Length in ms: 20 ](../../media/Metric-Watchdog-Watch-dog-image13.png){width="5.0in" height="2.361111111111111in"}
+![Event: api-response-time Region: dc-I Response code: 200 Length in ms: 20 ](../../media/Metric-Watchdog-Watch-dog-image13.png)
 
 
 
@@ -156,11 +154,11 @@ Or event DB (网站的solution
 
 
 
-![事 件 读 取 模 式 秒 / 分 钟 / 小 时 5 长 度 秒 / 分 钟 / 小 时 平 均 长 度 ](../../media/Metric-Watchdog-Watch-dog-image14.png){width="5.0in" height="3.4583333333333335in"}
+![事 件 读 取 模 式 秒 / 分 钟 / 小 时 5 长 度 秒 / 分 钟 / 小 时 平 均 长 度 ](../../media/Metric-Watchdog-Watch-dog-image14.png)
 
 
 
-![gov " 房 メ 半 霧 フ 卩 屮 + " 2 第 霧 ) 4 + " フ 笋 ル 尸 ノ ~ ソ " 。 " 房 メ 半 霧 フ み } + ょ つ 男 」 / 。 と d /oSd 4 物 4 で ユ 第 ル 尸 ノ の ~ ィ / v ノ 。 男 」 /0bd /0Sd 物 房 / つ ァ 叫 0 ](../../media/Metric-Watchdog-Watch-dog-image15.png){width="5.0in" height="2.7569444444444446in"}
+![gov " 房 メ 半 霧 フ 卩 屮 + " 2 第 霧 ) 4 + " フ 笋 ル 尸 ノ ~ ソ " 。 " 房 メ 半 霧 フ み } + ょ つ 男 」 / 。 と d /oSd 4 物 4 で ユ 第 ル 尸 ノ の ~ ィ / v ノ 。 男 」 /0bd /0Sd 物 房 / つ ァ 叫 0 ](../../media/Metric-Watchdog-Watch-dog-image15.png)
 
 
 
@@ -204,7 +202,7 @@ Event name
 
 
 
-![Time Series (RPC) get_event_time_series( event _ key, start time, end time, aggregation method, # sum granularity, # per-minute ](../../media/Metric-Watchdog-Watch-dog-image16.png){width="5.0in" height="4.208333333333333in"}![Monitoring Library statsd.incr(event_key, value, metadata) statsd . timer (event _ key) . start( ) statsd . timer (event _ key) . end( ) ](../../media/Metric-Watchdog-Watch-dog-image17.png){width="5.0in" height="3.6180555555555554in"}![服 务 器 存 储 1.7 扩 展 性 源 服 务 器 部 署 轻 量 后 台 进 程 或 Lib Kafka 实 现 收 集 所 有 源 服 务 的 事 件 Kafka Consumer 进 行 事 件 处 理 事 件 服 务 器 数 据 定 期 压 缩 Elasticsearch 读 取 机 制 灵 活 ](../../media/Metric-Watchdog-Watch-dog-image18.png){width="5.0in" height="2.5208333333333335in"}![服 务 器 存 储 1 ． 8 容 灾 设 计 Kafka 容 灾 机 制 服 务 器 数 据 备 份 ](../../media/Metric-Watchdog-Watch-dog-image19.png){width="5.0in" height="3.3819444444444446in"}![Kafka Producer 负 载 1 ． 9 监 控 警 报 Kafka Consumer 服 务 器 读 写 QPS 负 载 ](../../media/Metric-Watchdog-Watch-dog-image20.png){width="5.0in" height="2.7916666666666665in"}
+![Time Series (RPC) get_event_time_series( event _ key, start time, end time, aggregation method, # sum granularity, # per-minute ](../../media/Metric-Watchdog-Watch-dog-image16.png)![Monitoring Library statsd.incr(event_key, value, metadata) statsd . timer (event _ key) . start( ) statsd . timer (event _ key) . end( ) ](../../media/Metric-Watchdog-Watch-dog-image17.png)![服 务 器 存 储 1.7 扩 展 性 源 服 务 器 部 署 轻 量 后 台 进 程 或 Lib Kafka 实 现 收 集 所 有 源 服 务 的 事 件 Kafka Consumer 进 行 事 件 处 理 事 件 服 务 器 数 据 定 期 压 缩 Elasticsearch 读 取 机 制 灵 活 ](../../media/Metric-Watchdog-Watch-dog-image18.png)![服 务 器 存 储 1 ． 8 容 灾 设 计 Kafka 容 灾 机 制 服 务 器 数 据 备 份 ](../../media/Metric-Watchdog-Watch-dog-image19.png)![Kafka Producer 负 载 1 ． 9 监 控 警 报 Kafka Consumer 服 务 器 读 写 QPS 负 载 ](../../media/Metric-Watchdog-Watch-dog-image20.png)
 
 
 

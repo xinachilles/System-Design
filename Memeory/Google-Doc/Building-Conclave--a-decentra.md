@@ -1,18 +1,16 @@
 # Building Conclave: a decentralized, real time, collaborative text editor | Hacker Noon
 
-Created: 2020-12-24 16:39:01 -0600
 
-Modified: 2021-01-18 19:20:53 -0600
 
 ---
 
 Clipped from : <https://hackernoon.com/building-conclave-a-decentralized-real-time-collaborative-text-editor-a6ab438fe79f>
 
-![Upload Sharing Link Share the link to invite collaborators to your room. Save Peers : In r ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image1.gif){width="5.0in" height="2.25in"}
+![Upload Sharing Link Share the link to invite collaborators to your room. Save Peers : In r ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image1.gif)
 
 
 
-![Author profile picture](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image2.png){width="0.5069444444444444in" height="0.5069444444444444in"}
+![Author profile picture](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image2.png)
 
 **[@SunnyB](https://hackernoon.com/u/SunnyB)Sun-Li Beatteay**
 
@@ -48,7 +46,7 @@ Keep reading.
 
 Before we get started, I want to give a big shout out to the ragtag team of developers who created Conclave.
 
-![Nitin Savant Elise Olivares Sun-Li Beatteay ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image3.png){width="5.0in" height="2.8472222222222223in"}
+![Nitin Savant Elise Olivares Sun-Li Beatteay ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image3.png)
 
 What a handsome bunch.
 
@@ -88,13 +86,13 @@ For our project, we defined a text editor as a space where you can **insert** or
 
 For example, with the text "HAT", the first character has a value "H" and a position of 0, "A" has position 1, and "T" has position 2.
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image4.png){width="2.9375in" height="2.0972222222222223in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image4.png)
 
 A character can be inserted or deleted based on its positional index. To insert a "C" at the beginning of the text, the operation is insert("C", 0). This insertion causes all the other letters to shift their position to the right by 1.
 
 To delete the "H" would require the operation delete(1).
 
-![НАТ insert("C", о) СНАТ delete(1) САТ 012 о 2 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image5.png){width="5.0in" height="3.8541666666666665in"}
+![НАТ insert("C", о) СНАТ delete(1) САТ 012 о 2 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image5.png)
 
 One user editing a document is simple, but what if we want multiple users simultaneously editing the same document?
 
@@ -104,7 +102,7 @@ One user editing a document is simple, but what if we want multiple users simult
 
 Next, we need a way for users to inform other users of edits they made. We will introduce a **Central Relay Server** to facilitate this communication.
 
-![User Central Relay Server User ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image6.png){width="5.0in" height="1.5in"}
+![User Central Relay Server User ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image6.png)
 
 **Two users connected through a central relay server.**
 
@@ -114,7 +112,7 @@ The problem with this situation comes when users attempt to make concurrent edit
 
 As an example, say there are two users who both start with the word "HAT". One user inserts a "C" while the other deletes the "H" and both of their edits are sent to the other person to be incorporated.
 
-![Userl HAT CHAT HAT Don't commute! User2 HAT AT CAT ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image7.png){width="5.0in" height="2.8958333333333335in"}
+![Userl HAT CHAT HAT Don't commute! User2 HAT AT CAT ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image7.png)
 
 Oh no! One user has a "HAT" and the other user has a "CAT". Their documents did not converge to the same state.
 
@@ -126,7 +124,7 @@ Commutativity occurs when different operations produce the same result no matter
 
 Let us try another example where the users simultaneously decide they want to delete the "H" from "HAT" to get "AT".
 
-![Userl HAT AT Not idempotent! User2 HAT AT ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image8.png){width="5.0in" height="2.8958333333333335in"}
+![Userl HAT AT Not idempotent! User2 HAT AT ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image8.png)
 
 The documents **did converge** but we have another problem! Both users ended up with "T" instead of "AT". Neither of them wanted this result. This occurred because the delete operations are not **idempotent.**
 
@@ -163,7 +161,7 @@ CRDTs operate by converting each character in the document into a unique object 
 - **value**: which letter the object represents.
 - **position**: [a list of integers that represent the position of the character in the document. This position is relative to the characters around it.]{.mark}
 
-![Character Object siteld value position "skj7-329d" ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image9.png){width="5.0in" height="1.8055555555555556in"}
+![Character Object siteld value position "skj7-329d" ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image9.png)
 
 Conversion of letter into character object
 
@@ -183,19 +181,19 @@ We can do this by imagining the characters and their positions like nodes in a t
 
 If we write the word "CAT", each letter might get a position as in the diagram below.
 
-![Begin 99 End ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image10.png){width="5.0in" height="1.6875in"}
+![Begin 99 End ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image10.png)
 
 Example positions
 
 However, what if we want to insert a character between two adjacent positions? If we want to turn "CAT" into "CHAT", there is no integer between 2 and 3. For this, we need to move down to the next level of the tree and pick a position on the that level.
 
-![99 End Begin ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image11.png){width="5.0in" height="2.8333333333333335in"}
+![99 End Begin ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image11.png)
 
 Inserting characters between adjacent positions.
 
 This creates a fractional index. "C" has a position of 1, "A" has a position of 2 and "H" has a position of 1.5. In code, we represent this fraction as an array of integers.
 
-![冖 一 一 冖 2 一 冖 3 一 C A T C H A T 冖 一 · 5 一 冖 2 一 一 3 一 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image12.png){width="5.0in" height="2.6180555555555554in"}
+![冖 一 一 冖 2 一 冖 3 一 C A T C H A T 冖 一 · 5 一 冖 2 一 一 3 一 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image12.png)
 
 Fractional positions as arrays of integers.
 
@@ -203,13 +201,13 @@ Fractional positions as arrays of integers.
 
 If we go back to our previous example, we can see how CRDTs maintain commutativity and idempotency. The fractional indexes of the characters are included for reference.
 
-![Userl 1 1.5 1.5 Commutativity User2 2 2 2 3 3 3 1.5 2 3 1.5) 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image13.png){width="5.0in" height="2.4930555555555554in"}
+![Userl 1 1.5 1.5 Commutativity User2 2 2 2 3 3 3 1.5 2 3 1.5) 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image13.png)
 
 CRDT Commutativity
 
 Using relative positions allows us to be more specific about which letter we are deleting and where it is located. Due to this specificity, commutativity is not an issue.
 
-![Userl 2 2 2 Idempotency User2 3 delete(SH", 1) 3 3 123 2 2 3 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image14.png){width="5.0in" height="2.513888888888889in"}
+![Userl 2 2 2 Idempotency User2 3 delete(SH", 1) 3 3 123 2 2 3 3 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image14.png)
 
 CRDT Idempotency
 
@@ -223,7 +221,7 @@ Now that we have gone over how to merge conflicts and keep a consistent document
 
 Our current system architecture relies on the client-server model of communication. Each user is connected to a central server via a WebSocket connection. The central server acts as a relay by forwarding operations from each user to all the other users in the network.
 
-![User Central Relay Server User ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image6.png){width="5.0in" height="1.5in"}
+![User Central Relay Server User ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image6.png)
 
 **Multiple users connected through a central relay server.**
 
@@ -235,7 +233,7 @@ Are there improvements that can be made to this model? In order to find improvem
 
 It takes around 200--300ms for two users in California to communicate with each other through a server in New York. [This latency directly i]{.mark}mpacts how "real-time" our application feels. If they could send messages directly to each other, it would only take a few milliseconds.
 
-![Server Peerl 100-150 ms Peer2 10 ms ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image15.png){width="5.0in" height="2.8125in"}
+![Server Peerl 100-150 ms Peer2 10 ms ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image15.png)
 
 Latency across the United States.
 
@@ -253,7 +251,7 @@ Whenever a user makes a change, or receives an operation from another user, they
 
 In distributed systems, this is known as the [Gossip Protocol](https://en.wikipedia.org/wiki/Gossip_protocol).
 
-![peer 5 peer 1 peer 2 peer 6 peer 4 peer 3 peer 7 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image16.png){width="5.0in" height="2.9166666666666665in"}
+![peer 5 peer 1 peer 2 peer 6 peer 4 peer 3 peer 7 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image16.png)
 
 P2P architecture
 
@@ -265,7 +263,7 @@ While WebRTC enables our users to connect directly, a small server is required t
 
 It is important to mention that while WebRTC relies on this signaling server, no document content is ever sent through it. It [is simply used to initiate the connection. Once a connection is established, the signaling server is no longer necessary.]{.mark}
 
-![WebSocket WebSocket Signaling Server STUN TURN webRTC STUN ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image17.png){width="5.0in" height="2.7916666666666665in"}
+![WebSocket WebSocket Signaling Server STUN TURN webRTC STUN ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image17.png)
 
 Establishing WebRTC connections between users.
 
@@ -277,7 +275,7 @@ To read more about creating a P2P system, WebRTC, and how secure WebRTC is, chec
 
 One concept we have not covered yet is how to maintain **causality**. Causality is the relationship between cause and effect. To maintain causality is to guarantee an effect when there is a cause.
 
-![caffeine causali+y loop need coffee +0 wake up +00 much coffee, can'} sleep no} enough sleep, can'} wake up wronghandsl.wordpress.com @john Aikinson, Wrong Hands ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image18.png){width="5.0in" height="4.0in"}
+![caffeine causali+y loop need coffee +0 wake up +00 much coffee, can'} sleep no} enough sleep, can'} wake up wronghandsl.wordpress.com @john Aikinson, Wrong Hands ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image18.png)
 
 In the context of a collaborative text editor, [to guarantee causality means that all operations will be received in the order they were made.]{.mark}
 
@@ -289,13 +287,13 @@ This presents a potential issue. What if a user receives a message to delete a p
 
 In the diagram below, there are three peers collaborating on a document. Two of the peers are next to each other while the third is far away. Peer1 types an "A" and sends the operation out to both peers. Since Peer2 is nearby, it quickly receives the operation but decides it does not like it and promptly deletes it.
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image19.png){width="5.0in" height="2.8125in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image19.png)
 
 **Peer1 inserts a character and Peer2 immediately deletes it.**
 
 Now both the insert and delete operations are on their way to Peer 3. Due to the unpredictability of the Internet, the delete operation races past the insert operation.
 
-![peer 1 What if the delete arrives first? Insert Op. Delete Op. ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image20.png){width="5.0in" height="2.8125in"}
+![peer 1 What if the delete arrives first? Insert Op. Delete Op. ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image20.png)
 
 **The delete operation arrives at Peer3 before the insert operation.**
 
@@ -315,7 +313,7 @@ After every operation from another user is received, the deletion buffer is "pro
 
 In this example, the character that is supposed to be deleted has a Site ID of 1 and Counter of 24. To check if the character has been inserted, Peer3 consults its version vector. Since Peer3 has only seen 23 operations from Peer1, the delete operation will remain in the buffer.
 
-![Peer 1 Peer 2 Delete Op - Siteld: 2 - Counter. 6 Version Vector Peer Insert Char - Siteld: I 23 5 2 Peer 3 Deletion Buffer - Counter: 24 Process Buffer Char - Sited: 1 - counter: 24 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image21.png){width="5.0in" height="2.6041666666666665in"}
+![Peer 1 Peer 2 Delete Op - Siteld: 2 - Counter. 6 Version Vector Peer Insert Char - Siteld: I 23 5 2 Peer 3 Deletion Buffer - Counter: 24 Process Buffer Char - Sited: 1 - counter: 24 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image21.png)
 
 **The first time the buffer is processed, the delete operation is not ready to be applied by Peer3.**
 
@@ -323,7 +321,7 @@ In this example, the character that is supposed to be deleted has a Site ID of 1
 
 Since we have received a new operation, we again process the deletion buffer. This time, when the deletion operation's character is compared to the version vector, we see that the complement insert has been made. The delete operation can be removed from the buffer and applied.
 
-![Version Vector Peer 1 Peer 2 Delete op - Siteld: 2 - Counter: 6 Peer 2 Insert Char - Siteld: - Counter: 24 Op # 6 Deletion Buffer Process Buffer peer 3 Char - Siteld: 7 - Counter: 24 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image22.png){width="10.083333333333334in" height="5.909722222222222in"}
+![Version Vector Peer 1 Peer 2 Delete op - Siteld: 2 - Counter: 6 Peer 2 Insert Char - Siteld: - Counter: 24 Op # 6 Deletion Buffer Process Buffer peer 3 Char - Siteld: 7 - Counter: 24 ](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image22.png)
 
 **This time the delete operation can be applied by Peer3.**
 
@@ -331,7 +329,7 @@ Since we have received a new operation, we again process the deletion buffer. Th
 
 With a Version Vector in place, the collaborative text editor is fully functional. The final system architecture for the application we made is shown below.
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image23.png){width="10.083333333333334in" height="5.708333333333333in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image23.png)
 
 **Final System Architecture**
 
@@ -354,67 +352,67 @@ If you are interested in contributing to Conclave or want to read our code, you 
 
 Finally, if you enjoy using the Conclave editor and want to incorporate it into your own project, there is an embeddable version called [Conclavity](https://github.com/sunny-b/conclavity). Check it out!
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image24.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image24.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image25.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image25.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image26.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image26.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image27.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image27.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image28.png){width="0.8541666666666666in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image28.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image28.png){width="0.8541666666666666in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image28.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image28.png){width="0.8541666666666666in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image28.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image29.png){width="0.8541666666666666in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image29.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image26.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image26.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image27.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image27.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image30.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image30.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image24.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image24.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image31.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image31.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image26.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image26.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image27.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image27.png)
 
 
 
-![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image30.png){width="1.0416666666666667in" height="1.0416666666666667in"}
+![](../../media/Memeory-Google-Doc-Building-Conclave--a-decentralized,-real-time,-collaborative-text-editor---Hacker-Noon-image30.png)
 
 [Join Hacker Noon](https://app.hackernoon.com/signup)
 

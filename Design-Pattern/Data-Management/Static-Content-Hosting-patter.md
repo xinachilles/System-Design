@@ -1,8 +1,6 @@
 # Static Content Hosting pattern
 
-Created: 2018-12-13 00:59:26 -0600
 
-Modified: 2018-12-13 00:59:58 -0600
 
 ---
 

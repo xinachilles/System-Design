@@ -1,8 +1,6 @@
 # 12-15  mock interview : recommendation system
 
-Created: 2020-12-15 00:42:47 -0600
 
-Modified: 2021-01-03 18:57:21 -0600
 
 ---
 

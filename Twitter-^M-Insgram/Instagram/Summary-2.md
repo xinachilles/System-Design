@@ -1,8 +1,6 @@
 # Summary 2
 
-Created: 2018-01-27 17:28:53 -0600
 
-Modified: 2021-01-21 12:40:40 -0600
 
 ---
 
@@ -70,7 +68,7 @@ we can store the photo in the sql database
 
 
 
-![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image1.png){width="2.625in" height="3.1319444444444446in"}
+![Photo PhotolD: int UserlD: int PhotoPath: varchar(256) PhotoLatitude: int PhotoLongitude: int UserLatitude: int UserLongitude: int CreationDate: datetime ](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image1.png)
 
 
 
@@ -92,7 +90,7 @@ We aslo need the photo location table in the location service ( dictionary servi
 
 the url is like
 
-![](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image2.png){width="5.0in" height="2.0277777777777777in"}
+![](../../media/Twitter-^M-Insgram-Instagram-Summary-2-image2.png)
 
 so we need the cdn, cache, machine id and logical vloumn
 

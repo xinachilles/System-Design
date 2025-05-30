@@ -1,8 +1,6 @@
 # design key value sore
 
-Created: 2020-11-18 00:31:00 -0600
 
-Modified: 2020-11-18 00:50:15 -0600
 
 ---
 

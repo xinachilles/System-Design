@@ -1,8 +1,6 @@
 # Lab 6: Using AWS DevOps tools for CI/CD pipeline automations | Self-Paced Labs
 
-Created: 2023-10-28 04:01:45 -0600
 
-Modified: 2023-10-28 10:14:44 -0600
 
 ---
 
@@ -80,7 +78,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image1.png){width="6.5in" height="1.375in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image1.png)
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -97,7 +95,7 @@ In some cases, certain pop-up or script blocker web browser extensions might pre
 
 ### Lab environment
 
-![deployment pipeline](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image2.png){width="6.5in" height="3.1666666666666665in"}
+![deployment pipeline](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image2.png)
 
 *The images depicts how the pipeline format consists of stages, with each stage made up of different action types. An action type consists of an action category and provider type. Valid action categories in CodePipeline include: approval, build, deploy, invoke, source, and test.*
 
@@ -149,7 +147,7 @@ Refer to the following picture as well as the release pipeline [architecture pic
 
 *Test_Stack stage*
 
-![environment stack outline](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image3.png){width="6.5in" height="4.527777777777778in"}
+![environment stack outline](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image3.png)
 
 *Image highlights the public subnets in AZ1 and AZ2 along with the EC2 instances in private subnets.*
 
@@ -502,7 +500,7 @@ In this task, you correct the issue with the CloudFormation template after learn
 
 The *Action execution failed* message dialog box displays the error returned from the Lambda *CFNValidateLambda* function. The reason for the failure is that the function found global access to the *SSH network ingress ports* as shown below.
 
-![stack check failure](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image4.png){width="6.5in" height="1.7013888888888888in"}
+![stack check failure](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image4.png)
 
 *Image represents the error encountered from the Lambda function named CFNValidateLambda because their is global access to the ssh network ingress port.*
 
@@ -607,7 +605,7 @@ filter @message Like /Matched rule:/
 
 **Expected output:** Your CloudWatch Insights screen should be similar to the screenshot below.
 
-![CloudWatch Insights Screenshot](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image5.png){width="6.5in" height="4.298611111111111in"}
+![CloudWatch Insights Screenshot](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image5.png)
 
 *The image reflects what is expected in the CloudWatch insights screen after the previous step which includes to log entries.*
 
@@ -617,7 +615,7 @@ filter @message Like /Matched rule:/
 
 This opens up another web browser tab to show the log stream. At the top of the *Log events* window you should see the *Matched rule: SSHOpenToWorld* entry and the timestamp should match the timestamp shown in the CloudWatch Insights results.
 
-![Log Stream Screenshot](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image6.png){width="6.5in" height="3.1319444444444446in"}
+![Log Stream Screenshot](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image6.png)
 
 *In the image above, you can easily see what rule was matched and what resource from the CloudFormation template that matched the rule.*
 
@@ -625,7 +623,7 @@ On the line that states *There are older events to load*, you can click *Load mo
 
 1.  Choose **Load more** until you see the **START RequestId**.
 
-![Start of function screenshot](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image7.png){width="6.5in" height="3.2847222222222223in"}
+![Start of function screenshot](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image7.png)
 
 *Image show example of the START RequestId in the CloudWatch log for the Lambda function.*
 
@@ -661,7 +659,7 @@ A simple calculator web application is displayed.
 
 **Expected output:**
 
-![Calculator web page](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image8.png){width="6.5in" height="6.479166666666667in"}
+![Calculator web page](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image8.png)
 
 *Image shows an example of what the Simple Calculator Service application looks like on a web page. It shows an image of calculator and text reading, "Simple Calculator Service". Below that, it has one input field followed by a drop-down menu for +, -, *, and / symbols to calculate with. This is followed by a second input field. Depending on the numbers you enter it will calculate the appropriate value based on the Arithmetic operator chosen.*
 
@@ -806,7 +804,7 @@ in a new browser tab.
 
 1.  In the traces page, at the top-right of the page, choose **1h** to expand the time window searched to one hour.
 
-![xray timeframe](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image9.png){width="5.340277777777778in" height="2.576388888888889in"}
+![xray timeframe](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image9.png)
 
 *The image is an example of how to expand the time frame of the Traces search.*
 
@@ -820,7 +818,7 @@ Learn more from [Searching for Traces in the AWS X-Ray Console with Filter Expre
 
 It displays additional details about the trace of that particular function's run.
 
-![xray traces map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image10.png){width="6.5in" height="4.173611111111111in"}
+![xray traces map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image10.png)
 
 *The page appears similar to the example image above showing the trace details in milliseconds from the CloudWatch X-Ray console.*
 
@@ -840,7 +838,7 @@ The AWS X-Ray service map traces requests that your applications serve. It is a 
 
 1.  In the **Service map** page, at the top-right of the page, choose **1h** to expand the time window to one hour.
 
-![xray timeframe](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image9.png){width="5.340277777777778in" height="2.576388888888889in"}
+![xray timeframe](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image9.png)
 
 A service map of the actions completed by your web application in the last hour is displayed.
 
@@ -848,7 +846,7 @@ A service map of the actions completed by your web application in the last hour 
 
 A service map of the actions completed by your web application in the last hour is displayed.
 
-![xray service map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image11.png){width="6.5in" height="2.888888888888889in"}
+![xray service map](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image11.png)
 
 Choosing any of the items in the *Service map* displays more Service details.
 
@@ -1015,7 +1013,7 @@ With the manual approval given, the test environment is deleted and a new produc
 
 **Expected output:**
 
-![Simple Calculator Service interface with orange background](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image12.png){width="2.6041666666666665in" height="3.3541666666666665in"}
+![Simple Calculator Service interface with orange background](../../../media/AWS-Developing-Serverless-Solutions-on-AWS-Model--12-Lab-6--Using-AWS-DevOps-tools-for-CI-CD-pipeline-automations---Self-Paced-Labs-image12.png)
 
 *The image displays the calculator web application with the latest background code change to orange that was deployed to the production environment.*
 

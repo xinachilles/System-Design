@@ -1,8 +1,6 @@
 # External sorting
 
-Created: 2017-10-15 15:34:31 -0600
 
-Modified: 2020-12-16 01:25:01 -0600
 
 ---
 

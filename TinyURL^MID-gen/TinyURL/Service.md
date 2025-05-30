@@ -1,12 +1,10 @@
 # Service 
 
-Created: 2017-10-09 16:33:42 -0600
 
-Modified: 2017-10-09 16:40:26 -0600
 
 ---
 
-![](../../media/TinyURL^MID-gen-TinyURL-Service-image1.png){width="5.0in" height="2.826388888888889in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Service-image1.png)
 
 
 

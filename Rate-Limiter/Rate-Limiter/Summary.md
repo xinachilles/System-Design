@@ -1,8 +1,6 @@
 # Summary
 
-Created: 2018-01-02 16:41:21 -0600
 
-Modified: 2018-01-30 12:37:59 -0600
 
 ---
 
@@ -144,7 +142,7 @@ Otherwise, taken the request and the taken mins one
 
 
 
-![2 3 4 5 6 7 8 9 10 11 12 13 14 IS 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 static class TokenBucket { private final int capacity; private final int tokensPerSeconds; private int tokens private long timestamp --- System. currentTimeMi11is(); public TokenBucket(int tokensPerUnit, TimeUnit unit) { capacity = (int) (tokensPerUnit / unit. toSeconds(IL)); tokensPerSeconds = public boolean take() { long now = System. currentTimeMi11is(); tokens += (int) ( (now - timestamp) * tokensPerSeconds / 1000); if (tokens > capacity) tokens = capacity; timestamp --- - now; if (tokens < 1) return false; tokens--; return true; public static void main(String[] args) throws InterruptedException { TokenBucket bucket = new TokenBucket(250, TimeUnit.MINUTES); Thread . sleep( IOOOL); for (int i System. out . println(bucket . take()) ; Thread . sleep( IOOOL); for (int i System. out . println(bucket . take()) ; ](../../media/Rate-Limiter-Rate-Limiter-Summary-image1.jpeg){width="5.0in" height="2.673611111111111in"}
+![2 3 4 5 6 7 8 9 10 11 12 13 14 IS 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 static class TokenBucket { private final int capacity; private final int tokensPerSeconds; private int tokens private long timestamp --- System. currentTimeMi11is(); public TokenBucket(int tokensPerUnit, TimeUnit unit) { capacity = (int) (tokensPerUnit / unit. toSeconds(IL)); tokensPerSeconds = public boolean take() { long now = System. currentTimeMi11is(); tokens += (int) ( (now - timestamp) * tokensPerSeconds / 1000); if (tokens > capacity) tokens = capacity; timestamp --- - now; if (tokens < 1) return false; tokens--; return true; public static void main(String[] args) throws InterruptedException { TokenBucket bucket = new TokenBucket(250, TimeUnit.MINUTES); Thread . sleep( IOOOL); for (int i System. out . println(bucket . take()) ; Thread . sleep( IOOOL); for (int i System. out . println(bucket . take()) ; ](../../media/Rate-Limiter-Rate-Limiter-Summary-image1.jpeg)
 
 
 

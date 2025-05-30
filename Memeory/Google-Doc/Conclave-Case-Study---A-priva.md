@@ -1,8 +1,6 @@
 # Conclave Case Study - A private and secure real-time collaborative text editor
 
-Created: 2020-12-24 17:13:50 -0600
 
-Modified: 2021-01-19 01:02:24 -0600
 
 ---
 

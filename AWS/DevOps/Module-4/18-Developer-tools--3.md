@@ -1,8 +1,6 @@
 # 18 Developer tools -3
 
-Created: 2023-10-07 22:12:49 -0600
 
-Modified: 2023-10-22 17:41:52 -0600
 
 ---
 
@@ -31,7 +29,7 @@ Facts
 
 
 
-![Understanding revisions Revision 1 aws training and -7 certification Source code files Revision 2 AppSpec file Revision 3 Deployable content Pulls Revision 1 AWS CodeDeploy Amazon S3 Amazon EC2 Instances Or GitHub Pulls AWS CodeDepIoy 46 ](../../../media/AWS-DevOps-Module-4-18-Developer-tools--3-image1.png){width="5.0in" height="2.7777777777777777in"}
+![Understanding revisions Revision 1 aws training and -7 certification Source code files Revision 2 AppSpec file Revision 3 Deployable content Pulls Revision 1 AWS CodeDeploy Amazon S3 Amazon EC2 Instances Or GitHub Pulls AWS CodeDepIoy 46 ](../../../media/AWS-DevOps-Module-4-18-Developer-tools--3-image1.png)
 
 
 

@@ -1,12 +1,10 @@
 # Service for status search
 
-Created: 2017-10-10 23:35:09 -0600
 
-Modified: 2017-10-14 16:58:24 -0600
 
 ---
 
-![](../../media/Stream^JSearch-Twitter-Search-Service-for-status-search-image1.png){width="5.0in" height="1.9375in"}
+![](../../media/Stream^JSearch-Twitter-Search-Service-for-status-search-image1.png)
 
 
 
@@ -152,7 +150,7 @@ Application servers before hitting backend database can quickly check if the cac
 
 
 
-![Load Index Server al an cer Index Server Application Servers Index Server Database Index Server Database Database Index-guilder Serv Database ](../../media/Stream^JSearch-Twitter-Search-Service-for-status-search-image2.png){width="5.0in" height="2.0625in"}
+![Load Index Server al an cer Index Server Application Servers Index Server Database Index Server Database Database Index-guilder Serv Database ](../../media/Stream^JSearch-Twitter-Search-Service-for-status-search-image2.png)
 
 
 

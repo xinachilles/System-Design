@@ -1,8 +1,6 @@
 # Scale
 
-Created: 2017-04-30 10:27:55 -0600
 
-Modified: 2017-10-21 00:34:10 -0600
 
 ---
 
@@ -32,23 +30,23 @@ To further increase the efficiency, we can replicate our caching servers to dist
 
 **How can each cache replica be updated?**Whenever there is a cache miss, our servers would be hitting backend database. Whenever this happens, we can update the cache and pass the new entry to all the cache replicas. Each replica can update their cache by adding the new entry. If a replica already has that entry, it can simply ignore it.
 
-![a shortened Yes, m error 401 NO, redirect •al U RL as URL expired or user does not have pernissions URL nd orignal U RL not gnal URL L not found. URL fou Database update cache Request flow for accessing a shortened URL ](../../media/TinyURL^MID-gen-TinyURL-Scale-image1.png){width="5.0in" height="1.9444444444444444in"}
+![a shortened Yes, m error 401 NO, redirect •al U RL as URL expired or user does not have pernissions URL nd orignal U RL not gnal URL L not found. URL fou Database update cache Request flow for accessing a shortened URL ](../../media/TinyURL^MID-gen-TinyURL-Scale-image1.png)
 
 
 
-![us DNS DNS Web Server Shared DB Web Server Memcached Memcached ](../../media/TinyURL^MID-gen-TinyURL-Scale-image2.png){width="5.0in" height="3.0277777777777777in"}![Scale 扩 展 SHORT KEY · 如 果 最 开 始 ， short key 为 6 位 ， 下 面 为 sho 戊 key 增 加 1 位 前 置 位 · AB 1234 乛 CAB 1234 · 还 有 一 种 做 法 是 把 第 1 位 单 独 留 出 来 做 sharding key, 总 共 还 是 6 位 · 该 前 置 位 的 值 由 Hash(long_url) ％ 62 得 到 · 该 前 置 位 则 为 sharding key · Consistent Hashing · 相 关 练 习 h № 丿 ／ 、 、 、 lintcode.com/en/problem/consistent-hashing/ · 将 环 分 为 62 个 区 间 · 每 台 机 器 在 环 上 负 责 一 段 区 间 ](../../media/TinyURL^MID-gen-TinyURL-Scale-image3.png){width="5.0in" height="2.6666666666666665in"}
+![us DNS DNS Web Server Shared DB Web Server Memcached Memcached ](../../media/TinyURL^MID-gen-TinyURL-Scale-image2.png)![Scale 扩 展 SHORT KEY · 如 果 最 开 始 ， short key 为 6 位 ， 下 面 为 sho 戊 key 增 加 1 位 前 置 位 · AB 1234 乛 CAB 1234 · 还 有 一 种 做 法 是 把 第 1 位 单 独 留 出 来 做 sharding key, 总 共 还 是 6 位 · 该 前 置 位 的 值 由 Hash(long_url) ％ 62 得 到 · 该 前 置 位 则 为 sharding key · Consistent Hashing · 相 关 练 习 h № 丿 ／ 、 、 、 lintcode.com/en/problem/consistent-hashing/ · 将 环 分 为 62 个 区 间 · 每 台 机 器 在 环 上 负 责 一 段 区 间 ](../../media/TinyURL^MID-gen-TinyURL-Scale-image3.png)
 
 0-61 then map to 62`s characters
 
-![](../../media/TinyURL^MID-gen-TinyURL-Scale-image4.png){width="4.020833333333333in" height="0.5in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Scale-image4.png)
 
 
 
-![USA CN DNS Shared DB DNS Web Server Shared DB Shared DB Memcached Shared DB Memcached Consistent Hashing fi Mapping Web Server -E , hard code Web Server ](../../media/TinyURL^MID-gen-TinyURL-Scale-image5.png){width="5.0in" height="2.625in"}
+![USA CN DNS Shared DB DNS Web Server Shared DB Shared DB Memcached Shared DB Memcached Consistent Hashing fi Mapping Web Server -E , hard code Web Server ](../../media/TinyURL^MID-gen-TinyURL-Scale-image5.png)
 
 
 
-![](../../media/TinyURL^MID-gen-TinyURL-Scale-image6.png){width="5.0in" height="2.6875in"}
+![](../../media/TinyURL^MID-gen-TinyURL-Scale-image6.png)
 
 
 

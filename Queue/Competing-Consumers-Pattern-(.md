@@ -1,8 +1,6 @@
 # Competing Consumers Pattern (no need)
 
-Created: 2019-10-21 22:27:28 -0600
 
-Modified: 2020-09-09 11:36:00 -0600
 
 ---
 
@@ -10,7 +8,7 @@ Modified: 2020-09-09 11:36:00 -0600
 
 
 
-![Video web content titled: Queue: Competing Consumers Pattern](../media/Queue-Competing-Consumers-Pattern-(no-need)-image1.jpg){width="5.0in" height="2.798611111111111in"}
+![Video web content titled: Queue: Competing Consumers Pattern](../media/Queue-Competing-Consumers-Pattern-(no-need)-image1.jpg)
 
 
 

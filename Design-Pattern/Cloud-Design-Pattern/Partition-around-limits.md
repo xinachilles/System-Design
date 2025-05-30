@@ -1,8 +1,6 @@
 # Partition around limits
 
-Created: 2018-10-07 00:08:05 -0600
 
-Modified: 2018-10-07 00:10:34 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # Algo expert
 
-Created: 2020-11-18 16:21:23 -0600
 
-Modified: 2020-12-01 12:47:11 -0600
 
 ---
 
@@ -394,6 +392,6 @@ so I guess I'll just right for clarification here that like 10 to a hundred work
 
 I think that that's kind of what I'm thinking for the system because if I have to go back to the beginning here I think we've covered most of our bases I will say that just as a bonus, I know we're running out of time it is a bonus like we would probably want to have some pretty robust logging and monitoring in place here especially for the code execution engine, if we wanted to keep track of how many users are running coded us at a time and what language I, hear I'm thinking that form for workers with my optimize this basically based on or logging and monitoring and whatever the data tells us we might ,even separate these workers out based on language is we're out or forward request to specific language workers, this would all come you know as our system grows and logging and monitoring can help with that so that's kind of like a bonus, that I'm thing if we want to really optimize this system ,but otherwise like I think I like I'm feeling pretty comfortable with this system, you have any any other things that you'd like me to cover or not I think we're pretty much at a time but yeah your your your point about the long and my ring is is is is really good that's probably how we would we would auto-scale number workers ideally, so we don't have to do it manually ,would that I hope that you found this video informative and we'll see you in the next one
 
-![](../media/Onsite-quesion-Algo-expert-image1.png){width="0.20833333333333334in" height="0.20833333333333334in"}![](../media/Onsite-quesion-Algo-expert-image2.png){width="0.20833333333333334in" height="0.20833333333333334in"}
+![](../media/Onsite-quesion-Algo-expert-image1.png)![](../media/Onsite-quesion-Algo-expert-image2.png)
 
 

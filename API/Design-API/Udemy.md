@@ -593,11 +593,11 @@ in order to resolve the error, in order to address any issues, in order to bette
 
 
 
-![](../../media/API-Design-API-Udemy-image1.png){width="10.083333333333334in" height="5.729166666666667in"}
+![](../../media/API-Design-API-Udemy-image1.png)
 
 
 
-![](../../media/API-Design-API-Udemy-image2.png){width="10.083333333333334in" height="5.6875in"}![](../../media/API-Design-API-Udemy-image3.png){width="10.083333333333334in" height="5.71875in"}
+![](../../media/API-Design-API-Udemy-image2.png)![](../../media/API-Design-API-Udemy-image3.png)
 
 
 
@@ -633,7 +633,7 @@ it is non breaking change
 
 
 
-![](../../media/API-Design-API-Udemy-image4.png){width="10.083333333333334in" height="5.6875in"}
+![](../../media/API-Design-API-Udemy-image4.png)
 
 
 
@@ -641,7 +641,7 @@ if we need change the "discount " array name to "deal" that is the breaking chan
 
 
 
-![](../../media/API-Design-API-Udemy-image5.png){width="10.083333333333334in" height="5.385416666666667in"}
+![](../../media/API-Design-API-Udemy-image5.png)
 
 
 
@@ -657,7 +657,7 @@ Version information
 
 
 
-![](../../media/API-Design-API-Udemy-image6.png){width="10.083333333333334in" height="5.875in"}
+![](../../media/API-Design-API-Udemy-image6.png)
 
 Partial Response
 
@@ -673,7 +673,7 @@ API should be able to specify this feeds the particular fields that they would l
 
 
 
-![](../../media/API-Design-API-Udemy-image7.png){width="10.083333333333334in" height="5.03125in"}
+![](../../media/API-Design-API-Udemy-image7.png)
 
 
 
@@ -715,7 +715,7 @@ The previous cursor of points to the previous page which is page 1 and the next 
 
 
 
-![](../../media/API-Design-API-Udemy-image8.png){width="10.083333333333334in" height="5.625in"}
+![](../../media/API-Design-API-Udemy-image8.png)
 
 you also can save the page data in the http header
 
@@ -737,7 +737,7 @@ t
 
 
 
-![](../../media/API-Design-API-Udemy-image9.png){width="10.083333333333334in" height="5.697916666666667in"}
+![](../../media/API-Design-API-Udemy-image9.png)
 
 starting row = 6
 
@@ -747,7 +747,7 @@ how many row they want to receive
 
 
 
-![](../../media/API-Design-API-Udemy-image10.png){width="10.083333333333334in" height="4.614583333333333in"}
+![](../../media/API-Design-API-Udemy-image10.png)
 
 
 
@@ -775,7 +775,7 @@ And this one here is the link to the last page. The relationship shown here is l
 
 
 
-![](../../media/API-Design-API-Udemy-image11.png){width="10.083333333333334in" height="4.927083333333333in"}
+![](../../media/API-Design-API-Udemy-image11.png)
 
 
 
@@ -879,7 +879,7 @@ anonymous access
 
 
 
-![](../../media/API-Design-API-Udemy-image12.png){width="10.083333333333334in" height="5.802083333333333in"}
+![](../../media/API-Design-API-Udemy-image12.png)
 
 .
 
@@ -913,7 +913,7 @@ That is a concept of scope in which the user can decide what data the user is au
 
 
 
-![](../../media/API-Design-API-Udemy-image13.png){width="10.083333333333334in" height="5.645833333333333in"}
+![](../../media/API-Design-API-Udemy-image13.png)
 
 
 
@@ -955,7 +955,7 @@ And then that is also a refresh token
 
 
 
-![](../../media/API-Design-API-Udemy-image14.png){width="10.083333333333334in" height="5.260416666666667in"}
+![](../../media/API-Design-API-Udemy-image14.png)
 
 
 
@@ -987,7 +987,7 @@ Typical ones for private data authorization and implicit grant
 
 
 
-![](../../media/API-Design-API-Udemy-image15.png){width="10.083333333333334in" height="5.552083333333333in"}
+![](../../media/API-Design-API-Udemy-image15.png)
 
 
 

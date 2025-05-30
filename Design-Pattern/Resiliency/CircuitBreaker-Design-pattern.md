@@ -1,8 +1,6 @@
 # CircuitBreaker Design pattern
 
-Created: 2018-10-31 00:13:06 -0600
 
-Modified: 2019-06-21 08:58:11 -0600
 
 ---
 
@@ -82,7 +80,7 @@ If these requests are successful, it's assumed that the fault that was previousl
 
 If any request fails, the circuit breaker assumes that the fault is still present so it reverts back to the Open state and restarts the timeout timer to give the system a further period of time to recover from the failure.
 
-![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image1.png){width="5.375in" height="0.4236111111111111in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image2.png){width="4.479166666666667in" height="0.4375in"}![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image3.png){width="4.833333333333333in" height="0.4375in"}
+![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image1.png)![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image2.png)![](../../media/Design-Pattern-Resiliency-CircuitBreaker-Design-pattern-image3.png)
 
 
 

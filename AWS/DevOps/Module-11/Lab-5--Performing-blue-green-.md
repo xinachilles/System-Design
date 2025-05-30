@@ -1,8 +1,6 @@
 # Lab 5: Performing blue/green deployments with CI/CD pipelines and Amazon Elastic Container Service | Self-Paced Labs
 
-Created: 2023-10-22 15:31:37 -0600
 
-Modified: 2023-10-27 17:08:04 -0600
 
 ---
 
@@ -77,7 +75,7 @@ You are automatically signed in to the AWS Management Console in a new web brows
 
 #### *Error: You must first sign out*
 
-![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image1.png){width="6.5in" height="1.375in"}
+![Amazon Web Services Sign In You must first log out before logging into a different AWS account. To logout, click here ](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image1.png)
 
 If you see the message, **You must first log out before logging into a different AWS account:**
 
@@ -94,7 +92,7 @@ In some cases, certain pop-up or script blocker web browser extensions might pre
 
 ### Lab environment
 
-![High-level architecture](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image2.png){width="6.5in" height="2.888888888888889in"}
+![High-level architecture](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image2.png)
 
 *The diagram outlines a web application pipeline where images are retrieved and stored into ECR repos during the build process, and finally deploying into ECS containers using the Blue-Green deployment method.*
 
@@ -173,7 +171,7 @@ First, you need to configure the build specification file to match your lab sett
 3.  In the **Resources** pane to the left of the lab instructions, locate the **URIwebappECRrepo** variable and choose the copy icon.
 4.  In the **AWS Cloud9 editor** window, on line **9**, replace the text *after* **REPOSITORY_URI=** with the **URIwebappECRrepo** value you copied from the lab instructions for the Amazon Elastic Container Registry (Amazon ECR) **my-webapp-repo** repository.
 
-![web-app buildspec screenshot](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image3.png){width="6.5in" height="3.5625in"}
+![web-app buildspec screenshot](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image3.png)
 
 *Image highlights the format of the repository URI.*
 
@@ -370,7 +368,7 @@ my-webapp-build-project
 
 The *Details* page for the *my-webapp-pipeline* is displayed. You can observe the progress of each stage of your pipeline.
 
-![my-webapp-pipeline build success](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image4.png){width="6.5in" height="4.701388888888889in"}
+![my-webapp-pipeline build success](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image4.png)
 
 *Images shows the different stages of the pipeline.*
 
@@ -399,7 +397,7 @@ The task definition is the blueprint for your task and references the container 
 
 Once the changes are made as suggested, your *taskdef.json* should appear similar to:
 
-![taskdef_final1](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image5.png){width="6.5in" height="3.3819444444444446in"}
+![taskdef_final1](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image5.png)
 
 *Image shows examples for the executionRoleArn format and the image URI.*
 
@@ -490,7 +488,7 @@ image placeholder.
 
 Once the changes are made as suggested, your *taskdef.json* should appear similar to:
 
-![taskdef_final2](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image6.png){width="6.5in" height="3.486111111111111in"}
+![taskdef_final2](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image6.png)
 
 *Image shows example of the taskdef.json file highlighting the format of the executionRoleArn and the image property.*
 
@@ -524,7 +522,7 @@ Besides maintaining the desired count of tasks in your service, you can optional
 
 Once the changes are made as suggested, your *create-service.json* should appear similar to:
 
-![create-service-final](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image7.png){width="6.5in" height="2.7916666666666665in"}
+![create-service-final](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image7.png)
 
 *Image highlights examples of what targetGroupArn, subnets, and securityGroup properties look like when the create-service.json file is updated.*
 
@@ -713,7 +711,7 @@ By making the required application source code available and configuring ECS ser
 1.  Locate **LoadBalancerDNSName** in the information pane to left of the lab instructions. Copy the value of that variable.
 2.  Open a new browser tab and enter the load balancer's **public DNS name** that you copied. When the name resolves, it shows the application website greeting page with a blue background.
 
-![web-application-blue-page](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image8.png){width="6.5in" height="2.4791666666666665in"}
+![web-application-blue-page](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image8.png)
 
 *Image of the application with a blue screen.*
 
@@ -872,7 +870,7 @@ IMAGE1_NAME
 
 Once settings are entered as instructed, your final configurations should appear similar to the image below.
 
-![codedeploy-stage-final](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image9.png){width="6.5in" height="6.770833333333333in"}
+![codedeploy-stage-final](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image9.png)
 
 *Image shows the list of options just selected.*
 
@@ -893,7 +891,7 @@ The pipeline is now ready to automate application deployments using a blue/green
 
 ## 
 
-![@ InvalidActionDecLarationException Input Artifact Bundle BuildArtifact in action my-webapp-deploy is not declared as Output Artifact Bundle in any of the preceding actions x ](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image10.png){width="5.0in" height="0.2638888888888889in"}
+![@ InvalidActionDecLarationException Input Artifact Bundle BuildArtifact in action my-webapp-deploy is not declared as Output Artifact Bundle in any of the preceding actions x ](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image10.png)
 
 ## 
 
@@ -987,7 +985,7 @@ To <https://git-codecommit.us-west-2.amazonaws.com/v1/repos/my-webapp-repo>
 
 **Note:** Take time to review details. Notice the various stages of the deployment process and how the traffic is shifting from the blue to the green environment.
 
-![web-app deployment](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image11.png){width="6.5in" height="5.041666666666667in"}
+![web-app deployment](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image11.png)
 
 *Image depicts the deployment status once completed with traffic shifting to the replacement instance.*
 
@@ -995,7 +993,7 @@ You can also view the effects of traffic shifting in the web application by refr
 
 1.  Return to the browser you opened with the **load balancer's public DNS name**. Keep refreshing the browser and you observe the application website shift from a **blue** to a **green** background.
 
-![web-app deployment green](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image12.png){width="6.5in" height="2.5555555555555554in"}
+![web-app deployment green](../../../media/AWS-DevOps-Module-11-Lab-5--Performing-blue-green-deployments-with-CI-CD-pipelines-and-Amazon-Elastic-Container-Service---Self-Paced-Labs-image12.png)
 
 *Image depicts the green background after completing the blue-green deployment.*
 

@@ -1,8 +1,6 @@
 # Database scheme 
 
-Created: 2017-10-19 17:52:56 -0600
 
-Modified: 2021-01-05 17:39:21 -0600
 
 ---
 

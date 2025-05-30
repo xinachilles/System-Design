@@ -1,8 +1,6 @@
 # RabbitMQ tutorial - Remote procedure call (RPC) — RabbitMQ
 
-Created: 2020-12-24 18:23:27 -0600
 
-Modified: 2025-05-27 15:28:21 -0600
 
 ---
 

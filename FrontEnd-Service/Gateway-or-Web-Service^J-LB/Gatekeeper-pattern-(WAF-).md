@@ -1,8 +1,6 @@
 # Gatekeeper pattern (WAF )
 
-Created: 2019-10-24 22:24:28 -0600
 
-Modified: 2019-12-30 11:57:53 -0600
 
 ---
 

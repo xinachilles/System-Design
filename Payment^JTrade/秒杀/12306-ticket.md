@@ -1,8 +1,6 @@
 # 12306 ticket  
 
-Created: 2020-12-02 12:55:34 -0600
 
-Modified: 2021-04-22 23:25:28 -0600
 
 ---
 
@@ -78,7 +76,7 @@ client side will periodically check the booking table via the request id
 
 
 
-![](../../media/Payment^JTrade-秒杀-12306-ticket-image1.png){width="5.0in" height="3.9375in"}
+![](../../media/Payment^JTrade-秒杀-12306-ticket-image1.png)
 
 
 
@@ -96,7 +94,7 @@ Booking table indexed on passenger id, request id and route, primary key is auto
 
 moved the old record to historical log database
 
-![](../../media/Payment^JTrade-秒杀-12306-ticket-image2.png){width="5.0in" height="3.3472222222222223in"}
+![](../../media/Payment^JTrade-秒杀-12306-ticket-image2.png)
 
 
 

@@ -1,8 +1,6 @@
 # 33 Security of the Pipeline
 
-Created: 2023-10-11 20:26:29 -0600
 
-Modified: 2023-10-22 17:44:39 -0600
 
 ---
 
@@ -25,19 +23,19 @@ Facts
 
 
 
-![Temporary credentials • Trusted users can: • Assume roles on a temporary basis • Use temporary credentials to access your AWS resources • Not always necessary to create additional IAM users/ accounts • Can provide access without having to define an AWS identity for them • Common scenarios to use temporary credentials: • IAM roles • Cross-account access • Identity federation training and certification ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image1.png){width="5.0in" height="2.75in"}
+![Temporary credentials • Trusted users can: • Assume roles on a temporary basis • Use temporary credentials to access your AWS resources • Not always necessary to create additional IAM users/ accounts • Can provide access without having to define an AWS identity for them • Common scenarios to use temporary credentials: • IAM roles • Cross-account access • Identity federation training and certification ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image1.png)
 
 
 
-- ![AWS Security Token Service training and -1 certification • Provide trusted users with temporary credentials that give controlled access to your resources • Use AWS STS APIs to request temporary credentials: • AssumeR01e • AssumeRoIeWithWebIdentity • AssumeR01eWithSAML • GetFederationToken • GetSessionToken O web Semce% or A rese•ed ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image2.png){width="5.0in" height="2.8333333333333335in"}
+- ![AWS Security Token Service training and -1 certification • Provide trusted users with temporary credentials that give controlled access to your resources • Use AWS STS APIs to request temporary credentials: • AssumeR01e • AssumeRoIeWithWebIdentity • AssumeR01eWithSAML • GetFederationToken • GetSessionToken O web Semce% or A rese•ed ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image2.png)
 
 
 
-- ![Switching roles • Allows practice of the least-privilege principle training and certification • You should have only the permission to perform the current task • Use elevated permissions only if the task requires them • Permissions can be removed after task is completed • Example: If you need to push a new version of an application to the production environment: 1. Switch roles to get deployment permissions in the production environment 2. Perform the tasks 3. Switch back to your normal user account ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image3.png){width="5.0in" height="2.451388888888889in"}
+- ![Switching roles • Allows practice of the least-privilege principle training and certification • You should have only the permission to perform the current task • Use elevated permissions only if the task requires them • Permissions can be removed after task is completed • Example: If you need to push a new version of an application to the production environment: 1. Switch roles to get deployment permissions in the production environment 2. Perform the tasks 3. Switch back to your normal user account ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image3.png)
 
 
 
-- ![How to switch roles? 1. Create a role for cross-account access • Performed by the administrator of the trusted account training and certification 2. Establish trust from the account that owns the role and the resources to the account that contains the user • Allows any user in the trusted account to assume the role 3. Enable only specific users in the trusted account to assume the role • Performed by the administrator of the trusted account O web Semce% A rese•ed ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image4.png){width="5.0in" height="2.7708333333333335in"}
+- ![How to switch roles? 1. Create a role for cross-account access • Performed by the administrator of the trusted account training and certification 2. Establish trust from the account that owns the role and the resources to the account that contains the user • Allows any user in the trusted account to assume the role 3. Enable only specific users in the trusted account to assume the role • Performed by the administrator of the trusted account O web Semce% A rese•ed ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image4.png)
 - Multi-Factor Authentication (MFA):
   - Adds an extra layer of security.
   - Can be virtual (e.g., Google Authenticator) or hardware-based (e.g., YubiKey).
@@ -54,27 +52,27 @@ Facts
 
 
 
-![](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image5.png){width="5.0in" height="2.8680555555555554in"}
+![](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image5.png)
 
 
 
-![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image6.png){width="5.0in" height="1.0347222222222223in"}
-
-
-
-
-
-![AWS Config Use the Dashboard to see an overview of your resources, rules, conformance packs, and their compliance states and to visualize your AWS Config usage and success metrics with Amazon CloudWatch. This page helps you quickly identify the top resources in your AWS account, the conformance packs with the lowest level of compliance in your AWS account, what rules or resources are noncompliant in your AWS account, what traffic is driving your AWS Config usage, and key metrics for success and failure that have occurred in your workflows. To watch the instructor video, choose the play button. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image7.png){width="5.0in" height="2.1180555555555554in"}
+![DevSecOps is certainly about security, but it is just as much about the processes you use to build applications and helping to ensure security is built in to those processes by design. In this lesson, you learn how to implement DevSecOps. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image6.png)
 
 
 
 
 
+![AWS Config Use the Dashboard to see an overview of your resources, rules, conformance packs, and their compliance states and to visualize your AWS Config usage and success metrics with Amazon CloudWatch. This page helps you quickly identify the top resources in your AWS account, the conformance packs with the lowest level of compliance in your AWS account, what rules or resources are noncompliant in your AWS account, what traffic is driving your AWS Config usage, and key metrics for success and failure that have occurred in your workflows. To watch the instructor video, choose the play button. ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image7.png)
 
 
 
 
-![With security of the pipeline, what should you focus on? User management Least privilege Detective controls Infrastructure controls ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image8.png){width="5.0in" height="2.0833333333333335in"}
+
+
+
+
+
+![With security of the pipeline, what should you focus on? User management Least privilege Detective controls Infrastructure controls ](../../../media/AWS-DevOps-Module-10-33-Security-of-the-Pipeline-image8.png)
 
 
 

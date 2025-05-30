@@ -1,8 +1,6 @@
 # summary 3 -- update 2020/Dec
 
-Created: 2018-02-04 10:53:31 -0600
 
-Modified: 2021-02-15 00:56:34 -0600
 
 ---
 
@@ -119,7 +117,7 @@ The basic algorithm executed by any Web crawler is to take a list of whitelisted
 
 
 
-![Architecture ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image1.png){width="5.0in" height="4.277777777777778in"}
+![Architecture ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image1.png)
 
 API
 
@@ -156,19 +154,19 @@ Scheduler(Apache Airflow):
 
 
 
-![Metadata: Scheduling table: Id uuid Cron 08 • • user scott Creation 214145 Name replays URLs Link to YAML {ON, PAUSED, OFF} ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image2.png){width="5.0in" height="1.2361111111111112in"}
+![Metadata: Scheduling table: Id uuid Cron 08 • • user scott Creation 214145 Name replays URLs Link to YAML {ON, PAUSED, OFF} ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image2.png)
 
 cron express is task start time or frequency
 
 
 
-![Iteration progress Primary key: schedule_id + iteration schedule iteration uuid 9 start 214145 Uris found 10000 Stuck 10 crawled 9000 processed 8600 ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image3.png){width="5.0in" height="1.0555555555555556in"}
+![Iteration progress Primary key: schedule_id + iteration schedule iteration uuid 9 start 214145 Uris found 10000 Stuck 10 crawled 9000 processed 8600 ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image3.png)
 
 
 
 URL table
 
-![Record metadata shard ke : Id Hash URL, iteration id URL iteration state create time last_update 10 notified No Deleted str games. net 9 QUEUED 123431 STATE = {Queued, Crawled, Processed, Stuck} ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image4.png){width="5.0in" height="1.2777777777777777in"}
+![Record metadata shard ke : Id Hash URL, iteration id URL iteration state create time last_update 10 notified No Deleted str games. net 9 QUEUED 123431 STATE = {Queued, Crawled, Processed, Stuck} ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image4.png)
 
 [Url state: queue, crawled, processed stuck]{.mark}
 
@@ -208,7 +206,7 @@ Crawler: stateless
 
 5. Insert the raw data to the raw data table
 
-![Data Model Raw Data Table (S3): Id uuid HTML / JSON... Created time 21435343 ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image5.png){width="5.0in" height="1.2569444444444444in"}
+![Data Model Raw Data Table (S3): Id uuid HTML / JSON... Created time 21435343 ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image5.png)
 
 
 
@@ -250,7 +248,7 @@ Parser: stateless (p):)
 
 
 
-![Clean Data: Hash(URL, type iteration) (shard key) string Game_replay Hash(URL, type iteration) (shbrd key) string News URL steam.com/l iteration 10 URL cnn.com/l iteration headline Uber field 1 Hero: Riki main text What's new? ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image6.png){width="5.0in" height="2.361111111111111in"}
+![Clean Data: Hash(URL, type iteration) (shard key) string Game_replay Hash(URL, type iteration) (shbrd key) string News URL steam.com/l iteration 10 URL cnn.com/l iteration headline Uber field 1 Hero: Riki main text What's new? ](../../media/Web-crawler-^MP2p-Web-Crawler-summary-3----update-2020-Dec-image6.png)
 
 
 

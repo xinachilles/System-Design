@@ -1,8 +1,6 @@
 # Microservices Gateway Pattern
 
-Created: 2019-11-11 11:30:26 -0600
 
-Modified: 2019-12-16 15:22:05 -0600
 
 ---
 

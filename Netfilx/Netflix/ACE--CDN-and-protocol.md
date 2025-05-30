@@ -1,12 +1,10 @@
 # ACE- CDN and protocol
 
-Created: 2021-03-26 20:10:45 -0600
 
-Modified: 2021-04-27 11:11:41 -0600
 
 ---
 
-![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image1.png){width="5.0in" height="3.8125in"}
+![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image1.png)
 
 
 
@@ -34,7 +32,7 @@ Or cache has some data store in cache in advance
 
 
 
-![Internet Architecture (ISP, IXP, CDN) ISP A CONTENT PROVIDER B EXCHANGE POINT SWITCH ISP B CONTENT ROVIDER A ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image2.png){width="5.0in" height="3.125in"}
+![Internet Architecture (ISP, IXP, CDN) ISP A CONTENT PROVIDER B EXCHANGE POINT SWITCH ISP B CONTENT ROVIDER A ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image2.png)
 
 Traffic will first go to ISP
 
@@ -58,15 +56,15 @@ Cdn close to the exchange point iXP
 
 
 
-![ISP Network Small Peenng Location Large Peering/Origin Location AWS S3 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image3.png){width="5.0in" height="3.111111111111111in"}
+![ISP Network Small Peenng Location Large Peering/Origin Location AWS S3 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image3.png)
 
 
 
-![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image4.png){width="5.0in" height="2.798611111111111in"}
+![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image4.png)
 
 
 
-![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image5.png){width="5.0in" height="2.9722222222222223in"}
+![](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image5.png)
 
 Client will request the video clip, each clip may just 1-2 min, before first clip finish,
 
@@ -88,7 +86,7 @@ It will request next clip from service
 
 
 
-![D 创 用 Li 短 视 视 频 播 放 数 据 流 Allen Nir 应 该 需 ] dawn 《 戗 这 个 具 《 候 笞 出 0 Allen Nin 请 问 这 ， i Type me NetmxinAWS @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ om ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image6.png){width="5.0in" height="2.8958333333333335in"}
+![D 创 用 Li 短 视 视 频 播 放 数 据 流 Allen Nir 应 该 需 ] dawn 《 戗 这 个 具 《 候 笞 出 0 Allen Nin 请 问 这 ， i Type me NetmxinAWS @ 爱 思 版 权 所 有 未 经 允 许 请 勿 录 制 或 传 播 acecodeinterview ℃ om ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image6.png)
 
 
 
@@ -116,59 +114,59 @@ CDN may request different resolution of this video from AWS
 
 All the video store in a folder
 
-![Popularon N ~ IVEROALE S P A C E L 0 5 T ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image7.png){width="5.0in" height="3.0069444444444446in"}
+![Popularon N ~ IVEROALE S P A C E L 0 5 T ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image7.png)
 
 
 
-![List of List Service 自 定 义 列 表 （ List) (Trending Now) (Recommend) 流 行 内 容 (Popular) 趋 势 内 容 推 荐 内 容 类 别 内 容 (e.g. sci-fi) ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image8.png){width="5.0in" height="2.3958333333333335in"}
+![List of List Service 自 定 义 列 表 （ List) (Trending Now) (Recommend) 流 行 内 容 (Popular) 趋 势 内 容 推 荐 内 容 类 别 内 容 (e.g. sci-fi) ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image8.png)
 
 
 
-![Artwork Service ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image9.png){width="5.0in" height="4.277777777777778in"}
+![Artwork Service ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image9.png)
 
 
 
-![Details Service 电 影 剧 集 信 息 分 集 信 息 视 频 播 放 信 息 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image10.png){width="5.0in" height="3.1527777777777777in"}
+![Details Service 电 影 剧 集 信 息 分 集 信 息 视 频 播 放 信 息 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image10.png)
 
 
 
-![阿 ル 、 屮 。 叩 ! ハ ー ga O ん 。 ハ ) 佖 ぉ 学 で ・ 叩 い 一 p れ ← と / 51 ル d 0 》 や ! へ *O フ 、 07 叭 ノ 2 よ 、 フ 2 ) ( 互 ) ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image11.png){width="5.0in" height="2.423611111111111in"}
+![阿 ル 、 屮 。 叩 ! ハ ー ga O ん 。 ハ ) 佖 ぉ 学 で ・ 叩 い 一 p れ ← と / 51 ル d 0 》 や ! へ *O フ 、 07 叭 ノ 2 よ 、 フ 2 ) ( 互 ) ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image11.png)
 
 Gateway accept the first request and forward to certain service nexttime
 
 
 
-![幻 に ロ を を , 爪 ー ↓ CDP し ー ↓ 0 ) ノ ミ 」 者 、 ト ー ( を ・ ′ を d ・ 登 物 し く 第 。 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image12.png){width="5.0in" height="3.2708333333333335in"}
+![幻 に ロ を を , 爪 ー ↓ CDP し ー ↓ 0 ) ノ ミ 」 者 、 ト ー ( を ・ ′ を d ・ 登 物 し く 第 。 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image12.png)
 
 
 
 
 
-![User ID 用 户 数 据 库 UserName Membership ID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image13.png){width="5.0in" height="2.4375in"}
+![User ID 用 户 数 据 库 UserName Membership ID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image13.png)
 
 
 
-![Membership ID 订 阅 数 据 库 Renewal Start Time Status Offer ID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image14.png){width="5.0in" height="2.25in"}
+![Membership ID 订 阅 数 据 库 Renewal Start Time Status Offer ID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image14.png)
 
 Offer id
 
-![内 容 数 据 库 Content ID Parent Description ContentID Content ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image15.png){width="5.0in" height="2.5555555555555554in"}
+![内 容 数 据 库 Content ID Parent Description ContentID Content ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image15.png)
 
 Documents store
 
 
 
-![Video Video ID 视 频 数 据 库 Thumbnail ContentID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image16.png){width="5.0in" height="2.4722222222222223in"}
+![Video Video ID 视 频 数 据 库 Thumbnail ContentID ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image16.png)
 
 
 
-![Document Store Relational •SWSSS.ZO« MongoDB mt. name: laq_nan•; "J ones % location: I type: "Point", coordinates: 1-73.9876, "Engineer • l, apps: •My App". 1.0.4 2.5.7 j cus: I make: "Bentley", year: ( "Rolls year: J ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image17.png){width="5.0in" height="3.2291666666666665in"}
+![Document Store Relational •SWSSS.ZO« MongoDB mt. name: laq_nan•; "J ones % location: I type: "Point", coordinates: 1-73.9876, "Engineer • l, apps: •My App". 1.0.4 2.5.7 j cus: I make: "Bentley", year: ( "Rolls year: J ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image17.png)
 
 
 
-![content id: 1, description: "Awesome TV Show", . "tv show" types • seasons: [ season num: 1, description: "Awesome Season One", episodes: [ { episode _ num: 1, description: "Awesome Episode One" , video id: 123, video url: . ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image18.png){width="5.0in" height="4.9375in"}
+![content id: 1, description: "Awesome TV Show", . "tv show" types • seasons: [ season num: 1, description: "Awesome Season One", episodes: [ { episode _ num: 1, description: "Awesome Episode One" , video id: 123, video url: . ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image18.png)
 
-![丨 og ℃ list oflist service 功 能 是 找 到 合 适 的 列 表 和 每 个 列 表 里 的 一 组 Content ID, 具 体 根 据 Content ID 来 找 Thumbnail 的 是 Artwork service. 这 里 有 三 层 的 推 荐 ， 第 一 层 找 到 合 适 的 列 表 ， 第 二 层 找 到 列 表 中 合 适 的 内 容 ， 第 三 层 对 于 每 个 内 容 找 到 合 适 图 片 。 不 重 复 的 。 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image19.png){width="5.0in" height="1.0208333333333333in"}
+![丨 og ℃ list oflist service 功 能 是 找 到 合 适 的 列 表 和 每 个 列 表 里 的 一 组 Content ID, 具 体 根 据 Content ID 来 找 Thumbnail 的 是 Artwork service. 这 里 有 三 层 的 推 荐 ， 第 一 层 找 到 合 适 的 列 表 ， 第 二 层 找 到 列 表 中 合 适 的 内 容 ， 第 三 层 对 于 每 个 内 容 找 到 合 适 图 片 。 不 重 复 的 。 ](../../media/Netfilx-Netflix-ACE--CDN-and-protocol-image19.png)
 
 
 

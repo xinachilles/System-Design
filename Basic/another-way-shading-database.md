@@ -1,8 +1,6 @@
 # another way shading database
 
-Created: 2018-01-28 01:53:14 -0600
 
-Modified: 2018-01-28 01:58:42 -0600
 
 ---
 

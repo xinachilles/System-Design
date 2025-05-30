@@ -1,8 +1,6 @@
 # Problem: Design a key value data storage support the following
 
-Created: 2020-12-30 15:45:03 -0600
 
-Modified: 2020-12-30 18:38:38 -0600
 
 ---
 

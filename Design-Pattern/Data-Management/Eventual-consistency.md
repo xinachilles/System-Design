@@ -1,8 +1,6 @@
 # Eventual consistency
 
-Created: 2019-12-05 19:29:45 -0600
 
-Modified: 2019-12-06 10:46:47 -0600
 
 ---
 

@@ -1,8 +1,6 @@
 # Code deployment system 
 
-Created: 2020-10-24 00:33:45 -0600
 
-Modified: 2024-05-12 10:06:12 -0600
 
 ---
 
@@ -393,7 +391,7 @@ you know my SQL is a little bit rusty so I hope that I won't make mistakes
 
 
 
-![QUEUE-5 3 一 44 / 59 : 58 ](../../media/Example-Code-build-and-deployment-Code-deployment-system-image1.png){width="5.0in" height="1.8055555555555556in"}
+![QUEUE-5 3 一 44 / 59 : 58 ](../../media/Example-Code-build-and-deployment-Code-deployment-system-image1.png)
 
 
 
@@ -1237,7 +1235,7 @@ already and I'll see you in the next
 
 video
 
-![](../../media/Example-Code-build-and-deployment-Code-deployment-system-image2.png){width="0.22916666666666666in" height="0.5833333333333334in"}![](../../media/Example-Code-build-and-deployment-Code-deployment-system-image2.png){width="0.22916666666666666in" height="0.5833333333333334in"}![](../../media/Example-Code-build-and-deployment-Code-deployment-system-image3.png){width="0.5833333333333334in" height="0.5833333333333334in"}
+![](../../media/Example-Code-build-and-deployment-Code-deployment-system-image2.png)![](../../media/Example-Code-build-and-deployment-Code-deployment-system-image2.png)![](../../media/Example-Code-build-and-deployment-Code-deployment-system-image3.png)
 
 
 

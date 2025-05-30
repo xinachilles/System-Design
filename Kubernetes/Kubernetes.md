@@ -1,8 +1,6 @@
 # Kubernetes
 
-Created: 2023-03-25 16:42:11 -0600
 
-Modified: 2024-02-03 12:41:02 -0600
 
 ---
 
@@ -41,5 +39,5 @@ Reference [1]:[kubernetes.io/docs/concepts/overview/components/](http://kubernet
 
 
 
-![I What is Kubernetes? ](../media/Kubernetes-Kubernetes-image1.jpg){width="3.701388888888889in" height="2.076388888888889in"}
+![I What is Kubernetes? ](../media/Kubernetes-Kubernetes-image1.jpg)
 
