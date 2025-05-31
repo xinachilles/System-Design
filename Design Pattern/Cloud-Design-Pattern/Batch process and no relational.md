@@ -1,150 +1,78 @@
 # Batch process and  no relational data stores
-
-
-
 ---
+The source data is loaded into data storage, either by the source application itself or by another job or workflow.
 
-the source data is loaded into data storage, either by the source application itself or by another job or workflow.
+## Challenges
 
+### Data format and encoding
 
+- For example, source files might use a mix of UTF-16 and UTF-8 encoding, or contain unexpected delimiters (space versus tab), or include unexpected characters.
 
+- Another common example is text fields that contain tabs, spaces, or commas that are interpreted as delimiters.
 
+- Data loading and parsing logic must be flexible enough to detect and handle these issues.
 
-Challenges
+- Orchestrating time slices. Often source data is placed in a folder hierarchy that reflects processing windows, organized by year, month, day, hour, and so on. In some cases, data may arrive late. For example, suppose that a web server fails, and the logs for March 7th don't end up in the folder for processing until March 9th. Are they just ignored because they're too late? Can the downstream processing logic handle out-of-order records?
 
-Data format and encoding. .
+## Architecture
 
-For example, source files might use a mix of UTF-16 and UTF-8 encoding, or contain unexpected delimiters (space versus tab), or include unexpected characters.
+- Data storage: Azure Storage Blob Containers;Azure Data Lake Store.
 
-Another common example is text fields that contain tabs, spaces, or commas that are interpreted as delimiters.
+- Batch processing. Usually these jobs involve reading source files, processing them (filter, aggregate, and otherwise prepare the data for analysis), and writing the output to new files.
 
-Data loading and parsing logic must be flexible enough to detect and handle these issues.
+- Analytical data store. Many big data solutions are designed to prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools.
 
-
-
-Orchestrating time slices. Often source data is placed in a folder hierarchy that reflects processing windows, organized by year, month, day, hour, and so on. In some cases, data may arrive late. For example, suppose that a web server fails, and the logs for March 7th don't end up in the folder for processing until March 9th. Are they just ignored because they're too late? Can the downstream processing logic handle out-of-order records?
-
-
-
-Architecture
-
+- Orchestration. With batch processing, typically some orchestration is required to migrate or copy the data into your data storage, batch processing, analytical data store, and reporting layers.
 
 
+## Technology choices
 
+- The following technologies are recommended choices for batch processing solutions in Azure.
 
-Data storage: Azure Storage Blob Containers;Azure Data Lake Store.
+- Analytical data store: Spark SQL,HBase,Hive
 
+- Analytics and reporting
 
+## Orchestration
 
-Batch processing. Usually these jobs involve reading source files, processing them (filter, aggregate, and otherwise prepare the data for analysis), and writing the output to new files.
+ - Azure Data Factory. These activities can initiate data copy operations as well as Hive, Pig, MapReduce, or Spark jobs in on-demand HDInsight clusters;
 
+- Oozie and Sqoop. Oozie is a job automation engine for the Apache Hadoop ecosystem and can be used to initiate data copy operations as well as Hive, Pig, and MapReduce jobs to process data and Sqoop jobs to copy data between HDFS and SQL databases.
 
+- For more information, see Pipeline orchestration
 
-Analytical data store. Many big data solutions are designed to prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools.
+## Real time processing
 
+- Real time processing deals with streams of data that are captured in real-time and processed with minimal latency to generate real-time (or near-real-time) reports or automated responses.
 
-
-
-
-Orchestration. With batch processing, typically some orchestration is required to migrate or copy the data into your data storage, batch processing, analytical data store, and reporting layers.
-
-
-
-Technology choices
-
-The following technologies are recommended choices for batch processing solutions in Azure.
-
-
-
-Analytical data store: Spark SQL,HBase,Hive
-
-
-
-Analytics and reporting
-
-
-
-Orchestration
-
-Azure Data Factory. These activities can initiate data copy operations as well as Hive, Pig, MapReduce, or Spark jobs in on-demand HDInsight clusters;
-
-Oozie and Sqoop. Oozie is a job automation engine for the Apache Hadoop ecosystem and can be used to initiate data copy operations as well as Hive, Pig, and MapReduce jobs to process data and Sqoop jobs to copy data between HDFS and SQL databases.
-
-For more information, see Pipeline orchestration
-
-
-
-
-
-Real time processing
-
-
-
-Real time processing deals with streams of data that are captured in real-time and processed with minimal latency to generate real-time (or near-real-time) reports or automated responses.
-
-For example, a real-time traffic monitoring solution might use sensor data to detect high traffic volumes. This data could be used to dynamically update a map to show congestion,
-
+- For example, a real-time traffic monitoring solution might use sensor data to detect high traffic volumes. This data could be used to dynamically update a map to show congestion,
 or automatically initiate high-occupancy lanes or other traffic management systems.
 
+- Processed data is often written to an analytical data store, which is optimized for analytics and visualization.
+
+- The processed data can also be ingested directly into the analytics and reporting layer for analysis, business intelligence, and real-time dashboard visualization.
 
 
-
-
-
-
-
-
-Processed data is often written to an analytical data store, which is optimized for analytics and visualization.
-
-The processed data can also be ingested directly into the analytics and reporting layer for analysis, business intelligence, and real-time dashboard visualization.
-
-
-
-
-
-Architecture
-
+## Architecture
 A real-time processing architecture has the following logical components.
 
+- Real-time message ingestion. The architecture must include a way to capture and store real-time messages to be consumed by a stream processing consumer.
 
+- Stream processing. After capturing real-time messages, the solution must process them by filtering, aggregating, and otherwise preparing the data for analysis.
 
-Real-time message ingestion. The architecture must include a way to capture and store real-time messages to be consumed by a stream processing consumer.
+- Analytical data store. Many big data solutions are designed to prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools.
 
+- Real-time message ingestion:Apache Kafka.
 
+### Data storage
 
-Stream processing. After capturing real-time messages, the solution must process them by filtering, aggregating, and otherwise preparing the data for analysis.
+- Azure Storage Blob Containers or Azure Data Lake Store.
+- Stream processing Apache Storm,Apache Spark
 
+#### Analytical data store
+- SQL Data Warehouse, HBase, Spark, or Hive.
 
-
-Analytical data store. Many big data solutions are designed to prepare data for analysis and then serve the processed data in a structured format that can be queried using analytical tools.
-
-
-
-
-
-Real-time message ingestion:Apache Kafka.
-
-
-
-Data storage
-
-Azure Storage Blob Containers or Azure Data Lake Store.
-
-
-
-Stream processing Apache Storm,Apache Spark
-
-Analytical data store
-
-SQL Data Warehouse, HBase, Spark, or Hive.
-
-
-
-Analytics and reporting
-
-
-
-
+#### Analytics and reporting
 
 In a purely real-time solution, most of the processing orchestration is managed by the message ingestion and stream processing components.
 
@@ -152,29 +80,15 @@ However, in a lambda architecture that combines batch processing and real-time p
 
 you may need to use an orchestration framework such as Azure Data Factory or Apache Oozie and Sqoop to manage batch workflows for captured real-time data.
 
+### Non-relational data and NoSQL
 
-
-Non-relational data and NoSQL
-
-
-
-
-
-
-
-Document data stores
+#### Document data stores
 
 A document data store manages a set of named string fields and object data values in an entity referred to as a document.
 
 These data stores typically store data in the form of JSON documents.
 
-
-
-
-
 The application can retrieve documents by using the document key.
-
-
 
 Some document databases create the document key automatically.
 
@@ -182,35 +96,21 @@ The application can also query documents based on the value of one or more field
 
 Some document databases support indexing to facilitate fast lookup of documents based on one or more indexed fields.
 
-
-
 Many document databases support in-place updates, enabling an application to modify the values of specific fields in a document without rewriting the entire document.
 
 Read and write operations over multiple fields in a single document are usually atomic.
 
-
-
-
-
-Columnar data stores
+#### Columnar data stores
 
 A columnar or column-family data store organizes data into columns and rows. In its simplest form, a column-family data store can appear very similar to a relational database,
 
 The real power of a column-family database lies in its denormalized approach
 
-
-
 columns are divided into groups known as column families.
 
 Each column family holds a set of columns that are logically related and are typically retrieved or manipulated as a unit.
 
-
-
-
-
 The following diagram shows an example with two column families, Identity and Contact Info. The data for a single entity has the same row key in each column family.
-
-
 
 most column-family databases physically store data in key order, rather than by computing a hash.
 
@@ -220,24 +120,14 @@ Some implementations allow you to create secondary indexes over specific columns
 
 Secondary indexes let you retrieve data by columns value, rather than row key.
 
-
-
 On disk, all of the columns within a column family are stored together in the same file, with a certain number of rows in each file.
 
 With large data sets, this approach creates a performance benefit by reducing the amount of data that needs to be read from disk when only a few columns are queried together at a time.
 
 
-
 Read and write operations for a row are usually atomic within a single column family
 
-
-
-
-
-
-
-HBase in HDInsight
-
+#### HBase in HDInsight
 
 
 Key/value data stores
@@ -246,19 +136,12 @@ A key/value store is essentially a large hash table. You associate each data val
 
 The hashing function is selected to provide an even distribution of hashed keys across the data storage.
 
-
-
-
-
 key / value structure is very simple
-
 
 
 Key/value stores are highly optimized for applications performing simple lookups using the value of the key, or by a range of keys,
 
 but are less suitable for systems that need to query data across different tables of keys/values, such as joining data across multiple tables.
-
-
 
 A single key/value store can be extremely scalable, as the data store can easily distribute data across multiple nodes on separate machines.
 
