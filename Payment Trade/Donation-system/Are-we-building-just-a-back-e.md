@@ -1,16 +1,9 @@
 # Are we building just a back end system? And list of charities? Is it like hard coded in our system or dynamic?
-
-
-
 ---
 
 Are we building just a back end system? And list of charities? Is it like hard coded in our system or dynamic?
 
-
-
-
-
-[If i was a user, how can I actually donate]{.mark}, assume there is a kind of UI, I can select the charity I want to donate and select amount of money and press the donate button
+If i was a user, how can I actually donate. assume there is a kind of UI, I can select the charity I want to donate and select amount of money and press the donate button
 
 
 

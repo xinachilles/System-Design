@@ -1,7 +1,4 @@
 # Payment 
-
-
-
 ---
 
 Pay per transaction: From rider to Uber
@@ -9,11 +6,7 @@ Pay per transaction: From rider to Uber
 - Paid pre-transaction: Amazon
 - Paid post-transaction: Uber trip : take the trip first
 
-
-
 Schedule batched monthly payment: pay to driver
-
-
 
 physical infrastructure, data stores, data model, security, and performance considerations
 

@@ -129,7 +129,6 @@ Read and write operations for a row are usually atomic within a single column fa
 
 #### HBase in HDInsight
 
-
 Key/value data stores
 
 A key/value store is essentially a large hash table. You associate each data value with a unique key, and the key/value store uses this key to store the data by using an appropriate hashing function.
@@ -138,14 +137,11 @@ The hashing function is selected to provide an even distribution of hashed keys 
 
 key / value structure is very simple
 
-
 Key/value stores are highly optimized for applications performing simple lookups using the value of the key, or by a range of keys,
 
 but are less suitable for systems that need to query data across different tables of keys/values, such as joining data across multiple tables.
 
 A single key/value store can be extremely scalable, as the data store can easily distribute data across multiple nodes on separate machines.
-
-
 
 Key/value stores are also not optimized for scenarios where querying or filtering by non-key values is important, rather than performing lookups based only on keys.
 
@@ -153,37 +149,20 @@ For example, with a relational database, you can find a record by using a WHERE 
 
 but key/values stores usually do not have this type of lookup capability for values, or if they do it requires a slow scan of all values.
 
-
-
-
-
-
-
-Graph data stores
+### Graph data stores
 
 A graph data store manages two types of information, nodes and edges. Nodes represent entities, and edges specify the relationships between these entities.
 
 Both nodes and edges can have properties that provide information about that node or edge, similar to columns in a table. Edges can also have a direction indicating the nature of the relationship.
-
-
 
 The purpose of a graph data store is to allow an application to efficiently perform queries that traverse the network of nodes and edges, and to analyze the relationships between entities.
 
 The following diagram shows an organization's personnel data structured as a graph. The entities are employees and departments, and the edges indicate reporting relationships and the department in which employees work. In this graph, the arrows on the edges show the direction of the relationships.
 
 
-
-
-
 This structure makes it straightforward to perform queries such as "Find all employees who report directly or indirectly to Sarah" or "Who works in the same department as John?" For large graphs with lots of entities and relationships, you can perform very complex analyses very quickly. Many graph databases provide a query language that you can use to traverse a network of relationships efficiently.
 
-
-
-
-
-
-
-Time series data stores
+### Time series data stores
 
 Time series data is a set of values organized by time, and a time series data store is optimized for this type of data.
 
@@ -191,43 +170,23 @@ Time series data stores must support a very high number of writes, as they typic
 
 Time series data stores are optimized for storing telemetry data. Scenarios include IoT sensors or application/system counters. Updates are rare, and deletes are often done as bulk operations.
 
-
-
 Although the records written to a time series database are generally small, there are often a large number of records, and total data size can grow rapidly.
 
 Time series data stores also handle out-of-order and late-arriving data, automatic indexing of data points, and optimizations for queries described in terms of windows of time.
 
 This last feature enables queries to run across millions of data points and multiple data streams quickly
 
-
-
 For more information, see Time series solutions
 
-
-
-
-
-
-
-Object data stores
+### Object data stores
 
 Object data stores are optimized for storing and retrieving large binary objects or blobs such as images, text files, video and audio streams, large application data objects and documents, and virtual machine disk images. An object consists of the stored data, some metadata, and a unique ID for accessing the object. Object stores are designed to support files that are individually very large, as well provide large amounts of total storage to manage all files.
-
-
-
-
 
 Some object data stores replicate a given blob across multiple server nodes, which enables fast parallel reads.
 
 This in turn enables the scale-out querying of data contained in large files, because multiple processes, typically running on different servers, can each query the large data file simultaneously.
 
-
-
 One special case of object data stores is the network file share. Using file shares enables files to be accessed across a network using standard networking protocols like server message block (SMB). Given appropriate security and concurrent access control mechanisms, sharing data in this way can enable distributed services to provide highly scalable data access for basic, low level operations such as simple read and write requests.
-
-
-
-
 
 For example, you might have text files stored in a file system. Finding a file by its file path is quick,
 
@@ -241,14 +200,8 @@ External index data stores provide the ability to search for information held in
 
 An external index acts as a secondary index for any data store, and can be used to index massive volumes of data and provide near real-time access to these indexes.
 
-
-
-
-
 The indexes are created by running an indexing process. This can be performed using a pull model, triggered by the data store, or using a push model, initiated by application code.
 
 Indexes can be multidimensional and may support free-text searches across large volumes of text data.
-
-
 
 External index data stores are often used to support full text and web based search.
