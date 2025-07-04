@@ -5,3 +5,9 @@
 .obsidian/plugins/obsidian-image-auto-upload-plugin/main.js
 .obsidian/plugins/oz-clear-unused-images/main.js
 .obsidian/plugins/oz-clear-unused-images/styles.css
+*.pdf
+.obsidian/plugins/obsidian-excalidraw-plugin/styles.css
+.obsidian/plugins/obsidian-excalidraw-plugin/main.js
+.obsidian/plugins/table-editor-obsidian/main.js
+.obsidian/plugins/table-editor-obsidian/styles.css
+pdf/payment/auto/images/7181a81a2b6482265f11e0077da22420d66f26f427c9b410efb53e9d3ae3ba18.jpg

@@ -1,54 +1,33 @@
 # A primary key is a unique field on a table but it is special in the sense that the table considers that row as its key. This means that other tables can use this field to create foreign key relationships to themselves.
 
-
-
 ---
 
 A primary key is a unique field on a table but it is special in the sense that the table considers that row as its key. This means that other tables can use this field to create foreign key relationships to themselves.
 
 primary key also create a clustted index for this table
 
-
-
-
-
 A unique constraint simply means that a particular field must be unique.
 
-
-
-Department table
+**Department table**
 
 Department id, Department name, description
 
-
-
-Category table
+**Category table**
 
 Category id, Department id(FK), name, description
 
-
-
-Production table
+**Production table**
 
 Production id, name, description,price
 
-
-
-
-
-
-
-ProductionCategory table
+**ProductionCategory table**
 
 production id
 
 Category id
 
 
-
-
-
-Attribution table (the name of the attributes, such as Size or Color)
+**Attribution table (the name of the attributes, such as Size or Color)**
 
 Attribution id
 
