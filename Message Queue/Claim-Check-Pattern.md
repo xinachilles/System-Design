@@ -1,32 +1,16 @@
 # Claim-Check Pattern
 
-
-
 ---
 
 A messaging-based architecture at some point must be able to send, receive, and manipulate large messages.
 
-
-
 Sending such large messages to the message bus directly is not recommended, because they require more resources and bandwidth to be consumed. Large messages can also slow down the entire solution
 
-
-
-
-
-Solution
+**Solution**
 
 Store the entire message payload into an external service, such as a database. Get the reference to the stored payload, and send just that reference to the message bus. The reference acts like a claim check used to retrieve a piece of luggage, hence the name of the pattern.
 
-
-
-
-
-
-
-
-
-Issues and considerations
+**Issues and Considerations**
 
 Consider the following points when deciding how to implement this pattern:
 

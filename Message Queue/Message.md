@@ -1,130 +1,95 @@
-# Message 
-
-
-
----
 
 <https://www.youtube.com/watch?v=UesxWuZMZqI>
 
+### What is a Message?
+- A message is data sent between software components (higher-level than an IP packet), often in formats like JSON.
+- Messages have a payload (the main data) and attributes (key-value pairs for filtering/routing).
+- Payloads can be encrypted; attributes usually remain unencrypted.
 
+### Queues
+- Queues are durable buffers for messages, decoupling producers and consumers.
+- Producers send messages to the queue; consumers pull and acknowledge messages, which then get removed.
+- Queues help handle spikes in traffic and prevent backend overload.
 
+### Message Ordering & Groups
+- Strict ordering (FIFO) requires a **single worker** per stream.
+- To scale, use message groups: messages in the same group are processed in order, but different groups can be processed in parallel (e.g., by session ID).
+-for kakfa, if there are mutiple consumers in the same group, can we guareteen we consume the message in order
 
+-One example of where you might want to do that is if you're tracking website with a huge number of users interacting with the website so you would just use the session ID as a message group and that way each individual users session transactions would be processed properly in order, but you can still handle a huge number in parallel interleaved with no problem
 
-a message which is sent between software components so it's the way you think about it said higher level than an IP packet
+**Explanation:**
 
+- Imagine a website where many users are active at the same time.
+- Each user’s actions (like clicks, purchases, etc.) are grouped by their session ID.
+- By using the session ID as a "message group," you ensure that all messages (actions) from the same user are processed in the correct order.
+- At the same time, because each user has a different session ID, the system can process messages from different users in parallel.
+- This means you maintain order for each user’s actions, but the system can scale to handle many users at once, efficiently processing lots of activity without mixing up the order of actions within a single user’s session.
 
+**In short:**  
+Grouping messages by session ID lets you process each user’s actions in order, while still allowing the system to process many users’ actions at the same time.
 
-It's like emails it's not sending people it's in between software components.
+### Publish-Subscribe (Topics)
+- In pub/sub, each subscriber receives a copy of every message published to a topic.
 
+### Message Streams
+- Streams are ordered logs of messages, persistent for a set time.
+- Consumers use cursors to read messages; messages aren’t deleted after reading.
+- Use streams for analytics or when multiple consumers need to process the same data.
 
+### When to Use Queues vs. Streams
+- Use queues for independent, one-time processing (message deleted after consumption).
+- Use streams for sequential analysis or multiple consumers.
 
-the messaging deals with here's an example of a message and it represents a booking for a hotel system and the developers decided to represent the messages in the Json format
+### Architectural Benefits
+- Queues buffer requests, allowing backend services to process at their own pace and preventing overload.
+- Asynchronous background tasks should use queues for reliability (work isn’t lost if a worker fails).
 
+### Queue Configuration
+- Prefer a shared queue for background tasks (any worker can process), rather than a queue per worker.
 
+### Decoupling with Topics
+- Use topics to decouple services: the producer sends to a topic, and all subscribers (e.g., notification, finance, partners) receive the message.
+- This makes it easy to add new integrations and manage retries/failures.
 
+### Long Polling
+- Long polling allows consumers to wait for messages efficiently, reducing the need for constant polling and enabling near-instant message delivery.
 
+### Security
+- Support for server-side encryption of messages.
 
-message payload typically also can include key value pairs.
+---
 
-For the message attribute,
 
-You can put the things you want to filter on, route the message on.
 
 
 
-you can entcryped the message palyload and the attribute remain unencryped . You can have quite deep nested structures but your message attribute are pretty well just named value paris
 
 
 
 
 
-Queue are durable buffers for your messages and they have a pretty simple of operations is it will you can obviously send a message to Queue. You and once you get a confirmation that the message was stored and the message is supposed to be durable and won't go away.
 
 
 
 
 
-On the other hand say you have massive consumers would pull the message from the queue and then I acknowledge that they are done which actually will remove message from the queue. Queue like a buffer between producers and consumers.
 
 
 
-~~When you think about order to message processing and the question is can I actually use multiple workers to work on that perfectly order message.~~
 
 
 
-~~The answer is if it's a singles stream order message: No . it has to be sigle worker processing.~~
 
 
 
-so to allow you to build scalable message processors with FIFO.
 
 
 
-We've introduced the concept of message groups and what we say is messages belonging to the same message group will be consumed in order
 
 
 
-By introducing multiple message groups you can actually scale your feet of consumers
 
-
-
-One example of where you might want to do that is if you're tracking website with a huge number of users interacting with the website so you would just use the session ID as a message group and that way each individual users session transactions would be processed properly in order, but you can still handle a huge number in parallel interleaved with no problem
-
-
-
-
-
-Second concert in messaging is publish subscribe messaging using topics: send a separate copy to each subscriber so each subscriber to a topic will process all every single message that was published with that topic
-
-
-
-
-
-The third concept in messaging is message stream. message stream are ordered and sending message to a stream to get suspended to the end of the stream
-
-
-
-the typically also allow you to use multiple streams called stream charts or partitions depending a steam product
-
-
-
-What is the difference between a stream and a Q and the main differences will when you send a message to a stream it is persistent and when you read it back you actually open like a cursor or an iterator on the stream and you can use them decide how and when to move the director forward and backwards
-
-
-
-In the Stream when you don't do not delete the messages they are persistent for a pre-configured a Time
-
-
-
-When and when you would use another and you should use queue when you can process your messages independently and when you're done messages deleted
-
-
-
-You should you stream if you want to analyze the sequence of items in the Stream for analysis for incremental and differences between the items or if you want to run multiple analysis on the same stream using multiple processors
-
-
-
-
-
-
-
-2.  how use queue to help your architecture
-
-you have website, customer contact via the internet and calls go through the load balance.the calls go to feet of web service handling your traffic.
-
-
-
-When someone make the booking for the hotel, there are second layer microservice deal with the booking and it sits behind another load balance. the booking system himself use the relation database as data store.
-
-
-
-Most of traffic of the website is browsing the through the offers?. There are lot of traffic through the booking service and someone actually make a transaction in book a room
-
-
-
-So what's can go wrong in the situation is
-
-you a lunch a huge compaign and promotions and the customers are booking the hotel at the rate that you not prepared to handle.
 
 
 

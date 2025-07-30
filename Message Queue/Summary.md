@@ -1,6 +1,53 @@
-# Summary
 
+### Why Use a Queue?
+- **Queues decouple producers and consumers**, allowing asynchronous communication.
+- They help handle spikes in traffic (load leveling), preventing backend overload and reducing the need for over-provisioning.
 
+### Synchronous vs. Asynchronous
+- Synchronous calls are simple but make failure handling, retries, and scaling difficult.
+- Asynchronous queues buffer requests, allowing consumers to process at their own pace.
+
+### Core Requirements
+- **Functional:** Send/receive messages, create/delete queues, avoid duplicates, support ordering, etc.
+- **Non-functional:** Scalability, high availability, durability, performance, cost-effectiveness.
+
+### High-Level Architecture
+- **Load Balancer & VIPs:** Distribute requests, avoid single points of failure, and support scaling.
+- **FrontEnd Service:** Stateless, handles validation, authentication, SSL termination, encryption, caching, rate limiting, deduplication, and usage tracking.
+- **Metadata Service:** Stores queue metadata, often with caching and sharding for scalability.
+- **Backend Service:** Stores and processes messages, using memory and disk for durability.
+
+### Data Management & Replication
+- **Replication:** Ensures durability; can be synchronous (safer, slower) or asynchronous (faster, riskier).
+- **Leader-Follower or Clustered Backends:** Assign queues to leaders or clusters for storage and replication.
+- **Partitioning:** Large queues can be split across multiple leaders or clusters.
+
+### Message Deletion
+- Options include delayed deletion (like Kafka) or marking as invisible until explicitly deleted (like SQS).
+
+### Delivery Guarantees
+- **At most once:** Messages may be lost, never redelivered.
+- **At least once:** Messages never lost, may be redelivered.
+- **Exactly once:** Each message delivered only once (hardest to guarantee).
+
+### Push vs. Pull
+- **Pull:** Consumers poll for messages (simpler to implement).
+- **Push:** Consumers are notified when messages arrive (harder to implement).
+
+### Ordering
+- Strict FIFO is hard to guarantee at scale; many systems relax ordering for performance.
+
+### Security & Monitoring
+- Use encryption in transit and at rest.
+- Monitor all components and provide metrics and alerts for both operators and customers.
+
+### Scalability & Availability
+- All components are horizontally scalable and deployed across multiple data centers for high availability and fault tolerance.
+
+---
+
+**In summary:**  
+A distributed message queue enables scalable, reliable, and decoupled communication between services. The design must balance performance, durability, availability, and cost, using techniques like replication, sharding, and careful component separation. Security and monitoring are also essential for robust operation.
 
 ---
 

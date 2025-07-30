@@ -1,6 +1,3 @@
-# Microservices Gateway Pattern
-
-
 
 ---
 

@@ -1,5 +1,3 @@
-# Load balancing
-
 ## Load Balancing Summary
 
 - **Placement**: Load balancers can be used between:

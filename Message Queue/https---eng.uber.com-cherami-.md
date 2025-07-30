@@ -1,11 +1,62 @@
-# https://eng.uber.com/cherami-message-queue-system/
-
-
 
 ---
 
 <https://eng.uber.com/cherami-message-queue-system/>
 
+
+ Absolutely! Here’s a concise summary of Uber’s Cherami message queue system:
+
+---
+
+### What is Cherami?
+Cherami is Uber’s durable, highly available, and scalable distributed message queue system, designed to support Uber’s microservices with reliable task delivery.
+
+### Key Features & Design Principles
+- **Competing Consumers Model:**  
+  - Producers enqueue tasks; consumers (workers) in the same group compete for and process disjoint sets of tasks in parallel.
+  - Multiple consumer groups are supported; each group gets all tasks, and each group has a dead letter queue for failed messages.
+
+- **Durability & Fault Tolerance:**  
+  - Messages are replicated across multiple storage hosts using an append-only log structure.
+  - If a storage host fails, messages are still available from other replicas.
+  - If an input host or extent fails, Cherami “seals” the extent and creates a new one, ensuring no data loss but possibly causing duplicate deliveries (which consumers must handle).
+
+- **Scalability:**  
+  - Cherami automatically creates new “extents” (substreams) as write load increases, distributing traffic and avoiding bottlenecks.
+  - Both producers and consumers can scale independently.
+
+- **Eventual Consistency:**  
+  - Cherami prioritizes high availability and durability over strict ordering, accepting that messages may be delivered out of order during failures or partitions.
+
+- **Consumption Handling:**  
+  - Consumers acknowledge (ack) messages after processing; unacked messages are redelivered.
+  - Each consumer group maintains an “ack offset” per extent, tracking which messages have been processed.
+  - Messages exceeding retry limits are sent to a dead letter queue for manual review.
+
+- **Storage:**  
+  - Messages are stored in RocksDB for performance and durability.
+  - Metadata (queue info, extents, consumer group offsets) is stored in Cassandra, leveraging its high availability and tunable consistency.
+
+- **System Architecture:**  
+  - Roles include input hosts (write), storage hosts (persist), output hosts (read), controllers (coordinate), and frontends (API/routing).
+  - All roles are horizontally scalable and can be deployed in containers.
+
+- **AP vs. CP Queues:**  
+  - Cherami supports both AP (high availability, eventual consistency) and CP (stronger ordering, less availability during partitions) queue types, configurable via Cassandra’s consistency settings.
+
+### Why Cherami?
+- Language-agnostic (not tied to Python like Celery)
+- Durable (disk-backed, not just memory)
+- Scalable and highly available
+- Open source
+
+### Use Cases at Uber
+Cherami is used for post-trip processing, fraud detection, user notifications, incentive campaigns, and more—handling hundreds of millions of tasks per day.
+
+---
+
+**In summary:**  
+Cherami is a robust, scalable, and fault-tolerant message queue system built for Uber’s demanding microservices environment, with features like competing consumers, dead letter queues, automatic scaling, and flexible consistency models.
 
 
 Cherami's users are defined as either*producers*or*consumers*.*Producers*enqueue tasks.*Consumers*are worker processes that asynchronously pick up and process enqueued tasks. Cherami's delivery model is the typical[Competing Consumers](https://msdn.microsoft.com/en-us/library/dn568101.aspx)pattern, where consumers in the same consumer group receive disjoint sets of tasks (except in failure cases, which cause redelivery). Using this model, work fans out to many workers in parallel. ~~The number of workers is independent of any partitioning or sharding mechanisms internal to Cherami and can scale up and down simply by adding or removing workers.~~ If a worker fails to perform a task, another worker can redeliver and retry the task.
