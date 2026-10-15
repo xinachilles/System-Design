@@ -14,8 +14,6 @@ Most big data architectures include some or all of the following components:
 
 1.  data source:
 
-
-
 - Application data stores, such as relational databases.
 - Static files produced by applications, such as web server log files.
 - Real-time data sources, such as IoT devices.

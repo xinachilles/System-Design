@@ -52,3 +52,5 @@ response {
 	 1. SNS topic fan out message to multiple SQS queues
 	 2. SQS queues trigger the corresponding lambda functions for processing 
 	 3. Each Lambda specializes in a specific notification channel/type 
+
+

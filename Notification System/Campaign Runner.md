@@ -1,0 +1,16 @@
+Daemon for running scheduled campaigns
+-  APIs for UI
+	- runCampaign  
+		- parameters: campaign_name, run_parameters(JSON)
+		- response:  response, run_uid, error 
+	- getCampaignStatus
+		- parameters: start_date, end_date, campaignName  or run_uid
+		- response: status, uid 
+	- deliver campaign result
+- Schedule tasks to run periodically ( every scan cycle)
+	-  Query the [[Campaign DB]] and get the latest campaign configuration 
+	-  Check scheduling logic (for each campaign: 
+		- already running
+		- is enable, is today a scheduled day? (daily, weekly, or one-time)
+		- Is the current time>= the start time
+		- is within the timezone window: campaign scheduled at 10:00 am with a 120-minute sourcing window (window 10:00 -12:00 ), campaign can start anytime within this 2 hour window)

@@ -1,0 +1,5 @@
+- consume  the **SQS** event 
+- If there is an event in the high-priority queue, process it immediately 
+- Before processing the normal event, first check if the high-priority queue is empty. If it is not empty, requeue the normal event so the system can process the high-priority message first.
+- event routing through specialized **SNS** topic (send, resolve, revoke, email, notification)
+- 

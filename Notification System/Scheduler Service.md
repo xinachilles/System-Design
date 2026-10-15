@@ -1,0 +1,13 @@
+-  Campaign runner (every 30s, configurable)
+	- Gather eligible campaigns
+		- Calculate time windows based on the frequency
+		- Decide if the campaign should start based on the current state 
+	- Campaign execution; 
+	- Update the campaign status in the DB
+	- Multiple instances running in different DCs and must ensure exactly once execution per schedule time
+		- 
+	- Called  xx service to send 
+
+	- 
+-  Campaign Cleanup 
+-  Provide a couple of API for UI 
