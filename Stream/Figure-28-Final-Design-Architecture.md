@@ -134,9 +134,32 @@ flowchart TB
 
 #### Stream Aggregation Operational Mechanics:
 1. **Map Processing**: Map nodes read from Kafka, sanitize fields, discard corrupted payloads, and route events using consistent hashing on `ad_id` (`ad_id % N`). This ensures all click records for a specific ad converge on the exact same Aggregate node.
-2. **In-Memory Window Aggregation**: Each Aggregate node maintains stateful, in-memory structures:
-   - **Tumbling Window (1-minute)**: An in-memory hash map `{ad_id: click_count}` that flushes to downstream MQ2 at the end of each window.
-   - **Sliding Window (M-minutes)**: A circular buffer or tumbling-window bucket list storing 1-minute buckets over the last $M$ minutes, plus a bounded **Min-Heap of size 100** to extract the local top 100 ads in $O(K \log N)$ time.
+2. **In-Memory Window Aggregation (Concurrent Coexistence)**:
+   A foundational architectural mechanism in Chapter 6 is that **the Tumbling Window and Sliding Window exist and execute concurrently at the exact same time** within each Aggregate node. They do not compete with or replace one another; instead, they process the exact same ingested click stream to fulfill two distinct business use cases simultaneously:
+
+   - **Tumbling Window (1-Minute Fixed Chunks — Use Case 1: Billing & Accurate Counts)**:
+     - **Operational Role**: Partitions time into non-overlapping, continuous 1-minute chunks (`12:00–12:01`, `12:01–12:02`).
+     - **Why Required**: Mandatory for **advertiser invoicing, financial billing, and reconciliation**. Because windows never overlap, every click belongs to strictly one discrete bucket, eliminating any risk of double-billing advertisers.
+     - **State Mechanics**: Maintains an in-memory hash map `{ad_id: click_count}` for minute T. Upon window close (T + 1 min + 15s watermark delay), it flushes aggregated records to Kafka MQ2 topic `ad_clicks_aggregated_minute`, which are written to Cassandra's `ad_clicks_aggregated` table.
+   
+   - **Sliding Window (M-Minute Rolling Chunks — Use Case 2: Trending Top-N Ads)**:
+     - **Operational Role**: Evaluates an overlapping, rolling time window (e.g., top 100 most-clicked ads across the last M minutes, updated every 1 minute).
+     - **Why Required**: Supports **real-time bidding (RTB) trend analysis, fraud anomaly detection, and operational performance dashboards** where smooth, continuously moving leaderboards are required.
+     - **Architectural Optimization (Tumbling Bucket Reuse)**: Rather than storing millions of individual raw click events in memory across M minutes, the sliding window is constructed directly **on top of the 1-minute tumbling buckets** via an in-memory circular ring buffer of size M (`RingBuffer[M]`).
+     - **Rolling Update Mechanics (O(1))**: At each minute boundary T, the sliding window simply adds the newly finalized minute T tumbling bucket and evicts the expired minute (T - M) bucket from the sum in O(1) time.
+     - **Top-N Extraction**: Maintains a bounded **Min-Heap of size 100** per node to extract local top-performing ads in O(K log 100) time. Local heap results are forwarded to the Global Reduce node, emitted to Kafka MQ2 topic `ad_clicks_top_n_minute`, and written to Cassandra's `most_clicked_ads` table.
+
+   ```text
+   Raw Click Stream (Kafka MQ1)
+                │
+                ▼
+      [ Aggregate Node ]
+        ├── 1. Tumbling Window Accumulator (1-min) ──► Topic: ad_clicks_aggregated_minute ──► Table: ad_clicks_aggregated
+        │      (Non-overlapping, financial billing)
+        │
+        └── 2. Sliding Window Ring Buffer (M-min)   ──► Topic: ad_clicks_top_n_minute        ──► Table: most_clicked_ads
+               (Reuses 1-min buckets, Top-N Min-Heap)
+   ```
 3. **Global Reduce Consolidation**: For global queries (e.g., system-wide top 100 ads across all advertisers), the local top 100 candidates from all Aggregate nodes are transmitted over internal TCP/IPC channels to the Reduce node. The Reduce node merges these partial lists into the definitive global top 100 array.
 
 ---
@@ -153,6 +176,7 @@ flowchart TB
     classDef coldStyle fill:#eceff1,stroke:#607d8b,stroke-width:2px,color:#263238
     classDef userStyle fill:#fce4ec,stroke:#d81b60,stroke-width:2px,color:#880e4f
 
+    %% Node Declarations
     LW["Log Watcher"]:::srcStyle
     MQ[("Message Queue<br>(Kafka)")]:::bufStyle
     RCE["Risk Control Engine<br>(Fraud Detection & Filtering)"]:::engineStyle
@@ -171,6 +195,7 @@ flowchart TB
         DS["Data Scientist Queries<br>(Behavioral ML & Relevance Modeling)"]:::userStyle
     end
 
+    %% Pipeline Connections
     LW --> MQ
     MQ --> RCE
     RCE -->|"Clean stream"| CH
@@ -187,14 +212,65 @@ flowchart TB
 2. **Vectorized Columnar Storage**: Data is compressed column-by-column (LZ4/ZSTD) with sparse primary indexes on `(ad_id, click_timestamp)`.
 3. **On-the-Fly Aggregation**: Queries such as "clicks for `ad001` in the last 15 minutes" are evaluated dynamically via parallel SIMD instructions scanning only the `click_timestamp` and `ad_id` columns, bypassing the need for dedicated MapReduce code.
 
+#### 2.2.1 Deep Dive: Why Separate Real-Time DB, Elasticsearch, and Data Lake?
+
+A frequent architectural question in system design is: **Why does Figure 29 deploy three separate storage systems (ClickHouse/Cassandra, Elasticsearch, and Hive/Data Lake)? Since interactive query engines like Trino (Presto) can query Data Lakes directly, and Real-Time DBs can query data fast, why do we need all three?**
+
+The separation is governed by **how each system indexes data, their query latency profiles, and hardware cost tiering**:
+
+---
+
+##### 1. Why Have Both Elasticsearch and a Data Lake? (Why Trino Isn't Enough)
+* **Data Lake (Hive / S3 + Trino / Spark)** — *Cold Source of Truth & Heavy Batch Analytics*:
+  - **Strengths**: Stores petabytes of historical click logs indefinitely on ultra-cheap commodity object storage (S3 Standard transitioning to S3 Glacier). Powers offline machine learning training (CTR predictive models) and daily financial billing reconciliations.
+  - **Limitation with Trino**: Trino is a distributed Massively Parallel Processing (MPP) scanning engine, **not an inverted search index**. If an engineer or analyst needs to find 3 rare error events containing an obscure string buried within 50 TB of raw logs, Trino must pull and scan every single Parquet string column block across the cluster. That query takes **15 to 60+ seconds** and consumes massive cluster CPU.
+* **Elasticsearch** — *Hot Operational Search & Needle-in-a-Haystack Debugging*:
+  - **Strengths**: Built on Lucene inverted indexes. Every word, IP address, user agent, and error token is indexed directly to document IDs. It finds needles in haystacks in **< 30 milliseconds** without scanning un-matched data.
+  - **Limitation**: Extremely expensive (demands heavy JVM RAM and fast NVMe SSD storage).
+  - **The Compromise**: Only retain a **hot window (7 to 30 days)** of raw logs in Elasticsearch for operational triage, error debugging, and fraud analysis, while archiving years of data in the Data Lake.
+
+---
+
+##### 2. Can the Real-Time DB Replace Elasticsearch for "Needle in a Haystack" Searches?
+A natural follow-up is: *Can we eliminate Elasticsearch and just query the Real-Time DB (Cassandra or ClickHouse)?*
+
+The answer depends strictly on **whether the "needle" is part of the database's Primary Key / Sorting Key**:
+
+1. **In Cassandra (Variant A - Wide-Column NoSQL)**:
+   - **Primary Key (`ad_id, click_minute`)**: Sub-5 ms. Cassandra hashes `ad_id` directly to the correct physical node.
+   - **Arbitrary Field (`ip`, `user_id`, error payload)**: **Catastrophic Failure**. Without the partition key, Cassandra must execute a full cluster scan across every node (`ALLOW FILTERING`). At Facebook/Google scale (1B clicks/day), this query will time out, spike cluster CPU to 100%, and risk crashing production nodes. Secondary indexes in Cassandra are notoriously anti-pattern at this scale.
+2. **In ClickHouse / Pinot (Variant B - Columnar OLAP)**:
+   - **Primary Sort Key (`ORDER BY (ad_id, event_time)`)**: 10–50 ms via sparse index mark skipping.
+   - **Random Dimension (`WHERE user_agent LIKE '%iPhone14,2%'`)**: ClickHouse lacks an inverted index by default. It must scan and decompress the entire `user_agent` column across billions of rows. Even with SIMD vectorization scanning at 30 GB/s, this takes **1 to 5 seconds** and monopolizes CPU/IO threads needed for live merchant dashboards.
+3. **In Elasticsearch (Dedicated Search Engine)**:
+   - **Any Dimension or Text**: Builds an inverted index (`term -> document IDs`) on every field by default. Whether you search by IP, cookie ID, device OS, or a word inside an unstructured log payload, it resolves in **10–30 ms with zero linear scanning**.
+
+---
+
+##### 3. "Needle in a Haystack" Query Matrix Across Storage Engines
+
+| Query Pattern / Workload | Real-Time Cassandra (Variant A) | Real-Time ClickHouse / OLAP (Variant B) | Elasticsearch | Data Lake (Hive/S3 + Trino) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Lookup by Primary Key**<br>`WHERE ad_id = 'ad001'` | **Sub-5 ms** (Optimal partition routing) | **10–20 ms** (Fast sparse index skip) | **20–50 ms** (Good term lookup) | **2–10 s** (Trino partition pruning) |
+| **Search by Random Field**<br>`WHERE ip = '207.148.22.22'` | **Fails / Times Out** (Cluster-wide scan) | **1–5 seconds** (Scans entire column) | **< 30 ms** (Inverted index lookup) | **30 s – 5+ min** (Scans gigabytes of files) |
+| **Fuzzy / Partial String Search**<br>`WHERE user_agent LIKE '%Safari/604%'` | **Impossible** (Unsupported) | **2–10 seconds** (Regex/column scan) | **< 50 ms** (Tokenized full-text search) | **Minutes** (Exhaustive string scans) |
+| **Interactive Dashboard Aggregation**<br>`SUM(clicks), GROUP BY ad_id, minute` | **Sub-5 ms** (Pre-aggregated counters) | **50–200 ms** (Vectorized SIMD execution) | **Poor / High OOM Risk** (Expensive heap) | **10–60 s** (High query latency) |
+| **Storage Cost & Retention Window** | **Moderate** (LSM SSTables, 30–90 days) | **Moderate** (Compressed columns, 30–90 days) | **Very High Cost** (RAM-heavy, 7–30 days) | **Ultra-Low Cost** (S3/Glacier, years/forever) |
+
+> [!IMPORTANT]
+> **Summary Decision Rule for System Design Interviews**:
+> * **Real-Time DB (ClickHouse / Cassandra)**: Use for **known primary key lookups** and **live dashboard aggregations** (sub-second SLA).
+> * **Elasticsearch**: Use exclusively for **finding needles in haystacks across arbitrary/unstructured fields** (fraud investigations, error log debugging).
+> * **Data Lake (S3/Hive + Trino)**: Use as the **immutable cold source of truth** for multi-year regulatory audits and heavy machine learning model training.
+
 ---
 
 ### 2.3 Stream Aggregation (Figure 28) vs. OLAP Ingestion (Figure 29) Trade-Off Matrix
 
 | Dimension / Metric | Variant A: Stream Ingestion Aggregation (Figure 28) | Variant B: OLAP-Centric Aggregation (Figure 29) | Winner & Decision Rule |
 | :--- | :--- | :--- | :--- |
-| **Write Amplification & Storage Overhead** | **Extremely Low**. Raw data is reduced at ingestion (e.g., 10,000 raw clicks condensed into 1 aggregated record per minute). | **High**. Stores every individual raw click event in columnar format, requiring substantial disk and indexing memory. | **Variant A wins** for storage efficiency ($10\times\text{--}50\times$ less disk). |
-| **Dashboard Query Latency** | **Sub-millisecond ($< 5\text{ ms}$)**. Dashboard reads pre-computed values directly by primary key `(ad_id, minute)`. | **Moderate ($50\text{ ms -- }500\text{ ms}$)**. Query engine must scan millions of rows and execute on-the-fly group-bys. | **Variant A wins** for hyper-responsive dashboards with 2M concurrent ads. |
+| **Write Amplification & Storage Overhead** | **Extremely Low**. Raw data is reduced at ingestion (e.g., 10,000 raw clicks condensed into 1 aggregated record per minute). | **High**. Stores every individual raw click event in columnar format, requiring substantial disk and indexing memory. | **Variant A wins** for storage efficiency (10x to 50x less disk). |
+| **Dashboard Query Latency** | **Sub-millisecond (< 5 ms)**. Dashboard reads pre-computed values directly by primary key `(ad_id, minute)`. | **Moderate (50 ms – 500 ms)**. Query engine must scan millions of rows and execute on-the-fly group-bys. | **Variant A wins** for hyper-responsive dashboards with 2M concurrent ads. |
 | **Ad-Hoc Query Flexibility** | **Rigid**. Can only answer queries pre-baked into the DAG topology (e.g., pre-defined star schema dimensions). | **Completely Flexible**. Arbitrary SQL slices (e.g., filter by device OS + browser + carrier + city) without pipeline code changes. | **Variant B wins** when ad-hoc business exploration is frequent. |
 | **Operational & Codebase Complexity** | **High**. Must build, deploy, manage, checkpoint, and monitor distributed stream workers (Flink/Storm DAGs). | **Low to Moderate**. Leverages off-the-shelf distributed database features (ClickHouse, Druid, Pinot); no custom stream code. | **Variant B wins** for developer velocity and operational simplicity. |
 | **Recalculation & Backfilling** | **Complex**. Requires spinning up separate dedicated stream workers to replay raw logs into the DAG. | **Trivial**. Update data in place or re-index historical columns using native SQL update/replace partitions. | **Variant B wins** for operational remediation of logic bugs. |
@@ -258,18 +334,28 @@ flowchart TB
     classDef subStyle fill:#ede7f6,stroke:#7e57c2,stroke-width:2px,color:#4527a0
     classDef outStyle fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#1b5e20
 
-    INPUT["Input Stream"]:::mapStyle --> MAP["Map Node"]:::mapStyle
-    MAP -->|"ad_id 1: 300 events (Threshold = 100)"| AGG_HOT["Primary Aggregator Node<br>(Hotspot Detected)"]:::hotStyle
-    
-    AGG_HOT -.->|"1. Request dynamic capacity"| RM["Resource Manager<br>(Apache YARN / Kubernetes)"]:::mgrStyle
-    RM -.->|"2. Allocate 3 dynamic worker nodes"| SUB_CLUSTER
-    
+    %% Node Declarations
+    INPUT["Input Stream"]:::mapStyle
+    MAP["Map Node"]:::mapStyle
+    AGG_HOT["Primary Aggregator Node<br>(Hotspot Detected)"]:::hotStyle
+    RM["Resource Manager<br>(Apache YARN / Kubernetes)"]:::mgrStyle
+    FINAL_RED["Global Reducer"]:::outStyle
+
     subgraph SUB_CLUSTER ["Dynamic Sub-Aggregation Tier"]
         SUB_A1["Worker Node 1<br>(Processes 100 events)"]:::subStyle
         SUB_A2["Worker Node 2<br>(Processes 100 events)"]:::subStyle
         SUB_A3["Worker Node 3<br>(Processes 100 events)"]:::subStyle
         LOCAL_RED["Local Reducer<br>(Combines sub-counts)"]:::subStyle
     end
+
+    %% Pipeline Connections
+    INPUT --> MAP
+    MAP -->|"ad_id 1: 300 events (Threshold = 100)"| AGG_HOT
+    
+    AGG_HOT -.->|"1. Request dynamic capacity"| RM
+    RM -.->|"2. Allocate dynamic workers"| SUB_A1
+    RM -.->|"2. Allocate dynamic workers"| SUB_A2
+    RM -.->|"2. Allocate dynamic workers"| SUB_A3
 
     AGG_HOT -->|"3. Scatter 100 events each"| SUB_A1
     AGG_HOT -->|"3. Scatter 100 events each"| SUB_A2
@@ -280,12 +366,12 @@ flowchart TB
     SUB_A3 --> LOCAL_RED
 
     LOCAL_RED -->|"4. Return combined count (300)"| AGG_HOT
-    AGG_HOT -->|"5. Final consolidated result"| FINAL_RED["Global Reducer"]:::outStyle
+    AGG_HOT -->|"5. Final consolidated result"| FINAL_RED
 ```
 
 #### Hotspot Mitigation Strategies:
 1. **Dynamic Resource Allocation (Figure 25)**: When an Aggregate node detects event ingestion exceeding a threshold (e.g., > 100 events/sec for a single `ad_id`), it requests dynamic worker instances from the cluster Resource Manager (YARN/K8s), scatters batches to these ephemeral workers, and folds the result back into the main stream.
-2. **Global-Local (Two-Phase) Aggregation**: Before sharding by `ad_id`, an upstream mini-batch stage appends a random salt: `ad_id + "_" + random(1, k)`. Events are aggregated locally in phase 1, and then stripped of the salt and summed in phase 2. This diffuses any single mega-ad across $k$ separate nodes.
+2. **Global-Local (Two-Phase) Aggregation**: Before sharding by `ad_id`, an upstream mini-batch stage appends a random salt: `ad_id + "_" + random(1, k)`. Events are aggregated locally in phase 1, and then stripped of the salt and summed in phase 2. This diffuses any single mega-ad across k separate nodes.
 
 ---
 
@@ -369,10 +455,10 @@ The Raw Data Database acts as the **immutable source of truth**. It stores unagg
 #### 1. Processing Logic & Topologies
 * **Map Phase**: Map workers consume from Kafka partitions. They validate IP address formats, strip bot clicks using simple rule engines, and forward records to Aggregate nodes based on `hash(ad_id) % num_aggregate_nodes`.
 * **Aggregate Phase (Stateful Accumulator)**:
-  - **Tumbling Window (1 Minute)**: Collects counts for current minute $T$. At $T + 1\text{ min} + \text{Watermark}$, the window closes and emits `(ad_id, click_minute, count)`.
-  - **Sliding Window (M Minutes)**: Maintains an array of $M$ 1-minute tumbling buckets. Rolling totals are computed by sliding the window forward each minute (adding the new minute and subtracting the oldest minute) in $O(1)$ time.
-  - **Top-N Min-Heap**: Maintains a priority queue of size 100 per node. For each ad update, if the heap has $< 100$ items, it pushes the ad; otherwise, if `count > heap.peek()`, it replaces the root and reheapifies in $O(\log 100)$ time.
-* **Reduce Phase**: Collects the top 100 candidates from all $K$ Aggregate nodes and merges them into a single sorted array of top 100 most-clicked ads across the entire platform.
+  - **Tumbling Window (1 Minute)**: Collects counts for current minute T. At T + 1 min + Watermark, the window closes and emits `(ad_id, click_minute, count)`.
+  - **Sliding Window (M Minutes)**: Maintains an array of M 1-minute tumbling buckets. Rolling totals are computed by sliding the window forward each minute (adding the new minute and subtracting the oldest minute) in O(1) time.
+  - **Top-N Min-Heap**: Maintains a priority queue of size 100 per node. For each ad update, if the heap has < 100 items, it pushes the ad; otherwise, if `count > heap.peek()`, it replaces the root and reheapifies in O(log 100) time.
+* **Reduce Phase**: Collects the top 100 candidates from all K Aggregate nodes and merges them into a single sorted array of top 100 most-clicked ads across the entire platform.
 
 ---
 
@@ -384,29 +470,40 @@ The Raw Data Database acts as the **immutable source of truth**. It stores unagg
 * **Severely Late Events**: Events arriving beyond the 15-second window are dropped from the real-time stream and flagged for reconciliation in the end-of-day batch job.
 
 #### 2. Exactly-Once Processing via Distributed Transactions (Figures 17, 18, 19, 20)
-To prevent duplicate counts during aggregator node crashes:
+To prevent duplicate counts during aggregator node crashes, the system establishes a two-phase transactional snapshot boundary:
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    participant K1 as Upstream (Kafka MQ1)
-    participant AG as Aggregator Node
-    participant FS as Snapshot / State Store (S3/HDFS)
-    participant K2 as Downstream (Kafka MQ2)
+flowchart TB
+    classDef mqStyle fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    classDef nodeStyle fill:#ede7f6,stroke:#7e57c2,stroke-width:2px,color:#4527a0
+    classDef fsStyle fill:#eceff1,stroke:#607d8b,stroke-width:2px,color:#263238
+    classDef txStyle fill:#ffebee,stroke:#e53935,stroke-width:1.5px,color:#b71c1c
 
-    K1->>AG: 1. Poll events (offset 100 to 110)
-    AG->>FS: 2. Verify last persisted offset == 100
-    Note over AG: 3. Aggregate events 100-110 in memory
-    rect rgb(255, 235, 238)
-        Note over AG,K2: Distributed Transaction Boundary
-        AG->>K2: 4. Produce aggregated counts
-        AG->>FS: 5. Save state snapshot & upstream offset (110)
-        K2-->>AG: 6. Transaction Ack back
+    %% Node Declarations
+    K1[("Upstream Kafka MQ1<br>(Raw Events Topic)")]:::mqStyle
+    AG["Aggregator Node<br>(Flink Stream Worker)"]:::nodeStyle
+    FS[("Snapshot State Store<br>(S3 / HDFS / RocksDB)")]:::fsStyle
+    K2[("Downstream Kafka MQ2<br>(Aggregated Topic)")]:::mqStyle
+
+    subgraph TX_BOUNDARY ["Distributed 2PC Transaction Boundary"]
+        TX1["1. Atomic Produce Aggregated Counts"]:::txStyle
+        TX2["2. Checkpoint State & Upstream Offset 110"]:::txStyle
+        TX3["3. Transaction Acknowledgment"]:::txStyle
     end
-    AG->>K1: 7. Commit offset 110 to Upstream Kafka
+
+    %% Pipeline Execution Steps
+    K1 -->|"1. Poll events (offset 100 to 110)"| AG
+    AG -->|"2. Verify last persisted offset == 100"| FS
+    AG -->|"3. Aggregate events in memory"| TX1
+    TX1 --> K2
+    TX1 --> TX2
+    TX2 --> FS
+    K2 --> TX3
+    TX3 --> AG
+    AG -->|"4. Commit offset 110 to upstream Kafka"| K1
 ```
 
-* **Failure Scenario**: If the Aggregator crashes before step 7, the new node restarts from the snapshot in storage (offset 110) rather than reprocessing offset 100, preventing duplicate increments.
+* **Failure Scenario**: If the Aggregator crashes before step 4, the replacement node restarts from the snapshot in storage (offset 110) rather than reprocessing offset 100, preventing duplicate increments.
 
 ---
 
@@ -469,7 +566,7 @@ CREATE TABLE most_clicked_ads (
 * **API 1: Aggregate Click Counts**:
   `GET /v1/ads/{ad_id}/aggregated_count?from=202101010000&to=202101010005&filter=0012`
   - Returns sum of clicks across the requested minute range.
-  - Query time is $O(\text{range})$ across indexed clustering keys (typically $< 5\text{ ms}$).
+  - Query time is O(range) across indexed clustering keys (typically < 5 ms).
 * **API 2: Top-N Most Clicked Ads**:
   `GET /v1/ads/popular_ads?count=100&window=5&filter=0012`
   - Fetches pre-computed JSON array from `most_clicked_ads` where `window_size = 5` and `update_time_minute = latest`.
@@ -483,7 +580,7 @@ CREATE TABLE most_clicked_ads (
 Triggered when a critical bug is detected in stream aggregation logic or when fraud filters are updated retroactively.
 
 #### 2. Recalculation Mechanics
-1. **Batch Ingestion**: The Recalculation Service reads raw historical records from Cassandra / S3 storage starting from timestamp $T_{\text{bug\_intro}}$.
+1. **Batch Ingestion**: The Recalculation Service reads raw historical records from Cassandra / S3 storage starting from timestamp T_bug_intro.
 2. **Isolated Processing**: Data is routed to a **dedicated Recalculation Aggregation Cluster** so that high-volume batch replay does not consume CPU or memory from the live real-time pipeline.
 3. **Sink & Reconciliation**: Recalculated records are written to MQ2 and overwrite flawed entries in the `ad_clicks_aggregated` table.
 
@@ -499,7 +596,10 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 2. It reads all raw click logs from the Raw Data Database for the past 24 hours and sorts all events strictly by `click_timestamp` (event time).
 3. It performs a deterministic batch MapReduce aggregation per `(ad_id, minute, filter_id)`.
 4. It compares batch results against the real-time `ad_clicks_aggregated` table:
-   $$\Delta = |\text{Count}_{\text{Batch}} - \text{Count}_{\text{Real-time}}|$$
+
+> **Reconciliation Delta Formula**:  
+> Δ = |Count_Batch - Count_Real-time|
+
 5. Any discrepancy is updated in the database, and an audit ledger entry is created for finance billing adjustments.
 
 ---
@@ -513,7 +613,7 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | Dimension | Raw Data Only | Aggregated Data Only | Dual Storage: Both Raw & Aggregated (Adopted) | Winner & Decision Rule |
 | :--- | :--- | :--- | :--- | :--- |
 | **Storage Footprint** | Moderate (100 GB/day, 36.5 TB/yr). | Minimal (~2–5 GB/day). | Highest (~105 GB/day). | **Aggregated only wins on raw disk cost**. |
-| **Query Performance** | Unusable for real-time dashboards ($> 10\text{s}$ scanning billions of rows). | Ultra-fast ($< 5\text{ ms}$ index lookups). | Ultra-fast on active dashboards; queries hit aggregated tier. | **Dual Storage wins**. |
+| **Query Performance** | Unusable for real-time dashboards (> 10s scanning billions of rows). | Ultra-fast (< 5 ms index lookups). | Ultra-fast on active dashboards; queries hit aggregated tier. | **Dual Storage wins**. |
 | **Debugging & Bug Recovery** | Full fidelity; raw events can be audited anytime. | Impossible to audit or recover from calculation bugs (irreversible data loss). | Complete recovery capability via historical replay. | **Dual Storage wins**. |
 | **Machine Learning Utility** | Essential for training CTR models and fraud classifiers. | Useless for ML (individual user click context is lost). | Raw data can be offloaded to data lakes for offline model training. | **Dual Storage wins**. |
 
@@ -526,7 +626,7 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 
 | Feature | Online System (Services) | Batch System (Offline) | Streaming System (Near Real-Time) | OLAP System (ClickHouse/Druid) | Winner & Decision Rule |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Responsiveness** | Milliseconds ($< 50\text{ ms}$). | Hours to Days. | Seconds to Minutes ($< 2\text{ min}$). | Milliseconds to Seconds ($< 500\text{ ms}$). | **Online / Streaming wins for timely metrics**. |
+| **Responsiveness** | Milliseconds (< 50 ms). | Hours to Days. | Seconds to Minutes (< 2 min). | Milliseconds to Seconds (< 500 ms). | **Online / Streaming wins for timely metrics**. |
 | **Input Data Nature** | Discrete user requests. | Bounded, finite historical datasets. | Unbounded, infinite continuous streams. | Continuous streaming or micro-batch ingestion. | **Streaming / OLAP fits infinite click logs**. |
 | **Output Data** | Direct responses to clients. | Materialized views, data warehouse tables. | Real-time views, alert triggers, aggregated queues. | Interactive multidimensional analytical slices. | **Streaming wins for automated billing counters**. |
 | **Optimization Goal** | High Availability, Low Latency. | Maximum Throughput. | Low Latency + High Throughput. | Vectorized Scanning + Fast Filter Speed. | **Streaming (Flink) + OLAP (ClickHouse) hybrid**. |
@@ -539,7 +639,7 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | Evaluation Dimension | Event Time (Client Timestamp) | Processing Time (Server Timestamp) | Hybrid Approach (Event Time + Watermark + Reconciliation) | Winner & Decision Rule |
 | :--- | :--- | :--- | :--- | :--- |
 | **Data Correctness** | **High**. Reflects the actual instant an ad was displayed and clicked. | **Low**. Skewed by network latency, queue backlogs, and server restarts. | **Highest**. Groups clicks correctly, accommodates network jitter, and reconciles late data. | **Hybrid Wins**. |
-| **Vulnerability to Malicious Tampering** | Vulnerable to client clock drift or bad actors manipulating device clocks. | Immune to client-side clock tampering; relies on verified server NTP clocks. | Client-side drift is filtered by sanity checks ($T_{\text{event}} \le T_{\text{server}} + 5\text{s}$) and risk engines. | **Hybrid Wins**. |
+| **Vulnerability to Malicious Tampering** | Vulnerable to client clock drift or bad actors manipulating device clocks. | Immune to client-side clock tampering; relies on verified server NTP clocks. | Client-side drift is filtered by sanity checks (T_event ≤ T_server + 5s) and risk engines. | **Hybrid Wins**. |
 | **Window Closure Predictability** | Unpredictable; events can arrive hours late. | Instant; windows close strictly based on system wall-clock time. | Bounded by a 15-second watermark delay; late events pushed to reconciliation. | **Hybrid Wins**. |
 
 ---
@@ -549,8 +649,8 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | Dimension | Tumbling Window (Fixed Chunks) | Sliding Window (Rolling Buffer) | Hopping Window (Overlapping Fixed) | Session Window (Inactivity Gap) | Winner & Decision Rule |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Definition** | Non-overlapping, continuous fixed-size chunks (e.g., 00:00–00:01, 00:01–00:02). | Window slides continuously across data stream based on a sliding interval. | Fixed-length windows that advance by a hop interval smaller than window size. | Dynamic window bounded by periods of user inactivity (e.g., 30m idle). | **Tumbling wins for 1-minute billing counts**. |
-| **Memory Footprint** | Extremely low; intermediate state discarded immediately upon window flush. | Moderate; requires retaining $M$ minutes of sub-buckets or event queues in RAM. | Moderate to high; events replicate across multiple overlapping active windows. | High; must maintain state indefinitely until session timeout triggers. | **Sliding wins for Top 100 ads in last M mins**. |
-| **Primary Use Case in Chapter 6** | **Use Case 1**: Clicks for `ad001` per minute. | **Use Case 2**: Top 100 most-clicked ads in the last $M$ minutes. | Smooth moving averages. | User behavioral session tracking (not used for ad billing). | **Tumbling for counts; Sliding for Top-N**. |
+| **Memory Footprint** | Extremely low; intermediate state discarded immediately upon window flush. | Moderate; requires retaining M minutes of sub-buckets or event queues in RAM. | Moderate to high; events replicate across multiple overlapping active windows. | High; must maintain state indefinitely until session timeout triggers. | **Sliding wins for Top 100 ads in last M mins**. |
+| **Primary Use Case in Chapter 6** | **Use Case 1**: Clicks for `ad001` per minute. | **Use Case 2**: Top 100 most-clicked ads in the last M minutes. | Smooth moving averages. | User behavioral session tracking (not used for ad billing). | **Tumbling for counts; Sliding for Top-N**. |
 
 ---
 
@@ -561,7 +661,7 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | **Mechanism** | Fire-and-forget; commit offset before processing. | Retry upon failure; commit offset after acknowledgment. | Distributed 2-phase commit (2PC) / Kafka transactional API + Idempotent writes. | **Exactly-Once is mandatory for billing**. |
 | **Under Failure Condition** | Data is dropped (under-counting clicks). | Duplicate counts emitted (over-billing advertisers). | No data loss, no duplicate counts recorded. | **Exactly-Once wins**. |
 | **Impact on Ad Billing** | Loss of revenue for ad publisher. | Advertisers sue publisher for fraudulent over-billing. | 100% auditable financial integrity. | **Exactly-Once is strictly required**. |
-| **Performance Overhead** | Minimal overhead. | Low overhead. | Moderate throughput hit ($10\text{--}20\%$ latency increase for 2PC/transactions). | **Worth the cost for financial correctness**. |
+| **Performance Overhead** | Minimal overhead. | Low overhead. | Moderate throughput hit (10%–20% latency increase for 2PC/transactions). | **Worth the cost for financial correctness**. |
 
 ---
 
@@ -580,7 +680,7 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 
 | Evaluation Criteria | Monolithic Global Topic (`ad_clicks_global`) | Regional Sharded Topics (`ad_clicks_na`, `ad_clicks_eu`) | Winner & Decision Rule |
 | :--- | :--- | :--- | :--- |
-| **Consumer Rebalancing Time** | Slow ($> 5\text{ minutes}$) when hundreds of consumer nodes join/leave cluster. | Fast ($< 30\text{ seconds}$); consumer groups are divided into isolated, smaller clusters. | **Regional Sharding wins**. |
+| **Consumer Rebalancing Time** | Slow (> 5 minutes) when hundreds of consumer nodes join/leave cluster. | Fast (< 30 seconds); consumer groups are divided into isolated, smaller clusters. | **Regional Sharding wins**. |
 | **Network Egress Cost** | High cross-region WAN transfer costs pushing all global logs to one DC. | Low; local logs stay inside regional datacenters until aggregated. | **Regional Sharding wins**. |
 | **Cross-Region Ads Handling** | Trivial; all data lives in one central pipeline. | Requires an additional aggregation phase to merge counts for campaigns active across regions. | **Monolithic wins on simplicity**. |
 
@@ -606,7 +706,7 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | **Aggregation Paradigm** | Ingestion-Time Stream Aggregation (MapReduce DAG) | Pre-computes counts into 1-minute tumbling windows; provides sub-5ms dashboard reads. | High architectural complexity; requires maintaining stateful streaming workers. | Query-Time aggregation on raw logs (fails SLA due to multi-second scans on 2M ads). |
 | **Processing Architecture** | Kappa Architecture (Figure 10) | Single unified streaming codebase for both live traffic and historical replay (Figure 11). | Requires spinning up a secondary aggregator cluster during large historical replays. | Lambda Architecture (requires maintaining dual codebases: Spark batch + Flink streaming). |
 | **Event Time Handling** | Event Time (`click_timestamp`) with 15s Watermark | Accurate billing reflects when user actually clicked; watermark absorbs mobile network delays. | Introduces a 15-second delay before real-time counts can be committed and displayed. | Processing Time (faster, but distorts billing metrics during queue backups or server downtime). |
-| **Windowing Types** | Tumbling (Counts) + Sliding (Top 100 Ads) | Tumbling window gives clean 1-minute non-overlapping buckets; sliding window gives rolling top ads. | Sliding window requires in-memory retention of $M$ minutes of historical sub-buckets. | Hopping windows (redundant write amplification for simple per-minute counters). |
+| **Windowing Types** | Tumbling (Counts) + Sliding (Top 100 Ads) | Tumbling window gives clean 1-minute non-overlapping buckets; sliding window gives rolling top ads. | Sliding window requires in-memory retention of M minutes of historical sub-buckets. | Hopping windows (redundant write amplification for simple per-minute counters). |
 | **Delivery Guarantee** | Exactly-Once Semantics (Figure 20) | Advertisers are billed based on counts; over-counting or under-counting results in financial discrepancies. | Requires 2-phase commit and distributed offset snapshotting, lowering maximum throughput. | At-least-once delivery (causes duplicate billing during node crashes and network retries). |
 | **Hotspot Mitigation** | Dynamic Resource Allocation (Figure 25) & Global-Local Aggregation | Prevents viral ads from overwhelming individual aggregator nodes via two-phase salted aggregation. | Increases DAG latency and requires dynamic orchestration via YARN/Kubernetes. | Unmitigated hash partitioning (leads to node OOM and cascading worker crashes). |
 | **Raw Storage Engine** | Apache Cassandra / S3 Columnar (Parquet) | High-throughput write-optimized append; supports long-term cold storage offload for ML and audits. | Read queries are slow compared to aggregated store. | Relational RDBMS (PostgreSQL) (cannot scale to 50,000 peak write QPS cost-effectively). |
