@@ -257,8 +257,7 @@ The answer depends strictly on **whether the "needle" is part of the database's 
 | **Interactive Dashboard Aggregation**<br>`SUM(clicks), GROUP BY ad_id, minute` | **Sub-5 ms** (Pre-aggregated counters) | **50–200 ms** (Vectorized SIMD execution) | **Poor / High OOM Risk** (Expensive heap) | **10–60 s** (High query latency) |
 | **Storage Cost & Retention Window** | **Moderate** (LSM SSTables, 30–90 days) | **Moderate** (Compressed columns, 30–90 days) | **Very High Cost** (RAM-heavy, 7–30 days) | **Ultra-Low Cost** (S3/Glacier, years/forever) |
 
-> [!IMPORTANT]
-> **Summary Decision Rule for System Design Interviews**:
+> ⚠️ **Important — Summary Decision Rule for System Design Interviews**:
 > * **Real-Time DB (ClickHouse / Cassandra)**: Use for **known primary key lookups** and **live dashboard aggregations** (sub-second SLA).
 > * **Elasticsearch**: Use exclusively for **finding needles in haystacks across arbitrary/unstructured fields** (fraud investigations, error log debugging).
 > * **Data Lake (S3/Hive + Trino)**: Use as the **immutable cold source of truth** for multi-year regulatory audits and heavy machine learning model training.
@@ -276,8 +275,7 @@ The answer depends strictly on **whether the "needle" is part of the database's 
 | **Recalculation & Backfilling** | **Complex**. Requires spinning up separate dedicated stream workers to replay raw logs into the DAG. | **Trivial**. Update data in place or re-index historical columns using native SQL update/replace partitions. | **Variant B wins** for operational remediation of logic bugs. |
 | **Cost Profile at Google/FB Scale** | Memory-intensive for stream workers, but long-term storage is tiny. | Disk and memory-heavy due to keeping billions of raw events active in RAM/NVMe for fast scanning. | **Variant A wins** when running multi-billion event systems with tight budgets. |
 
-> [!IMPORTANT]
-> **Key Trade-Off Rule for Interviews**:
+> ⚠️ **Important — Key Trade-Off Rule for Interviews**:
 > If the business requirement demands **ultra-low read latency on pre-defined dashboards** and strict billing accuracy at minimal storage cost, choose **Variant A (Real-time Stream Aggregation)**. If the engineering organization values **ad-hoc exploratory analytics** across arbitrary dimensions and wants to avoid writing custom streaming DAG logic, choose **Variant B (OLAP / ClickHouse)**.
 
 ---
@@ -467,8 +465,7 @@ Click events are generated on edge web/mobile proxy servers and written to local
 * **Topic Physical Sharding**: For global throughput, the topic can be partitioned by region (`ad_clicks_na`, `ad_clicks_eu`, `ad_clicks_apac`). (different topics in different regions)
 * **Backpressure**: If downstream ingestion slows, Kafka's distributed commit log absorbs spikes safely on NVMe drives (NVMe stands for Non-Volatile Memory Express. In simple terms, it is the fastest, modern generation of Solid-State Drives (SSDs) used in servers and laptops today.) without dropping events.
 
-> [!TIP]
-> **Partition Allocation Rule**:
+> 💡 **Tip — Partition Allocation Rule**:
 > Pre-allocate sufficient Kafka partitions (e.g., 64–128 partitions per topic) upon creation. Dynamically adding partitions alters hash ring assignments, causing subsequent clicks for `ad001` to land on a different partition and scrambling in-flight aggregation windows.
 
 ---
@@ -613,6 +610,8 @@ CREATE TABLE most_clicked_ads (
   `GET /v1/ads/popular_ads?count=100&window=5&filter=0012`
   - Fetches pre-computed JSON array from `most_clicked_ads` where `window_size = 5` and `update_time_minute = latest`.
   - Bypasses any runtime scanning; returns instant result.
+  - window=5 means: "Give me the top clicked ads over the last 5 minutes.
+  - Filter ID (e.g., filter by specific country, platform, or advertiser category).
 
 ---
 
@@ -659,20 +658,51 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | **Debugging & Bug Recovery** | Full fidelity; raw events can be audited anytime. | Impossible to audit or recover from calculation bugs (irreversible data loss). | Complete recovery capability via historical replay. | **Dual Storage wins**. |
 | **Machine Learning Utility** | Essential for training CTR models and fraud classifiers. | Useless for ML (individual user click context is lost). | Raw data can be offloaded to data lakes for offline model training. | **Dual Storage wins**. |
 
-> [!IMPORTANT]
-> **Decision Rule**: Always store **Both**. Aggregated data acts as the high-speed cache for operational dashboards, while immutable Raw Data serves as the system of record for disaster recovery, historical backfills, ML model training, and billing audits.
+> ⚠️ **Important — Decision Rule**: Always store **Both**. Aggregated data acts as the high-speed cache for operational dashboards, while immutable Raw Data serves as the system of record for disaster recovery, historical backfills, ML model training, and billing audits.
 
 ---
 
-#### Trade-Off Matrix 2: Online vs. Batch vs. Streaming vs. OLAP Systems (Table 17)
+#### Trade-Off Matrix 2: Batch vs. Streaming vs. OLAP Systems (Table 17)
 
-| Feature | Online System (Services) | Batch System (Offline) | Streaming System (Near Real-Time) | OLAP System (ClickHouse/Druid) | Winner & Decision Rule |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **Responsiveness** | Milliseconds (< 50 ms). | Hours to Days. | Seconds to Minutes (< 2 min). | Milliseconds to Seconds (< 500 ms). | **Online / Streaming wins for timely metrics**. |
-| **Input Data Nature** | Discrete user requests. | Bounded, finite historical datasets. | Unbounded, infinite continuous streams. | Continuous streaming or micro-batch ingestion. | **Streaming / OLAP fits infinite click logs**. |
-| **Output Data** | Direct responses to clients. | Materialized views, data warehouse tables. | Real-time views, alert triggers, aggregated queues. | Interactive multidimensional analytical slices. | **Streaming wins for automated billing counters**. |
-| **Optimization Goal** | High Availability, Low Latency. | Maximum Throughput. | Low Latency + High Throughput. | Vectorized Scanning + Fast Filter Speed. | **Streaming (Flink) + OLAP (ClickHouse) hybrid**. |
-| **Standard Tech** | REST/gRPC microservices. | Hadoop MapReduce, Apache Spark. | Apache Flink, Kafka Streams, Storm. | ClickHouse, Apache Druid, Apache Pinot. | **Chapter 6 adopts Flink-style Streaming DAG**. |
+| Feature | Batch System (Offline) | Streaming System (Near Real-Time) | OLAP System (ClickHouse/Druid) | Winner & Decision Rule |
+| :--- | :--- | :--- | :--- | :--- |
+| **Responsiveness** | Hours to Days. | Seconds to Minutes (< 2 min). | Milliseconds to Seconds (< 500 ms). | **Streaming / OLAP wins for timely metrics**. |
+| **Input Data Nature** | Bounded, finite historical datasets. | Unbounded, infinite continuous streams. | Continuous streaming or micro-batch ingestion. | **Streaming / OLAP fits infinite click logs**. |
+| **Output Data** | Materialized views, data warehouse tables. | Real-time views, alert triggers, aggregated queues. | Interactive multidimensional analytical slices. | **Streaming wins for automated billing counters**. |
+| **Optimization Goal** | Maximum Throughput. | Low Latency + High Throughput. | Vectorized Scanning + Fast Filter Speed. | **Streaming (Flink) + OLAP (ClickHouse) hybrid**. |
+| **Standard Tech** | Hadoop MapReduce, Apache Spark. | Apache Flink, Kafka Streams, Storm. | ClickHouse, Apache Druid, Apache Pinot. | **Chapter 6 adopts Flink-style Streaming DAG**. |
+
+> ⚠️ **Note on "Online Systems (Services)"**: An "Online Service" (synchronous request/response like an e-commerce checkout) makes no sense for crunching millions of asynchronous click events. Immediately below Table 17 (Page 19), the author ignores the "Online System" column entirely and focuses 100% on batch vs. streaming.
+
+##### Deep Dive: Output Data Comparison (Why Streaming Wins for Automated Billing Counters)
+* **Batch Output (Fails for Billing due to High Latency)**:
+  - *Mechanism*: Dumps materialized tables once an hour or once a day (Hadoop / Spark).
+  - *Why it fails*: Advertisers set strict daily budgets (e.g., $500/day). If an ad hits its budget limit at 10:00 AM, waiting for a nightly batch job means the ad keeps serving all day, racking up thousands of dollars in overspend and causing massive advertiser disputes.
+* **OLAP Output (Suboptimal for Automated Billing - Pull vs. Push)**:
+  - *Mechanism*: On-demand SQL queries (`SELECT SUM(clicks)...`) optimized for interactive merchant dashboards (ClickHouse / Druid).
+  - *Why it is suboptimal*: OLAP is a **pull-based query engine** meant for human exploration, not an event-driven emitter. Polling an OLAP database every minute across 2 million active ad campaigns would create massive, redundant table scanning overhead.
+* **Streaming Output (The Clear Winner for Automated Billing)**:
+  - *Mechanism*: The streaming engine (Flink) automatically closes each 1-minute tumbling window and **pushes discrete, non-overlapping records directly into Kafka Message Queue 2**:
+    ```json
+    {"ad_id": "ad001", "click_minute": "202101010001", "count": 1050}
+    ```
+  - *Why it wins*: Downstream financial billing microservices consume MQ2 as an **event-driven stream**. Every 60 seconds, advertiser account balances are automatically decremented, enabling instant campaign cutoffs the exact minute a budget runs out with 100% auditable accounting.
+
+##### Deep Dive: Optimization Goal & Why the "Streaming (Flink) + OLAP (ClickHouse) Hybrid" Wins
+* **What "Optimization Goal" Means (Table 17 "Performance Measurement")**:
+  - It answers: *"What primary metric is this architecture engineered to maximize, and what is it willing to sacrifice?"*
+  - **Batch (Maximum Throughput)**: Aims to churn through 50+ Terabytes of historical data with maximum hardware saturation; sacrifices latency (jobs take hours).
+  - **Streaming (Low Latency + High Throughput)**: Aims to process infinite event streams with seconds-level latency while sustaining high ingestion rates (50,000+ clicks/sec).
+  - **OLAP (Vectorized Scanning + Fast Filter Speed)**: Aims to deliver sub-second SQL queries across billions of rows via hardware-level SIMD CPU instructions and columnar compression; sacrifices storage cost and write simplicity.
+* **Why the Hybrid Model Wins at Production Scale (Google, Meta, Uber)**:
+  - **The Dilemma of Opposing Needs**: An advertising platform has two consumers with conflicting requirements:
+    1. *The Automated System*: Demands instant, non-overlapping 1-minute billing counts for known keys `(ad_id, minute)` to enforce budget cutoffs.
+    2. *The Human Advertiser*: Demands ad-hoc, multi-dimensional queries (e.g., *"clicks for ad001 on iOS in France using Safari"*).
+  - **Why Pure Streaming Fails on Human Analytics (Dimensionality Explosion)**: Pre-aggregating every conceivable combination of dimensions (`ad_id × country × OS × browser × device`) in Flink creates millions of concurrent window buckets in RAM, leading to Out-Of-Memory (OOM) crashes.
+  - **Why Pure OLAP Fails on Automated Billing (Poll Saturation & Cost)**: Polling an OLAP engine every 60 seconds across 2+ million active ads burns massive database CPU, and keeping all raw clicks unaggregated in RAM/NVMe is cost-prohibitive.
+  - **The Winning Hybrid Division of Labor**:
+    - **Apache Flink (Streaming)** acts as the **Automated Financial Backbone**: It continuously pre-aggregates 1-minute tumbling windows into Kafka MQ2 $\to$ Cassandra for real-time budget capping and billing.
+    - **ClickHouse (OLAP)** acts as the **Interactive Exploratory Brain**: It ingests event streams to power interactive merchant analytics dashboards with sub-second queries across arbitrary dimensions.
 
 ---
 
@@ -705,6 +735,9 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | **Impact on Ad Billing** | Loss of revenue for ad publisher. | Advertisers sue publisher for fraudulent over-billing. | 100% auditable financial integrity. | **Exactly-Once is strictly required**. |
 | **Performance Overhead** | Minimal overhead. | Low overhead. | Moderate throughput hit (10%–20% latency increase for 2PC/transactions). | **Worth the cost for financial correctness**. |
 
+> ⚠️ **Author's Recommendation & Conclusion (Page 25)**:
+> While at-least-once processing is acceptable in standard telemetry systems where a small percentage of duplicate events can be tolerated, **the author explicitly recommends Exactly-Once delivery for this system**. In an advertising platform, click counts directly govern financial billing—a discrepancy of even a few percent across billions of clicks results in millions of dollars in fraudulent advertiser over-billing or lost revenue. The system achieves this by enclosing downstream emissions (`MQ2`) and upstream offset commits (`MQ1`) within a **distributed transaction** (Figures 19 & 20).
+
 ---
 
 #### Trade-Off Matrix 6: Aggregator Scaling: Multi-Threading vs. Distributed Multi-Processing
@@ -715,6 +748,18 @@ Due to extreme edge cases (e.g., mobile devices offline for 12 hours uploading c
 | **Vertical vs. Horizontal Limits** | Hard-bounded by single-host CPU core limits and memory bus bandwidth. | Horizontally unbounded; can scale to thousands of nodes across multiple racks. | **Option 2 wins at scale**. |
 | **Fault Isolation** | Poor; a memory leak or segfault in one worker thread crashes the entire host process. | Excellent; worker crashes are isolated within containers and rescheduled automatically. | **Option 2 wins**. |
 | **Chapter 6 Verdict** | Viable for low-budget or smaller-scale deployments. | **Recommended standard** for Google/Facebook scale systems (1B clicks/day). | **Option 2 (Multi-processing / YARN) wins**. |
+
+##### Deep Dive: Engineering Mechanics of Multi-Threading vs. Distributed Multi-Processing
+* **Processes per Node (Avoiding the "Mega-Process" Trap)**:
+  - In Option 2 (YARN / Kubernetes), a single physical server (e.g., 64 CPU cores, 256 GB RAM) does **not** run just one monolithic process. 
+  - Instead, the cluster manager slices the server into **multiple isolated worker processes (containers/Pods)**, each given medium specs (e.g., 4 CPUs, 16 GB RAM). This avoids catastrophic Java Garbage Collection (GC) pauses and limits the blast radius if an individual worker crashes.
+* **Code-Level vs. Infrastructure-Level Configuration**:
+  - **Option 1 (Multi-Threading)**: Requires heavy **code-level concurrency management**. Developers must manually code and maintain thread pools (`ExecutorService`), concurrent blocking queues, mutex locks, and custom ad hashing algorithms (`ad_id.hashCode() % num_threads`). Scaling up requires recompiling or redeploying code.
+  - **Option 2 (Multi-Processing)**: **Zero code-level concurrency configuration**. Developers write pure, sequential business logic (`stream.keyBy(ad_id).window(...).aggregate(...)`). Process counts, CPU/memory limits, and worker replication (`spec.replicas`) are declared entirely outside the codebase in deployment manifests (Kubernetes YAML / YARN CLI).
+* **Modern Production Best Practice: The Hybrid Model (Pods + HPA/KEDA)**:
+  - **Inside the Container/Pod**: Use framework-level multi-threading (2–4 threads) to saturate the CPU cores allocated to that specific process.
+  - **Across the Cluster**: Scale horizontally by letting Kubernetes adjust the total number of Pod processes.
+  - **Event-Driven Autoscaling (HPA + KEDA)**: In streaming pipelines, avoid scaling on lagging CPU/Memory metrics. Instead, use **KEDA** to monitor **Kafka consumer lag** (queue backlog) and dynamically scale worker Pod processes via HPA before queues overflow.
 
 ---
 
