@@ -321,6 +321,48 @@ flowchart TB
 1. **Single Codebase**: Lambda requires maintaining two distinct implementations of aggregation logic—one in Java/Scala for Spark/MapReduce (batch) and another in Flink/Storm (streaming). Any bug fix or metric logic update must be synchronously deployed to both codebases, creating subtle drift.
 2. **Unified Historical Recalculation**: In Kappa, when historical recalculation is required (e.g., after fixing an aggregation bug), raw data is streamed through a **dedicated clone of the real-time stream aggregation service** (Figure 11). The same business logic processes both live data and historical backfills.
 
+#### 2.4.1 Relationship Between Section 2.1 and Section 2.4:
+- **Macro-Strategy (2.4) vs. Micro-Engine (2.1)**: Section 2.4 dictates the **architectural policy** (unifying real-time streaming and historical backfills under Kappa), while Section 2.1 supplies the **concrete processing pipeline** (the Map-Aggregate-Reduce DAG topology with concurrent tumbling and sliding windows).
+- **One Engine, Two Deployment Roles**: The pipeline defined in Section 2.1 is deployed as two identical instances:
+  1. **Live Aggregation (`AG_REAL`)**: Continuously processes live click traffic from Kafka MQ1.
+  2. **Historical Replay (`AG_RECALC`)**: Spun up on-demand when bug fixes or schema updates require reprocessing raw logs via the Recalculation Service (Figure 11).
+- **Zero Logic Drift**: Reusing the exact Section 2.1 codebase ensures recalculated historical metrics are 100% mathematically consistent with real-time numbers.
+
+```mermaid
+flowchart TB
+    classDef macroStyle fill:#e1f5fe,stroke:#0288d1,stroke-width:2px,color:#01579b
+    classDef engineStyle fill:#ede7f6,stroke:#7e57c2,stroke-width:2px,color:#4527a0
+    classDef storeStyle fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#1b5e20
+    classDef replayStyle fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+
+    subgraph MACRO ["Section 2.4: Kappa Architecture (Data Lifecycle Strategy)"]
+        direction TB
+        LIVE_LOGS["Live Raw Click Stream<br>(Kafka MQ1)"]:::macroStyle
+        RAW_STORE[("Raw Data DB<br>(Cassandra / S3)")]:::storeStyle
+        RECALC_SVC["Recalculation Service<br>(Batch Reader / Log Feeder)"]:::replayStyle
+    end
+
+    subgraph MICRO ["Section 2.1: Stream Aggregation Pipeline Engine (Unified Codebase)"]
+        direction LR
+        MAP_TIER["Map Stage<br>(ad_id % N sharding)"]:::engineStyle
+        AGG_TIER["Aggregate Stage<br>(Tumbling & Sliding Windows)"]:::engineStyle
+        RED_TIER["Reduce Stage<br>(Global Top-100 Heap)"]:::engineStyle
+
+        MAP_TIER --> AGG_TIER --> RED_TIER
+    end
+
+    subgraph SINKS ["Output Tier (Message Queue 2 & Aggregated DB)"]
+        MQ2_OUT[("Message Queue 2 & DB Writer")]:::storeStyle
+        AGG_DB_OUT[("Aggregation DB<br>(Cassandra / TSDB)")]:::storeStyle
+        MQ2_OUT --> AGG_DB_OUT
+    end
+
+    LIVE_LOGS -->|"1. Live Real-Time Ingest (AG_REAL)"| MAP_TIER
+    RAW_STORE --> RECALC_SVC
+    RECALC_SVC -->|"2. On-Demand Replay Backfill (AG_RECALC)"| MAP_TIER
+    RED_TIER --> MQ2_OUT
+```
+
 ---
 
 ### 2.5 Hotspot Ad Mitigation Subsystem (Figure 25)
@@ -422,8 +464,8 @@ Click events are generated on edge web/mobile proxy servers and written to local
 
 #### 3. Buffering, Partitioning & Backpressure
 * **Partition Key**: Kafka topic `ad_click_raw` uses `ad_id` as the message key. All events for the same `ad_id` consistently hash to the same Kafka partition, enabling single-consumer ordering without global locks.
-* **Topic Physical Sharding**: For global throughput, the topic can be partitioned by region (`ad_clicks_na`, `ad_clicks_eu`, `ad_clicks_apac`).
-* **Backpressure**: If downstream ingestion slows, Kafka's distributed commit log absorbs spikes safely on NVMe drives without dropping events.
+* **Topic Physical Sharding**: For global throughput, the topic can be partitioned by region (`ad_clicks_na`, `ad_clicks_eu`, `ad_clicks_apac`). (different topics in different regions)
+* **Backpressure**: If downstream ingestion slows, Kafka's distributed commit log absorbs spikes safely on NVMe drives (NVMe stands for Non-Volatile Memory Express. In simple terms, it is the fastest, modern generation of Solid-State Drives (SSDs) used in servers and laptops today.) without dropping events.
 
 > [!TIP]
 > **Partition Allocation Rule**:
@@ -466,7 +508,7 @@ The Raw Data Database acts as the **immutable source of truth**. It stores unagg
 
 #### 1. Watermark & Late Event Handling (Figures 12, 13, 14)
 * **Event Time vs. Processing Time**: The system aggregates strictly on `click_timestamp` (event time), not ingestion system clock (processing time).
-* **Watermark Window Extension**: A 15-second watermark delay (Figure 14) allows late-arriving events due to cellular network latency to merge into their correct window.
+* **Watermark Window Extension**: A 15-second watermark delay (Figure 14) allows late-arriving events due to cellular network latency to merge into their correct window. The watermark window extension is implemented and executed entirely inside the Data Aggregation Service (specifically within the Aggregate Nodes / Flink streaming workers).
 * **Severely Late Events**: Events arriving beyond the 15-second window are dropped from the real-time stream and flagged for reconciliation in the end-of-day batch job.
 
 #### 2. Exactly-Once Processing via Distributed Transactions (Figures 17, 18, 19, 20)
