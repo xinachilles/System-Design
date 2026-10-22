@@ -1,0 +1,193 @@
+Chapter 8. Distributed Email Service
+
+In this chapter we design a large-scale email service, such as Gmail, Outlook, or Yahoo Mail. The growth of the internet has led to an explosion in the volume of emails. In 2020, Gmail had over 1.8 billion active users and Outlook had over 400 million users worldwide [1] [2].
+
+Figure 1 Popular email providers
+
+Step 1 - Understand the Problem and Establish Design Scope
+Over the years, email services have changed significantly in complexity and scale. A modern email service is a complex system with many functions. There is no way we can design a real-world system in 45 minutes. So before jumping into the design, we definitely want to ask clarifying questions to narrow down the scope.
+
+Candidate: How many people use the product?
+Interviewer: One billion users.
+Candidate: I think the following features are important:
+- Authentication.
+- Send and receive emails.
+- Fetch all emails.
+- Filter emails by read and unread status.
+- Search emails by subject, sender, and body.
+- Anti-spam and anti-virus.
+Are there any other features you would like me to focus on?
+Interviewer: That’s a good list. We don’t need to worry about authentication. Let’s focus on the other features you mentioned.
+Candidate: How do users connect with mail servers?
+Interviewer: Traditionally, users connect with mail servers through native clients that use SMTP, POP, IMAP, and vendor-specific protocols. Those protocols are legacy to some extent, yet still very popular. For this interview, let’s assume HTTP is used for client and server communication.
+Candidate: Can emails have attachments?
+Interviewer: Yes.
+
+Non-functional requirements
+Next, let’s go over the most important non-functional requirements.
+- Reliability. We should not lose email data.
+- Availability. Email and user data should be automatically replicated across multiple nodes to ensure availability. Besides, the system should continue to function despite partial system failures.
+- Scalability. As the number of users grows, the system should be able to handle the increasing number of users and emails. The performance of the system should not degrade with more users or emails.
+- Flexibility and extensibility. A flexible/extensible system allows us to add new features or improve performance easily by adding new components. Traditional email protocols such as POP and IMAP have very limited functionality (more on this in high-level design). Therefore, we may need custom protocols to satisfy the flexibility and extensibility requirements.
+
+Back-of-the-envelope estimation
+Let’s do a back-of-the-envelope calculation to determine the scale and to discover some challenges our solution will need to address. By design, emails are storage heavy applications.
+- 1 billion users.
+- Assume the average number of emails a person sends per day is 10. QPS for sending emails = 10^9 * 10 / (10^5) = 100,000.
+- Assume the average number of emails a person receives in a day is 40 [3] and the average size of email metadata is 50KB. Metadata refers to everything related to an email, excluding attachment files.
+- Assume metadata is stored in a database. Storage requirement for maintaining metadata in 1 year: 1 billion users * 40 emails / day * 365 days * 50 KB = 730 PB.
+- Assume 20% of emails contain an attachment and the average attachment size is 500 KB.
+- Storage for attachments in 1 year is: 1 billion users * 40 emails / day * 365 days * 20% * 500 KB = 1,460 PB.
+From this back-of-the-envelope calculation, it’s clear we would deal with a lot of data. So, it’s likely that we need a distributed database solution.
+
+Step 2 - Propose High-Level Design and Get Buy-In
+In this section, we first discuss some basics about email servers and how email servers evolve over time. Then we look at the high-level design of distributed email servers. The content is structured as follows:
+- Email knowledge 101
+- Traditional mail servers
+- Distributed mail servers
+
+Email knowledge 101
+There are various email protocols that are used to send and receive emails. Historically, most mail servers use email protocols such as POP, IMAP, and SMTP.
+
+Email protocols
+- SMTP: Simple Mail Transfer Protocol (SMTP) is the standard protocol for sending emails from one mail server to another.
+- The most popular protocols for retrieving emails are known as Post Office Protocol (POP) and the Internet Mail Access Protocol (IMAP).
+- POP is a standard mail protocol to receive and download emails from a remote mail server to a local email client. Once emails are downloaded to your computer or phone, they are deleted from the email server, which means you can only access emails on one computer or phone. The details of POP are covered in RFC 1939 [4]. POP requires mail clients to download the entire email. This can take a long time if an email contains a large attachment.
+- IMAP is also a standard mail protocol for receiving emails for a local email client. When you read an email, you are connected to an external mail server, and data is transferred to your local device. IMAP only downloads a message when you click it, and emails are not deleted from mail servers, meaning that you can access emails from multiple devices. IMAP is the most widely used protocol for individual email accounts. It works well when the connection is slow because only the email header information is downloaded until opened.
+- HTTPS is not technically a mail protocol, but it can be used to access your mailbox, particularly for web-based email. For example, it’s common for Microsoft Outlook to talk to mobile devices over HTTPS, on a custom-made protocol called ActiveSync [5].
+
+Domain name service (DNS)
+A DNS server is used to look up the mail exchanger record (MX record) for the recipient’s domain. If you run DNS lookup for gmail.com from the command line, you may get MX records as shown in Figure 2.
+Figure 2 MX records:
+gmail.com mail exchanger = 5 gmail-smtp-in.l.google.com
+gmail.com mail exchanger = 10 alt1.gmail-smtp-in.l.google.com
+gmail.com mail exchanger = 20 alt2.gmail-smtp-in.l.google.com
+gmail.com mail exchanger = 30 alt3.gmail-smtp-in.l.google.com
+gmail.com mail exchanger = 40 alt4.gmail-smtp-in.l.google.com
+The priority numbers indicate preferences, where the mail server with a lower priority number is more preferred.
+
+Attachment
+An email attachment is sent along with an email message, commonly with Base64 encoding [6]. There is usually a size limit for an email attachment. For example, Outlook and Gmail limit the size of attachments to 20MB and 25MB respectively as of June 2021. This number is highly configurable and varies from individual to corporate accounts. Multipurpose Internet Mail Extension (MIME) [7] is a specification that allows the attachment to be sent over the internet.
+
+Traditional mail servers
+Before we dive into distributed mail servers, let’s dig a little bit through the history and see how traditional mail servers work, as doing so provides good lessons about how to scale an email server system. You can consider a traditional mail server as a system that works when there are limited email users, usually on a single server.
+
+Traditional mail server architecture
+Figure 3 Traditional mail servers:
+Alice (Outlook client) --(1) Send SMTP--> Outlook mail server (IMAP/POP Server, SMTP Server, Storage)
+Outlook mail server SMTP Server --(2) Send SMTP--> Gmail mail server SMTP Server
+Gmail mail server (SMTP Server --(3) Store--> Storage <-- Fetch -- IMAP/POP Server)
+Gmail client (Bob) <-- (4) Get IMAP/POP -- Gmail mail server IMAP/POP Server
+
+The process consists of 4 steps:
+1. Alice logs in to her Outlook client, composes an email, and presses “send”. The email is sent to the Outlook mail server. The communication protocol between the Outlook client and mail server is SMTP.
+2. Outlook mail server queries the DNS (not shown in the diagram) to find the address of the recipient’s SMTP server. In this case, it is Gmail’s SMTP server. Next, it transfers the email to the Gmail mail server. The communication protocol between the mail servers is SMTP.
+3. The Gmail server stores the email and makes it available to Bob, the recipient.
+4. Gmail client fetches new emails through the IMAP/POP server when Bob logs in to Gmail.
+
+Storage
+Most email systems at large scale such as Gmail, Outlook, and Yahoo use highly customized databases. In the past, emails were stored in local file directories and each email was stored in a separate file with a unique name. Each user maintained a user directory to store configuration data and mailboxes. Maildir was a popular way to store email messages on the mail server (Figure 4).
+Figure 4 Maildir: / -> home -> user1 -> Maildir -> (cur, new, tmp)
+File directories worked well when the user base was small, but it was challenging to retrieve and backup billions of emails. As the email volume grew and the file structure became more complex, disk I/O became a bottleneck. The local directories also don’t satisfy our high availability and reliability requirements. The disk can be damaged and servers can go down. We need a more reliable distributed storage layer.
+
+Distributed mail servers
+Distributed mail servers are designed to support modern use cases and solve the problems of scale and resiliency. This section covers email APIs, distributed email server architecture, email sending, and email receiving flows.
+
+Email APIs
+- POST /v1/messages: Sends a message to the recipients in To, Cc, Bcc headers.
+- GET /v1/folders: Returns all folders of an email account (All, Archive, Drafts, Flagged, Junk, Sent, Trash).
+- GET /v1/folders/{folder_id}/messages: Returns messages under a folder (with pagination).
+- GET /v1/messages/{message_id}: Gets all details of a specific message.
+
+Distributed mail server architecture (Figure 5 High-level design)
+Webmail -> HTTPS -> Web Servers -> Storage Layer
+Webmail -> WebSocket -> Real-time Servers -> Storage Layer
+Storage Layer consists of: Metadata DB, Attachment store, Distributed cache, Search store.
+- Webmail: Users use web browsers.
+- Web servers: Public-facing request/response services (login, signup, sending email, loading folders, loading messages).
+- Real-time servers: Responsible for pushing new email updates to clients in real-time. Stateful servers with persistent connections. Uses WebSocket whenever possible and long-polling as fallback. E.g. Apache James implements JMAP subprotocol over WebSocket.
+- Metadata database: Stores mail metadata (subject, body, from, to, etc.).
+- Attachment store: Object store such as Amazon S3. Cassandra not a good fit (theoretical blob 2GB, practical limit <1MB, attachment ruins row cache).
+- Distributed cache: Redis caches recent emails in memory (rich data structures like lists, easy to scale).
+- Search store: Distributed document store using inverted index.
+
+Email sending flow (Figure 6)
+1. User writes email on webmail, presses send -> Load balancer.
+2. Load balancer rate limits and routes traffic to web servers.
+3. Web servers perform:
+   - Basic validation (email size limit, etc.).
+   - Recipient domain check: If domain is same as sender (internal email), directly insert into storage, cache, and object store. Recipient fetches via RESTful API; no need for outgoing queue.
+4. Message queues:
+   - If validation succeeds -> Outgoing queue.
+   - If validation fails -> Error queue.
+5. SMTP outgoing workers pull events from outgoing queue, verify spam/virus free.
+6. Outgoing email stored in "Sent Folder" of storage layer.
+7. SMTP outgoing workers send email to recipient mail server via SMTP over Internet.
+Decoupling via distributed message queue allows SMTP outgoing workers to scale independently and buffer spikes.
+Queue monitoring: If emails get stuck, check if recipient mail server is unavailable (exponential backoff retry) or need more consumer workers.
+
+Email receiving flow (Figure 7)
+1. Incoming emails arrive at SMTP load balancer.
+2. Load balancer distributes traffic to SMTP servers. Email acceptance policies (bouncing invalid emails) applied at SMTP connection level.
+3. If attachment is too large for queue, put into attachment store (S3).
+4. Emails put into incoming email queue (buffers surges, decouples processing).
+5. Mail processing workers filter spam, check viruses, validate email.
+6. Email stored in mail storage (metadata DB), cache, and attachment store.
+7. If receiver online, push to real-time servers (WebSocket).
+8. Real-time servers push email to client.
+9. For offline users, email remains in storage. When user comes online, webmail client pulls via RESTful API on web servers.
+
+Step 3 - Design Deep Dive
+
+Metadata database:
+Characteristics:
+- Headers small and frequently accessed.
+- Bodies range in size, infrequently accessed (usually read once).
+- Mail operations isolated to individual user (user-partitioned).
+- Recency impact: 82% of read queries are for data younger than 16 days.
+- Strict reliability: Data loss is unacceptable.
+
+Database Selection:
+- Relational DB (RDBMS): Fast simple queries via indexes, but unsuited for large emails/HTML (>100KB) and BLOB queries inefficient. High disk I/O.
+- Distributed object storage (S3): Good for backup, but poor for marking read, keyword search, threading.
+- NoSQL (Bigtable / Cassandra): Bigtable used by Gmail. Characteristics needed: Single column single-digit MB, strong consistency, reduced disk I/O (LSM-tree), HA, easy incremental backup. Custom KV store or wide-column NoSQL.
+
+Data Model:
+- Partition key: user_id (distributes across nodes).
+- Clustering key: sorts data within partition.
+- Table: folders_by_user (PK: user_id K, folder_id UUID, folder_name TEXT).
+- Table: emails_by_folder (PK: <user_id, folder_id> K, email_id TIMEUUID C DESC, from TEXT, subject TEXT, preview TEXT, is_read BOOLEAN).
+- Table: emails_by_user (PK: user_id K, email_id TIMEUUID C DESC, from TEXT, to LIST<TEXT>, subject TEXT, body TEXT, attachments LIST<filename|size>).
+- Table: attachments (PK: filename K, email_id TIMEUUID C, url TEXT).
+- Table: read_emails and unread_emails: Denormalized to support fast filtering by read/unread status in NoSQL. Marking unread to read deletes from unread_emails and inserts into read_emails.
+- Conversation threads: JWZ algorithm using headers Message-Id, In-Reply-To, References.
+- Consistency trade-off: Single primary per mailbox. In event of failover, mailbox sync/update paused until failover ends (trades availability in favor of consistency / CP system).
+
+Email Deliverability:
+- Dedicated IPs: New IPs have no reputation; use dedicated IPs for sending.
+- Email classification: Separate IP pools for transactional vs promotional/marketing emails.
+- Warm-up IP slowly: Takes 2-6 weeks to ramp volume and build reputation with major ISPs.
+- Ban spammers quickly.
+- Retries with exponential backoff; dead-letter queue for investigation.
+- Feedback processing (Figure 8): Separate queues for soft bounces (temporary), hard bounces (invalid address), complaints (spam report). Feed into feedback processing to maintain low complaint rate.
+- Email authentication: SPF, DKIM, DMARC to combat phishing and spoofing (Figure 9).
+
+Search:
+Characteristics:
+- Write-heavy: re-index on send, receive, delete. Reads happen only when user clicks search.
+- Scope: User's own mailbox (partitioned by user_id).
+- Sorting: By date/attributes, not relevance.
+- Accuracy: Near real-time, 100% accurate.
+
+Elasticsearch vs Custom Search Engine (Table 7):
+- Elasticsearch: Ingestion via Kafka async queue to consumers and REST API into ES cluster. Scalable, easy integration, but maintains two copies of data, sync issues, consistency hard.
+- Custom Search Engine: Embedded in datastore with LSM-tree (Figure 11). Sequential disk I/O, in-memory Level 0 cache flushed to SSTables, separates frequently changed folder metadata from immutable email body.
+
+Scalability and Availability:
+- Multi-datacenter replication (Figure 12): Active-active or active-passive across US and Europe data centers. Users route to closest DC; failover during network partition.
+
+Step 4 - Wrap Up:
+- Fault tolerance (node failures, queue backlog).
+- Compliance (GDPR PII protection, Legal intercept).
+- Security (phishing protection, safe browsing, encryption, confidential mode).
+- Optimizations: Deduplication of attachments in multi-recipient emails (hash check before upload to S3).
